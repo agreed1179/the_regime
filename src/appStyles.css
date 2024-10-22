@@ -1,0 +1,279 @@
+/* src/public/styles/appStyles.css */
+
+/* 1. Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400&display=swap');
+
+/* 2. Global Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Disable both horizontal and vertical scroll bars */
+  font-family: 'Fira Sans', sans-serif; /* Set Fira Sans as the global font */
+  background-color: #f9f9f9; /* Optional: Light background color for the entire app */
+  color: #333; /* Default text color */
+  z-index: 999; /* Ensure the button is on top */
+}
+
+/* 3. Animation Keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* 4. Starting Screen */
+.starting-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  cursor: pointer;
+  font-family: 'Fira Sans', sans-serif; /* Optional: Reinforce global font */
+}
+
+.starting-screen h1 {
+  font-size: 3em;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+  font-weight: 300; /* Light weight */
+}
+
+/* 5. Meeting Room */
+.meeting-room {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  width: 100vw;  /* Full viewport width */
+  background-color: #f1f1f1;
+  overflow: hidden; /* Prevent overflow in the container */
+}
+
+.screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1440px; /* Optional maximum width */
+  max-height: 90vh;   /* Optional maximum height */
+  aspect-ratio: 16 / 9; /* Desired aspect ratio */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid #333;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: flex; /* Use flex layout */
+  justify-content: center;
+  align-items: center;
+  transition: background-image 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+/* 6. Slide Content */
+.slide-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column; /* Allows vertical stacking of content */
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 7. Images */
+img {
+  max-width: 100%; /* Make images responsive */
+  height: auto;
+  /*border-radius: 10px;*/
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+}
+
+/* 8. Reference Text */
+.reference {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  font-size: 0.9em;
+  color: #666;
+  font-style: italic;
+  z-index: 999; /* Higher than overlay */
+}
+
+.source-label {
+  font-style: normal;
+  font-weight: 700; /* Bold */
+}
+
+.source-text {
+  font-style: italic;
+}
+
+/* 9. Button Styles */
+
+/* Base Button Styling */
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #007bff; /* Default color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Fira Sans', sans-serif; /* Ensure all buttons use Fira Sans */
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 999; /* Ensure the button is on top */
+}
+
+/* Hover Effect for All Buttons */
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Disabled Buttons */
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+/* Specific Button Types */
+
+/* Back Button */
+.back-button {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: #007bff;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+/* Next Chapter Button */
+.next-chapter-button {
+  background-color: #28a745; /* Green for distinction */
+}
+
+.next-chapter-button:hover {
+  background-color: #218838;
+}
+
+/* Choice Button */
+.choice-button {
+  background-color: #ffc107;
+  color: black;
+  width: 200px;
+}
+
+.choice-button:hover {
+  background-color: #e0a800;
+}
+
+/* Mute Button */
+.mute-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #6c757d;
+}
+
+.mute-button:hover {
+  background-color: #5a6268;
+}
+
+/* 10. Progress Bar Styles */
+
+/* Progress Bar Container */
+.progress-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 999; /* Ensure the button is on top */
+}
+
+/* Progress Bar Background */
+.progress-bar {
+  width: 600px; /* Increased from 300px to 600px */
+  height: 12px; /* Slightly increased height for better visibility */
+  background-color: #e0e0e0; /* Lighter gray for better contrast */
+  border-radius: 6px; /* Increased border-radius for smoother edges */
+  overflow: hidden;
+  margin-bottom: 10px; /* Increased margin for better spacing */
+  position: relative; /* To position markers absolutely within */
+  z-index: 999; /* Ensure the button is on top */
+}
+
+/* Progress Bar Fill */
+.progress {
+  height: 100%;
+  background-color: #28a745;
+  width: 0%; /* Dynamically set via inline style */
+  transition: width 0.3s ease;
+  z-index: 999; /* Ensure the button is on top */
+}
+
+/* Marker Styling */
+.marker {
+  position: absolute;
+  top: -5px; /* Position above the progress bar */
+  width: 2px;
+  height: 20px;
+  background-color: #ff5722; /* Distinct color for markers */
+  transform: translateX(-50%); /* Center the marker on the position */
+  cursor: pointer;
+  z-index: 999; /* Ensure the button is on top */
+}
+
+.marker:hover::after {
+  content: attr(title);
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 0.8em;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+/* Progress Counter Text */
+.progress-counter {
+  font-size: 0.9em;
+  color: #333;
+}
+
+/* 11. Responsive Design */
+
+@media (max-width: 800px) {
+  .progress-bar {
+    width: 90%; /* Use percentage for better responsiveness */
+  }
+}
+
+@media (max-width: 600px) {
+  .progress-bar {
+    width: 200px;
+  }
+
+  .progress-counter {
+    font-size: 0.8em;
+  }
+
+  .marker {
+    height: 15px;
+  }
+}
