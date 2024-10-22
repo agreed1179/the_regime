@@ -1,0 +1,121 @@
+{
+  "slides": [
+    {
+      "id": 0,
+      "type": "info",
+      "text": "# Welcome to the Adventure!\n\nClick anywhere to begin your journey.",
+      "soundEffect": "test.mp3",
+      "clickToAdvance": true,
+      "background": "philosophy_classroom.jpg"
+    },
+    {
+      "id": 2,
+      "type": "dialogue",
+      "characters": [
+        {
+          "speaker": "Protestor",
+          "imageType": "large",
+          "imageSrc": "protestor_1.png",
+          "position": "upper-left",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          },
+          "imgborder": true
+        },
+        {
+          "speaker": "Protestor",
+          "imageType": "medium",
+          "imageSrc": "protestor_1.png",
+          "position": "upper-middle",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          },
+          "imgborder": false
+        },
+        {
+          "speaker": "Protestor",
+          "imageType": "small",
+          "imageSrc": "protestor_1.png",
+          "position": "upper-right",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          },
+          "imgborder": true
+        },
+        {
+          "speaker": "Protestor",
+          "imageType": "medium",
+          "imageSrc": "protestor_1.png",
+          "position": "middle-left",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          },
+          "imgborder": false
+        },
+        {
+          "speaker": "Protestor",
+          "imageType": "large",
+          "imageSrc": "protestor_1.png",
+          "position": "middle-middle",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          },
+          "imgborder": true
+        },
+        {
+          "speaker": "Protestor",
+          "imageType": "small",
+          "imageSrc": "protestor_1.png",
+          "position": "middle-right",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          },
+          "imgborder": false
+        },
+        {
+          "speaker": "Protestor",
+          "imageType": "medium",
+          "imageSrc": "protestor_1.png",
+          "position": "lower-left",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          },
+          "imgborder": true
+        },
+        {
+          "speaker": "Protestor",
+          "imageType": "small",
+          "imageSrc": "protestor_1.png",
+          "position": "lower-middle",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          },
+          "imgborder": false
+        },
+        {
+          "speaker": "Protestor",
+          "imageType": "large",
+          "imageSrc": "protestor_1.png",
+          "position": "lower-right",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          },
+          "imgborder": true
+        }
+      ],
+      "dialogueText": "How often have you seen this?",
+      "background": "debate_room.jpg",
+      "soundEffect": "test.mp3",
+      "nextId": 3
+    }
+  ]
+}

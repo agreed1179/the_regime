@@ -1,0 +1,94 @@
+{
+  "music": "chapter1.mp3",
+  "volume": 0.4,
+  "slides": [
+    {
+      "id": 0,
+      "type": "info",
+      "text": "# 01. \"Might makes right\" \n\n But in reality, people shout past each other's ears. **?",
+      "reference": "Smith, J. (2020). The Nature of Reality. Academic Press.",
+      "background": "debate_room.jpg",
+      "transition": "fade_short",
+      "clickToAdvance": true
+    },
+    {
+      "id": 2,
+      "type": "dialogue",
+      "characters": [
+        {
+          "speaker": "",
+          "imageType": "large",
+          "imageSrc": "protestor_1.png",
+          "position": "upper-left",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          }
+        }
+      ],
+      "dialogueText": "How often have you seen this?",
+      "background": "debate_room.jpg",
+      "soundEffect": "test.mp3",
+      "nextId": 2
+    },
+    {
+      "id": 2,
+      "type": "dialogue",
+      "characters": [
+        {
+          "speaker": "Plato",
+          "imageType": "medium",
+          "imageSrc": "plato.jpg",
+          "position": "left",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          }
+        },
+        {
+          "speaker": "Aristotle",
+          "imageType": "medium",
+          "imageSrc": "kant.jpg",
+          "position": "right",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          }
+        }
+      ],
+      "dialogueText": "Let us delve deeper into the forms and their existence.",
+      "background": "debate_room.jpg",
+      "soundEffect": "test.mp3",
+      "nextId": 3
+    },
+    {
+      "id": 3,
+      "type": "choices",
+      "choices": [
+        {
+          "side": "left",
+          "character": {
+            "speaker": "Kant",
+            "imageType": "small",
+            "imageSrc": "kant.jpg",
+            "position": "left"
+          },
+          "choiceText": "Ask about perception",
+          "popupMessage": "You chose to ask about perception. This will lead to new insights."
+        },
+        {
+          "side": "right",
+          "character": {
+            "speaker": "Politician",
+            "imageType": "small",
+            "imageSrc": "trump.webp",
+            "position": "right"
+          },
+          "choiceText": "Introduce Cartesian skepticism",
+          "popupMessage": "You chose to introduce Cartesian skepticism. Prepare for a philosophical debate."
+        }
+      ],
+      "background": "philosophy_classroom.jpg"
+    }
+  ]
+}
