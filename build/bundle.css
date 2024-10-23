@@ -271,7 +271,7 @@ button:disabled {
   top: -5px; /* Position above the progress bar */
   width: 2px;
   height: 20px;
-  background-color: #ff5722; /* Distinct color for markers */
+  background-color: #ffa200; /* Distinct color for markers */
   transform: translateX(-50%); /* Center the marker on the position */
   cursor: pointer;
 }
@@ -314,7 +314,8 @@ button:disabled {
 .slide-counter:focus,
 .chapter-counter:hover,
 .chapter-counter:focus {
-  color: #ffffff; /* Change text color on hover and focus */
+  color: #ffa200; /* Change text color on hover and focus */
+  /* Optional underline */
   outline: none; /* Remove default focus outline */
 }
 
