@@ -1,16 +1,63 @@
 {
   "slides": [
     {
-      "id": 0,
       "type": "info",
       "text": "# 0. Prelude \n\n Filmmaking is the perhaps most potent form of storytelling. At its core, it’s the art of evoking emotions, drawing the audience into a world crafted by light, sound, and narrative. \n\n Filmmakers are, in many ways, engineers of emotion – masterfully guiding the audience through dramatic conflict, manipulating feelings to create lasting impact beyond the final frame of the film.\n\nFilmmakers often rely on the universality of human emotions to guide their creative decisions, trusting that these emotional experiences resonate across the boundaries of subjectivity. Very often, the only measure which informs the filmmaker as to the impact of a captivating scene or a line of provocative dialogue is our own reaction. We test our work against ourselves, hoping that what moves or stirs us will do the same for the audience – and through which the emotions we carefully engineer will be replicated in its exactness as intended. \n\n \n\n <p style=\"text-align: right\"> Click anywhere to continue... </p>",
       "soundEffect": "test.mp3",
       "reference":"Bordwell, D., & Thompson, K. (2010). *Film Art: An Introduction (10th ed.).* McGraw-Hill.",
-      "clickToAdvance": true,
       "background": "philosophy_classroom.jpg"
     },
     {
-      "id": 2,
+      "type": "info",
+      "text": "**Yet, therein lies a trap.**  \n\n While emotions are essential to the final product, the process itself demands rationality. Filmmakers, passionate by nature, tend to lean on gut feelings—what feels right. As we become increasingly reliant on decision making driven by reference to our own internal feelings, we fall into the false sense of security that our feelings are inherently correct. Too often, feelings cloud our thinking as we mistake our emotional alignment for reason and logic, contaminating our decision making and rendering us incapable of complex judgement which is exactly what is needed to make a good film. \n\n Emotion-driven decisions in filmmaking may resonate on screen, but they often cloud rational judgment and preventing complex, reasoned decision making. We see this time and again in the creative industries, where people bicker over feelings rather than putting forward a well-articulated proposition with clear reasoning.  ",
+      "soundEffect": "test.mp3",
+      "reference":"Lerner, J. S., Li, Y., Valdesolo, P., & Kassam, K. S. (2015). Emotion and decision making. *Annual Review of Psychology*, 66, 799–823. ",
+      "background": "philosophy_classroom.jpg"
+    },
+    {
+      "type": "quotequiz",
+      "characterImage": "unknown_character.png",
+      "text": "The only limit to our realization of tomorrow is our doubts of today.",
+      "quoteWho": "",
+      "correctAnswer": "Franklin D. Roosevelt",
+      "choices": [
+        {
+          "name": "Franklin D. Roosevelt",
+          "characterImage": "kant.jpg"
+        },
+        {
+          "name": "Albert Einstein",
+          "characterImage": "plato.jpg"
+        },
+        {
+          "name": "Winston Churchill",
+          "characterImage": "trump.webp"
+        },
+        {
+          "name": "Abraham Lincoln",
+          "characterImage": "protestor_1.png"
+        }
+      ],
+      "background": "cave_background.jpg",
+      "soundEffect": "test.mp3"
+    },
+    {
+      "type": "quote",
+      "text": "Practical men, who believe themselves to be quite exempt from any intellectual influences, are usually the slaves of some *defunct economist*.",
+      "characterImage": "plato.jpg",
+      "quoteWho" : "John Maynard Keynes",
+      "reflectionText" : "I'd say Keynes is wrong... but who am I?",
+      "soundEffect": "test.mp3",
+      "reference":"Bordwell, D., & Thompson, K. (2010). *Film Art: An Introduction (10th ed.).* McGraw-Hill.",
+      "background": "philosophy_classroom.jpg"
+    },
+    {
+      "type": "dialogue",
+      "dialogueText": "But I would say, that we’re all slaves to some philosophers, defunct or not…",
+      "background": "debate_room.jpg",
+      "soundEffect": "test.mp3"
+    },
+    {
       "type": "dialogue",
       "characters": [
         {
@@ -117,7 +164,7 @@
       "background": "debate_room.jpg",
       "reference":"Bordwell, D., & Thompson, K. (2010). *Film Art: An Introduction (10th ed.).* McGraw-Hill.",
       "soundEffect": "test.mp3",
-      "nextId": 3
+      "nextId": 5
     }
   ]
 }
