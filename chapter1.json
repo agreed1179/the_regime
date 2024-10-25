@@ -17,7 +17,7 @@
       "characters": [
         {
           "speaker": "",
-          "imageType": "large",
+          "imageSize": "large",
           "imageSrc": "protestor_1.png",
           "position": "upper-left",
           "transition": {
@@ -37,7 +37,7 @@
       "characters": [
         {
           "speaker": "Plato",
-          "imageType": "medium",
+          "imageSize": "medium",
           "imageSrc": "plato.jpg",
           "position": "left",
           "transition": {
@@ -47,7 +47,7 @@
         },
         {
           "speaker": "Aristotle",
-          "imageType": "medium",
+          "imageSize": "medium",
           "imageSrc": "kant.jpg",
           "position": "right",
           "transition": {
@@ -69,9 +69,9 @@
           "side": "left",
           "character": {
             "speaker": "Kant",
-            "imageType": "small",
+            "imageSize": "small",
             "imageSrc": "kant.jpg",
-            "position": "left"
+            "position": "choices"
           },
           "choiceText": "Ask about perception",
           "popupMessage": "You chose to ask about perception. This will lead to new insights."
@@ -80,9 +80,9 @@
           "side": "right",
           "character": {
             "speaker": "Politician",
-            "imageType": "small",
+            "imageSize": "small",
             "imageSrc": "trump.webp",
-            "position": "right"
+            "position": "choices"
           },
           "choiceText": "Introduce Cartesian skepticism",
           "popupMessage": "You chose to introduce Cartesian skepticism. Prepare for a philosophical debate."

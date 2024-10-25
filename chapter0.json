@@ -12,7 +12,41 @@
       "text": "**Yet, therein lies a trap.**  \n\n While emotions are essential to the final product, the process itself demands rationality. Filmmakers, passionate by nature, tend to lean on gut feelings—what feels right. As we become increasingly reliant on decision making driven by reference to our own internal feelings, we fall into the false sense of security that our feelings are inherently correct. Too often, feelings cloud our thinking as we mistake our emotional alignment for reason and logic, contaminating our decision making and rendering us incapable of complex judgement which is exactly what is needed to make a good film. \n\n Emotion-driven decisions in filmmaking may resonate on screen, but they often cloud rational judgment and preventing complex, reasoned decision making. We see this time and again in the creative industries, where people bicker over feelings rather than putting forward a well-articulated proposition with clear reasoning.  ",
       "soundEffect": "test.mp3",
       "reference":"Lerner, J. S., Li, Y., Valdesolo, P., & Kassam, K. S. (2015). Emotion and decision making. *Annual Review of Psychology*, 66, 799–823. ",
-      "background": "philosophy_classroom.jpg"
+      "background": "philosophy_classroom.jpg",
+      "transition": "fade_short"
+    },
+    {
+      "type": "info",
+      "text": "In *The Regime*, I challenge these misconceptions, some of which had already become deep rooted norms especially in creative institutions. \n\n ",
+      "soundEffect": "test.mp3",
+      "reference":"Lerner, J. S., Li, Y., Valdesolo, P., & Kassam, K. S. (2015). Emotion and decision making. *Annual Review of Psychology*, 66, 799–823. ",
+      "background": "philosophy_classroom.jpg",
+      "transition": "fade_short"
+    },
+    {
+      "type": "quote",
+      "text": "Practical men, who believe themselves to be quite exempt from any intellectual influences, are usually the slaves of some *defunct economist*.",
+      "characterImage": "plato.jpg",
+      "quoteWho" : "John Maynard Keynes",
+      "reflectionText" : "Keynes may have a point, but where do these *defunct economists* get their ideas from?",
+      "soundEffect": "test.mp3",
+      "reference":"Keynes, J. M. (1936). *The general theory of employment, interest, and money.* Palgrave Macmillan.",
+      "background": "philosophy_classroom.jpg",
+      "guess": true
+    },
+    {
+      "type": "info",
+      "text": "In fact, I'd go another step and say that we're usually slaves of some defunct *philosophers*. \n\n Some are not even philosophers, but figures of populism. \n\n Very often, we're under the influence of something we intuitively feel to be true, but haven't thorougly investigated what they meant in the context of their origins. \n\n Feelings can be deceiving. </p>",
+      "soundEffect": "test.mp3",
+      "background": "philosophy_classroom.jpg",
+      "transition": "fade_short"
+    },
+    {
+      "type": "dream",
+      "text": "Let's play a game. \n\n<br/> Guess who said these quotes...",
+      "soundEffect" : "test.mp3",
+      "fadeInTime" : 1800,
+      "fadeOutTime" : 2000
     },
     {
       "type": "quotequiz",
@@ -20,6 +54,7 @@
       "text": "The only limit to our realization of tomorrow is our doubts of today.",
       "quoteWho": "",
       "correctAnswer": "Franklin D. Roosevelt",
+      "reference":"Keynes, J. M. (1936). *The general theory of employment, interest, and money.* Palgrave Macmillan.",
       "choices": [
         {
           "name": "Franklin D. Roosevelt",
@@ -39,17 +74,9 @@
         }
       ],
       "background": "cave_background.jpg",
-      "soundEffect": "test.mp3"
-    },
-    {
-      "type": "quote",
-      "text": "Practical men, who believe themselves to be quite exempt from any intellectual influences, are usually the slaves of some *defunct economist*.",
-      "characterImage": "plato.jpg",
-      "quoteWho" : "John Maynard Keynes",
-      "reflectionText" : "I'd say Keynes is wrong... but who am I?",
       "soundEffect": "test.mp3",
-      "reference":"Bordwell, D., & Thompson, K. (2010). *Film Art: An Introduction (10th ed.).* McGraw-Hill.",
-      "background": "philosophy_classroom.jpg"
+      "reflectionTextCorrect": "🎉 **Great job!** You selected the correct answer.",
+      "reflectionTextIncorrect": "❌ **Oops!** That's not correct. The right answer is *Franklin D. Roosevelt*."
     },
     {
       "type": "dialogue",
