@@ -100,17 +100,48 @@ img {
   left: 20px;
   font-size: 0.9em;
   color: #666;
-  font-style: italic;
   z-index: 999; /* Higher than overlay */
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #666;
+  font-style: normal;
+  cursor: pointer; /* Indicates it's clickable */
+  transition: color 0.3s ease;
 }
 
+.reference p {
+  margin: 0;
+  display: inline;
+}
+.copy-banner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  z-index: 1000;
+  text-align: center;
+  max-width: 80%;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  pointer-events: none; /* Prevents interaction */
+}
+
+.reference:hover,
+.reference:focus {
+  color: #007bff; /* Change color on hover/focus */
+  outline: none; /* Remove default focus outline */
+  text-decoration: underline; /* Optional underline on hover/focus */
+}
 .source-label {
   font-style: normal;
   font-weight: 700; /* Bold */
 }
 
 .source-text {
-  font-style: italic;
+  font-style: normal;
 }
 
 /* 9. Button Styles */
@@ -188,29 +219,42 @@ button:disabled {
 }
 
 /* 10. Progress Bar Styles */
-
-/* Progress Bar Container */
+/* Progress Bar and Counters */
 .progress-container {
   position: absolute;
-  bottom: 20px;
+  bottom: 33px; /* Increased from 20px to 50px */
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row; /* Arrange items horizontally */
+  align-items: center; /* Vertically center the items */
+  gap: 10px; /* Space between elements */
   z-index: 999; /* Ensure the button is on top */
 }
 
-/* Progress Bar Background */
+/* Separator Styling */
+.separator {
+  font-size: 1em;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Slide and Chapter Counters */
+.slide-counter,
+.chapter-counter {
+  font-size: 0.9em;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Adjusted Progress Bar Width */
 .progress-bar {
-  width: 600px; /* Increased from 300px to 600px */
-  height: 12px; /* Slightly increased height for better visibility */
-  background-color: #e0e0e0; /* Lighter gray for better contrast */
-  border-radius: 6px; /* Increased border-radius for smoother edges */
+  width: 400px; /* Adjust as needed for your layout */
+  height: 12px;
+  background-color: #e0e0e0;
+  border-radius: 6px;
   overflow: hidden;
-  margin-bottom: 10px; /* Increased margin for better spacing */
-  position: relative; /* To position markers absolutely within */
-  z-index: 999; /* Ensure the button is on top */
+  position: relative;
 }
 
 /* Progress Bar Fill */
@@ -219,7 +263,6 @@ button:disabled {
   background-color: #28a745;
   width: 0%; /* Dynamically set via inline style */
   transition: width 0.3s ease;
-  z-index: 999; /* Ensure the button is on top */
 }
 
 /* Marker Styling */
@@ -228,10 +271,9 @@ button:disabled {
   top: -5px; /* Position above the progress bar */
   width: 2px;
   height: 20px;
-  background-color: #ff5722; /* Distinct color for markers */
+  background-color: #ffa200; /* Distinct color for markers */
   transform: translateX(-50%); /* Center the marker on the position */
   cursor: pointer;
-  z-index: 999; /* Ensure the button is on top */
 }
 
 .marker:hover::after {
@@ -250,11 +292,100 @@ button:disabled {
   opacity: 0.9;
 }
 
-/* Progress Counter Text */
-.progress-counter {
+/* Slide and Chapter Counters */
+/* 9. Slide Counter */
+.slide-counter {
   font-size: 0.9em;
-  color: #333;
+  color: #000000; /* Default text color */
+  transition: color 0.3s ease; /* Smooth transition */
+  cursor: default; /* Indicates non-interactive by default */
 }
+
+/* 10. Chapter Counter */
+.chapter-counter {
+  font-size: 0.9em;
+  color: #000000; /* Default text color */
+  transition: color 0.3s ease; /* Smooth transition */
+  cursor: default; /* Indicates non-interactive by default */
+}
+
+/* Hover and Focus Effects */
+.slide-counter:hover,
+.slide-counter:focus,
+.chapter-counter:hover,
+.chapter-counter:focus {
+  color: #ffa200; /* Change text color on hover and focus */
+  /* Optional underline */
+  outline: none; /* Remove default focus outline */
+}
+
+/* Confirmation Banner */
+.copy-banner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  z-index: 1000;
+  text-align: center;
+  max-width: 80%;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  pointer-events: none; /* Prevents interaction */
+}
+
+/* Reference Section */
+.reference {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  
+  /* Ensure there's no background */
+  /* background-color: none; */ /* Ensure no background */
+
+  /* Default text color */
+  color: #000000; /* Black text by default */
+
+  /* Existing styles */
+  font-size: 0.9em;
+  z-index: 999; /* Ensure it's above other elements if necessary */
+  margin-top: 20px;
+  font-style: normal;
+  cursor: pointer; /* Indicates it's clickable */
+  
+  /* Transition for smooth color change */
+  transition: color 0.3s ease;
+  
+  /* Flex properties if needed */
+  display: flex;
+  align-items: center;
+}
+
+.reference p {
+  margin: 0;
+  display: inline;
+  
+  /* Remove explicit color to allow inheritance */
+  /* color: #000000; */ /* Removed */
+  color: inherit; /* Inherit color from parent .reference */
+}
+
+.reference:hover,
+.reference:focus {
+  color: #ffa200; /* Change text color on hover and focus */
+  outline: none; /* Remove default focus outline */
+  text-decoration: underline; /* Optional underline on hover/focus */
+}
+
+.source-label {
+  margin-right: 5px; /* Space between "Source:" and the reference */
+  font-weight: 700; /* Bold */
+}
+
+/* Optional: Adjust other styles as needed */
+
 
 /* 11. Responsive Design */
 

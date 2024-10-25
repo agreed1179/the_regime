@@ -1,24 +1,22 @@
 // src/utils/assetHelper.js
 export function getAssetPath(assetType, filename, assetPaths) {
   if (!filename) return '';
-
+  
   const typeMap = {
-    'character': 'characters',   // Added this line
+    'character': 'characters',
     'background': 'backgrounds',
     'sound': 'sounds',
     'music': 'music',
-    'style': 'styles' // If needed
+    'style': 'styles'
     // Remove 'full' and 'close' if they're no longer used
   };
 
   const pathType = typeMap[assetType];
 
   if (pathType && assetPaths[pathType]) {
-    // Ensure there's a slash between the path and filename
-    // Also, remove any trailing slash from assetPaths[pathType] to prevent double slashes
-    const sanitizedPath = assetPaths[pathType].endsWith('/')
-      ? assetPaths[pathType].slice(0, -1)
-      : assetPaths[pathType];
+    // Remove any leading and trailing slashes to ensure relative paths
+    const sanitizedPath = assetPaths[pathType].replace(/^\/+|\/+$/g, '');
+    console.log(`${sanitizedPath}/${filename}`)
     return `${sanitizedPath}/${filename}`;
   }
 

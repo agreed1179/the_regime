@@ -1,0 +1,287 @@
+/* src/public/styles/appStyles.css */
+
+/* 1. Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400&display=swap');
+
+/* 2. Global Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Disable both horizontal and vertical scroll bars */
+  font-family: 'Fira Sans', sans-serif; /* Set Fira Sans as the global font */
+  background-color: #f9f9f9; /* Optional: Light background color for the entire app */
+  color: #333; /* Default text color */
+  z-index: 999; /* Ensure the button is on top */
+}
+
+/* 3. Animation Keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* 4. Starting Screen */
+.starting-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  cursor: pointer;
+  font-family: 'Fira Sans', sans-serif; /* Optional: Reinforce global font */
+}
+
+.starting-screen h1 {
+  font-size: 3em;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+  font-weight: 300; /* Light weight */
+}
+
+/* 5. Meeting Room */
+.meeting-room {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  width: 100vw;  /* Full viewport width */
+  background-color: #f1f1f1;
+  overflow: hidden; /* Prevent overflow in the container */
+}
+
+.screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1440px; /* Optional maximum width */
+  max-height: 90vh;   /* Optional maximum height */
+  aspect-ratio: 16 / 9; /* Desired aspect ratio */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid #333;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: flex; /* Use flex layout */
+  justify-content: center;
+  align-items: center;
+  transition: background-image 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+/* 6. Slide Content */
+.slide-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column; /* Allows vertical stacking of content */
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 7. Images */
+img {
+  max-width: 100%; /* Make images responsive */
+  height: auto;
+  /*border-radius: 10px;*/
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+}
+
+/* 8. Reference Text */
+.reference {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  font-size: 0.9em;
+  color: #666;
+  font-style: italic;
+  z-index: 999; /* Higher than overlay */
+}
+
+.source-label {
+  font-style: normal;
+  font-weight: 700; /* Bold */
+}
+
+.source-text {
+  font-style: italic;
+}
+
+/* 9. Button Styles */
+
+/* Base Button Styling */
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #007bff; /* Default color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Fira Sans', sans-serif; /* Ensure all buttons use Fira Sans */
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 999; /* Ensure the button is on top */
+}
+
+/* Hover Effect for All Buttons */
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Disabled Buttons */
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+/* Specific Button Types */
+
+/* Back Button */
+.back-button {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: #007bff;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+/* Next Chapter Button */
+.next-chapter-button {
+  background-color: #28a745; /* Green for distinction */
+}
+
+.next-chapter-button:hover {
+  background-color: #218838;
+}
+
+/* Choice Button */
+.choice-button {
+  background-color: #ffc107;
+  color: black;
+  width: 200px;
+}
+
+.choice-button:hover {
+  background-color: #e0a800;
+}
+
+/* Mute Button */
+.mute-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #6c757d;
+}
+
+.mute-button:hover {
+  background-color: #5a6268;
+}
+
+/* 10. Progress Bar Styles */
+
+/* Progress Bar Container */
+.progress-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 999; /* Ensure the button is on top */
+}
+
+/* Progress Bar Background */
+.progress-bar {
+  width: 600px; /* Increased from 300px to 600px */
+  height: 12px; /* Slightly increased height for better visibility */
+  background-color: #e0e0e0; /* Lighter gray for better contrast */
+  border-radius: 6px; /* Increased border-radius for smoother edges */
+  overflow: hidden;
+  margin-bottom: 10px; /* Increased margin for better spacing */
+  position: relative; /* To position markers absolutely within */
+  z-index: 999; /* Ensure the button is on top */
+}
+
+/* Progress Bar Fill */
+.progress {
+  height: 100%;
+  background-color: #28a745;
+  width: 0%; /* Dynamically set via inline style */
+  transition: width 0.3s ease;
+  z-index: 999; /* Ensure the button is on top */
+}
+
+/* Marker Styling */
+.marker {
+  position: absolute;
+  top: -5px; /* Position above the progress bar */
+  width: 2px;
+  height: 20px;
+  background-color: #ff5722; /* Distinct color for markers */
+  transform: translateX(-50%); /* Center the marker on the position */
+  cursor: pointer;
+  z-index: 999; /* Ensure the button is on top */
+}
+
+.marker:hover::after {
+  content: attr(title);
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 0.8em;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+/* Progress Counter Text */
+.progress-counter {
+  font-size: 0.9em;
+  color: #333;
+}
+
+/* 11. Responsive Design */
+
+@media (max-width: 800px) {
+  .progress-bar {
+    width: 90%; /* Use percentage for better responsiveness */
+  }
+}
+
+@media (max-width: 600px) {
+  .progress-bar {
+    width: 200px;
+  }
+
+  .progress-counter {
+    font-size: 0.8em;
+  }
+
+  .marker {
+    height: 15px;
+  }
+}
+
+img.svelte-ln043p{display:block;max-width:100%;height:auto}img.enhanced.svelte-ln043p{border-radius:20px;box-shadow:0 8px 16px rgba(0, 0, 0, 0.2);transition:transform 0.3s ease, box-shadow 0.3s ease}img.enhanced.svelte-ln043p:hover{transform:scale(1.05);box-shadow:0 12px 24px rgba(0, 0, 0, 0.3)}
+.overlay.svelte-1o1lzq8{position:absolute;top:0;left:0;width:100%;height:100%;background:transparent;cursor:pointer;z-index:998}
+.dialogue-slide.svelte-1ug835e{position:relative;width:100%;height:100%;overflow:hidden;background-size:cover;background-position:center;display:flex;flex-direction:column;justify-content:flex-end;align-items:center}.portraits-container.svelte-1ug835e{position:absolute;top:0%;left:50%;transform:translateX(-50%);width:100%;height:80%;pointer-events:none}.character-image.svelte-1ug835e{position:absolute;transition:transform 0.3s ease, box-shadow 0.3s ease;display:flex;align-items:center;justify-content:center;cursor:pointer}.large.svelte-1ug835e{width:40%;height:auto}.medium.svelte-1ug835e{width:25%;height:auto}.small.svelte-1ug835e{width:10%;height:auto}.upper-left.svelte-1ug835e{top:5%;left:5%}.upper-middle.svelte-1ug835e{top:5%;left:50%;transform:translateX(-50%)}.upper-right.svelte-1ug835e{top:5%;right:5%}.middle-left.svelte-1ug835e{top:25%;left:5%}.middle-middle.svelte-1ug835e{top:25%;left:50%;transform:translateX(-50%)}.middle-right.svelte-1ug835e{top:25%;right:5%}.lower-left.svelte-1ug835e{top:50%;left:10%}.lower-middle.svelte-1ug835e{top:50%;left:50%;transform:translateX(-50%)}.lower-right.svelte-1ug835e{top:50%;right:90%}@media(max-width: 1024px){.large.svelte-1ug835e{width:18%}.medium.svelte-1ug835e{width:13%}.small.svelte-1ug835e{width:9%}.upper-left.svelte-1ug835e,.upper-right.svelte-1ug835e,.lower-left.svelte-1ug835e,.lower-right.svelte-1ug835e{top:5%;bottom:5%}.upper-middle.svelte-1ug835e,.middle-middle.svelte-1ug835e,.lower-middle.svelte-1ug835e{transform:translateX(-50%)}}@media(max-width: 768px){.large.svelte-1ug835e{width:16%}.medium.svelte-1ug835e{width:11%}.small.svelte-1ug835e{width:8%}}@media(max-width: 480px){.large.svelte-1ug835e{width:20%}.medium.svelte-1ug835e{width:12%}.small.svelte-1ug835e{width:7%}.portraits-container.svelte-1ug835e{top:5%;height:90%}.upper-left.svelte-1ug835e,.upper-middle.svelte-1ug835e,.upper-right.svelte-1ug835e,.middle-left.svelte-1ug835e,.middle-middle.svelte-1ug835e,.middle-right.svelte-1ug835e,.lower-left.svelte-1ug835e,.lower-middle.svelte-1ug835e,.lower-right.svelte-1ug835e{position:relative;transform:none;top:auto;bottom:auto;left:auto;right:auto;margin-bottom:10px}}.dialogue-box.svelte-1ug835e{position:relative;width:100%;height:33vh;background:rgba(0, 0, 0, 0.7);color:#fff;padding:20px;box-sizing:border-box;cursor:pointer;border-top-left-radius:15px;border-top-right-radius:15px;animation:svelte-1ug835e-fadeIn 0.5s ease-in-out;display:flex;align-items:center;justify-content:center;z-index:2}.dialogue-text.svelte-1ug835e{font-size:1.2em;line-height:1.4;white-space:pre-wrap;overflow-y:auto;max-height:100%}@keyframes svelte-1ug835e-fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}.dialogue-text.svelte-1ug835e::-webkit-scrollbar{width:6px}.dialogue-text.svelte-1ug835e::-webkit-scrollbar-track{background:rgba(255, 255, 255, 0.1);border-radius:3px}.dialogue-text.svelte-1ug835e::-webkit-scrollbar-thumb{background:rgba(255, 255, 255, 0.3);border-radius:3px}
+.choices-slide.svelte-v4d7b5{position:relative;width:100%;height:100%;background-size:cover;background-position:center;display:flex;flex-direction:column;justify-content:space-between;padding:20px 0;box-sizing:border-box}.portraits-container.svelte-v4d7b5{flex:1;display:flex;justify-content:center;align-items:flex-end;gap:250px;padding:10px 0;box-sizing:border-box;position:relative}.portrait-large.svelte-v4d7b5{width:40%}.portrait-medium.svelte-v4d7b5{width:30%}.portrait-small.svelte-v4d7b5{width:20%}.choices-container.svelte-v4d7b5{flex:2;display:flex;justify-content:space-around;align-items:stretch;padding:20px;box-sizing:border-box}.choice-container.svelte-v4d7b5{width:45%;display:flex;flex-direction:column;align-items:center}.choice-box.svelte-v4d7b5{width:100%;height:100%;background:rgba(255, 255, 255, 0.95);border-radius:15px;padding:25px;box-shadow:0 6px 8px rgba(0, 0, 0, 0.2);display:flex;flex-direction:column;justify-content:space-between;transition:transform 0.3s ease, box-shadow 0.3s ease}.choice-box.svelte-v4d7b5:hover{transform:translateY(-5px);box-shadow:0 8px 12px rgba(0, 0, 0, 0.3)}.choice-text.svelte-v4d7b5{font-size:1.2em;color:#333;margin-bottom:20px;flex-grow:1;overflow-y:auto;padding-right:10px}.choose-button.svelte-v4d7b5{align-self:center;padding:20px 40px;font-size:1.2em;background-color:#4caf50;color:#fff;border:none;border-radius:10px;cursor:pointer;transition:background-color 0.3s ease, transform 0.2s ease}.choose-button.svelte-v4d7b5:hover{background-color:#45a049;transform:scale(1.05)}.popup-overlay.svelte-v4d7b5{position:fixed;top:0;left:0;width:100%;height:100%;background:transparent;display:flex;align-items:center;justify-content:center;z-index:1000;cursor:pointer}.popup-message.svelte-v4d7b5{background:rgba(128, 128, 128, 0.85);padding:15px 30px;border-radius:10px;max-width:80%;width:60%;font-size:1.5em;color:#fff;text-align:center;box-shadow:0 4px 6px rgba(0, 0, 0, 0.3);transition:opacity 0.3s ease, transform 0.3s ease}@media(max-width: 1024px){.portraits-container.svelte-v4d7b5{gap:30px}.choices-container.svelte-v4d7b5{flex-direction:column;align-items:center;gap:20px}.choice-container.svelte-v4d7b5{width:80%}.choice-text.svelte-v4d7b5{font-size:1em}.choose-button.svelte-v4d7b5{padding:16px 32px;font-size:1em}.popup-message.svelte-v4d7b5{font-size:1.3em;padding:12px 24px;width:70%}}@media(max-width: 768px){.portraits-container.svelte-v4d7b5{flex-direction:column;gap:20px}.choices-container.svelte-v4d7b5{flex-direction:column;align-items:center;gap:20px}.choice-container.svelte-v4d7b5{width:90%}.choice-text.svelte-v4d7b5{font-size:0.95em}.choose-button.svelte-v4d7b5{padding:14px 28px;font-size:0.95em}.popup-message.svelte-v4d7b5{font-size:1.1em;padding:10px 20px;width:80%}}@media(max-width: 480px){.portraits-container.svelte-v4d7b5{gap:15px}.choice-box.svelte-v4d7b5{padding:20px}.choice-text.svelte-v4d7b5{font-size:0.9em;margin-bottom:15px}.choose-button.svelte-v4d7b5{padding:12px 24px;font-size:0.9em}.popup-message.svelte-v4d7b5{font-size:1em;padding:8px 16px;width:90%}}
+.info-slide.svelte-awtb3c{position:relative;width:100%;height:100%;padding:40px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;background-size:cover;background-position:center;overflow:hidden}.info-slide.svelte-awtb3c::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0, 0, 0, 0.4);z-index:1}.info-box.svelte-awtb3c{position:relative;background:rgba(255, 255, 255, 0.85);padding:30px 40px;border-radius:15px;box-shadow:0 8px 16px rgba(0, 0, 0, 0.3);max-width:800px;width:100%;z-index:2;transform-origin:top center}@media(max-width: 1024px){.info-box.svelte-awtb3c{padding:25px 30px}}@media(max-width: 768px){.info-box.svelte-awtb3c{padding:20px 25px}}@media(max-width: 480px){.info-box.svelte-awtb3c{padding:15px 20px}}.info-content.svelte-awtb3c{font-size:1.1em;color:#333;line-height:1.6;overflow-y:auto}@keyframes svelte-awtb3c-fillUp{from{transform:scaleY(0);opacity:0}to{transform:scaleY(1);opacity:1}}
+.flash-screen.svelte-10wl3do{display:flex;flex-direction:column;justify-content:center;align-items:center;height:100vh;width:100vw;background-color:#000;color:#fff;cursor:pointer;text-align:center;font-family:'Fira Sans', sans-serif}.action-button.svelte-10wl3do{margin-top:40px;padding:10px 20px;background-color:#28a745;color:white;border:none;border-radius:5px;cursor:pointer;font-size:16px;transition:background-color 0.3s ease, transform 0.2s ease;font-family:'Fira Sans', sans-serif;font-weight:400}.action-button.svelte-10wl3do:hover{background-color:#218838;transform:scale(1.05)}@keyframes svelte-10wl3do-fadeIn{from{opacity:0}to{opacity:1}}
+@import './appStyles.css';

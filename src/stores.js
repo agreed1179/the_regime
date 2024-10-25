@@ -21,6 +21,12 @@ export const backgroundVolume = writable(0.5); // Default volume set to 50%
 // Record player choices
 export const playerChoices = writable([]);
 
+// Current score
+export const currentScore = writable(0);
+
+// Export the current choice (for the current question)
+export const currentChoice = writable(null);
+
 // **Audio Management Stores and Functions**
 
 // Track the currently playing audio instance

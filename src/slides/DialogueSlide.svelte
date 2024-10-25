@@ -5,10 +5,10 @@
   import { marked } from 'marked';
   import { getAssetPath } from '../utils/assetHelper.js';
   import TransitionWrapper from '../components/TransitionWrapper.svelte';
-  import { fade } from 'svelte/transition';
   import { playSound } from '../stores.js'; // Import from stores.js
   import ClickToAdvanceOverlay from '../components/ClickToAdvanceOverlay.svelte';
-  
+  import { fade } from 'svelte/transition';
+
   // Component Props
   export let characters = []; // Array of character objects
   export let dialogueText = '';
@@ -17,33 +17,53 @@
   export let isMuted = false;
   export let updateSlide = () => {};
   export let assetPaths = {}; // Passed as a plain object
-  
+
   // Compute full paths using the utility function
   $: backgroundPath = getAssetPath('background', background, assetPaths);
   $: soundEffectPath = getAssetPath('sound', soundEffect, assetPaths);
-  
-  let sanitizedHTML = '';
-  
-  // Parse and sanitize HTML
-  $: sanitizedHTML = DOMPurify.sanitize(marked.parse(dialogueText), {
-    ALLOWED_TAGS: [
-      'b', 'i', 'em', 'strong', 'a', 'p', 'br', 'ul', 'ol', 'li', 'span',
-      'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'img', 'table', 'thead', 'tbody', 'tr', 'th', 'td', 'blockquote', 'code', 'pre'
-    ],
-    ALLOWED_ATTR: ['href', 'target', 'rel', 'style', 'class', 'src', 'alt']
-  });
-  
+
+  let sanitizedBlocks = []; // Array to hold sanitized HTML blocks
+
+  /**
+   * Parses the dialogueText into individual blocks,
+   * sanitizes each block, and stores them in sanitizedBlocks.
+   */
+  function parseDialogueBlocks(markdownText) {
+    if (!markdownText) {
+      sanitizedBlocks = [];
+      return;
+    }
+
+    // Split the markdown by double newlines to separate blocks (paragraphs)
+    const rawBlocks = markdownText.split('\n\n');
+    sanitizedBlocks = rawBlocks.map(block => {
+      // Convert markdown to HTML
+      const html = marked.parse(block);
+      // Sanitize the HTML
+      return DOMPurify.sanitize(html, {
+        ALLOWED_TAGS: [
+          'b', 'i', 'em', 'strong', 'a', 'p', 'br', 'ul', 'ol', 'li', 'span',
+          'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'img', 'table', 'thead', 'tbody', 'tr', 'th', 'td', 'blockquote', 'code', 'pre'
+        ],
+        ALLOWED_ATTR: ['href', 'target', 'rel', 'style', 'class', 'src', 'alt']
+      });
+    });
+  }
+
   // Function to handle dialogue advance
   function handleDialogueAdvance(event) {
     console.log('DialogueSlide handleDialogueAdvance triggered');
     updateSlide();
     // Removed playSound() from here to prevent double playback
   }
-  
+
   // Play sound effect on mount at full volume
   onMount(() => {
     playSound(soundEffectPath, isMuted); // Full volume on mount
   });
+
+  // Parse and sanitize dialogue blocks whenever 'dialogueText' changes
+  $: parseDialogueBlocks(dialogueText);
 </script>
 
 <style>
@@ -84,12 +104,12 @@
 
   /* Image Sizes with Relative Dimensions */
   .large {
-    width: 40%; /* 20% of the parent's width */
+    width: 40%; /* 40% of the parent's width */
     height: auto; /* Maintains aspect ratio */
   }
 
   .medium {
-    width: 25%; /* 15% of the parent's width */
+    width: 25%; /* 25% of the parent's width */
     height: auto;
   }
 
@@ -246,7 +266,7 @@
   .dialogue-box {
     position: relative; /* Relative to dialogue-slide */
     width: 100%; /* Span the entire width */
-    height: 33vh; /* Occupies one-third of the viewport height */
+    height: 25vh; /* Occupies one-third of the viewport height */
     background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
     color: #fff;
     padding: 20px;
@@ -254,43 +274,130 @@
     cursor: pointer;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    animation: fadeIn 0.5s ease-in-out;
+    animation: fadeInUp 0.5s ease-in-out;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 2; /* Ensure it's above characters */
   }
 
-  .dialogue-text {
-    font-size: 1.2em;
-    line-height: 1.4;
-    white-space: pre-wrap;
-    overflow-y: auto;
-    max-height: 100%;
+  .dialogue-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align text to the left */
+    height: 100%;
+    width: 100%;
+    padding: 10px; /* Optional padding */
+    box-sizing: border-box;
+    overflow: hidden;
   }
 
-  /* Fade In Animation for Dialogue Box */
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+  /* Dialogue Block Styling */
+  .dialogue-block {
+    opacity: 0; /* Initial state */
+    transform: translateY(20px); /* Initial position */
+    animation: fadeInUp 0.5s forwards ease-out; /* Animation properties */
+    margin-bottom: 10px; /* Space between blocks */
+    width: 100%;
   }
 
-  /* Scrollbar Styling for Dialogue Text */
-  .dialogue-text::-webkit-scrollbar {
-    width: 6px;
+  /* Fade-In Up Animation */
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
-  .dialogue-text::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 3px;
+  /* Reference Styling */
+  .reference {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #666;
+    font-style: italic;
   }
 
-  .dialogue-text::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 3px;
+  .source-label {
+    font-weight: bold;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .dialogue-box {
+      padding: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .dialogue-box {
+      padding: 15px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .dialogue-box {
+      padding: 10px;
+    }
+  }
+
+  /* Additional Styling for Content */
+  .dialogue-content a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .dialogue-content a:hover {
+    text-decoration: underline;
+  }
+
+  .dialogue-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+
+  .dialogue-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+  }
+
+  .dialogue-content th,
+  .dialogue-content td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  .dialogue-content th {
+    background-color: #f2f2f2;
+    text-align: left;
+  }
+
+  .dialogue-content blockquote {
+    border-left: 4px solid #ccc;
+    padding-left: 16px;
+    color: #666;
+    margin: 20px 0;
+    font-style: italic;
+  }
+
+  .dialogue-content pre {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+  }
+
+  .dialogue-content code {
+    background-color: #f5f5f5;
+    padding: 2px 4px;
+    border-radius: 4px;
   }
 </style>
 
+<!-- DialogueSlide Markup with Block-by-Block Fade-In -->
 <div class="dialogue-slide" style="background-image: url('{backgroundPath}');">
   
   <!-- Portraits Container -->
@@ -317,7 +424,16 @@
     in:fade={{ duration: 500 }}
     out:fade={{ duration: 500 }}
   >
-    <div class="dialogue-text">{@html sanitizedHTML}</div>
+    <div class="dialogue-content">
+      {#each sanitizedBlocks as block, index (index)}
+        <div
+          class="dialogue-block"
+          style="animation-delay: {index * 300}ms;"
+        >
+          {@html block}
+        </div>
+      {/each}
+    </div>
   </div>
   
   <!-- Click-to-Advance Overlay -->

@@ -1,4 +1,3 @@
-<!-- src/App.svelte -->
 <script>
   import './appStyles.css';
   import { onMount } from 'svelte';
@@ -6,7 +5,13 @@
   import DialogueSlide from './slides/DialogueSlide.svelte';
   import ChoicesSlide from './slides/ChoicesSlide.svelte';
   import InfoSlide from './slides/InfoSlide.svelte';
-  import FlashScreen from './components/FlashScreen.svelte'; // Import FlashScreen
+  import QuoteSlide from './slides/QuoteSlide.svelte';
+  import QuoteQuizSlide from './slides/QuoteQuizSlide.svelte';
+  import FlashScreen from './components/FlashScreen.svelte';
+  import ClickToAdvanceOverlay from './components/ClickToAdvanceOverlay.svelte';
+  import { marked } from 'marked';
+  import DOMPurify from 'dompurify';
+  import removeMarkdown from 'remove-markdown';
   
   // Import stores
   import { 
@@ -20,23 +25,22 @@
     assetPaths 
   } from './stores.js';
   
-  // Import utility function
+  // Import utility functions
   import { getAssetPath } from './utils/assetHelper.js';
-  
-  // Import logic functions
   import { loadChapter, updateSlide, goBack, loadNextChapter } from './utils/appLogic.js';
   
   import { playerChoices } from './stores.js'; // Ensure playerChoices is imported
-  
-  let gameStarted = false; // Variable to track game start
-  let isMuted = false; // Variable to track mute state
-  let backgroundAudio; // Reference to the background audio element
-  
+
+  // Existing variables
+  let gameStarted = false;
+  let isMuted = false;
+  let backgroundAudio;
+
   // Progress-related variables
-  let slideCounts = []; // Array to store the number of slides per chapter
-  let cumulativeSlideCounts = []; // Array to store cumulative slides up to each chapter
-  let totalSlides = 0; // Total number of slides across all chapters
-  let totalChapters = 3; // Total number of chapters (chapter0.json to chapter7.json)
+  let slideCounts = [];
+  let cumulativeSlideCounts = [];
+  let totalSlides = 0;
+  let totalChapters = 3;
   
   // Current Slide Index (1-based)
   $: currentSlideIndex = slideCounts
@@ -46,8 +50,9 @@
   // Progress Percentage
   $: progress = totalSlides ? (currentSlideIndex / totalSlides) * 100 : 0;
   
-  // Progress Counter Text
-  $: counterText = `Chapter ${$currentChapter + 1}/${totalChapters} - Slide ${$currentStage + 1}/${slideCounts[$currentChapter] || 1}`;
+  // Define separate counter texts
+  $: slideCounterText = `Slide ${currentSlideIndex}/${slideCounts[$currentChapter] || 1}`;
+  $: chapterCounterText = `Chapter ${$currentChapter + 1}/${totalChapters}`;
   
   // Compute Cumulative Slide Counts whenever slideCounts changes
   $: cumulativeSlideCounts = slideCounts.reduce((acc, count, index) => {
@@ -60,7 +65,7 @@
     const counts = [];
     for (let i = 0; i < totalChapters; i++) {
       try {
-        const response = await fetch(`/chapter${i}.json`);
+        const response = await fetch(`chapter${i}.json`);
         if (response.ok) {
           const chapterData = await response.json();
           const slides = chapterData.slides || [];
@@ -97,7 +102,7 @@
       if (isMuted) {
         backgroundAudio.pause();
       } else {
-        if ($backgroundMusic) { // Removed backgroundAudio.paused check
+        if ($backgroundMusic) {
           backgroundAudio.play().catch(error => {
             console.error('Background music playback failed:', error);
           });
@@ -157,22 +162,108 @@
     }
   }
 
+  // State variables for the confirmation banner
+  let showBanner = false;
+  let copiedReference = '';
+  let sanitizedCopiedReference = '';
+
+  // Reactive variable to hold the sanitized reference HTML
+  $: sanitizedReference = $slides[$currentStage]?.reference
+    ? DOMPurify.sanitize(marked.parse($slides[$currentStage].reference), {
+        ALLOWED_TAGS: [
+          'b', 'i', 'em', 'strong', 'a', 'p', 'br', 'ul', 'ol', 'li', 'span',
+          'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'img', 'table', 'thead',
+          'tbody', 'tr', 'th', 'td', 'blockquote', 'code', 'pre'
+        ],
+        ALLOWED_ATTR: ['href', 'target', 'rel', 'style', 'class', 'src', 'alt']
+      })
+    : '';
+
+  // Reactive variable to hold the sanitized copied reference HTML
+  $: sanitizedCopiedReference = copiedReference
+    ? DOMPurify.sanitize(marked.parse(copiedReference), {
+        ALLOWED_TAGS: [
+          'b', 'i', 'em', 'strong', 'a', 'p', 'br', 'ul', 'ol', 'li', 'span',
+          'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'img', 'table', 'thead',
+          'tbody', 'tr', 'th', 'td', 'blockquote', 'code', 'pre'
+        ],
+        ALLOWED_ATTR: ['href', 'target', 'rel', 'style', 'class', 'src', 'alt']
+      })
+    : '';
+
+  /**
+   * Copies the provided reference text to the clipboard.
+   * @param {string} reference - The reference text to copy.
+   */
+  async function copyReferenceToClipboard(reference) {
+    try {
+      // Convert Markdown to plain text by removing Markdown syntax
+      const plainTextReference = removeMarkdown(reference);
+      
+      // Copy the plain text to the clipboard
+      await navigator.clipboard.writeText(plainTextReference);
+      
+      // Set the copied reference for the confirmation banner
+      copiedReference = plainTextReference;
+      showBanner = true;
+      
+      // Sanitize the copied reference for display in the banner
+      sanitizedCopiedReference = DOMPurify.sanitize(marked.parse(reference), {
+        ALLOWED_TAGS: [
+          'b', 'i', 'em', 'strong', 'a', 'p', 'br', 'ul', 'ol', 'li', 'span',
+          'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'img', 'table', 'thead',
+          'tbody', 'tr', 'th', 'td', 'blockquote', 'code', 'pre'
+        ],
+        ALLOWED_ATTR: ['href', 'target', 'rel', 'style', 'class', 'src', 'alt']
+      });
+      
+      // Hide the banner after 3 seconds
+      setTimeout(() => {
+        showBanner = false;
+        copiedReference = '';
+        sanitizedCopiedReference = '';
+      }, 3000);
+    } catch (err) {
+      console.error('Failed to copy:', err);
+      // Optionally, handle the error (e.g., show an error message)
+    }
+  }
+
+  /**
+   * Handles the click event on the reference section.
+   * Copies the reference to the clipboard if available.
+   */
+  function handleReferenceClick() {
+    const reference = $slides[$currentStage]?.reference;
+    if (reference) {
+      copyReferenceToClipboard(reference);
+    }
+  }
+
+  /**
+   * Handles keydown events on the reference section for accessibility.
+   * @param {KeyboardEvent} event - The keyboard event.
+   */
+  function handleReferenceKeydown(event) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      handleReferenceClick();
+    }
+  }
 </script>
 
 <style>
   /* Import the global styles */
   @import './appStyles.css';
-
-  /* Optional: Additional global styles can go here */
 </style>
 
 <!-- Application Markup -->
 {#if !gameStarted}
   <!-- Starting screen using FlashScreen component -->
-  <FlashScreen screenType="start" onProceed={startGame} />
+  <FlashScreen screenType="start" on:proceed={startGame} />
 {:else if currentSlideIndex > totalSlides}
   <!-- Ending screen using FlashScreen component -->
-  <FlashScreen screenType="end" onProceed={restartGame} />
+  <FlashScreen screenType="end" on:proceed={restartGame} />
 {:else}
   <!-- Existing game content -->
   <div class="meeting-room">
@@ -224,25 +315,54 @@
                 clickToAdvance={$slides[$currentStage]?.clickToAdvance}
                 background={$slides[$currentStage].background}
               />
+            {:else if $slides[$currentStage]?.type === 'quote'}
+              <QuoteSlide
+                updateSlide={handleDialogueEnd}
+                characterImage={$slides[$currentStage].characterImage}
+                text={$slides[$currentStage].text}
+                quoteWho={$slides[$currentStage].quoteWho}
+                background={$slides[$currentStage].background}
+                soundEffect={$slides[$currentStage].soundEffect}
+                reflectionText={$slides[$currentStage].reflectionText}
+                isMuted={isMuted}
+              />
+            {:else if $slides[$currentStage]?.type === 'quotequiz'}
+            <QuoteQuizSlide
+                updateSlide={handleDialogueEnd}
+                characterImage={$slides[$currentStage].characterImage}
+                text={$slides[$currentStage].text}
+                quoteWho={$slides[$currentStage].quoteWho}
+                background={$slides[$currentStage].background}
+                soundEffect={$slides[$currentStage].soundEffect}
+                isMuted={isMuted}
+                choices={$slides[$currentStage].choices}
+                correctAnswer={$slides[$currentStage].correctAnswer}
+                reflectionTextCorrect={$slides[$currentStage].reflectionTextCorrect}
+                reflectionTextIncorrect={$slides[$currentStage].reflectionTextIncorrect}
+              />
             {/if}
           </div>
         {/key}
       {/if}
 
-      <!-- Display the back button -->
+      <!-- Back Button -->
       {#if $history.length > 0}
         <button on:click={goBack} class="back-button" aria-label="Go Back">
           Back
         </button>
       {/if}
 
-      <!-- Progress Bar and Counter with Next Chapter Button -->
+      <!-- Progress Bar and Counters -->
       <div class="progress-container">
-        {#if $currentStage === (slideCounts[$currentChapter] || 0) - 1}
-          <button on:click={loadNextChapter} class="next-chapter-button" aria-label="Proceed to the Next Chapter">
-            Next Chapter
-          </button>
-        {/if}
+        <!-- Slide Counter -->
+        <div class="slide-counter">
+          {slideCounterText}
+        </div>
+        
+        <!-- Separator -->
+        <span class="separator" aria-hidden="true">-</span>
+        
+        <!-- Progress Bar -->
         <div class="progress-bar">
           <div class="progress" style="width: {progress}%"></div>
           <!-- Chapter Markers -->
@@ -256,8 +376,13 @@
             {/if}
           {/each}
         </div>
-        <div class="progress-counter">
-          {counterText}
+        
+        <!-- Separator -->
+        <span class="separator" aria-hidden="true">-</span>
+        
+        <!-- Chapter Counter -->
+        <div class="chapter-counter">
+          {chapterCounterText}
         </div>
       </div>
 
@@ -270,14 +395,33 @@
         {/if}
       </button>
 
-      <!-- Display the academic reference at the bottom left -->
+      <!-- Reference Section -->
       {#if $slides[$currentStage]?.reference}
-        <div class="reference">
+        <div 
+          class="reference" 
+          on:click={handleReferenceClick} 
+          on:keydown={handleReferenceKeydown}
+          tabindex="0" 
+          role="button" 
+          aria-label="Copy reference to clipboard"
+        >
           <span class="source-label">Source:</span>
-          <span class="source-text">{$slides[$currentStage].reference}</span>
+          {@html sanitizedReference}
         </div>
+      {/if}
+
+      <!-- Reference Copy Confirmation Banner -->
+      {#if showBanner}
+        <div class="copy-banner" transition:fade={{ duration: 500 }} role="alert" aria-live="assertive">
+          Reference successfully copied:<br/><br/>
+          {copiedReference}
+        </div>
+      {/if}
+
+      <!-- Click to Advance Overlay -->
+      {#if $currentStage === (slideCounts[$currentChapter] || 0) - 1}
+        <ClickToAdvanceOverlay onAdvance={loadNextChapter} />
       {/if}
     </div>
   </div>
 {/if}
-

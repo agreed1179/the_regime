@@ -25,7 +25,7 @@ export function preloadImages(slideData) {
 export async function loadChapter(chapterIndex) {
   try {
     console.log(`Loading Chapter ${chapterIndex}`);
-    const response = await fetch(`/chapter${chapterIndex}.json`);
+    const response = await fetch(`chapter${chapterIndex}.json`);
     if (response.ok) {
       const chapterData = await response.json();
       
