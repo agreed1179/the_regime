@@ -12,16 +12,17 @@
   /**
    * Determines the appropriate transition function and options based on the transition object.
    * @param {Object} transition - The transition configuration.
-   * @returns {Object} - Contains the transition type and its options.
+   * @returns {Object|null} - Contains the transition type and its options or null if no transition.
    */
   function determineTransition(transition) {
     if (!transition || !transition.type) {
-      return { type: 'fade', options: { duration: 500 } };
+      return null; // No transition specified
     }
-
     switch (transition.type) {
       case 'fade':
         return { type: 'fade', options: { duration: transition.duration || 500 } };
+      case 'dream':
+        return { type: 'fade', options: { duration: transition.duration || 1500 } };
       case 'fly':
         return {
           type: 'fly',
@@ -52,58 +53,58 @@
           },
         };
       default:
-        return { type: 'fade', options: { duration: 500 } };
+        return null; // Unrecognized transition type; no transition applied
     }
   }
 
-  const { type: transitionType, options: transitionOptions } = determineTransition(transition);
+  const transitionConfig = determineTransition(transition);
 </script>
 
 <!-- Conditional Blocks to Apply Transitions -->
-{#if transitionType === 'fade'}
-  <img
-    class:enhanced={imgborder}
-    src="{getAssetPath('character', character.imageSrc, assetPaths)}"
-    alt="{character.speaker || 'Character'}"
-    in:fade={transitionOptions}
-    out:fade={{ duration: 500 }}
-    loading="lazy"
-  />
-{:else if transitionType === 'fly'}
-  <img
-    class:enhanced={imgborder}
-    src="{getAssetPath('character', character.imageSrc, assetPaths)}"
-    alt="{character.speaker || 'Character'}"
-    in:fly={transitionOptions}
-    out:fade={{ duration: 500 }}
-    loading="lazy"
-  />
-{:else if transitionType === 'customFade'}
-  <img
-    class:enhanced={imgborder}
-    src="{getAssetPath('character', character.imageSrc, assetPaths)}"
-    alt="{character.speaker || 'Character'}"
-    in:customFade={transitionOptions}
-    out:fade={{ duration: 500 }}
-    loading="lazy"
-  />
-{:else if transitionType === 'customFly'}
-  <img
-    class:enhanced={imgborder}
-    src="{getAssetPath('character', character.imageSrc, assetPaths)}"
-    alt="{character.speaker || 'Character'}"
-    in:customFly={transitionOptions}
-    out:fade={{ duration: 500 }}
-    loading="lazy"
-  />
+{#if transitionConfig}
+  {#if transitionConfig.type === 'fade'}
+    <img
+      class:enhanced={imgborder}
+      src="{getAssetPath('character', character.imageSrc, assetPaths)}"
+      alt="{character.speaker || 'Character'}"
+      in:fade={transitionConfig.options}
+      out:fade={{ duration: transitionConfig.options.duration || 500 }}
+      loading="lazy"
+    />
+  {:else if transitionConfig.type === 'fly'}
+    <img
+      class:enhanced={imgborder}
+      src="{getAssetPath('character', character.imageSrc, assetPaths)}"
+      alt="{character.speaker || 'Character'}"
+      in:fly={transitionConfig.options}
+      out:fade={{ duration: transitionConfig.options.duration || 500 }}
+      loading="lazy"
+    />
+  {:else if transitionConfig.type === 'customFade'}
+    <img
+      class:enhanced={imgborder}
+      src="{getAssetPath('character', character.imageSrc, assetPaths)}"
+      alt="{character.speaker || 'Character'}"
+      in:customFade={transitionConfig.options}
+      out:fade={{ duration: transitionConfig.options.duration || 500 }}
+      loading="lazy"
+    />
+  {:else if transitionConfig.type === 'customFly'}
+    <img
+      class:enhanced={imgborder}
+      src="{getAssetPath('character', character.imageSrc, assetPaths)}"
+      alt="{character.speaker || 'Character'}"
+      in:customFly={transitionConfig.options}
+      out:fade={{ duration: transitionConfig.options.duration || 500 }}
+      loading="lazy"
+    />
+  {/if}
 {:else}
-  <!-- Default to fade if transition type is unrecognized -->
+  <!-- No Transition Applied -->
   <img
     class:enhanced={imgborder}
     src="{getAssetPath('character', character.imageSrc, assetPaths)}"
     alt="{character.speaker || 'Character'}"
-    in:fade={{ duration: 500 }}
-    out:fade={{ duration: 500 }}
     loading="lazy"
   />
 {/if}

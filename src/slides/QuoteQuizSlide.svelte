@@ -1,56 +1,73 @@
 <!-- src/slides/QuoteQuizSlide.svelte -->
 <script>
-    import { fade } from 'svelte/transition';
-    import { onMount, onDestroy } from 'svelte';
-    import { getAssetPath } from '../utils/assetHelper.js';
-    import { assetPaths, currentScore, currentChoice, playSound } from '../stores.js';
-    import { marked } from 'marked';
-    import DOMPurify from 'dompurify';
-    import ClickToAdvanceOverlay from '../components/ClickToAdvanceOverlay.svelte';
+  import { fade } from 'svelte/transition';
+  import { onMount } from 'svelte';
+  import { getAssetPath } from '../utils/assetHelper.js';
+  import {
+    assetPaths,
+    currentScore,
+    currentChoice,
+    playSound,
+    hideReference
+  } from '../stores.js';
+  import { marked } from 'marked';
+  import DOMPurify from 'dompurify';
+  import ClickToAdvanceOverlay from '../components/ClickToAdvanceOverlay.svelte';
 
-    export let characterImage = ''; // Initially 'unknown_character.png'
-    export let text = '';           // The quote to display (Markdown supported)
-    export let quoteWho = '';       // Initially empty
-    export let background = '';     // Background image path
-    export let soundEffect = '';    // (Optional) Sound effect path
-    export let isMuted = false;     // Mute state
-    export let updateSlide;         // Function to advance the slide
-    export let choices = [];        // Array of choices
-    export let correctAnswer = '';  // Name of the correct answer
-    export let reflectionTextCorrect = '';    // Reflection text for correct answer
-    export let reflectionTextIncorrect = '';  // Reflection text for incorrect answer
+  export let characterImage = 'unknown_character.png'; // Initially 'unknown_character.png'
+  export let text = '';           // The quote to display (Markdown supported)
+  export let quoteWho = '';       // Initially empty
+  export let background = '';     // Background image path
+  export let soundEffect = '';    // (Optional) Sound effect path
+  export let isMuted = false;     // Mute state
+  export let updateSlide;         // Function to advance the slide
+  export let choices = [];        // Array of choices
+  export let correctAnswer = '';  // Name of the correct answer
+  export let reflectionTextCorrect = '';    // Reflection text for correct answer
+  export let reflectionTextIncorrect = '';  // Reflection text for incorrect answer
 
+  // Reactive variables to compute asset paths
+  $: backgroundPath = getAssetPath('background', background, $assetPaths);
+  $: soundEffectPath = getAssetPath('sound', soundEffect, $assetPaths);
 
-    // Reactive variables to compute asset paths
-    $: characterImagePath = getAssetPath('character', characterImage, $assetPaths);
-    $: backgroundPath = getAssetPath('background', background, $assetPaths);
-    $: soundEffectPath = getAssetPath('sound', soundEffect, $assetPaths);
+  // Define reactive variables for correct and incorrect sound paths
+  $: correctSoundPath = getAssetPath('sound', 'correct.wav', $assetPaths);
+  $: incorrectSoundPath = getAssetPath('sound', 'incorrect.wav', $assetPaths);
 
-    // Define reactive variables for correct and incorrect sound paths
-    $: correctSoundPath = getAssetPath('sound', 'correct.wav', $assetPaths);
-    $: incorrectSoundPath = getAssetPath('sound', 'incorrect.wav', $assetPaths);
+  // Compute displayedCharacterImage
+  $: displayedCharacterImage = (hasAnswered && characterImage) ? characterImage : 'unknown_character.png';
 
-    // Parsed and sanitized HTML from Markdown
-    $: sanitizedText = text
-      ? DOMPurify.sanitize(marked.parse(text))
-      : '';
+  // Parsed and sanitized HTML from Markdown
+  $: sanitizedText = text
+    ? DOMPurify.sanitize(marked.parse(text))
+    : '';
 
-    let hasAnswered = false;
-    let selectedChoice = null;
-    let isCorrect = false; // Tracks if the selected answer is correct
-    let bannerTextDisplayed = "";
+  let hasAnswered = false;
+  let selectedChoice = null;
+  let isCorrect = false; // Tracks if the selected answer is correct
+  let bannerTextDisplayed = "";
 
-    function handleClick(event) {
-      console.log('InfoSlide handleClick triggered');
-      updateSlide();
-    }
-    // Function to handle user selection
-    function handleChoiceClick(choice) {
-      if (hasAnswered) return; // Prevent multiple selections
-      hasAnswered = true;
-      selectedChoice = choice;
-      currentChoice.set(choice.name);
+  let overlayClass = ''; // Class to control overlay transitions
 
+  function handleClick(event) {
+    updateSlide();
+  }
+
+  // Function to handle user selection
+  function handleChoiceClick(choice) {
+    if (hasAnswered) return; // Prevent multiple selections
+    hasAnswered = true;
+    selectedChoice = choice;
+    currentChoice.set(choice.name);
+
+    // Reveal the reference after the player has made a choice
+    hideReference.set(false);
+
+    // Start the overlay animation
+    overlayClass = 'fade-in';
+
+    // After 0.5s (overlays are fully opaque), update the character image and name
+    setTimeout(() => {
       // Determine if the selected choice is correct
       isCorrect = choice.name === correctAnswer;
 
@@ -62,34 +79,38 @@
       characterImage = getCharacterImage(correctAnswer);
       quoteWho = correctAnswer;
 
+      overlayClass = 'fade-out'; // Start fade-out of overlays
+
       // Play the appropriate sound
       if (isCorrect) {
         // Play correct sound
         playSound(correctSoundPath, isMuted, 0.5); // Volume set to 50%
-        // update banner text
+        // Update banner text
         bannerTextDisplayed = reflectionTextCorrect;
       } else {
         // Play incorrect sound
         playSound(incorrectSoundPath, isMuted, 0.5); // Volume set to 50%
-        // update banner text, and if no incorrect text play the correct text instead
-        bannerTextDisplayed = reflectionTextIncorrect
-        if (reflectionTextIncorrect == "") { 
-          bannerTextDisplayed = reflectionTextCorrect;
-        } 
+        // Update banner text
+        bannerTextDisplayed = reflectionTextIncorrect || reflectionTextCorrect;
       }
-    }
+    }, 500); // 0.5s for fade-in
 
+    // Remove overlayClass after fade-out completes
+    setTimeout(() => {
+      overlayClass = '';
+    }, 1500); // Total of 0.5s fade-in + 1s fade-out
+  }
 
-    // Function to get character image path by name
-    function getCharacterImage(name) {
-      const choice = choices.find(c => c.name === name);
-      return choice ? choice.characterImage : 'unknown_character.png';
-    }
+  // Function to get character image path by name
+  function getCharacterImage(name) {
+    const choice = choices.find(c => c.name === name);
+    return choice ? choice.characterImage : 'unknown_character.png';
+  }
 
-    onMount(() => {
-      playSound(soundEffectPath, isMuted); // Full volume on mount
+  onMount(() => {
+    hideReference.set(true); // Hide the reference when the component mounts
+    playSound(soundEffectPath, isMuted); // Full volume on mount
   });
-
 </script>
 
 <style>
@@ -115,16 +136,17 @@
   }
 
   .character-image {
-  width: 320px;       /* Fixed width */
-  height: 480px;      /* Fixed height */
-  padding-right: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-    }
+    position: relative;
+    width: 320px;
+    height: 480px;
+    padding-right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
 
-    .character-image img {
+  .character-image img {
     object-fit: contain;/* Resize image without distortion */
     border-radius: 10px;
     border: 2px solid #000; /* Black border */
@@ -132,6 +154,27 @@
     margin: auto;       /* Center the image within the container */
     }
 
+  /* White overlay for character image */
+  .white-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0; /* Start fully transparent */
+    pointer-events: none;
+  }
+
+  .white-overlay.fade-in {
+    transition: opacity 0.5s linear;
+    opacity: 1;
+  }
+
+  .white-overlay.fade-out {
+    transition: opacity 1s linear;
+    opacity: 0;
+  }
 
   .quote-container {
     max-width: 500px;
@@ -148,11 +191,38 @@
     font-weight: 300;
   }
 
+  /* Position the quote-who-container relative for the overlay */
+  .quote-who-container {
+    position: relative;
+  }
+
   .quote-who {
     margin-top: 15px;
     text-align: right;
     font-size: 1em;
     color: #fff;
+  }
+
+  /* White overlay for quote-who */
+  .quote-who-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.2em; /* Adjust to match the height of .quote-who */
+    background-color: white;
+    opacity: 0; /* Start fully transparent */
+    pointer-events: none;
+  }
+
+  .quote-who-overlay.fade-in {
+    transition: opacity 0.5s linear;
+    opacity: 1;
+  }
+
+  .quote-who-overlay.fade-out {
+    transition: opacity 1s linear;
+    opacity: 0;
   }
 
   /* Choices Container */
@@ -282,23 +352,35 @@
   }
 </style>
 
-<div 
-  class="quote-slide" 
-  in:fade={{ duration: 500 }} 
+<div
+  class="quote-slide"
+  in:fade={{ duration: 500 }}
   out:fade={{ duration: 500 }}
   style="background-image: url('{backgroundPath}'); background-size: cover; background-position: center;"
 >
   <div class="quote-content">
     <div class="character-image">
-      <img src="{getAssetPath('character', characterImage, $assetPaths)}" alt="Image of {quoteWho}" />
+      <img src="{getAssetPath('character', displayedCharacterImage, $assetPaths)}" alt="Image of {quoteWho}" />
+      {#if !hasAnswered || overlayClass}
+        <div class="white-overlay {overlayClass}"></div>
+      {/if}
     </div>
     <div class="quote-container">
       <div class="quote-text">
         {@html sanitizedText}
       </div>
-      {#if quoteWho}
-        <div class="quote-who">- {quoteWho}</div>
-      {/if}
+      <div class="quote-who-container">
+        {#if hasAnswered}
+          {#if quoteWho}
+            <div class="quote-who">
+              - {quoteWho}
+            </div>
+          {/if}
+        {/if}
+        {#if !hasAnswered || overlayClass}
+          <div class="quote-who-overlay {overlayClass}"></div>
+        {/if}
+      </div>
     </div>
   </div>
 
@@ -319,7 +401,7 @@
     {#if (reflectionTextCorrect == "") && (reflectionTextIncorrect == "")}
       <!-- If no text is provided, proceed straight to Click-to-Advance Overlay -->
       <ClickToAdvanceOverlay onAdvance={handleClick} />
-    {:else} 
+    {:else}
       <!-- If some text is provided, proceed with a Reflection Banner first -->
       <div class="reflection-banner {isCorrect ? 'correct' : 'incorrect'}">
         {@html bannerTextDisplayed}

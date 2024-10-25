@@ -35,6 +35,10 @@ export const currentAudio = writable(null);
 // Default volume for sound effects (50%)
 export const soundEffectVolume = writable(0.4);
 
+// Add the hideReference store - for quizzes and stuff
+export const hideReference = writable(false);
+
+
 /**
  * Play a sound with specified volume.
  * @param {string} soundPath - The path to the sound file.

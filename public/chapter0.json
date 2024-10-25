@@ -31,15 +31,22 @@
       "reflectionText" : "Keynes may have a point, but where do these *defunct economists* get their ideas from?",
       "soundEffect": "test.mp3",
       "reference":"Keynes, J. M. (1936). *The general theory of employment, interest, and money.* Palgrave Macmillan.",
-      "background": "philosophy_classroom.jpg"
+      "background": "philosophy_classroom.jpg",
+      "guess": true
     },
     {
       "type": "info",
-      "text": "In fact, I'd go another step and say that we're usually slaves of some defunct *philosophers*. \n\n \n\n <p style=\"text-align: right\"> Let's play a game... </p>",
+      "text": "In fact, I'd go another step and say that we're usually slaves of some defunct *philosophers*. \n\n Some are not even philosophers, but figures of populism. \n\n Very often, we're under the influence of something we intuitively feel to be true, but haven't thorougly investigated what they meant in the context of their origins. \n\n Feelings can be deceiving. </p>",
       "soundEffect": "test.mp3",
-      "reference":"Lerner, J. S., Li, Y., Valdesolo, P., & Kassam, K. S. (2015). Emotion and decision making. *Annual Review of Psychology*, 66, 799–823. ",
       "background": "philosophy_classroom.jpg",
       "transition": "fade_short"
+    },
+    {
+      "type": "dream",
+      "text": "Let's play a game. \n\n<br/> Guess who said these quotes...",
+      "soundEffect" : "test.mp3",
+      "fadeInTime" : 1800,
+      "fadeOutTime" : 2000
     },
     {
       "type": "quotequiz",
@@ -47,6 +54,7 @@
       "text": "The only limit to our realization of tomorrow is our doubts of today.",
       "quoteWho": "",
       "correctAnswer": "Franklin D. Roosevelt",
+      "reference":"Keynes, J. M. (1936). *The general theory of employment, interest, and money.* Palgrave Macmillan.",
       "choices": [
         {
           "name": "Franklin D. Roosevelt",

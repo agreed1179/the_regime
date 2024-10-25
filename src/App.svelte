@@ -7,12 +7,13 @@
   import InfoSlide from './slides/InfoSlide.svelte';
   import QuoteSlide from './slides/QuoteSlide.svelte';
   import QuoteQuizSlide from './slides/QuoteQuizSlide.svelte';
+  import DreamSlide from './slides/DreamSlide.svelte';
   import FlashScreen from './components/FlashScreen.svelte';
   import ClickToAdvanceOverlay from './components/ClickToAdvanceOverlay.svelte';
   import { marked } from 'marked';
   import DOMPurify from 'dompurify';
   import removeMarkdown from 'remove-markdown';
-  
+
   // Import stores
   import { 
     currentStage, 
@@ -22,13 +23,14 @@
     currentChapter, 
     backgroundMusic, 
     backgroundVolume, 
+    hideReference,
     assetPaths 
   } from './stores.js';
-  
+
   // Import utility functions
   import { getAssetPath } from './utils/assetHelper.js';
   import { loadChapter, updateSlide, goBack, loadNextChapter } from './utils/appLogic.js';
-  
+
   import { playerChoices } from './stores.js'; // Ensure playerChoices is imported
 
   // Existing variables
@@ -50,16 +52,27 @@
   // Progress Percentage
   $: progress = totalSlides ? (currentSlideIndex / totalSlides) * 100 : 0;
   
-  // Define separate counter texts
-  $: slideCounterText = `Slide ${currentSlideIndex}/${slideCounts[$currentChapter] || 1}`;
+  // Current Slide Number within the Current Chapter
+  $: currentSlideNumberInChapter = ($currentStage || 0) + 1;
+
+  // Updated Slide Counter Text
+  $: slideCounterText = `Slide ${currentSlideNumberInChapter}/${slideCounts[$currentChapter] || 1}`;
+
+  // Chapter Counter Text
   $: chapterCounterText = `Chapter ${$currentChapter + 1}/${totalChapters}`;
-  
+
   // Compute Cumulative Slide Counts whenever slideCounts changes
   $: cumulativeSlideCounts = slideCounts.reduce((acc, count, index) => {
     acc.push((acc[index - 1] || 0) + count);
     return acc;
   }, []);
-  
+
+  // Reset hideReference when currentStage changes
+  $: if ($currentStage !== undefined) {
+    hideReference.set(false);
+  }
+
+
   // Function to fetch all chapters and count slides
   async function fetchAllChapters() {
     const counts = [];
@@ -92,6 +105,7 @@
     gameStarted = true;
     currentChapter.set(0); // Start with Chapter 0
     loadChapter(0); // Load Chapter 0
+    currentStage.set(0); // Initialize currentStage
   }
   
   // Function to toggle mute state
@@ -255,6 +269,8 @@
 <style>
   /* Import the global styles */
   @import './appStyles.css';
+
+  /* Additional styles can be added here if necessary */
 </style>
 
 <!-- Application Markup -->
@@ -325,9 +341,10 @@
                 soundEffect={$slides[$currentStage].soundEffect}
                 reflectionText={$slides[$currentStage].reflectionText}
                 isMuted={isMuted}
+                guess={$slides[$currentStage].guess}
               />
             {:else if $slides[$currentStage]?.type === 'quotequiz'}
-            <QuoteQuizSlide
+              <QuoteQuizSlide
                 updateSlide={handleDialogueEnd}
                 characterImage={$slides[$currentStage].characterImage}
                 text={$slides[$currentStage].text}
@@ -339,6 +356,15 @@
                 correctAnswer={$slides[$currentStage].correctAnswer}
                 reflectionTextCorrect={$slides[$currentStage].reflectionTextCorrect}
                 reflectionTextIncorrect={$slides[$currentStage].reflectionTextIncorrect}
+              />
+            {:else if $slides[$currentStage]?.type === 'dream'}
+              <DreamSlide
+                text={$slides[$currentStage].text}
+                soundEffect={$slides[$currentStage].soundEffect}
+                isMuted={isMuted}
+                updateSlide={handleDialogueEnd}
+                fadeInTime={$slides[$currentStage].fadeInTime}
+                fadeOutTime={$slides[$currentStage].fadeOutTime}
               />
             {/if}
           </div>
@@ -396,7 +422,7 @@
       </button>
 
       <!-- Reference Section -->
-      {#if $slides[$currentStage]?.reference}
+      {#if $slides[$currentStage]?.reference && !$hideReference}
         <div 
           class="reference" 
           on:click={handleReferenceClick} 
