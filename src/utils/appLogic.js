@@ -126,22 +126,3 @@ export function goBack() {
     return $history;
   });
 }
-
-  // Function to load the next chapter
-  async function loadNextChapter() {
-    const newChapter = $currentChapter + 1;
-
-    if (newChapter < totalChapters) {
-      const success = await loadChapter(newChapter);
-      if (success) {
-        currentChapter.set(newChapter);
-        currentStage.set(0); // Reset currentStage
-      } else {
-        console.log('No more chapters available.');
-        gameEnded = true;
-      }
-    } else {
-      console.log('No more chapters available.');
-      gameEnded = true;
-    }
-  }

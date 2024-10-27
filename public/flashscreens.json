@@ -1,12 +1,16 @@
 {
   "start": {
-    "content": "<h1>Click anywhere to Start</h1><p><i>\"It's not really a protest until someone shows up with sharp glinting pitchfork.\"</i> - Unknown</p>"
+    "heading": "<h1>The Regime</h1>",
+    "subheading": "an analysis into the concept of creative democracy",
+    "quote": "<p><i>\"It's not really a protest until someone shows up with a sharp glinting pitchfork.\"</i> - Unknown</p>"
   },
   "end": {
-    "content": "<h1>What have we learnt today?</h1><p><em>\"More dialogue, less pitchforks.\" - Mike Luo</em></p> \n\n Thank you for playing.",
+    "heading": "<h1>Thank you for playing.</h1>",
+    "subheading": "Democracy isn't just the tyranny of the majority, but the rule of true philosophy. \n\n Special thanks to ......",
+    "quote": "<p><em>\"More dialogue, less pitchforks.\"</em></p> \n\n Thank you for playing.",
     "button": {
       "label": "Play again",
-      "action": "reload" 
+      "action": "reload"
     }
   }
 }

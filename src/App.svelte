@@ -2,6 +2,10 @@
   import './appStyles.css';
   import { onMount } from 'svelte';
   import { fade } from 'svelte/transition';
+  import { marked } from 'marked';
+  import DOMPurify from 'dompurify';
+  import removeMarkdown from 'remove-markdown';
+
   import DialogueSlide from './slides/DialogueSlide.svelte';
   import ChoicesSlide from './slides/ChoicesSlide.svelte';
   import InfoSlide from './slides/InfoSlide.svelte';
@@ -11,9 +15,6 @@
   import FlashScreen from './components/FlashScreen.svelte';
   import ScoreSummary from './slides/ScoreSummary.svelte';
   import ClickToAdvanceOverlay from './components/ClickToAdvanceOverlay.svelte';
-  import { marked } from 'marked';
-  import DOMPurify from 'dompurify';
-  import removeMarkdown from 'remove-markdown';
 
   // Import stores
   import { 
@@ -33,8 +34,10 @@
   // Import utility functions
   import { getAssetPath } from './utils/assetHelper.js';
   import { loadChapter, updateSlide, goBack } from './utils/appLogic.js';
-
   import { playerChoices } from './stores.js'; // Ensure playerChoices is imported
+  import { collectAssetPaths } from './utils/collectAssetPaths.js';
+
+  let assetsToLoad = []; // List of assets to preload
 
   // Existing variables
   let gameStarted = false;
@@ -117,6 +120,74 @@
     fetchAllChapters();
   });
   
+    // Function to preload assets with progress tracking
+    async function preloadAssets(event) {
+    console.log('App: preloadAssets function called');
+    const { onProgress, onComplete, setTotalAssets } = event.detail;
+
+    // Ensure chapters are fetched to get totalChapters
+    await fetchAllChapters();
+
+    // Collect all asset paths
+    assetsToLoad = await collectAssetPaths(totalChapters);
+
+    // Set total assets
+    const totalAssets = assetsToLoad.length;
+    setTotalAssets(totalAssets);
+
+    let loadedAssets = 0;
+
+    // Function to update progress
+    function updateProgress() {
+      loadedAssets++;
+      onProgress(loadedAssets);
+    }
+
+    const loadPromises = assetsToLoad.map((assetPath) => {
+      return new Promise((resolve) => {
+        const fileExtension = assetPath.split('.').pop().toLowerCase();
+        let asset;
+
+        if (['png', 'jpg', 'jpeg', 'gif'].includes(fileExtension)) {
+          // Image asset
+          asset = new Image();
+          asset.src = assetPath;
+          asset.onload = () => {
+            updateProgress();
+            resolve();
+          };
+          asset.onerror = () => {
+            console.error(`Failed to load image: ${assetPath}`);
+            updateProgress();
+            resolve();
+          };
+        } else if (['mp3', 'wav', 'ogg'].includes(fileExtension)) {
+          // Audio asset
+          asset = new Audio();
+          asset.src = assetPath;
+          asset.onloadeddata = () => {
+            updateProgress();
+            resolve();
+          };
+          asset.onerror = () => {
+            console.error(`Failed to load audio: ${assetPath}`);
+            updateProgress();
+            resolve();
+          };
+        } else {
+          // Other asset types
+          updateProgress();
+          resolve();
+        }
+      });
+    });
+
+    await Promise.all(loadPromises);
+    console.log('App: All assets loaded');
+    onComplete();
+  }
+
+
   // Function to start the game
   async function startGame() {
     await fetchAllChapters(); // Ensure chapters are fetched before starting
@@ -125,7 +196,26 @@
     await loadChapter(0); // Load Chapter 0
     currentStage.set(0); // Initialize currentStage
   }
-  
+
+  // Function to load the next chapter
+  async function loadNextChapter() {
+    const newChapter = $currentChapter + 1;
+
+    if (newChapter < totalChapters) {
+      const success = await loadChapter(newChapter);
+      if (success) {
+        currentChapter.set(newChapter);
+        currentStage.set(0); // Reset currentStage
+      } else {
+        console.log('No more chapters available.');
+        gameEnded = true;
+      }
+    } else {
+      console.log('No more chapters available.');
+      gameEnded = true;
+    }
+  }
+
   // Function to toggle mute state
   function toggleMute() {
     isMuted = !isMuted;
@@ -290,7 +380,11 @@
 <!-- Application Markup -->
 {#if !gameStarted}
   <!-- Starting screen using FlashScreen component -->
-  <FlashScreen screenType="start" on:proceed={startGame} />
+  <FlashScreen 
+    screenType="start" 
+    on:proceed={startGame} 
+    on:startLoading={preloadAssets}
+  />
 {:else if currentSlideIndex > totalSlides}
   <!-- Ending screen using FlashScreen component -->
   <FlashScreen screenType="end" on:proceed={restartGame} />
