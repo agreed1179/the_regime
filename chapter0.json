@@ -1,4 +1,6 @@
 {
+  "music": "chapter1.mp3",
+  "volume": 0.4,
   "slides": [
     {
       "type": "info",
@@ -45,6 +47,7 @@
       "type": "dream",
       "text": "Let's play a game. \n\n<br/> Guess who said these quotes...",
       "soundEffect" : "test.mp3",
+      "noHistory" : "true",
       "fadeInTime" : 1800,
       "fadeOutTime" : 2000
     },
@@ -77,6 +80,141 @@
       "soundEffect": "test.mp3",
       "reflectionTextCorrect": "🎉 **Great job!** You selected the correct answer.",
       "reflectionTextIncorrect": "❌ **Oops!** That's not correct. The right answer is *Franklin D. Roosevelt*."
+    },
+    {
+      "type": "quotequiz",
+      "characterImage": "unknown_character.png",
+      "text": "The only limit to our realization of tomorrow is our doubts of today.",
+      "quoteWho": "",
+      "correctAnswer": "Franklin D. Roosevelt",
+      "reference":"Keynes, J. M. (1936). *The general theory of employment, interest, and money.* Palgrave Macmillan.",
+      "choices": [
+        {
+          "name": "Franklin D. Roosevelt",
+          "characterImage": "kant.jpg"
+        },
+        {
+          "name": "Albert Einstein",
+          "characterImage": "plato.jpg"
+        },
+        {
+          "name": "Winston Churchill",
+          "characterImage": "trump.webp"
+        },
+        {
+          "name": "Abraham Lincoln",
+          "characterImage": "protestor_1.png"
+        }
+      ],
+      "background": "cave_background.jpg",
+      "soundEffect": "test.mp3",
+      "reflectionTextCorrect": "🎉 **Great job!** You selected the correct answer.",
+      "reflectionTextIncorrect": "❌ **Oops!** That's not correct. The right answer is *Franklin D. Roosevelt*."
+    },
+    {
+      "type": "quotequiz",
+      "characterImage": "unknown_character.png",
+      "text": "The only limit to our realization of tomorrow is our doubts of today.",
+      "quoteWho": "",
+      "correctAnswer": "Franklin D. Roosevelt",
+      "reference":"Keynes, J. M. (1936). *The general theory of employment, interest, and money.* Palgrave Macmillan.",
+      "choices": [
+        {
+          "name": "Franklin D. Roosevelt",
+          "characterImage": "kant.jpg"
+        },
+        {
+          "name": "Albert Einstein",
+          "characterImage": "plato.jpg"
+        },
+        {
+          "name": "Winston Churchill",
+          "characterImage": "trump.webp"
+        },
+        {
+          "name": "Abraham Lincoln",
+          "characterImage": "protestor_1.png"
+        }
+      ],
+      "background": "cave_background.jpg",
+      "soundEffect": "test.mp3",
+      "reflectionTextCorrect": "🎉 **Great job!** You selected the correct answer.",
+      "reflectionTextIncorrect": "❌ **Oops!** That's not correct. The right answer is *Franklin D. Roosevelt*."
+    },
+    {
+      "type": "quotequiz",
+      "characterImage": "unknown_character.png",
+      "text": "The only limit to our realization of tomorrow is our doubts of today.",
+      "quoteWho": "",
+      "correctAnswer": "Franklin D. Roosevelt",
+      "reference":"Keynes, J. M. (1936). *The general theory of employment, interest, and money.* Palgrave Macmillan.",
+      "choices": [
+        {
+          "name": "Franklin D. Roosevelt",
+          "characterImage": "kant.jpg"
+        },
+        {
+          "name": "Albert Einstein",
+          "characterImage": "plato.jpg"
+        },
+        {
+          "name": "Winston Churchill",
+          "characterImage": "trump.webp"
+        },
+        {
+          "name": "Abraham Lincoln",
+          "characterImage": "protestor_1.png"
+        }
+      ],
+      "background": "cave_background.jpg",
+      "soundEffect": "test.mp3",
+      "reflectionTextCorrect": "🎉 **Great job!** You selected the correct answer.",
+      "reflectionTextIncorrect": "❌ **Oops!** That's not correct. The right answer is *Franklin D. Roosevelt*."
+    },
+    {
+      "type": "dream",
+      "text": "Brace yourselves, things are about to get serious... \n\n<br/> (Trigger warning: serious political themes.)",
+      "soundEffect" : "test.mp3",
+      "noHistory" : true,
+      "fadeInTime" : 1800,
+      "fadeOutTime" : 2000
+    },
+    {
+      "type": "quotequiz",
+      "characterImage": "unknown_character.png",
+      "text": "The only limit to our realization of tomorrow is our doubts of today.",
+      "quoteWho": "",
+      "correctAnswer": "Franklin D. Roosevelt",
+      "reference":"Keynes, J. M. (1936). *The general theory of employment, interest, and money.* Palgrave Macmillan.",
+      "choices": [
+        {
+          "name": "Franklin D. Roosevelt",
+          "characterImage": "kant.jpg"
+        },
+        {
+          "name": "Albert Einstein",
+          "characterImage": "plato.jpg"
+        },
+        {
+          "name": "Winston Churchill",
+          "characterImage": "trump.webp"
+        },
+        {
+          "name": "Abraham Lincoln",
+          "characterImage": "protestor_1.png"
+        }
+      ],
+      "background": "cave_background.jpg",
+      "soundEffect": "test.mp3",
+      "reflectionTextCorrect": "🎉 **Great job!** You selected the correct answer.",
+      "reflectionTextIncorrect": "❌ **Oops!** That's not correct. The right answer is *Franklin D. Roosevelt*."
+    },
+    {
+      "type": "scoresummary",
+      "quizId" : 1,
+      "background": "cave_background.jpg",
+      "soundEffect": "test.mp3",
+      "reference" : "DeGroot, M. H., & Schervish, M. J. (2012). *Probability and statistics* (4th ed.). Pearson."
     },
     {
       "type": "dialogue",
