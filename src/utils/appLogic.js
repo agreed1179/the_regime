@@ -127,12 +127,21 @@ export function goBack() {
   });
 }
 
-// Function to load the next chapter
-export function loadNextChapter() {
-  currentChapter.update(($chapter) => {
-    const newChapter = $chapter + 1;
-    console.log(`Transitioning to Chapter ${newChapter}`);
-    loadChapter(newChapter);
-    return newChapter;
-  });
-}
+  // Function to load the next chapter
+  async function loadNextChapter() {
+    const newChapter = $currentChapter + 1;
+
+    if (newChapter < totalChapters) {
+      const success = await loadChapter(newChapter);
+      if (success) {
+        currentChapter.set(newChapter);
+        currentStage.set(0); // Reset currentStage
+      } else {
+        console.log('No more chapters available.');
+        gameEnded = true;
+      }
+    } else {
+      console.log('No more chapters available.');
+      gameEnded = true;
+    }
+  }

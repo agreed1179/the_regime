@@ -47,6 +47,14 @@
   let totalSlides = 0;
   let totalChapters = 3;
   
+  // State variable to indicate the game has ended
+  let gameEnded = false;
+  
+  // State variables for the confirmation banner
+  let showBanner = false;
+  let copiedReference = '';
+  let sanitizedCopiedReference = '';
+
   // Current Slide Index (1-based)
   $: currentSlideIndex = slideCounts
     .slice(0, $currentChapter)
@@ -79,24 +87,30 @@
   // Function to fetch all chapters and count slides
   async function fetchAllChapters() {
     const counts = [];
-    for (let i = 0; i < totalChapters; i++) {
+    let i = 0;
+    const maxChapters = 100; // Set a maximum limit
+
+    while (i < maxChapters) {
       try {
         const response = await fetch(`chapter${i}.json`);
         if (response.ok) {
           const chapterData = await response.json();
           const slides = chapterData.slides || [];
           counts.push(slides.length);
+          i++;
         } else {
-          console.error(`chapter${i}.json not found.`);
-          counts.push(0);
+          console.log(`chapter${i}.json not found.`);
+          break; // Exit the loop if the file is not found
         }
       } catch (error) {
         console.error(`Error fetching chapter${i}.json:`, error);
-        counts.push(0);
+        break; // Exit the loop on error
       }
     }
+
     slideCounts = counts;
     totalSlides = slideCounts.reduce((a, b) => a + b, 0);
+    totalChapters = counts.length; // Update totalChapters dynamically
   }
   
   onMount(() => {
@@ -104,10 +118,11 @@
   });
   
   // Function to start the game
-  function startGame() {
+  async function startGame() {
+    await fetchAllChapters(); // Ensure chapters are fetched before starting
     gameStarted = true;
     currentChapter.set(0); // Start with Chapter 0
-    loadChapter(0); // Load Chapter 0
+    await loadChapter(0); // Load Chapter 0
     currentStage.set(0); // Initialize currentStage
   }
   
@@ -160,6 +175,7 @@
   function restartGame() {
     // Reset game state
     gameStarted = false;
+    gameEnded = false; // Reset gameEnded
     isMuted = false;
     currentChapter.set(0);
     currentStage.set(0);
@@ -178,11 +194,6 @@
       backgroundAudio.src = '';
     }
   }
-
-  // State variables for the confirmation banner
-  let showBanner = false;
-  let copiedReference = '';
-  let sanitizedCopiedReference = '';
 
   // Reactive variable to hold the sanitized reference HTML
   $: sanitizedReference = $slides[$currentStage]?.reference
