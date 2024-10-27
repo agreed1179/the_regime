@@ -20,7 +20,7 @@
     },
     {
       "type": "info",
-      "text": "In *The Regime*, I challenge these misconceptions, some of which had already become deep rooted norms especially in creative institutions. \n\n ",
+      "text": "In *The Regime*, I challenge these misconceptions, some of which had already become deep rooted norms especially in creative institutions. \n\n \"But what is the use of this?\" You might ask. \n\n Well...",
       "soundEffect": "test.mp3",
       "reference":"Lerner, J. S., Li, Y., Valdesolo, P., & Kassam, K. S. (2015). Emotion and decision making. *Annual Review of Psychology*, 66, 799–823. ",
       "background": "philosophy_classroom.jpg",
@@ -35,7 +35,19 @@
       "soundEffect": "test.mp3",
       "reference":"Keynes, J. M. (1936). *The general theory of employment, interest, and money.* Palgrave Macmillan.",
       "background": "philosophy_classroom.jpg",
-      "guess": true
+      "guess": false
+    },
+    {
+      "type": "agreedisagree",
+      "agreeDisagreeId": 1,
+      "text": "The production of too many useful things results in too many useless people. .",
+      "characterImage": "marx.jpg",
+      "quoteWho" : "Karl Marx",
+      "reflectionTextCorrect": "Congratulations, you agreed with Karl Marx",
+      "reflectionTextIncorrect": "Congratulations, you disagreed with Karl Marx.",
+      "soundEffect": "test.mp3",
+      "reference":"Keynes, J. M. (1936). *The general theory of employment, interest, and money.* Palgrave Macmillan.",
+      "background": "philosophy_classroom.jpg"
     },
     {
       "type": "info",
