@@ -369,7 +369,7 @@
 >
   <div class="quote-content">
     <div class="character-image">
-      <img src="{getAssetPath('character', displayedCharacterImage, $assetPaths)}" alt="Image of {quoteWho}" />
+      <img src="{getAssetPath('character', displayedCharacterImage, $assetPaths)}" alt="Image of character" />
       {#if !hasAnswered || overlayClass}
         <div class="white-overlay {overlayClass}"></div>
       {/if}

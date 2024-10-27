@@ -72,7 +72,7 @@ export function updateSlide(nextId = null) {
   let shouldSaveToHistory = true;
 
   // Check if the current slide is of type 'quotequiz' or has 'noHistory' set to true
-  if (currentSlide.type === 'quotequiz' || currentSlide.noHistory === true) {
+  if (currentSlide.type === 'quotequiz' || currentSlide.type === 'agreedisagree' || currentSlide.noHistory === true) {
     shouldSaveToHistory = false;
   }
 

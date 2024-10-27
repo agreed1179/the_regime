@@ -14,6 +14,7 @@
   import DreamSlide from './slides/DreamSlide.svelte';
   import FlashScreen from './components/FlashScreen.svelte';
   import ScoreSummary from './slides/ScoreSummary.svelte';
+  import AgreeDisagreeSlide from './slides/AgreeDisagreeSlide.svelte';
   import ClickToAdvanceOverlay from './components/ClickToAdvanceOverlay.svelte';
   import ChapterSelector from './components/ChapterSelector.svelte';
 
@@ -63,6 +64,16 @@
   let copiedReference = '';
   let sanitizedCopiedReference = '';
   let showChapterSelector = false;
+
+  // Reactive statement to control back button visibility
+  $: {
+    const currentSlideType = $slides[$currentStage]?.type;
+    if (currentSlideType === 'agreedisagree') {
+      showBackButton.set(false);
+    } else {
+      showBackButton.set(true);
+    }
+  }
 
   // Current Slide Index (1-based)
   $: currentSlideIndex = slideCounts
@@ -298,7 +309,7 @@
     backgroundImage.set('');
     backgroundMusic.set('');
     backgroundVolume.set(1);
-    playerChoices.set([]);
+    playerChoices.set([]); // Reset playerChoices
     // Additional resets if necessary
 
     // Pause and reset background audio
@@ -537,6 +548,19 @@
                 updateSlide={handleDialogueEnd}
                 fadeInTime={$slides[$currentStage].fadeInTime}
                 fadeOutTime={$slides[$currentStage].fadeOutTime}
+              />
+            {:else if $slides[$currentStage]?.type === 'agreedisagree'}
+              <AgreeDisagreeSlide
+                updateSlide={handleDialogueEnd}
+                characterImage={$slides[$currentStage].characterImage}
+                text={$slides[$currentStage].text}
+                quoteWho={$slides[$currentStage].quoteWho}
+                background={$slides[$currentStage].background}
+                soundEffect={$slides[$currentStage].soundEffect}
+                isMuted={isMuted}
+                reflectionTextCorrect={$slides[$currentStage].reflectionTextCorrect}
+                reflectionTextIncorrect={$slides[$currentStage].reflectionTextIncorrect}
+                agreeDisagreeId={$slides[$currentStage].agreeDisagreeId}
               />
             {/if}
           </div>
