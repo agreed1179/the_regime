@@ -32,7 +32,7 @@
 
   // Import utility functions
   import { getAssetPath } from './utils/assetHelper.js';
-  import { loadChapter, updateSlide, goBack, loadNextChapter } from './utils/appLogic.js';
+  import { loadChapter, updateSlide, goBack } from './utils/appLogic.js';
 
   import { playerChoices } from './stores.js'; // Ensure playerChoices is imported
 
