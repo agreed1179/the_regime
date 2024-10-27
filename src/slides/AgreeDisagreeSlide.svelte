@@ -28,6 +28,9 @@
     let showReflection = false; // Whether to show reflection text
     let hasRevealed = false;  // Whether the character image and name have been revealed
   
+    // Overlay class for transition animations
+    let overlayClass = ''; // Class to control overlay transitions
+  
     // Compute the displayed character image path
     $: displayedCharacterImagePath = hasRevealed
       ? characterImagePath
@@ -47,16 +50,28 @@
       if (!hasChosen) {
         hasChosen = true;
         playerChoice = choice;  // 'agree' or 'disagree'
-        hasRevealed = true;     // Reveal the character image and name
+  
+        // Start Phase 1: Fade-in the overlays
+        overlayClass = 'fade-in';
+  
+        // After 0.5s (overlays are fully opaque), swap the image and show the name
+        setTimeout(() => {
+          hasRevealed = true; // Swap to the real character image and reveal the name
+          overlayClass = 'fade-out'; // Start Phase 3: Fade-out the overlays
+        }, 500); // 0.5s for fade-in
+  
+        // Remove overlayClass after fade-out completes
+        setTimeout(() => {
+          overlayClass = ''; // Clean up classes if needed
+          // Show reflection text
+          showReflection = true;
+        }, 1500); // Total of 0.5s fade-in + 1s fade-out
   
         // Record the player's choice in the store
         playerChoices.update(choices => {
           choices.push({ id: agreeDisagreeId, choice: choice });
           return choices;
         });
-  
-        // Show reflection text
-        showReflection = true;
       }
     }
   
@@ -96,6 +111,7 @@
     }
   
     .character-image {
+      position: relative; /* Position relative for overlay */
       flex: 0 0 320px;
       height: 480px;
       padding-right: 40px;
@@ -113,7 +129,30 @@
       margin: auto;
     }
   
+    /* White overlay for character image */
+    .white-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      opacity: 0; /* Start fully transparent */
+      pointer-events: none;
+    }
+  
+    .white-overlay.fade-in {
+      transition: opacity 0.5s linear; /* Fade to opaque over 0.5s */
+      opacity: 1;
+    }
+  
+    .white-overlay.fade-out {
+      transition: opacity 1s linear; /* Fade back to transparent over 1s */
+      opacity: 0;
+    }
+  
     .quote-container {
+      position: relative; /* Position relative for overlay */
       max-width: 500px;
       background: rgba(0, 0, 0, 0.6);
       padding: 20px;
@@ -128,6 +167,10 @@
       font-weight: 300;
     }
   
+    .quote-who-container {
+      position: relative;
+    }
+  
     .quote-who {
       margin-top: 15px;
       text-align: right;
@@ -136,22 +179,47 @@
       color: #fff;
     }
   
+    /* Overlay for quote who */
+    .quote-who-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1.5em; /* Adjust to match the height of .quote-who */
+      background-color: white;
+      opacity: 0; /* Start fully transparent */
+      pointer-events: none;
+    }
+  
+    .quote-who-overlay.fade-in {
+      transition: opacity 0.5s linear; /* Fade to opaque over 0.5s */
+      opacity: 1;
+    }
+  
+    .quote-who-overlay.fade-out {
+      transition: opacity 1s linear; /* Fade back to transparent over 1s */
+      opacity: 0;
+    }
+  
+    /* Larger buttons suitable for video games */
     .choice-buttons {
       display: flex;
-      gap: 20px;
-      margin-top: 20px;
+      gap: 40px; /* Increase gap between buttons */
+      margin-top: 40px; /* Increase margin for better spacing */
     }
   
     .choice-buttons button {
-      padding: 10px 20px;
-      font-size: 1em;
+      padding: 20px 40px; /* Increase padding for larger buttons */
+      font-size: 1.5em; /* Increase font size */
       font-family: 'Fira Sans', sans-serif;
       border: none;
-      border-radius: 5px;
+      border-radius: 10px; /* Increase border radius for rounded corners */
       cursor: pointer;
       transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
     }
   
+    /* Adjust agree button styles */
     .agree-button {
       background-color: #28a745; /* Green */
       color: #fff;
@@ -162,6 +230,7 @@
       transform: scale(1.05);
     }
   
+    /* Adjust disagree button styles */
     .disagree-button {
       background-color: #dc3545; /* Red */
       color: #fff;
@@ -220,6 +289,16 @@
         text-align: center;
         font-size: 1.2em;
       }
+  
+      .choice-buttons {
+        flex-direction: column;
+        gap: 20px;
+      }
+  
+      .choice-buttons button {
+        width: 100%;
+        max-width: 300px;
+      }
     }
   </style>
   
@@ -232,15 +311,19 @@
     <!-- Quote and Character Image -->
     <div class="quote-content">
       <div class="character-image">
-        <img src="{displayedCharacterImagePath}" alt="Image of the character who made the quote" />
+        <img src="{displayedCharacterImagePath}" alt="Image of character" />
+        <div class="white-overlay {overlayClass}"></div>
       </div>
       <div class="quote-container">
         <div class="quote-text">
           {@html sanitizedText}
         </div>
         {#if hasRevealed}
-          <div class="quote-who">
-            - {quoteWho}
+          <div class="quote-who-container">
+            <div class="quote-who">
+              - {quoteWho}
+            </div>
+            <div class="quote-who-overlay {overlayClass}"></div>
           </div>
         {/if}
       </div>
