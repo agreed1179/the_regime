@@ -5,9 +5,9 @@
     "quote": "<p><i>\"It's not really a protest until someone shows up with a sharp glinting pitchfork.\"</i> - Unknown</p>"
   },
   "end": {
-    "heading": "<h1>So what have we learnt today?</h1>",
+    "heading": "<h1>Thank you for playing.</h1>",
     "subheading": "Democracy isn't just the tyranny of the majority, but the rule of true philosophy.",
-    "quote": "<p><em>\"More dialogue, less pitchforks.\"</em></p> \n\n Thank you for playing.",
+    "quote": "<p><em>\"More dialogue, less pitchforks.\"</em></p> \n\n Special thanks to:....",
     "button": {
       "label": "Play again",
       "action": "reload"
