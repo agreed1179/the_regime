@@ -18,11 +18,20 @@ export const currentChapter = writable(0);
 export const backgroundMusic = writable(''); // Initialize as empty
 export const backgroundVolume = writable(0.5); // Default volume set to 50%
 
-// Record player choices
-export const playerChoices = writable([]);
+// Add the showBackButton store to control the visibility of the back button
+export const showBackButton = writable(true);
 
 // Current score
 export const currentScore = writable(0);
+
+// Total number of questions
+export const totalQuestions = writable(0);
+
+// Store for quiz scores by quizId
+export const quizScores = writable({});
+
+// Record player choices
+export const playerChoices = writable([]);
 
 // Export the current choice (for the current question)
 export const currentChoice = writable(null);

@@ -64,44 +64,46 @@ export async function loadChapter(chapterIndex) {
 
 // Function to update the current slide and save history
 export function updateSlide(nextId = null) {
-  if (nextId !== null) {
-    // Navigate directly to the specified nextId
-    currentStage.set(nextId);
-    // Update background
-    const slidesArray = get(slides);
-    if (slidesArray[nextId] && slidesArray[nextId].background) {
-      backgroundImage.set(getAssetPath('background', slidesArray[nextId].background, get(assetPaths)));
+  const slidesArray = get(slides);
+  const currentSlideIndex = get(currentStage);
+  const currentSlide = slidesArray[currentSlideIndex];
+
+  // Determine if the current slide should not be saved to history
+  let shouldSaveToHistory = true;
+
+  // Check if the current slide is of type 'quotequiz' or has 'noHistory' set to true
+  if (currentSlide.type === 'quotequiz' || currentSlide.noHistory === true) {
+    shouldSaveToHistory = false;
+  }
+
+  // Save current stage to history if shouldSaveToHistory is true
+  if (shouldSaveToHistory) {
+    history.update(($history) => {
+      $history.push(currentSlideIndex);
+      return $history;
+    });
+  }
+
+  // Determine the new stage
+  let newStage = nextId !== null ? nextId : currentSlideIndex + 1;
+
+  if (newStage < slidesArray.length) {
+    // Update current stage
+    currentStage.set(newStage);
+
+    // Update background for the new slide
+    const newSlide = slidesArray[newStage];
+    if (newSlide && newSlide.background) {
+      backgroundImage.set(getAssetPath('background', newSlide.background, get(assetPaths)));
     } else {
       backgroundImage.set(''); // Or set to a default background
     }
   } else {
-    // Advance to the next slide sequentially
-    slides.update(($slides) => {
-      const newStage = get(currentStage) + 1;
-      if (newStage < $slides.length) {
-        // Save current stage to history
-        history.update(($history) => {
-          $history.push(get(currentStage));
-          return $history;
-        });
-
-        // Update background for the new slide
-        if ($slides[newStage].background) {
-          backgroundImage.set(getAssetPath('background', $slides[newStage].background, get(assetPaths)));
-        } else {
-          backgroundImage.set(''); // Or set to a default background
-        }
-
-        // Update current stage
-        currentStage.set(newStage);
-      } else {
-        console.warn('Reached the end of slides.');
-        // Optional: Handle end of slides, e.g., show an end screen or loop back
-      }
-      return $slides;
-    });
+    console.warn('Reached the end of slides.');
+    // Optional: Handle end of slides, e.g., show an end screen or loop back
   }
 }
+
 
 // Function to go back to the previous slide
 export function goBack() {
@@ -109,7 +111,7 @@ export function goBack() {
     if ($history.length > 0) {
       const previousStage = $history.pop();
       currentStage.set(previousStage); // Go back to the previous slide in history
-      
+
       // Update background
       const slidesArray = get(slides);
       if (slidesArray[previousStage] && slidesArray[previousStage].background) {
@@ -117,6 +119,9 @@ export function goBack() {
       } else {
         backgroundImage.set(''); // Or set to a default background
       }
+    } else {
+      console.warn('No more history to go back to.');
+      // Optionally, handle if there's no history left
     }
     return $history;
   });

@@ -1,14 +1,16 @@
 <!-- src/slides/QuoteQuizSlide.svelte -->
 <script>
   import { fade } from 'svelte/transition';
-  import { onMount } from 'svelte';
+  import { onMount, onDestroy } from 'svelte';
   import { getAssetPath } from '../utils/assetHelper.js';
   import {
     assetPaths,
     currentScore,
     currentChoice,
     playSound,
-    hideReference
+    hideReference,
+    showBackButton, 
+    totalQuestions
   } from '../stores.js';
   import { marked } from 'marked';
   import DOMPurify from 'dompurify';
@@ -108,9 +110,16 @@
   }
 
   onMount(() => {
-    hideReference.set(true); // Hide the reference when the component mounts
-    playSound(soundEffectPath, isMuted); // Full volume on mount
+    hideReference.set(true);
+    playSound(soundEffectPath, isMuted);
+    showBackButton.set(false);
+    totalQuestions.update(n => n + 1); // Increment totalQuestions when the slide mounts
   });
+
+  onDestroy(() => {
+    showBackButton.set(true); // Show the back button when this component is destroyed
+  });
+
 </script>
 
 <style>

@@ -9,6 +9,7 @@
   import QuoteQuizSlide from './slides/QuoteQuizSlide.svelte';
   import DreamSlide from './slides/DreamSlide.svelte';
   import FlashScreen from './components/FlashScreen.svelte';
+  import ScoreSummary from './slides/ScoreSummary.svelte';
   import ClickToAdvanceOverlay from './components/ClickToAdvanceOverlay.svelte';
   import { marked } from 'marked';
   import DOMPurify from 'dompurify';
@@ -24,7 +25,9 @@
     backgroundMusic, 
     backgroundVolume, 
     hideReference,
+    showBackButton,
     assetPaths 
+  
   } from './stores.js';
 
   // Import utility functions
@@ -328,7 +331,6 @@
                 updateSlide={handleDialogueEnd}
                 soundEffect={$slides[$currentStage]?.soundEffect}
                 isMuted={isMuted}
-                clickToAdvance={$slides[$currentStage]?.clickToAdvance}
                 background={$slides[$currentStage].background}
               />
             {:else if $slides[$currentStage]?.type === 'quote'}
@@ -357,6 +359,14 @@
                 reflectionTextCorrect={$slides[$currentStage].reflectionTextCorrect}
                 reflectionTextIncorrect={$slides[$currentStage].reflectionTextIncorrect}
               />
+            {:else if $slides[$currentStage]?.type === 'scoresummary'}
+                <ScoreSummary 
+                updateSlide={handleDialogueEnd} 
+                quizId={$slides[$currentStage].quizId}
+                background={$slides[$currentStage].background}
+                soundEffect={$slides[$currentStage].soundEffect}
+                reference={$slides[$currentStage].reference}
+              />
             {:else if $slides[$currentStage]?.type === 'dream'}
               <DreamSlide
                 text={$slides[$currentStage].text}
@@ -372,7 +382,7 @@
       {/if}
 
       <!-- Back Button -->
-      {#if $history.length > 0}
+      {#if $history.length > 0 && $showBackButton}
         <button on:click={goBack} class="back-button" aria-label="Go Back">
           Back
         </button>
