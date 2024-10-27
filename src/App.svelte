@@ -15,6 +15,7 @@
   import FlashScreen from './components/FlashScreen.svelte';
   import ScoreSummary from './slides/ScoreSummary.svelte';
   import ClickToAdvanceOverlay from './components/ClickToAdvanceOverlay.svelte';
+  import ChapterSelector from './components/ChapterSelector.svelte';
 
   // Import stores
   import { 
@@ -50,6 +51,10 @@
   let totalSlides = 0;
   let totalChapters = 3;
   
+  // Holding chapter data for navigation
+  let allChapters = [];
+  let chaptersData = [];
+
   // State variable to indicate the game has ended
   let gameEnded = false;
   
@@ -57,6 +62,7 @@
   let showBanner = false;
   let copiedReference = '';
   let sanitizedCopiedReference = '';
+  let showChapterSelector = false;
 
   // Current Slide Index (1-based)
   $: currentSlideIndex = slideCounts
@@ -87,33 +93,43 @@
   }
 
 
-  // Function to fetch all chapters and count slides
+  // Function to fetch all chapters and count slides (and construct data for chapter navigation button)
   async function fetchAllChapters() {
-    const counts = [];
-    let i = 0;
-    const maxChapters = 100; // Set a maximum limit
+    totalChapters = 0;
+    slideCounts = [];
+    cumulativeSlideCounts = [0];
+    totalSlides = 0;
+    allChapters = [];
+    chaptersData = [];
 
-    while (i < maxChapters) {
+    while (true) {
       try {
-        const response = await fetch(`chapter${i}.json`);
+        const response = await fetch(`chapter${totalChapters}.json`);
         if (response.ok) {
           const chapterData = await response.json();
-          const slides = chapterData.slides || [];
-          counts.push(slides.length);
-          i++;
+          allChapters.push(chapterData);
+
+          const slideCount = chapterData.slides.length;
+          slideCounts.push(slideCount);
+          totalSlides += slideCount;
+          cumulativeSlideCounts.push(totalSlides);
+
+          const chapterTitle = chapterData.title || `Chapter ${totalChapters + 1}`;
+          chaptersData.push({
+            index: totalChapters,
+            title: chapterTitle,
+            slideCount: slideCount,
+          });
+
+          totalChapters++;
         } else {
-          console.log(`chapter${i}.json not found.`);
-          break; // Exit the loop if the file is not found
+          break;
         }
       } catch (error) {
-        console.error(`Error fetching chapter${i}.json:`, error);
-        break; // Exit the loop on error
+        console.error(`Error fetching chapter${totalChapters}.json:`, error);
+        break;
       }
     }
-
-    slideCounts = counts;
-    totalSlides = slideCounts.reduce((a, b) => a + b, 0);
-    totalChapters = counts.length; // Update totalChapters dynamically
   }
   
   onMount(() => {
@@ -195,23 +211,26 @@
     currentChapter.set(0); // Start with Chapter 0
     await loadChapter(0); // Load Chapter 0
     currentStage.set(0); // Initialize currentStage
+    slides.set(allChapters[$currentChapter].slides); //set initial slide of a chapter
   }
 
   // Function to load the next chapter
-  async function loadNextChapter() {
-    const newChapter = $currentChapter + 1;
+  function loadNextChapter() {
+    if ($currentChapter < totalChapters - 1) {
+      currentChapter.update(n => n + 1);
+      currentStage.set(0);
 
-    if (newChapter < totalChapters) {
-      const success = await loadChapter(newChapter);
-      if (success) {
-        currentChapter.set(newChapter);
-        currentStage.set(0); // Reset currentStage
-      } else {
-        console.log('No more chapters available.');
-        gameEnded = true;
-      }
+      // Update slides and other settings
+      slides.set(allChapters[$currentChapter].slides);
+      backgroundMusic.set(allChapters[$currentChapter].music || '');
+      backgroundVolume.set(allChapters[$currentChapter].volume || 1);
+
+      // Reset other states if necessary
+      backgroundImage.set('');
+      playerChoices.set([]);
+      history.set([]);
     } else {
-      console.log('No more chapters available.');
+      // Handle game end if needed
       gameEnded = true;
     }
   }
@@ -251,7 +270,12 @@
   $: if (backgroundAudio) {
     backgroundAudio.volume = $backgroundVolume;
   }
-  
+
+  // Allow user to navigate around by selecting chapters
+  function openChapterSelector() {
+    showChapterSelector = true;
+  }
+
   // Function to advance to the next slide
   function handleDialogueEnd(nextId = null) {
     if (nextId !== null) {
@@ -347,6 +371,30 @@
     }
   }
 
+  // handle user click action on chapter navigation
+  function handleChapterSelection(event) {
+    const { chapterIndex } = event.detail;
+
+    // Update current chapter and stage
+    currentChapter.set(chapterIndex);
+    currentStage.set(0);
+
+    // Update slides
+    slides.set(allChapters[chapterIndex].slides);
+
+    // Update background music and other settings
+    backgroundMusic.set(allChapters[chapterIndex].music || '');
+    backgroundVolume.set(allChapters[chapterIndex].volume || 1);
+
+    // Reset other states if necessary
+    backgroundImage.set('');
+    playerChoices.set([]);
+    history.set([]);
+
+    // Close the chapter selector
+    showChapterSelector = false;
+  }
+
   /**
    * Handles the click event on the reference section.
    * Copies the reference to the clipboard if available.
@@ -385,10 +433,11 @@
     on:proceed={startGame} 
     on:startLoading={preloadAssets}
   />
-{:else if currentSlideIndex > totalSlides}
+  {:else if gameEnded}
   <!-- Ending screen using FlashScreen component -->
   <FlashScreen screenType="end" on:proceed={restartGame} />
 {:else}
+
   <!-- Existing game content -->
   <div class="meeting-room">
     <!-- Background Audio Element -->
@@ -406,6 +455,14 @@
     ></audio>
     
     <div class="screen" style="background-image: url('{$backgroundImage}');">
+      {#if showChapterSelector}
+  <ChapterSelector 
+    chapters={chaptersData} 
+    on:close={() => showChapterSelector = false}
+    on:selectChapter={handleChapterSelection}
+  />
+{/if}
+
       {#if $slides.length > 0}
         <!-- Slide content transition -->
         {#key $currentStage}
@@ -527,14 +584,22 @@
         </div>
       </div>
 
-      <!-- Mute/Unmute Button -->
-      <button on:click={toggleMute} class="mute-button" aria-label={isMuted ? 'Unmute Music' : 'Mute Music'}>
-        {#if isMuted}
-          Unmute 🔊
-        {:else}
-          Mute 🔇
-        {/if}
-      </button>
+        <!-- Controls Container -->
+        <div class="controls">
+          <!-- Chapter Selection Button -->
+          <button on:click={openChapterSelector} class="chapter-button" aria-label="Select Chapter">
+            Chapters 📖
+          </button>
+
+          <!-- Mute/Unmute Button -->
+          <button on:click={toggleMute} class="mute-button" aria-label={isMuted ? 'Unmute Music' : 'Mute Music'}>
+            {#if isMuted}
+              Unmute 🔊
+            {:else}
+              Mute 🔇
+            {/if}
+          </button>
+        </div>
 
       <!-- Reference Section -->
       {#if $slides[$currentStage]?.reference && !$hideReference}

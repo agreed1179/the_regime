@@ -206,17 +206,52 @@ button:disabled {
   background-color: #e0a800;
 }
 
-/* Mute Button */
-.mute-button {
+/* Controls Container */
+.controls {
   position: absolute;
   bottom: 20px;
   right: 20px;
-  background-color: #6c757d;
+  display: flex;
+  gap: 10px;
+  z-index: 999; /* Ensure the controls are on top */
+}
+
+/* Mute Button */
+.mute-button {
+  background-color: #6c757d; /* Gray */
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .mute-button:hover {
-  background-color: #5a6268;
+  background-color: #5a6268; /* Darker Gray */
+  transform: scale(1.05);
 }
+
+/* Chapter Selection Button */
+.chapter-button {
+  background-color: #007bff; /* Blue */
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.chapter-button:hover {
+  background-color: #0056b3; /* Darker Blue */
+  transform: scale(1.05);
+}
+
 
 /* 10. Progress Bar Styles */
 /* Progress Bar and Counters */
@@ -384,8 +419,6 @@ button:disabled {
   font-weight: 700; /* Bold */
 }
 
-/* Optional: Adjust other styles as needed */
-
 
 /* 11. Responsive Design */
 
@@ -408,3 +441,4 @@ button:disabled {
     height: 15px;
   }
 }
+

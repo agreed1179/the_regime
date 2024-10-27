@@ -6,8 +6,8 @@
   },
   "end": {
     "heading": "<h1>Thank you for playing.</h1>",
-    "subheading": "Democracy isn't just the tyranny of the majority, but the rule of true philosophy. \n\n Special thanks to ......",
-    "quote": "<p><em>\"More dialogue, less pitchforks.\"</em></p> \n\n Thank you for playing.",
+    "subheading": "Democracy isn't just the tyranny of the majority, but the rule of true philosophy.",
+    "quote": "<p><em>\"More dialogue, less pitchforks.\"</em></p> \n\n Special thanks to:....",
     "button": {
       "label": "Play again",
       "action": "reload"
