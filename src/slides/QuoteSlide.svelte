@@ -8,73 +8,74 @@
   import DOMPurify from 'dompurify';
   import ClickToAdvanceOverlay from '../components/ClickToAdvanceOverlay.svelte';
 
-  export let characterImage = ''; // Path to character image
-  export let text = '';           // The quote to display (Markdown supported)
-  export let reflectionText = ''; // Self-reflection text
-  export let quoteWho = '';       // The person who made the quote
-  export let background = '';     // Background image path
-  export let soundEffect = '';    // (Optional) Sound effect path
-  export let isMuted = false;     // Mute state
-  export let updateSlide;         // Function to advance the slide
-  export let guess = false;       // Prop to control the guess functionality
+  export let characterImage = '';
+  export let text = '';
+  export let reflectionText = '';
+  export let quoteWho = '';
+  export let background = '';
+  export let soundEffect = '';
+  export let isMuted = false;
+  export let updateSlide;
+  export let guess = false;
 
-  // Reactive variables to compute asset paths
   $: characterImagePath = getAssetPath('character', characterImage, $assetPaths);
   $: backgroundPath = getAssetPath('background', background, $assetPaths);
   $: soundEffectPath = getAssetPath('sound', soundEffect, $assetPaths);
 
-  // Initialize `hasRevealed` based on `guess`
   let hasRevealed = !guess;
 
-  // Compute the displayed character image path
   $: displayedCharacterImagePath = (guess && !hasRevealed)
     ? getAssetPath('character', 'unknown_character.png', $assetPaths)
     : characterImagePath;
 
-  // Parsed and sanitized HTML from Markdown
   $: sanitizedText = text
     ? DOMPurify.sanitize(marked.parse(text))
     : '';
 
-  // Parsed and sanitized HTML for reflectionText
   $: sanitizedReflectionText = reflectionText
     ? DOMPurify.sanitize(marked.parse(reflectionText))
     : '';
 
-  let showReflection = false; // State to manage reflection box visibility
+  $: sanitizedQuoteWho = quoteWho
+    ? DOMPurify.sanitize(marked.parseInline(quoteWho))
+    : '';
 
-  let overlayClass = ''; // Class to control overlay transitions
+  let showReflection = false;
+
+  let overlayClass = '';
 
   function handleClick(event) {
     if (guess && !hasRevealed) {
-      // Start Phase 1: Fade-in the overlays
       overlayClass = 'fade-in';
 
-      // After 0.5s (overlays are fully opaque), swap the image and show the name
       setTimeout(() => {
-        hasRevealed = true; // Swap to the real character image and reveal the name
-        overlayClass = 'fade-out'; // Start Phase 3: Fade-out the overlays
-      }, 500); // 0.5s for fade-in
+        hasRevealed = true;
+        overlayClass = 'fade-out';
+      }, 1000);
 
-      // Remove overlayClass after fade-out completes
       setTimeout(() => {
-        overlayClass = ''; // Clean up classes if needed
-      }, 1500); // Total of 0.5s fade-in + 1s fade-out
+        overlayClass = '';
+      }, 2000);
+
+      return;
     } else if (!showReflection) {
       if (reflectionText === "") {
-        updateSlide(); // Advance to next slide if reflection text is empty
+        updateSlide();
         return;
       }
-      // Show the reflection text
       showReflection = true;
     } else {
-      // Advance to the next slide
       updateSlide();
     }
   }
 
   onMount(() => {
     playSound(soundEffectPath, isMuted);
+
+    if (guess) {
+      const img = new Image();
+      img.src = characterImagePath;
+    }
   });
 </script>
 
@@ -94,6 +95,13 @@
 
   .quote-slide.show-reflection {
     justify-content: flex-end;
+  }
+
+  /* Content Wrapper */
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .quote-content {
@@ -137,18 +145,16 @@
     width: 100%;
     height: 100%;
     background-color: white;
-    opacity: 0; /* Start fully transparent */
+    opacity: 0;
     pointer-events: none;
   }
 
   .white-overlay.fade-in {
-    transition: opacity 0.5s linear; /* Fade to opaque over 0.5s */
-    opacity: 1;
+    animation: fadeIn 1s linear forwards;
   }
 
   .white-overlay.fade-out {
-    transition: opacity 1s linear; /* Fade back to transparent over 1s */
-    opacity: 0;
+    animation: fadeOut 1s linear forwards;
   }
 
   .quote-container {
@@ -157,6 +163,7 @@
     padding: 20px;
     border-radius: 10px;
     color: #fff;
+    box-sizing: border-box;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     line-height: 1.5;
     transition: transform 0.5s ease;
@@ -175,31 +182,29 @@
   .quote-who {
     margin-top: 15px;
     text-align: right;
-    font-size: 1.2em;
-    font-weight: bold;
+    /* Removed font-weight to allow Markdown styling */
+    /* font-weight: bold; */
     color: #fff;
   }
 
-  /* White overlay for quote-who */
+  /* Adjustments for .quote-who-overlay */
   .quote-who-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 1.5em; /* Adjust to match the height of .quote-who */
+    height: 1.5em;
     background-color: white;
-    opacity: 0; /* Start fully transparent */
+    opacity: 0;
     pointer-events: none;
   }
 
   .quote-who-overlay.fade-in {
-    transition: opacity 0.5s linear; /* Fade to opaque over 0.5s */
-    opacity: 1;
+    animation: fadeIn 1s linear forwards;
   }
 
   .quote-who-overlay.fade-out {
-    transition: opacity 1s linear; /* Fade back to transparent over 1s */
-    opacity: 0;
+    animation: fadeOut 1s linear forwards;
   }
 
   /* Reflection Box Styling */
@@ -221,10 +226,58 @@
     transition: opacity 0.5s ease, transform 0.5s ease;
   }
 
+
+
+  /* Banner Styling */
+  .banner {
+    position: relative; /* Part of normal flow */
+    width: 100%; /* Stretch across the slide */
+    margin-bottom: 20px; /* Space below the banner */
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-size: 1.5em;
+    /* Remove font-weight if you don't want bold text */
+    text-align: center;
+    z-index: 100;
+    animation: fadeInDown 0.5s ease-out;
+  }
+
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
   @keyframes fadeInUp {
     from {
       opacity: 0;
       transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
     }
     to {
       opacity: 1;
@@ -266,6 +319,11 @@
       font-size: 1em;
       padding: 15px;
     }
+
+    .banner {
+      font-size: 1.2em;
+      padding: 10px 20px;
+    }
   }
 </style>
 
@@ -275,37 +333,44 @@
   out:fade={{ duration: 500 }}
   style="background-image: url('{backgroundPath}'); background-size: cover; background-position: center;"
 >
-  <div class="quote-content">
-    <div class="character-image">
-      <img src="{displayedCharacterImagePath}" alt="Image of {quoteWho}" />
-      {#if guess}
-        <div class="white-overlay {overlayClass}"></div>
-      {/if}
-    </div>
-    <div class="quote-container">
-      <div class="quote-text">
-        {@html sanitizedText}
+  <div class="content-wrapper">
+    <!-- Banner text -->
+    {#if guess && !hasRevealed}
+      <div class="banner">
+        Who do you think said this?
       </div>
-      <div class="quote-who-container">
-        {#if hasRevealed || !guess}
-          <div class="quote-who">
-            - {quoteWho}
-          </div>
+    {/if}
+
+    <div class="quote-content">
+      <div class="character-image">
+        <img src="{displayedCharacterImagePath}" alt="Image of {quoteWho}" />
+        {#if guess && (!hasRevealed || overlayClass !== '')}
+          <div class="white-overlay {overlayClass}"></div>
         {/if}
-        {#if guess}
-          <div class="quote-who-overlay {overlayClass}"></div>
-        {/if}
+      </div>
+      <div class="quote-container">
+        <div class="quote-text">
+          {@html sanitizedText}
+        </div>
+        <div class="quote-who-container">
+          {#if hasRevealed || !guess}
+            <div class="quote-who">
+              {@html sanitizedQuoteWho}
+            </div>
+          {/if}
+          {#if guess && (!hasRevealed || overlayClass !== '')}
+            <div class="quote-who-overlay {overlayClass}"></div>
+          {/if}
+        </div>
       </div>
     </div>
   </div>
 
   {#if showReflection}
-    <!-- Reflection Box -->
     <div class="reflection-box">
       {@html sanitizedReflectionText}
     </div>
   {/if}
 
-  <!-- Click-to-Advance Overlay -->
   <ClickToAdvanceOverlay onAdvance={handleClick} />
 </div>
