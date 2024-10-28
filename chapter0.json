@@ -5,14 +5,22 @@
   "slides": [
     {
       "type": "info",
-      "text": "# 0. Prelude \n\n Filmmaking is the perhaps most potent form of storytelling. At its core, it’s the art of evoking emotions, drawing the audience into a world crafted by light, sound, and narrative. \n\n Filmmakers are, in many ways, engineers of emotion – masterfully guiding the audience through dramatic conflict, manipulating feelings to create lasting impact beyond the final frame of the film.\n\nFilmmakers often rely on the universality of human emotions to guide their creative decisions, trusting that these emotional experiences resonate across the boundaries of subjectivity. Very often, the only measure which informs the filmmaker as to the impact of a captivating scene or a line of provocative dialogue is our own reaction. We test our work against ourselves, hoping that what moves or stirs us will do the same for the audience – and through which the emotions we carefully engineer will be replicated in its exactness as intended. \n\n \n\n <p style=\"text-align: right\"> Click anywhere to continue... </p>",
+      "text": "Films are powerful. \n\n They immerse the audience into a world of dreams and imagination beyond the reach of ordinary life.  \n\n With a tapestry of sights and sounds, the moving images ypass the reptilian brain and communicates directly with the human soul, and influences us far beyond the final frame in the reel. \n\n These influences ripple outward, becoming a powerful force in society, subtly shaping how we think, feel, and perceive the world around us. Through film, emotions and ideas transcend the boundaries of subjectivity, contributing to a shared cultural narrative that shape much of what we experience in everyday life. \n\n <p style=\"text-align: right\"> Click anywhere to continue... </p>",
       "soundEffect": "test.mp3",
       "reference":"Bordwell, D., & Thompson, K. (2010). *Film Art: An Introduction (10th ed.).* McGraw-Hill.",
       "background": "philosophy_classroom.jpg"
     },
     {
       "type": "info",
-      "text": "**Yet, therein lies a trap.**  \n\n While emotions are essential to the final product, the process itself demands rationality. Filmmakers, passionate by nature, tend to lean on gut feelings—what feels right. As we become increasingly reliant on decision making driven by reference to our own internal feelings, we fall into the false sense of security that our feelings are inherently correct. Too often, feelings cloud our thinking as we mistake our emotional alignment for reason and logic, contaminating our decision making and rendering us incapable of complex judgement which is exactly what is needed to make a good film. \n\n Emotion-driven decisions in filmmaking may resonate on screen, but they often cloud rational judgment and preventing complex, reasoned decision making. We see this time and again in the creative industries, where people bicker over feelings rather than putting forward a well-articulated proposition with clear reasoning.  ",
+      "text": "At its core, filmmaking is the art of evoking emotions. \n\n Filmmakers are in many ways engineers of emotions, manipulating how audiences feel from moment to moment as they’re captivated by the story unfolding in front of them. \n\n In crafting the light, sound, and narrative that give rise to these emotions, very often the only reliable gauge indicating the success of a gripping scene or a line of provocative dialogue, is our own internal reaction.  \n\n We test our work against ourselves, hoping that that what moves or stirs us will do the same for the audience – and through which the emotions we carefully engineer will be replicated in its exactness as intended. This forms much of the foundation of our craft as filmmakers, trusting that the law of the universality of human emotions to apply across the boundaries of time, space, culture and language, replicating in their exactness from individual to individual. \n\n *It’s what make films the most powerful form of storytelling.*   ",
+      "soundEffect": "test.mp3",
+      "reference":"Bourdieu, Pierre. *Distinction: A Social Critique of the Judgement of Taste*. Harvard University Press, 1984. ",
+      "background": "philosophy_classroom.jpg",
+      "transition": "fade_short"
+    },
+    {
+      "type": "info",
+      "text": "Yet, therein lies a trap. \n\n While emotions are essential to the final product, the filmmaking process itself depends on the applications of reason and logic. \n\n Filmmakers, passionate by nature, tend to lean on what feels right not just in their creative work, but in business decisions which demand reason and logic. After all, we’re fond of relying on our own internal reactions to test the merits of creative work; the “killer taste” that we develop in our careers as we master our craft. \n\n However, as we become increasingly reliant on decision making driven by reference to our own internal feelings, we fall into the false sense of security that our feelings are inherently correct in not just matters of artistry, but outside it as well. Too often, feelings cloud our thinking as we mistake our emotional alignment for reason and logic, contaminating our decision making and rendering us incapable of complex judgement which is exactly what is needed to make a good film. \n\n We see this time and again in the creative industries, where people bicker over feelings rather than putting forward a well-articulated proposition with clear reasoning. Projects stall and films go unfinished. Teams break up before they even begin doing anything productive. The very fact that it takes on average almost **7 years** to make a film is revelatory in itself.",
       "soundEffect": "test.mp3",
       "reference":"Lerner, J. S., Li, Y., Valdesolo, P., & Kassam, K. S. (2015). Emotion and decision making. *Annual Review of Psychology*, 66, 799–823. ",
       "background": "philosophy_classroom.jpg",
@@ -20,7 +28,7 @@
     },
     {
       "type": "info",
-      "text": "In *The Regime*, I challenge these misconceptions, some of which had already become deep rooted norms especially in creative institutions. \n\n \"But what is the use of this?\" You might ask. \n\n Well...",
+      "text": "Feelings can turn dark very quickly. \n\n Unchecked by reason, our artistic taste can quickly become heralds of prejudice and injury. \n\n Or, in its extreme form, systemic discrimination leading to the tragic attempts eradicating marginalised groups – the human tragedies that we witness from time to time in history. \n\n You might think that it’s far-fetched to make that claim, but the fundamental logical errors are the same.",
       "soundEffect": "test.mp3",
       "reference":"Lerner, J. S., Li, Y., Valdesolo, P., & Kassam, K. S. (2015). Emotion and decision making. *Annual Review of Psychology*, 66, 799–823. ",
       "background": "philosophy_classroom.jpg",
@@ -28,321 +36,21 @@
     },
     {
       "type": "quote",
-      "text": "Practical men, who believe themselves to be quite exempt from any intellectual influences, are usually the slaves of some *defunct economist*.",
-      "characterImage": "plato.jpg",
-      "quoteWho" : "John Maynard Keynes",
-      "reflectionText" : "Keynes may have a point, but where do these *defunct economists* get their ideas from?",
+      "text": "We have carried out this most difficult task out of love for our people, not out of any base motives.",
+      "characterImage": "heinrich_himmler_child.jpg",
+      "quoteWho" : " <h2>- Henrich Himmler</h2> Chief Architect of the Holocaust, <br> Leader of the SS, <br> and Head of the Gestapo",
       "soundEffect": "test.mp3",
-      "reference":"Keynes, J. M. (1936). *The general theory of employment, interest, and money.* Palgrave Macmillan.",
+      "reference":"Trials of War Criminals before the Nuremberg Military Tribunals under Control Council Law No. 10. (1950). *United States v. Oswald Pohl et al. (“The Pohl Case”)*, Vol. 5. U.S. Government Printing Office",
       "background": "philosophy_classroom.jpg",
-      "guess": false
-    },
-    {
-      "type": "agreedisagree",
-      "agreeDisagreeId": 1,
-      "text": "The production of too many useful things results in too many useless people. .",
-      "characterImage": "marx.jpg",
-      "quoteWho" : "Karl Marx",
-      "reflectionTextCorrect": "Congratulations, you agreed with Karl Marx",
-      "reflectionTextIncorrect": "Congratulations, you disagreed with Karl Marx.",
-      "soundEffect": "test.mp3",
-      "reference":"Keynes, J. M. (1936). *The general theory of employment, interest, and money.* Palgrave Macmillan.",
-      "background": "philosophy_classroom.jpg"
+      "guess": true
     },
     {
       "type": "info",
-      "text": "In fact, I'd go another step and say that we're usually slaves of some defunct *philosophers*. \n\n Some are not even philosophers, but figures of populism. \n\n Very often, we're under the influence of something we intuitively feel to be true, but haven't thorougly investigated what they meant in the context of their origins. \n\n Feelings can be deceiving. </p>",
+      "text": "If what Himmler said was true, and if we believe that the law of the universality of human emotions to hold true, then Himmler would’ve felt the same love we feel as he orchestrated the murder of 14 million people. \n\n This psychology is perhaps best captured in the work of the Russian crime novelist, Fyodor Dostoevsky, in his work *Crime and Punishment*, where a murder was rationalised by precisely that of love. \n\n The only defence that we have, is reason and intellect. \n\n Fortunately, much work has already been done for us by thinkers of history. We merely need to attune ourselves to the results of their intellectual labour, in order to build that mental muscle which shields ourselves from the terrible mistakes that would seem to us to be righteous. \n\n This is precisely what I seek to accomplish in *The Regime*. Let’s get started. \n\n ",
       "soundEffect": "test.mp3",
+      "reference":"Dostoyevsky, F. (1993). *Crime and Punishment* (R. Pevear & L. Volokhonsky, Trans.). Vintage Classics. (Original work published 1866)",
       "background": "philosophy_classroom.jpg",
       "transition": "fade_short"
-    },
-    {
-      "type": "dream",
-      "text": "Let's play a game. \n\n<br/> Guess who said these quotes...",
-      "soundEffect" : "test.mp3",
-      "noHistory" : "true",
-      "fadeInTime" : 1800,
-      "fadeOutTime" : 2000
-    },
-    {
-      "type": "quotequiz",
-      "characterImage": "unknown_character.png",
-      "text": "The only limit to our realization of tomorrow is our doubts of today.",
-      "quoteWho": "",
-      "correctAnswer": "Franklin D. Roosevelt",
-      "reference":"Keynes, J. M. (1936). *The general theory of employment, interest, and money.* Palgrave Macmillan.",
-      "choices": [
-        {
-          "name": "Franklin D. Roosevelt",
-          "characterImage": "kant.jpg"
-        },
-        {
-          "name": "Albert Einstein",
-          "characterImage": "plato.jpg"
-        },
-        {
-          "name": "Winston Churchill",
-          "characterImage": "trump.webp"
-        },
-        {
-          "name": "Abraham Lincoln",
-          "characterImage": "protestor_1.png"
-        }
-      ],
-      "background": "cave_background.jpg",
-      "soundEffect": "test.mp3",
-      "reflectionTextCorrect": "🎉 **Great job!** You selected the correct answer.",
-      "reflectionTextIncorrect": "❌ **Oops!** That's not correct. The right answer is *Franklin D. Roosevelt*."
-    },
-    {
-      "type": "quotequiz",
-      "characterImage": "unknown_character.png",
-      "text": "The only limit to our realization of tomorrow is our doubts of today.",
-      "quoteWho": "",
-      "correctAnswer": "Franklin D. Roosevelt",
-      "reference":"Keynes, J. M. (1936). *The general theory of employment, interest, and money.* Palgrave Macmillan.",
-      "choices": [
-        {
-          "name": "Franklin D. Roosevelt",
-          "characterImage": "kant.jpg"
-        },
-        {
-          "name": "Albert Einstein",
-          "characterImage": "plato.jpg"
-        },
-        {
-          "name": "Winston Churchill",
-          "characterImage": "trump.webp"
-        },
-        {
-          "name": "Abraham Lincoln",
-          "characterImage": "protestor_1.png"
-        }
-      ],
-      "background": "cave_background.jpg",
-      "soundEffect": "test.mp3",
-      "reflectionTextCorrect": "🎉 **Great job!** You selected the correct answer.",
-      "reflectionTextIncorrect": "❌ **Oops!** That's not correct. The right answer is *Franklin D. Roosevelt*."
-    },
-    {
-      "type": "quotequiz",
-      "characterImage": "unknown_character.png",
-      "text": "The only limit to our realization of tomorrow is our doubts of today.",
-      "quoteWho": "",
-      "correctAnswer": "Franklin D. Roosevelt",
-      "reference":"Keynes, J. M. (1936). *The general theory of employment, interest, and money.* Palgrave Macmillan.",
-      "choices": [
-        {
-          "name": "Franklin D. Roosevelt",
-          "characterImage": "kant.jpg"
-        },
-        {
-          "name": "Albert Einstein",
-          "characterImage": "plato.jpg"
-        },
-        {
-          "name": "Winston Churchill",
-          "characterImage": "trump.webp"
-        },
-        {
-          "name": "Abraham Lincoln",
-          "characterImage": "protestor_1.png"
-        }
-      ],
-      "background": "cave_background.jpg",
-      "soundEffect": "test.mp3",
-      "reflectionTextCorrect": "🎉 **Great job!** You selected the correct answer.",
-      "reflectionTextIncorrect": "❌ **Oops!** That's not correct. The right answer is *Franklin D. Roosevelt*."
-    },
-    {
-      "type": "quotequiz",
-      "characterImage": "unknown_character.png",
-      "text": "The only limit to our realization of tomorrow is our doubts of today.",
-      "quoteWho": "",
-      "correctAnswer": "Franklin D. Roosevelt",
-      "reference":"Keynes, J. M. (1936). *The general theory of employment, interest, and money.* Palgrave Macmillan.",
-      "choices": [
-        {
-          "name": "Franklin D. Roosevelt",
-          "characterImage": "kant.jpg"
-        },
-        {
-          "name": "Albert Einstein",
-          "characterImage": "plato.jpg"
-        },
-        {
-          "name": "Winston Churchill",
-          "characterImage": "trump.webp"
-        },
-        {
-          "name": "Abraham Lincoln",
-          "characterImage": "protestor_1.png"
-        }
-      ],
-      "background": "cave_background.jpg",
-      "soundEffect": "test.mp3",
-      "reflectionTextCorrect": "🎉 **Great job!** You selected the correct answer.",
-      "reflectionTextIncorrect": "❌ **Oops!** That's not correct. The right answer is *Franklin D. Roosevelt*."
-    },
-    {
-      "type": "dream",
-      "text": "Brace yourselves, things are about to get serious... \n\n<br/> (Trigger warning: serious political themes.)",
-      "soundEffect" : "test.mp3",
-      "noHistory" : true,
-      "fadeInTime" : 1800,
-      "fadeOutTime" : 2000
-    },
-    {
-      "type": "quotequiz",
-      "characterImage": "unknown_character.png",
-      "text": "The only limit to our realization of tomorrow is our doubts of today.",
-      "quoteWho": "",
-      "correctAnswer": "Franklin D. Roosevelt",
-      "reference":"Keynes, J. M. (1936). *The general theory of employment, interest, and money.* Palgrave Macmillan.",
-      "choices": [
-        {
-          "name": "Franklin D. Roosevelt",
-          "characterImage": "kant.jpg"
-        },
-        {
-          "name": "Albert Einstein",
-          "characterImage": "plato.jpg"
-        },
-        {
-          "name": "Winston Churchill",
-          "characterImage": "trump.webp"
-        },
-        {
-          "name": "Abraham Lincoln",
-          "characterImage": "protestor_1.png"
-        }
-      ],
-      "background": "cave_background.jpg",
-      "soundEffect": "test.mp3",
-      "reflectionTextCorrect": "🎉 **Great job!** You selected the correct answer.",
-      "reflectionTextIncorrect": "❌ **Oops!** That's not correct. The right answer is *Franklin D. Roosevelt*."
-    },
-    {
-      "type": "scoresummary",
-      "quizId" : 1,
-      "background": "cave_background.jpg",
-      "soundEffect": "test.mp3",
-      "reference" : "DeGroot, M. H., & Schervish, M. J. (2012). *Probability and statistics* (4th ed.). Pearson."
-    },
-    {
-      "type": "dialogue",
-      "dialogueText": "But I would say, that we’re all slaves to some philosophers, defunct or not…",
-      "background": "debate_room.jpg",
-      "soundEffect": "test.mp3"
-    },
-    {
-      "type": "dialogue",
-      "characters": [
-        {
-          "speaker": "Protestor",
-          "imageType": "large",
-          "imageSrc": "protestor_1.png",
-          "position": "upper-left",
-          "transition": {
-            "type": "fade",
-            "duration": 500
-          },
-          "imgborder": true
-        },
-        {
-          "speaker": "Protestor",
-          "imageType": "medium",
-          "imageSrc": "protestor_1.png",
-          "position": "upper-middle",
-          "transition": {
-            "type": "fade",
-            "duration": 500
-          },
-          "imgborder": false
-        },
-        {
-          "speaker": "Protestor",
-          "imageType": "small",
-          "imageSrc": "protestor_1.png",
-          "position": "upper-right",
-          "transition": {
-            "type": "fade",
-            "duration": 500
-          },
-          "imgborder": true
-        },
-        {
-          "speaker": "Protestor",
-          "imageType": "medium",
-          "imageSrc": "protestor_1.png",
-          "position": "middle-left",
-          "transition": {
-            "type": "fade",
-            "duration": 500
-          },
-          "imgborder": false
-        },
-        {
-          "speaker": "Protestor",
-          "imageType": "large",
-          "imageSrc": "protestor_1.png",
-          "position": "middle-middle",
-          "transition": {
-            "type": "fade",
-            "duration": 500
-          },
-          "imgborder": true
-        },
-        {
-          "speaker": "Protestor",
-          "imageType": "small",
-          "imageSrc": "protestor_1.png",
-          "position": "middle-right",
-          "transition": {
-            "type": "fade",
-            "duration": 500
-          },
-          "imgborder": false
-        },
-        {
-          "speaker": "Protestor",
-          "imageType": "medium",
-          "imageSrc": "protestor_1.png",
-          "position": "lower-left",
-          "transition": {
-            "type": "fade",
-            "duration": 500
-          },
-          "imgborder": true
-        },
-        {
-          "speaker": "Protestor",
-          "imageType": "small",
-          "imageSrc": "protestor_1.png",
-          "position": "lower-middle",
-          "transition": {
-            "type": "fade",
-            "duration": 500
-          },
-          "imgborder": false
-        },
-        {
-          "speaker": "Protestor",
-          "imageType": "large",
-          "imageSrc": "protestor_1.png",
-          "position": "lower-right",
-          "transition": {
-            "type": "fade",
-            "duration": 500
-          },
-          "imgborder": true
-        }
-      ],
-      "dialogueText": "How often have you seen this?",
-      "background": "debate_room.jpg",
-      "reference":"Bordwell, D., & Thompson, K. (2010). *Film Art: An Introduction (10th ed.).* McGraw-Hill.",
-      "soundEffect": "test.mp3",
-      "nextId": 5
     }
   ]
 }

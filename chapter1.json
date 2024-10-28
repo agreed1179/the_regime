@@ -1,7 +1,344 @@
 {
+  "title": "02. Things are not what they seem",
   "music": "chapter1.mp3",
   "volume": 0.4,
   "slides": [
+    {
+      "type": "quote",
+      "text": "Practical men, who believe themselves to be quite exempt from any intellectual influences, are usually the slaves of some *defunct economist*.",
+      "characterImage": "plato.jpg",
+      "quoteWho" : "John Maynard Keynes",
+      "reflectionText" : "Keynes may have a point, but where do these *defunct economists* get their ideas from?",
+      "soundEffect": "test.mp3",
+      "reference":"Keynes, J. M. (1936). *The general theory of employment, interest, and money.* Palgrave Macmillan.",
+      "background": "philosophy_classroom.jpg",
+      "guess": false
+    },
+    {
+      "type": "info",
+      "text": "In fact, I'd go another step and say that we're usually slaves of some defunct *philosophers*. \n\n Some are not even philosophers, but figures of populism. \n\n Very often, we're under the influence of something we intuitively feel to be true, but haven't thorougly investigated what they meant in the context of their origins. \n\n Feelings can be deceiving - especially ones without the backing of careful reasoning. </p>",
+      "soundEffect": "test.mp3",
+      "background": "philosophy_classroom.jpg",
+      "transition": "fade_short"
+    },
+    {
+      "type": "quote",
+      "text": "The professional intellectuals are, in effect, the field agents of the army whose head or commander in chief is the philosopher. \n\n And professional intellectuals are all those whose professions deal with the humanities, the studies of man as against the physical sciences. \n\n The professional intellectuals ... carry to the rest of the culture, the rest of society, the philosophical premises, the ideas which have been defined by the philosopher. \n\n They are the ones who determine the goals, the values, and the direction of a culture. ",
+      "characterImage": "ayn_rand.jpg",
+      "quoteWho" : "Ayn Rand",
+      "reflectionText" : "Keynes may have a point, but where do these *defunct economists* get their ideas from?",
+      "soundEffect": "test.mp3",
+      "reference":"Ayn Rand Institute. (2015). James McConnell Interviews Ayn Rand About the New Intellectual. *In YouTube*. https://www.youtube.com/watch?v=IeaAC832gG4",
+      "background": "philosophy_classroom.jpg",
+      "guess": false
+    },
+    {
+      "type": "info",
+      "text": "The real question is, which general are you fighting for? </p>",
+      "soundEffect": "test.mp3",
+      "background": "philosophy_classroom.jpg",
+      "transition": "fade_short"
+    },
+    {
+      "type": "agreedisagree",
+      "agreeDisagreeId": 1,
+      "text": "The production of too many useful things results in too many useless people. .",
+      "characterImage": "marx.jpg",
+      "quoteWho" : "Karl Marx",
+      "reflectionTextCorrect": "Congratulations, you agreed with Karl Marx",
+      "reflectionTextIncorrect": "Congratulations, you disagreed with Karl Marx.",
+      "soundEffect": "test.mp3",
+      "reference":"Keynes, J. M. (1936). *The general theory of employment, interest, and money.* Palgrave Macmillan.",
+      "background": "philosophy_classroom.jpg"
+    },
+    {
+      "type": "dream",
+      "text": "Let's play a game. \n\n<br/> Guess who said these quotes...",
+      "soundEffect" : "test.mp3",
+      "noHistory" : "true",
+      "fadeInTime" : 1800,
+      "fadeOutTime" : 2000
+    },
+    {
+      "type": "quotequiz",
+      "characterImage": "unknown_character.png",
+      "text": "The only limit to our realization of tomorrow is our doubts of today.",
+      "quoteWho": "",
+      "correctAnswer": "Franklin D. Roosevelt",
+      "reference":"Keynes, J. M. (1936). *The general theory of employment, interest, and money.* Palgrave Macmillan.",
+      "choices": [
+        {
+          "name": "Franklin D. Roosevelt",
+          "characterImage": "kant.jpg"
+        },
+        {
+          "name": "Albert Einstein",
+          "characterImage": "plato.jpg"
+        },
+        {
+          "name": "Winston Churchill",
+          "characterImage": "trump.webp"
+        },
+        {
+          "name": "Abraham Lincoln",
+          "characterImage": "protestor_1.png"
+        }
+      ],
+      "background": "cave_background.jpg",
+      "soundEffect": "test.mp3",
+      "reflectionTextCorrect": "🎉 **Great job!** You selected the correct answer.",
+      "reflectionTextIncorrect": "❌ **Oops!** That's not correct. The right answer is *Franklin D. Roosevelt*."
+    },
+    {
+      "type": "quotequiz",
+      "characterImage": "unknown_character.png",
+      "text": "The only limit to our realization of tomorrow is our doubts of today.",
+      "quoteWho": "",
+      "correctAnswer": "Franklin D. Roosevelt",
+      "reference":"Keynes, J. M. (1936). *The general theory of employment, interest, and money.* Palgrave Macmillan.",
+      "choices": [
+        {
+          "name": "Franklin D. Roosevelt",
+          "characterImage": "kant.jpg"
+        },
+        {
+          "name": "Albert Einstein",
+          "characterImage": "plato.jpg"
+        },
+        {
+          "name": "Winston Churchill",
+          "characterImage": "trump.webp"
+        },
+        {
+          "name": "Abraham Lincoln",
+          "characterImage": "protestor_1.png"
+        }
+      ],
+      "background": "cave_background.jpg",
+      "soundEffect": "test.mp3",
+      "reflectionTextCorrect": "🎉 **Great job!** You selected the correct answer.",
+      "reflectionTextIncorrect": "❌ **Oops!** That's not correct. The right answer is *Franklin D. Roosevelt*."
+    },
+    {
+      "type": "quotequiz",
+      "characterImage": "unknown_character.png",
+      "text": "The only limit to our realization of tomorrow is our doubts of today.",
+      "quoteWho": "",
+      "correctAnswer": "Franklin D. Roosevelt",
+      "reference":"Keynes, J. M. (1936). *The general theory of employment, interest, and money.* Palgrave Macmillan.",
+      "choices": [
+        {
+          "name": "Franklin D. Roosevelt",
+          "characterImage": "kant.jpg"
+        },
+        {
+          "name": "Albert Einstein",
+          "characterImage": "plato.jpg"
+        },
+        {
+          "name": "Winston Churchill",
+          "characterImage": "trump.webp"
+        },
+        {
+          "name": "Abraham Lincoln",
+          "characterImage": "protestor_1.png"
+        }
+      ],
+      "background": "cave_background.jpg",
+      "soundEffect": "test.mp3",
+      "reflectionTextCorrect": "🎉 **Great job!** You selected the correct answer.",
+      "reflectionTextIncorrect": "❌ **Oops!** That's not correct. The right answer is *Franklin D. Roosevelt*."
+    },
+    {
+      "type": "quotequiz",
+      "characterImage": "unknown_character.png",
+      "text": "The only limit to our realization of tomorrow is our doubts of today.",
+      "quoteWho": "",
+      "correctAnswer": "Franklin D. Roosevelt",
+      "reference":"Keynes, J. M. (1936). *The general theory of employment, interest, and money.* Palgrave Macmillan.",
+      "choices": [
+        {
+          "name": "Franklin D. Roosevelt",
+          "characterImage": "kant.jpg"
+        },
+        {
+          "name": "Albert Einstein",
+          "characterImage": "plato.jpg"
+        },
+        {
+          "name": "Winston Churchill",
+          "characterImage": "trump.webp"
+        },
+        {
+          "name": "Abraham Lincoln",
+          "characterImage": "protestor_1.png"
+        }
+      ],
+      "background": "cave_background.jpg",
+      "soundEffect": "test.mp3",
+      "reflectionTextCorrect": "🎉 **Great job!** You selected the correct answer.",
+      "reflectionTextIncorrect": "❌ **Oops!** That's not correct. The right answer is *Franklin D. Roosevelt*."
+    },
+    {
+      "type": "dream",
+      "text": "Brace yourselves, things are about to get serious... \n\n<br/> (Trigger warning: serious political themes.)",
+      "soundEffect" : "test.mp3",
+      "noHistory" : true,
+      "fadeInTime" : 1800,
+      "fadeOutTime" : 2000
+    },
+    {
+      "type": "quotequiz",
+      "characterImage": "unknown_character.png",
+      "text": "The only limit to our realization of tomorrow is our doubts of today.",
+      "quoteWho": "",
+      "correctAnswer": "Franklin D. Roosevelt",
+      "reference":"Keynes, J. M. (1936). *The general theory of employment, interest, and money.* Palgrave Macmillan.",
+      "choices": [
+        {
+          "name": "Franklin D. Roosevelt",
+          "characterImage": "kant.jpg"
+        },
+        {
+          "name": "Albert Einstein",
+          "characterImage": "plato.jpg"
+        },
+        {
+          "name": "Winston Churchill",
+          "characterImage": "trump.webp"
+        },
+        {
+          "name": "Abraham Lincoln",
+          "characterImage": "protestor_1.png"
+        }
+      ],
+      "background": "cave_background.jpg",
+      "soundEffect": "test.mp3",
+      "reflectionTextCorrect": "🎉 **Great job!** You selected the correct answer.",
+      "reflectionTextIncorrect": "❌ **Oops!** That's not correct. The right answer is *Franklin D. Roosevelt*."
+    },
+    {
+      "type": "scoresummary",
+      "quizId" : 1,
+      "background": "cave_background.jpg",
+      "soundEffect": "test.mp3",
+      "reference" : "DeGroot, M. H., & Schervish, M. J. (2012). *Probability and statistics* (4th ed.). Pearson."
+    },
+    {
+      "type": "dialogue",
+      "dialogueText": "But I would say, that we’re all slaves to some philosophers, defunct or not…",
+      "background": "debate_room.jpg",
+      "soundEffect": "test.mp3"
+    },
+    {
+      "type": "dialogue",
+      "characters": [
+        {
+          "speaker": "Protestor",
+          "imageType": "large",
+          "imageSrc": "protestor_1.png",
+          "position": "upper-left",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          },
+          "imgborder": true
+        },
+        {
+          "speaker": "Protestor",
+          "imageType": "medium",
+          "imageSrc": "protestor_1.png",
+          "position": "upper-middle",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          },
+          "imgborder": false
+        },
+        {
+          "speaker": "Protestor",
+          "imageType": "small",
+          "imageSrc": "protestor_1.png",
+          "position": "upper-right",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          },
+          "imgborder": true
+        },
+        {
+          "speaker": "Protestor",
+          "imageType": "medium",
+          "imageSrc": "protestor_1.png",
+          "position": "middle-left",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          },
+          "imgborder": false
+        },
+        {
+          "speaker": "Protestor",
+          "imageType": "large",
+          "imageSrc": "protestor_1.png",
+          "position": "middle-middle",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          },
+          "imgborder": true
+        },
+        {
+          "speaker": "Protestor",
+          "imageType": "small",
+          "imageSrc": "protestor_1.png",
+          "position": "middle-right",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          },
+          "imgborder": false
+        },
+        {
+          "speaker": "Protestor",
+          "imageType": "medium",
+          "imageSrc": "protestor_1.png",
+          "position": "lower-left",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          },
+          "imgborder": true
+        },
+        {
+          "speaker": "Protestor",
+          "imageType": "small",
+          "imageSrc": "protestor_1.png",
+          "position": "lower-middle",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          },
+          "imgborder": false
+        },
+        {
+          "speaker": "Protestor",
+          "imageType": "large",
+          "imageSrc": "protestor_1.png",
+          "position": "lower-right",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          },
+          "imgborder": true
+        }
+      ],
+      "dialogueText": "How often have you seen this?",
+      "background": "debate_room.jpg",
+      "reference":"Bordwell, D., & Thompson, K. (2010). *Film Art: An Introduction (10th ed.).* McGraw-Hill.",
+      "soundEffect": "test.mp3",
+      "nextId": 5
+    },
     {
       "id": 0,
       "type": "info",
