@@ -4,11 +4,18 @@
   "volume": 0.4,
   "slides": [
     {
+      "type": "info",
+      "text": "# 01. Philosophical Influences \n\n Filmmakers influence each other creatively; “creative influences” is what we love to talk about. It’s how we communicate, and it’s how we shape our artistic identities. \n\n But we all function while influenced by a different force: Philosophers. \n\n Philosophers shape our worldview in very subtle ways. When we talk about things like *justice*, *fairness*, *truth* or *ethics*, we're often echoing ideas rooted in the works of a long line of thinkers who’s name most people probably won’t even recognise. \n\n From the way we frame ethical decisions to our assumptions about success, happiness, and human potential, to how we strategise and execute a project, philosophers are everywhere. \n\n Their intellectual legacy forms an unseen foundation for our understanding of the world and ourselves. \n\n And we are not alone. Some of the greatest minds of history acknowledged this fact… ",
+      "soundEffect": "test.mp3",
+      "background": "philosophy_classroom.jpg",
+      "transition": "fade_long"
+    },
+    {
       "type": "quote",
       "text": "Practical men, who believe themselves to be quite exempt from any intellectual influences, are usually the slaves of some *defunct economist*.",
       "characterImage": "plato.jpg",
       "quoteWho" : "John Maynard Keynes",
-      "reflectionText" : "Keynes may have a point, but where do these *defunct economists* get their ideas from?",
+      "reflectionText" : "Keynes may have a point, but where do these *defunct economists* get their ideas from? \n\n ... Probably from philosophers ...",
       "soundEffect": "test.mp3",
       "reference":"Keynes, J. M. (1936). *The general theory of employment, interest, and money.* Palgrave Macmillan.",
       "background": "philosophy_classroom.jpg",
