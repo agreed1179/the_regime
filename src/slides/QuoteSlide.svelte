@@ -3,7 +3,7 @@
   import { fade } from 'svelte/transition';
   import { onMount } from 'svelte';
   import { getAssetPath } from '../utils/assetHelper.js';
-  import { assetPaths, playSound } from '../stores.js';
+  import { assetPaths, playSound, hideReference } from '../stores.js';
   import { marked } from 'marked';
   import DOMPurify from 'dompurify';
   import ClickToAdvanceOverlay from '../components/ClickToAdvanceOverlay.svelte';
@@ -46,6 +46,7 @@
 
   function handleClick(event) {
     if (guess && !hasRevealed) {
+      hideReference.set(true); // **Hide the reference while guessing**
       overlayClass = 'fade-in';
 
       setTimeout(() => {
@@ -54,6 +55,7 @@
       }, 1000);
 
       setTimeout(() => {
+        hideReference.set(false); // **reveal reference**
         overlayClass = '';
       }, 2000);
 
@@ -73,6 +75,7 @@
     playSound(soundEffectPath, isMuted);
 
     if (guess) {
+      hideReference.set(true); // **Hide the reference while guessing**
       const img = new Image();
       img.src = characterImagePath;
     }

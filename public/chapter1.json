@@ -8,14 +8,15 @@
       "text": "# 01. Philosophical Influences \n\n Filmmakers influence each other creatively; “creative influences” is what we love to talk about. It’s how we communicate, and it’s how we shape our artistic identities. \n\n But we all function while influenced by a different force: Philosophers. \n\n Philosophers shape our worldview in very subtle ways. When we talk about things like *justice*, *fairness*, *truth* or *ethics*, we're often echoing ideas rooted in the works of a long line of thinkers who’s name most people probably won’t even recognise. \n\n From the way we frame ethical decisions to our assumptions about success, happiness, and human potential, to how we strategise and execute a project, philosophers are everywhere. \n\n Their intellectual legacy forms an unseen foundation for our understanding of the world and ourselves. \n\n And we are not alone. Some of the greatest minds of history acknowledged this fact… ",
       "soundEffect": "test.mp3",
       "background": "philosophy_classroom.jpg",
+      "reference":"Litch, M. (2010). *Philosophy through film*. Routledge.",
       "transition": "fade_long"
     },
     {
       "type": "quote",
       "text": "Practical men, who believe themselves to be quite exempt from any intellectual influences, are usually the slaves of some *defunct economist*.",
-      "characterImage": "plato.jpg",
+      "characterImage": "keynes.jpg",
       "quoteWho" : "John Maynard Keynes",
-      "reflectionText" : "Keynes may have a point, but where do these *defunct economists* get their ideas from? \n\n ... Probably from philosophers ...",
+      "reflectionText" : "Keynes may have a point, but where do these *defunct economists* get their ideas from? \n\n",
       "soundEffect": "test.mp3",
       "reference":"Keynes, J. M. (1936). *The general theory of employment, interest, and money.* Palgrave Macmillan.",
       "background": "philosophy_classroom.jpg",
@@ -23,17 +24,16 @@
     },
     {
       "type": "info",
-      "text": "In fact, I'd go another step and say that we're usually slaves of some defunct *philosophers*. \n\n Some are not even philosophers, but figures of populism. \n\n Very often, we're under the influence of something we intuitively feel to be true, but haven't thorougly investigated what they meant in the context of their origins. \n\n Feelings can be deceiving - especially ones without the backing of careful reasoning. </p>",
+      "text": "In fact, I'd go another step and say that we're usually slaves of some *philosophers*, defunct or not. \n\n Some are not even philosophers, but figures of populism. \n\n Very often, we're under the influence of something we intuitively feel to be true, but haven't thoroughly investigated what they meant in the context of their origins. \n\n As we will soon see, feelings can be deceiving - especially ones without the backing of careful reasoning. \n\n For example…",
       "soundEffect": "test.mp3",
       "background": "philosophy_classroom.jpg",
       "transition": "fade_short"
     },
     {
       "type": "quote",
-      "text": "The professional intellectuals are, in effect, the field agents of the army whose head or commander in chief is the philosopher. \n\n And professional intellectuals are all those whose professions deal with the humanities, the studies of man as against the physical sciences. \n\n The professional intellectuals ... carry to the rest of the culture, the rest of society, the philosophical premises, the ideas which have been defined by the philosopher. \n\n They are the ones who determine the goals, the values, and the direction of a culture. ",
+      "text": "The professional intellectuals are, in effect, the field agents of the army whose head or commander in chief is the philosopher. \n\n The professional intellectuals ... carry to the rest of the culture, the rest of society, the philosophical premises, the ideas which have been defined by the philosopher. ",
       "characterImage": "ayn_rand.jpg",
       "quoteWho" : "Ayn Rand",
-      "reflectionText" : "Keynes may have a point, but where do these *defunct economists* get their ideas from?",
       "soundEffect": "test.mp3",
       "reference":"Ayn Rand Institute. (2015). James McConnell Interviews Ayn Rand About the New Intellectual. *In YouTube*. https://www.youtube.com/watch?v=IeaAC832gG4",
       "background": "philosophy_classroom.jpg",
@@ -60,7 +60,7 @@
     },
     {
       "type": "dream",
-      "text": "Let's play a game. \n\n<br/> Guess who said these quotes...",
+      "text": "Let's play a game. \n\n<br/> Guess who said these quotes... (INCOMPLETE - questions not working)",
       "soundEffect" : "test.mp3",
       "noHistory" : "true",
       "fadeInTime" : 1800,

@@ -2,7 +2,7 @@
     import { fade } from 'svelte/transition';
     import { onMount } from 'svelte';
     import { getAssetPath } from '../utils/assetHelper.js';
-    import { assetPaths, playSound, playerChoices } from '../stores.js';
+    import { assetPaths, playSound, playerChoices, hideReference } from '../stores.js';
     import { marked } from 'marked';
     import DOMPurify from 'dompurify';
     import ClickToAdvanceOverlay from '../components/ClickToAdvanceOverlay.svelte';
@@ -48,6 +48,7 @@
   
     function handleChoice(choice) {
       if (!hasChosen) {
+        hideReference.set(true); // **Hide the reference while guessing**
         hasChosen = true;
         playerChoice = choice;  // 'agree' or 'disagree'
   
@@ -58,6 +59,7 @@
         setTimeout(() => {
           hasRevealed = true; // Swap to the real character image and reveal the name
           overlayClass = 'fade-out'; // Start Phase 3: Fade-out the overlays
+          hideReference.set(false); // **Hide the reference while guessing**
         }, 500); // 0.5s for fade-in
   
         // Remove overlayClass after fade-out completes
@@ -83,6 +85,7 @@
     }
   
     onMount(() => {
+      hideReference.set(true); // **Hide the reference while guessing**
       playSound(soundEffectPath, isMuted);
     });
   </script>
