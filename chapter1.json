@@ -41,7 +41,94 @@
     },
     {
       "type": "info",
-      "text": "The real question is, which general are you fighting for? </p>",
+      "text": "Indeed, whether we're conscious or not, the philosophers of the past have already a deep seated influence on us.",
+      "soundEffect": "test.mp3",
+      "background": "philosophy_classroom.jpg",
+      "transition": "fade_short"
+    },
+    {
+      "type": "quotemulti",
+      "characterImage": "plato.jpg",
+      "quoteWho" : "Plato (427—347 B.C.E.)",
+      "reflectionText": "...Some of these philosophical \"generals\" are benign... \n\n Others, not so much.",
+      "quotes": [
+        {
+          "text": "With great power comes great responsibility"
+        },
+        {
+          "text": "Good actions give strength to ourselves and inspire good actions in others"
+        },
+        {
+          "text": "Necessity is the mother of invention"
+        },
+        {
+          "text": "The measure of a man is what he does with power"
+        },
+        {
+          "text": "Ignorance, the root and stem of every evil"
+        },
+        {
+          "text": "A good decision is based on knowledge, not on numbers"
+        },
+        {
+          "text": "Justice means minding your own business and not meddling with other men's concerns"
+        },
+        {
+          "text": "Dictatorship naturally arises out of democracy"
+        },
+        {
+          "text": "Those who tell the stories rule society"
+        }
+      ],
+      "soundEffect": "test.mp3",
+      "background": "philosophy_classroom.jpg",
+      "reference":"Image source: Lapham's Quarterly, https://www.laphamsquarterly.org/contributors/plato",
+      "transition": "fade_short",
+      "guess": false
+    },
+    {
+      "type": "quotemulti",
+      "characterImage": "plato.jpg",
+      "quoteWho" : "Plato (427—347 B.C.E.)",
+      "reflectionText": "...Some of these philosophical \"generals\" are benign... \n\n Others, not so much.",
+      "quotes": [
+        {
+          "text": "With great power comes great responsibility"
+        },
+        {
+          "text": "Good actions give strength to ourselves and inspire good actions in others"
+        },
+        {
+          "text": "Necessity is the mother of invention"
+        },
+        {
+          "text": "The measure of a man is what he does with power"
+        },
+        {
+          "text": "Ignorance, the root and stem of every evil"
+        },
+        {
+          "text": "A good decision is based on knowledge, not on numbers"
+        },
+        {
+          "text": "Justice means minding your own business and not meddling with other men's concerns"
+        },
+        {
+          "text": "Dictatorship naturally arises out of democracy"
+        },
+        {
+          "text": "Those who tell the stories rule society"
+        }
+      ],
+      "soundEffect": "test.mp3",
+      "background": "philosophy_classroom.jpg",
+      "reference":"Image source: Lapham's Quarterly, https://www.laphamsquarterly.org/contributors/plato",
+      "transition": "fade_short",
+      "guess": false
+    },
+    {
+      "type": "info",
+      "text": "The real question is, which general are you fighting for? \n\n Some of these philosophical \"generals\" are benign. Others not so much.  ",
       "soundEffect": "test.mp3",
       "background": "philosophy_classroom.jpg",
       "transition": "fade_short"
