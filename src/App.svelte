@@ -10,6 +10,7 @@
   import ChoicesSlide from './slides/ChoicesSlide.svelte';
   import InfoSlide from './slides/InfoSlide.svelte';
   import QuoteSlide from './slides/QuoteSlide.svelte';
+  import QuoteMultiSlide from './slides/QuoteMultiSlide.svelte';
   import QuoteQuizSlide from './slides/QuoteQuizSlide.svelte';
   import DreamSlide from './slides/DreamSlide.svelte';
   import FlashScreen from './components/FlashScreen.svelte';
@@ -517,6 +518,18 @@
                 reflectionText={$slides[$currentStage].reflectionText}
                 isMuted={isMuted}
                 guess={$slides[$currentStage].guess}
+              />
+            {:else if $slides[$currentStage]?.type === 'quotemulti'}
+              <QuoteMultiSlide
+                characterImage={$slides[$currentStage].characterImage}
+                quoteWho={$slides[$currentStage].quoteWho}
+                quotes={$slides[$currentStage].quotes}
+                background={$slides[$currentStage].background}
+                soundEffect={$slides[$currentStage].soundEffect}
+                isMuted={isMuted}
+                updateSlide={handleDialogueEnd}
+                guess={$slides[$currentStage].guess}
+                reflectionText={$slides[$currentStage].reflectionText}
               />
             {:else if $slides[$currentStage]?.type === 'quotequiz'}
               <QuoteQuizSlide
