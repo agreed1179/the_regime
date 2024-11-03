@@ -35,10 +35,13 @@
     let chatInterval;
     let currentChatIndex = 0;
   
-    // Variables for click-and-drag scrolling
+    // Variables for click-and-drag scrolling with momentum
     let isDragging = false;
     let startY;
     let scrollTopAtStart;
+    let positions = []; // Store positions and timestamps
+    let velocity = 0; // Initial scroll velocity
+    let momentumID; // ID for requestAnimationFrame
   
     function handleScroll() {
       if (!hasScrolled && chatContainer.scrollTop > 0) {
@@ -53,34 +56,90 @@
       }
     }
   
-    // Event handlers for click-and-drag scrolling
+    // Event handlers for click-and-drag scrolling with momentum
     function handleMouseDown(event) {
       isDragging = true;
       startY = event.clientY;
       scrollTopAtStart = chatContainer.scrollTop;
+      positions = [{ time: Date.now(), y: event.clientY }];
       chatContainer.classList.add('grabbing'); // Change cursor
       event.preventDefault(); // Prevent text selection
+  
+      // Stop any ongoing momentum scrolling
+      if (momentumID) {
+        cancelAnimationFrame(momentumID);
+      }
     }
   
     function handleMouseMove(event) {
       if (isDragging) {
         const deltaY = startY - event.clientY;
         chatContainer.scrollTop = scrollTopAtStart + deltaY;
+  
+        // Record the position and time
+        positions.push({ time: Date.now(), y: event.clientY });
+  
+        // Keep only the last 5 positions to calculate velocity
+        if (positions.length > 5) {
+          positions.shift();
+        }
       }
     }
   
     function handleMouseUp() {
-      isDragging = false;
-      chatContainer.classList.remove('grabbing'); // Reset cursor
+      if (isDragging) {
+        isDragging = false;
+        chatContainer.classList.remove('grabbing'); // Reset cursor
+  
+        // Calculate velocity
+        if (positions.length >= 2) {
+          const lastPosition = positions[positions.length - 1];
+          const secondLastPosition = positions[positions.length - 2];
+  
+          const deltaY = lastPosition.y - secondLastPosition.y;
+          const deltaTime = lastPosition.time - secondLastPosition.time;
+  
+          velocity = deltaY / deltaTime; // pixels per millisecond
+          // Invert velocity to match scroll direction
+          velocity = -velocity;
+  
+          // Start momentum scrolling if velocity is significant
+          if (Math.abs(velocity) > 0.1) {
+            momentumScroll();
+          }
+        }
+  
+        positions = []; // Reset positions
+      }
     }
   
     function handleMouseLeave() {
-      isDragging = false;
-      chatContainer.classList.remove('grabbing'); // Reset cursor
+      if (isDragging) {
+        handleMouseUp();
+      }
+    }
+  
+    function momentumScroll() {
+      if (Math.abs(velocity) > 0.1) {
+        chatContainer.scrollTop += velocity * 16; // Assuming 60fps, 16ms per frame
+        velocity *= 0.95; // Apply friction to slow down
+  
+        // Prevent scrolling beyond the content
+        if (
+          chatContainer.scrollTop < 0 ||
+          chatContainer.scrollTop > chatContainer.scrollHeight - chatContainer.clientHeight
+        ) {
+          velocity = 0;
+        }
+  
+        momentumID = requestAnimationFrame(momentumScroll);
+      } else {
+        cancelAnimationFrame(momentumID);
+      }
     }
   
     onMount(async () => {
-        await asyncPlaySound(soundEffectPath, isMuted); // async playSound function to accommodate async function in onMount
+      await asyncPlaySound(soundEffectPath, isMuted); // async playSound function to accommodate async function in onMount
   
       // Add event listener for click outside
       document.addEventListener('click', handleClickOutside);
@@ -124,6 +183,10 @@
       document.removeEventListener('click', handleClickOutside);
       // Clean up the interval
       clearInterval(chatInterval);
+      // Cancel any ongoing momentum scrolling
+      if (momentumID) {
+        cancelAnimationFrame(momentumID);
+      }
     });
   </script>
   
