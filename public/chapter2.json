@@ -122,6 +122,14 @@
     "background": "philosophy_classroom.jpg",
     "reference":"On the Common Saying: \"That May Be Correct in Theory, But Is of No Use in Practice\" (1793) by Immanuel Kant..",
     "transition": "fade_long"
+  },
+  {
+    "type": "info",
+    "text": "asfd",
+    "soundEffect": "test.mp3",
+    "background": "philosophy_classroom.jpg",
+    "reference":"as cited.",
+    "transition": "fade_long"
   }
 ]
 }

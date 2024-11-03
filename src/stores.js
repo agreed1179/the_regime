@@ -74,6 +74,30 @@ export function playSound(soundPath, isMuted, volume = 0.5) {
   }
 }
 
+export async function asyncPlaySound(soundPath, isMuted, volume = 0.5) {
+  if (soundPath && !isMuted) {
+    let previousAudio;
+    currentAudio.subscribe(audio => {
+      previousAudio = audio;
+    })();
+
+    if (previousAudio) {
+      await previousAudio.pause();
+      previousAudio.currentTime = 0;
+    }
+
+    const audio = new Audio(soundPath);
+    audio.volume = volume;
+
+    try {
+      await audio.play();
+      currentAudio.set(audio);
+    } catch (error) {
+      console.error('Sound effect playback failed:', error);
+    }
+  }
+}
+
 /**
  * Stop the currently playing sound.
  */

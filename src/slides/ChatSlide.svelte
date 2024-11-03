@@ -2,7 +2,7 @@
 <script>
     import { onMount, onDestroy, tick } from 'svelte';
     import { getAssetPath } from '../utils/assetHelper.js';
-    import { assetPaths, playSound } from '../stores.js';
+    import { assetPaths, asyncPlaySound } from '../stores.js';
     import { marked } from 'marked';
     import DOMPurify from 'dompurify';
     import ClickToAdvanceOverlay from '../components/ClickToAdvanceOverlay.svelte';
@@ -80,7 +80,7 @@
     }
   
     onMount(async () => {
-      playSound(soundEffectPath, isMuted);
+        await asyncPlaySound(soundEffectPath, isMuted); // async playSound function to accommodate async function in onMount
   
       // Add event listener for click outside
       document.addEventListener('click', handleClickOutside);
@@ -104,16 +104,18 @@
           }
         } else {
           clearInterval(chatInterval);
-          // Scroll to top after all messages are displayed
+          // Smoothly scroll to top after all messages are displayed
           setTimeout(() => {
             if (chatContainer) {
-              chatContainer.scrollTop = 0;
+              chatContainer.scrollTo({ top: 0, behavior: 'smooth' });
               // Check if scroll is needed after messages are rendered
-              if (chatContainer.scrollHeight > chatContainer.clientHeight) {
-                showScrollTip = true;
-              }
+              setTimeout(() => {
+                if (chatContainer.scrollHeight > chatContainer.clientHeight) {
+                  showScrollTip = true;
+                }
+              }, 500); // Delay to ensure smooth scroll completes
             }
-          }, 100); // small delay to ensure messages are rendered
+          }, 100); // Small delay to ensure messages are rendered
         }
       }, 200); // Adjust the interval as needed (e.g., 200ms between messages)
     });
@@ -154,14 +156,15 @@
   
     /* Chat Header */
     .chat-header {
-      height: 60px;
+      height: 50px; /* Reduced from 60px */
       background-color: #075e54;
       color: white;
       display: flex;
       align-items: center;
+      justify-content: center; /* Center align */
       padding: 0 15px;
-      font-size: 1.2em;
-      font-weight: bold;
+      font-size: 1.1em; /* Reduced font size */
+      /* Removed font-weight: bold; */
       flex-shrink: 0;
     }
   
@@ -278,7 +281,7 @@
   
     /* Message Input Bar */
     .message-input-bar {
-      height: 60px;
+      height: 50px; /* Reduced from 60px */
       background-color: #ffffff;
       border-top: 1px solid #cccccc;
       display: flex;
@@ -289,7 +292,7 @@
   
     .message-input-bar .input-placeholder {
       color: #999999;
-      font-size: 1em;
+      font-size: 0.9em; /* Reduced font size */
     }
   
     .reflection-box {
