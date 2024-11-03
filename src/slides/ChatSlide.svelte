@@ -5,7 +5,6 @@
     import { assetPaths, asyncPlaySound } from '../stores.js';
     import { marked } from 'marked';
     import DOMPurify from 'dompurify';
-    import ClickToAdvanceOverlay from '../components/ClickToAdvanceOverlay.svelte';
     import { fade } from 'svelte/transition';
   
     export let chats = []; // Array of chat messages
@@ -28,6 +27,9 @@
   
     let showScrollTip = false;
     let chatContainer;
+    let chatHeader; // Reference to the chat header
+    let messageInputBar; // Reference to the message input bar
+    let bannerMessage; // Reference to the banner message
     let hasScrolled = false;
   
     // Variables for animation
@@ -43,6 +45,9 @@
     let velocity = 0; // Initial scroll velocity
     let momentumID; // ID for requestAnimationFrame
   
+    // Variable to control the display of the banner message
+    let showBannerMessage = false;
+  
     function handleScroll() {
       if (!hasScrolled && chatContainer.scrollTop > 0) {
         hasScrolled = true;
@@ -51,7 +56,12 @@
     }
   
     function handleClickOutside(event) {
-      if (!chatContainer.contains(event.target)) {
+      if (
+        !chatContainer.contains(event.target) &&
+        !chatHeader.contains(event.target) &&
+        !messageInputBar.contains(event.target) &&
+        !(bannerMessage && bannerMessage.contains(event.target))
+      ) {
         updateSlide();
       }
     }
@@ -136,6 +146,11 @@
       } else {
         cancelAnimationFrame(momentumID);
       }
+    }
+  
+    // Handle click on the message input bar
+    function handleMessageInputClick() {
+      showBannerMessage = true;
     }
   
     onMount(async () => {
@@ -229,6 +244,7 @@
       font-size: 1.1em; /* Reduced font size */
       /* Removed font-weight: bold; */
       flex-shrink: 0;
+      z-index: 1000;
     }
   
     .chat-messages {
@@ -240,7 +256,7 @@
       position: relative;
       cursor: grab;
       user-select: none;
-  
+
       /* Custom scrollbar styling */
       scrollbar-width: thin; /* For Firefox */
       scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
@@ -373,11 +389,14 @@
       align-items: center;
       padding: 0 15px;
       flex-shrink: 0;
+      cursor: pointer; /* Make it look clickable */
+      z-index: 1000;
     }
   
     .message-input-bar .input-placeholder {
       color: #999999;
       font-size: 0.9em; /* Reduced font size */
+      z-index: 1000;
     }
   
     .reflection-box {
@@ -392,6 +411,30 @@
       text-align: center;
       font-size: 1.2em;
       z-index: 1; /* Ensure it appears above other elements */
+    }
+  
+    /* Banner Message */
+    .banner-message {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000; /* Higher than other elements */
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+  
+    .banner-message p {
+      margin: 10px 0;
+      font-size: 1.2em;
     }
   
     /* Adjustments for mobile */
@@ -409,15 +452,19 @@
         width: 100%;
         height: 20%; /* Slightly taller on mobile */
       }
+  
+      .banner-message p {
+        font-size: 1em;
+      }
+
     }
   </style>
   
   <div class="chat-slide" style="background-image: url('{backgroundPath}');">
-    <!-- ClickToAdvanceOverlay to capture clicks outside the chat container -->
-    <ClickToAdvanceOverlay onAdvance={updateSlide} />
+    <!-- Removed ClickToAdvanceOverlay -->
     <div class="chat-container">
       <!-- Chat Header -->
-      <div class="chat-header">
+      <div class="chat-header" bind:this={chatHeader}>
         {chatName}
       </div>
       <!-- Chat Messages -->
@@ -469,9 +516,24 @@
         {/if}
       </div>
       <!-- Message Input Bar -->
-      <div class="message-input-bar">
+      <div class="message-input-bar" on:click={handleMessageInputClick} bind:this={messageInputBar}>
         <div class="input-placeholder">Type a message...</div>
       </div>
+      <!-- Banner Message -->
+      {#if showBannerMessage}
+        <div
+          class="banner-message"
+          bind:this={bannerMessage}
+          on:click={(event) => {
+            showBannerMessage = false;
+            event.stopPropagation();
+          }}
+        >
+          <p>Glad to see that you're keen to join the conversation</p>
+          <p>In the future I might put an AI in there so you can have a good chat...</p>
+          <p>But for now, email me your thoughts instead :)</p>
+        </div>
+      {/if}
     </div>
     <!-- Reflection Text -->
     {#if reflectionText}
