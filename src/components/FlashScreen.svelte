@@ -248,7 +248,7 @@
       <!-- Subheading -->
       {#if subheading}
         <div class="subheading">
-          {subheading}
+          {@html subheading}
         </div>
       {/if}
       

@@ -13,11 +13,13 @@
   import QuoteMultiSlide from './slides/QuoteMultiSlide.svelte';
   import QuoteQuizSlide from './slides/QuoteQuizSlide.svelte';
   import DreamSlide from './slides/DreamSlide.svelte';
+  import ChatSlide from './slides/ChatSlide.svelte';
   import FlashScreen from './components/FlashScreen.svelte';
   import ScoreSummary from './slides/ScoreSummary.svelte';
   import AgreeDisagreeSlide from './slides/AgreeDisagreeSlide.svelte';
   import ClickToAdvanceOverlay from './components/ClickToAdvanceOverlay.svelte';
   import ChapterSelector from './components/ChapterSelector.svelte';
+  
 
   // Import stores
   import { 
@@ -574,6 +576,17 @@
                 reflectionTextCorrect={$slides[$currentStage].reflectionTextCorrect}
                 reflectionTextIncorrect={$slides[$currentStage].reflectionTextIncorrect}
                 agreeDisagreeId={$slides[$currentStage].agreeDisagreeId}
+              />
+            {:else if $slides[$currentStage]?.type === 'chat'}
+              <ChatSlide
+                chats={$slides[$currentStage].chats}
+                chatName={$slides[$currentStage].chatName}
+                soundEffect={$slides[$currentStage].soundEffect}
+                isMuted={isMuted}
+                updateSlide={handleDialogueEnd}
+                background={$slides[$currentStage].background}
+                reflectionText={$slides[$currentStage].reflectionText}
+                reference={$slides[$currentStage].reference}
               />
             {/if}
           </div>

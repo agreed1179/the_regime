@@ -1,5 +1,5 @@
 {
-  "title": "02. Things are not what they seem",
+  "title": "01. Who are you fighting for?",
   "music": "chapter1.mp3",
   "volume": 0.4,
   "slides": [
@@ -87,8 +87,149 @@
       "guess": false
     },
     {
+      "type": "quotemulti",
+      "characterImage": "plato.jpg",
+      "quoteWho" : "Immanuel Kant",
+      "quotes": [
+        {
+          "text": "I can’t prove it, but I feel it’s true"
+        },
+        {
+          "text": "There is nothing higher than reason"
+        },
+        {
+          "text": "The mind imposes order on the chaos of reality"
+        },
+        {
+          "text": "What we know is not the thing in itself, but only our perception of it"
+        },
+        {
+          "text": "Experience, not reason alone, is the source of knowledge"
+        },
+        {
+          "text": "I had to deny knowledge in order to make room for faith."
+        },
+        {
+          "text": "Reality is shaped by the mind, not revealed by it"
+        },
+        {
+          "text": "We can only know things as they appear, not as they are"
+        },
+        {
+          "text": "Certainty in science does not imply truth in philosophy"
+        },
+        {
+          "text": "Reason must be humbled by experience"
+        },
+        {
+          "text": "Truth lies beyond the reach of pure logic"
+        }
+      ],
+      "soundEffect": "test.mp3",
+      "background": "philosophy_classroom.jpg",
+      "reference":"Image source: Lapham's Quarterly, https://www.laphamsquarterly.org/contributors/plato",
+      "transition": "fade_short",
+      "guess": false
+    },
+    {
+      "type": "quotemulti",
+      "characterImage": "plato.jpg",
+      "quoteWho" : "David Hume",
+      "quotes": [
+        {
+          "text": "Beauty in things exists in the mind which contemplates them"
+        },
+        {
+          "text": "To hate, to love, to think, to feel, to see; all this is nothing but to perceive"
+        },
+        {
+          "text": "A wise man proportions his belief to the evidence"
+        },
+        {
+          "text": "The rules of morality are not the conclusion of our reason"
+        },
+        {
+          "text": "Human Nature is the only science of man; and yet has been hitherto the most neglected"
+        },
+        {
+          "text": "It is not contrary to reason to prefer the destruction of the whole world to the scratching of my finger"
+        },
+        {
+          "text": "Nothing is more surprising than the easiness with which the many are governed by the few"
+        },
+        {
+          "text": "Any person seasoned with a just sense of the imperfections of natural reason, will fly to revealed truth with the greatest avidity"
+        },
+        {
+          "text": "Belief is nothing but a more vivid, lively, forcible, firm, steady conception of an object, than what the imagination alone is ever able to attain"
+        },
+        {
+          "text": "It is a just political maxim, that every man must be supposed a knave"
+        },
+        {
+          "text": "Eloquence, at its highest pitch, leaves little room for reason or reflection, but addresses itself entirely to the desires and affections, captivating the willing hearers, and subduing their understanding"
+        },
+        {
+          "text": "Heaven and Hell suppose two distinct species of men, the Good and the Bad. But the greatest part of mankind float betwixt vice and virtue"
+        },
+        {
+          "text": "All knowledge degenerates into probability"
+        }
+      ],
+      "soundEffect": "test.mp3",
+      "background": "philosophy_classroom.jpg",
+      "reference":"Image source: Lapham's Quarterly, https://www.laphamsquarterly.org/contributors/plato",
+      "transition": "fade_short",
+      "guess": false
+    },
+    {
+      "type": "quotemulti",
+      "characterImage": "plato.jpg",
+      "quoteWho" : "David Hume",
+      "quotes": [
+        {
+          "text": "Genuine tragedies in the world are not conflicts between right and wrong. They are conflicts between two rights"
+        },
+        {
+          "text": "Nothing great in the world has ever been accomplished without passion"
+        },
+        {
+          "text": "The learner always begins by finding fault, but the scholar sees the positive merit in everything"
+        },
+        {
+          "text": "Evil resides in the very gaze which perceives Evil all around itself"
+        },
+        {
+          "text": "Truth is found neither in the thesis nor the antithesis, but in an emergent synthesis which reconciles the two"
+        },
+        {
+          "text": "Education is the art of making man ethical"
+        },
+        {
+          "text": "When liberty is mentioned, we must always be careful to observe whether it is not really the assertion of private interests which is thereby designated"
+        },
+        {
+          "text": "Mere goodness can achieve little against the power of nature"
+        },
+        {
+          "text": "Once the state has been founded, there can no longer be any heroes. They come on the scene only in uncivilized conditions"
+        },
+        {
+          "text": "It is easier to discover a deficiency in individuals, in states, and in Providence, than to see their real import and value"
+        },
+        {
+          "text": "Animals are in possession of themselves; their soul is in possession of their body. But they have no right to their life, because they do not will it"
+        }
+      ],
+      "soundEffect": "test.mp3",
+      "background": "philosophy_classroom.jpg",
+      "reference":"Image source: Lapham's Quarterly, https://www.laphamsquarterly.org/contributors/plato",
+      "transition": "fade_short",
+      "guess": false
+    },
+    {
       "type": "info",
-      "text": "The real question is, which general are you fighting for? \n\n Some of these philosophical \"generals\" are benign. Others not so much.  ",
+      "text": "The real question is, which general are you fighting for? \n\n Some of these philosophical \"generals\" are benign. Others not so much. \n\n Say... Would you agree with this statement?",
       "soundEffect": "test.mp3",
       "background": "philosophy_classroom.jpg",
       "transition": "fade_short"

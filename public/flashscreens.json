@@ -2,12 +2,12 @@
   "start": {
     "heading": "<h1>The Regime</h1>",
     "subheading": "- an analysis of creative democracy",
-    "quote": "<p><i>\"The essence of democracy is not voting but speaking; not majority rule, but reasoned argument.\"</i> - Fareed Zakaria</p>"
+    "quote": "<p><i>\"The ignorant man is not free, because what confronts him is an alien world... \"</i> - Hegel</p>"
   },
   "end": {
     "heading": "<h1>Thank you for playing.</h1>",
-    "subheading": "Democracy isn't just the tyranny of the majority, but the rule of true philosophy.",
-    "quote": "<p><em>\"More dialogue, less pitchforks.\"</em></p> \n\n Special thanks to:....",
+    "subheading": "<p><i>\"The essence of democracy is not voting but speaking; not majority rule, but reasoned argument.\"</i> - Fareed Zakaria</p>",
+    "quote": "<p><em>Special thanks to:</em></p> \n\n Name 1 \n\n Name 2...",
     "button": {
       "label": "Play again",
       "action": "reload"

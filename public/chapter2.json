@@ -1,22 +1,127 @@
-{
+{  
+  "title": "02. \"Might makes Right\"",
+  "music": "chapter1.mp3",
+  "volume": 0.4,
   "slides": [
   {
-    "id": 0,
     "type": "info",
-    "text": "# What have we learnt today!\n\nLess pitchforks and more dialogue.",
+    "text": "# 02 \"Might makes right\" \n\n \"Might makes right\" refers to the idea that power alone is the ultimate determinant of what is morally or ethically \"right\". \n\n Simply because the powerful couldn't be stopped. \n\n This power can come in many shapes or forms. In the ancient times it was physical strength, or perhaps tribal lineage. Nowadays we see it in forms of political power, popularity, wealth, qualifications, and hierarchical authority in an organisation. \n\n It's a simplistic yet dangerously appealing idea, and most people would agree that the notion of \"might makes right\" is fundamentally wrong, as it goes against the very principles of civilisation which seeks to rise above the Darwinian laws of the jungle. \n\n But, it quickly gets more complicated if you take the logic just *one step further*...",
     "soundEffect": "test.mp3",
-    "background": "philosophy_classroom.jpg"
+    "background": "philosophy_classroom.jpg",
+    "reference":"*Merriam-Webster Dictionary*. (2021). Merriam-Webster.com. https://www.merriam-webster.com/dictionary/might%20makes%2Fis%20right",
+    "transition": "fade_long"
   },
   {
-    "id": 1,
     "type": "info",
-    "text": "Plato's Allegory of the Cave.",
-    "portrait": "plato.jpg",
-    "reference": "Plato. (380 BCE). The Republic. Penguin Classics.",
-    "background": "cave_background.jpg",
-    "transition": "fade_long",
-    "clickToAdvance": true
+    "text": "If \"Might makes right\" is wrong, then logic would dictate that *\"Weak makes right\"* is also wrong. \n\n If we accept the proposition that power alone should not dictate what is morally right, then the logical conclusion is that the weaker party is not morally superior merely because of their lack of power. \n\n But in practice, people naturally incline towards supporting the weaker party, or the \"underdog\". \n\n In film, the underdog tale goes as far back as the 1920s, portrayed in classic Chaplin films *The kid* (1921) and *The Gold Rush* (1925), to *Wings* (1927), the first film to win the Academy Award for Best Picture. \n\n In recent times, the most popular films stretching from the original Star Wars to Harry Potter, Dodgeball, the Matrix, and in TV – Breaking Bad (chemistry teacher with terminal cancer),  Queen’s Gambit (orphan girl), and various protagonistic characters in Game of Thrones. ",
+    "soundEffect": "test.mp3",
+    "background": "philosophy_classroom.jpg",
+    "reference":"as cited.",
+    "transition": "fade_long"
+  },
+  {
+    "type": "info",
+    "text": "",
+    "soundEffect": "test.mp3",
+    "background": "philosophy_classroom.jpg",
+    "reference":"as cited.",
+    "transition": "fade_long"
+  },
+  {
+    "type": "chat",
+    "chatName": "Chat with Plato",
+    "chats": [
+      {
+        "who": "plato",
+        "who-img": "plato.jpg",
+        "position": "left",
+        "text": "With great power comes great responsibility. With great power comes great responsibility. With great power comes great responsibility"
+      },
+      {
+        "who": "bentham",
+        "who-img": "bentham.jpg",
+        "position": "right",
+        "text": "I agree."
+      },
+      {
+        "who": "plato",
+        "who-img": "plato.jpg",
+        "position": "left",
+        "text": "Lies. You don't."
+      },
+      {
+        "who": "bentham",
+        "who-img": "bentham.jpg",
+        "position": "right",
+        "text": "With great power comes great responsibility. With great power comes great responsibility. With great power comes great responsibility"
+      },
+      {
+        "who": "plato",
+        "who-img": "plato.jpg",
+        "position": "left",
+        "text": "Lies. You don't."
+      },
+      {
+        "who": "plato",
+        "who-img": "plato.jpg",
+        "position": "left",
+        "text": "Try again."
+      },
+      {
+        "who": "bentham",
+        "who-img": "bentham.jpg",
+        "position": "right",
+        "text": "I agree."
+      },
+      {
+        "who": "plato",
+        "who-img": "plato.jpg",
+        "position": "left",
+        "text": "Lies. You don't."
+      },
+      {
+        "who": "bentham",
+        "who-img": "bentham.jpg",
+        "position": "right",
+        "text": "I agree."
+      },
+      {
+        "who": "plato",
+        "who-img": "plato.jpg",
+        "position": "left",
+        "text": "Lies. You don't."
+      },
+      {
+        "who": "bentham",
+        "who-img": "bentham.jpg",
+        "position": "right",
+        "text": "I agree."
+      },
+      {
+        "who": "plato",
+        "who-img": "plato.jpg",
+        "position": "left",
+        "text": "Lies. You don't."
+      }
+      ,
+      {
+        "who": "bentham",
+        "who-img": "bentham.jpg",
+        "position": "right",
+        "text": "I agree."
+      },
+      {
+        "who": "plato",
+        "who-img": "plato.jpg",
+        "position": "left",
+        "text": "Lies. You don't."
+      }
+    ],
+    "soundEffect": "test.mp3",
+    "reflectionText" : "Who do you think is right?",
+    "background": "philosophy_classroom.jpg",
+    "reference":"On the Common Saying: \"That May Be Correct in Theory, But Is of No Use in Practice\" (1793) by Immanuel Kant..",
+    "transition": "fade_long"
   }
-
 ]
 }
