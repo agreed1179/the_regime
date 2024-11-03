@@ -240,6 +240,28 @@
       position: relative;
       cursor: grab;
       user-select: none;
+  
+      /* Custom scrollbar styling */
+      scrollbar-width: thin; /* For Firefox */
+      scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+    }
+  
+    /* WebKit-based browsers */
+    .chat-messages::-webkit-scrollbar {
+      width: 4px; /* Adjust the width to make it thin */
+    }
+  
+    .chat-messages::-webkit-scrollbar-track {
+      background: transparent; /* Make the track transparent */
+    }
+  
+    .chat-messages::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.2); /* Dark grey thumb */
+      border-radius: 10px; /* Rounded corners */
+    }
+  
+    .chat-messages::-webkit-scrollbar-thumb:hover {
+      background-color: rgba(0, 0, 0, 0.4); /* Darker on hover */
     }
   
     .chat-messages.grabbing {
