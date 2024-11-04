@@ -250,7 +250,7 @@
       "type": "dream",
       "text": "Let's play a game. \n\n<br/> Guess who said these quotes... (INCOMPLETE - questions not working)",
       "soundEffect" : "test.mp3",
-      "noHistory" : "true",
+      "noHistory" : false,
       "fadeInTime" : 1800,
       "fadeOutTime" : 2000
     },

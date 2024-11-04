@@ -20,11 +20,101 @@
     "transition": "fade_long"
   },
   {
+    "type": "dialogue",
+    "characters": [
+      {
+        "speaker": "",
+        "imageSize": "large",
+        "imageSrc": "save_the_cat.jpg",
+        "position": "middle-middle",
+        "transition": {
+          "type": "fade",
+          "duration": 500
+        }
+      }
+    ],
+    "dialogueText": "Hollywood writing coaches often advice budding writers that the protagonist must be an underdog in order to gain the empathy of the audience, or be \"likable\" as they would say. \n\n In perhaps the most influential screenwriting guide published in 2005, *Save the Cat!*, Synder advises that protagonists should be made underdogs, stressing the significance of tapping into the audience’s empathy so they could “root for” the character and follow their journey as if they were their own. ",
+    "background": "debate_room.jpg",
+    "soundEffect": "test.mp3",
+    "reference":"Snyder, B. (2005). *Save the cat! : the last book on screenwriting you'll ever need*. Michael Wiese Productions."
+  },
+  {
     "type": "info",
-    "text": "",
+    "text": "It would seem contradictory that people's natural instincts are to simultaneously reject the notion that “Might makes right” but accept the proposition that \"Weak makes right.\" \n\n The result however, is the same. \"Weak makes right\" is merely another form of \"Might makes right\" differing only in the definition of or metric applied to the word \"Might\". \n\n In ancient times, barbarians with bulging muscles are perceived as mighty because they're able to effectively use violence to achieve a desired outcome through brute force. \n\n In contemporary society, systems might exist to reward are perceived to lack power, which in turn makes them mighty. Societies do this for a variety of reasons, including restorative justice and reducing inequality, to name a few. \n\n But many would shun at the argument that \"weak makes right\", understandably so. \n\n What then is the moral justification for the support of the weaker party? Is there a consistent rule that allows us to approach a problem like this? ",
     "soundEffect": "test.mp3",
     "background": "philosophy_classroom.jpg",
-    "reference":"as cited.",
+    "reference":"",
+    "transition": "fade_long"
+  },
+  {
+    "type": "dialogue",
+    "characters": [
+      {
+        "speaker": "Or, are we gonna let these people win…",
+        "imageSize": "large",
+        "imageSrc": "musk_twitter.png",
+        "position": "middle-middle",
+        "transition": {
+          "type": "fade",
+          "duration": 500
+        }
+      }
+    ],
+    "dialogueText": "",
+    "background": "debate_room.jpg",
+    "soundEffect": "test.mp3",
+    "reference":"x.com. (2024). X (Formerly Twitter). https://x.com/elonmusk/status/1783727565989134488?lang=en"
+  },
+  {
+    "type": "dream",
+    "text": "Fortunately, someone came up with a solution a long time ago. Right here in this galaxy, I might add. \n\n His name, was Jeremy Bentham. \n\n The solution, was this...",
+    "soundEffect" : "test.mp3",
+    "noHistory" : false,
+    "fadeInTime" : 1800,
+    "fadeOutTime" : 2000
+  },
+  {
+    "type": "quote",
+    "text": "It is the *greatest happiness* of the *greatest number* that is the measure of right and wrong.",
+    "characterImage": "bentham.jpg",
+    "quoteWho" : "Jeremy Bentham",
+    "soundEffect": "test.mp3",
+    "reference":"Crimmins, J. E. (2021). *Jeremy Bentham* (E. N. Zalta, Ed.). Stanford Encyclopedia of Philosophy; Metaphysics Research Lab, Stanford University.",
+    "background": "philosophy_classroom.jpg",
+    "guess": false
+  },  
+  {
+    "type": "info",
+    "text": "Bentham's solution to the problem was to axiomatically define the measure of right or wrong, or the judge of morality, in terms of the *greatest good* for the *greatest number* of people. \n\n This approach, is known as **Utilitarianism**. \n\n Utilitarianism is a form of *Consequentialism*, a moral framework that assesses the rightness or wrongness of an action based solely on its outcomes. \n\n For a utilitarian (or a consequentialist), actions are not judged by intentions, principles, or inherent characteristics or anything else, except by the results they produce, and by these results only. \n\n After all, who can argue with getting *the greatest good for the greatest number*?",
+    "soundEffect": "test.mp3",
+    "background": "philosophy_classroom.jpg",
+    "reference":"",
+    "transition": "fade_long"
+  },
+  {
+    "type": "info",
+    "text": "But another question remains. \n\n If we were to accept Utilitarianism as the judge of morality, and we try to achieve *the greatest good for the greatest number*, then what is it meant by \"good\"? \n\n How do you define good? \n\n Bentham’s answer was again straightforward...",
+    "soundEffect": "test.mp3",
+    "background": "philosophy_classroom.jpg",
+    "reference":"Driver, J. (2009, March 27). *The History of Utilitarianism*. Stanford Encyclopedia of Philosophy; Stanford University. ",
+    "transition": "fade_long"
+  },
+  {
+    "type": "quote",
+    "text": "Nature has placed mankind under the governance of two sovereign masters, <span style=\"color:red\">*pain* </span> and <span style=\"color:green\">*pleasure*</span>. It is for them alone to point out what we ought to do, as well as to determine what we shall do.",
+    "characterImage": "bentham.jpg",
+    "quoteWho" : "Jeremy Bentham",
+    "soundEffect": "test.mp3",
+    "reference":"Bentham, J. (2012). *An Introduction to the Principles of Morals and Legislation*. Courier Corporation. (Original work published 1789)",
+    "background": "philosophy_classroom.jpg",
+    "guess": false
+  },
+  {
+    "type": "info",
+    "text": "Bentham's position can thus be summed in one simple line: \n\n <p style=\"text-align: center\"> *Pleasure good, Pain bad.*</p> \n\n Utilitarianism would thus dictate that the *moral thing to do* is to try to achieve: \n\n - maximum amount of pleasure; \n\n - minimum amount of pain; \n\n - for as many people as possible. \n\n Now, having said all that, how might Bentham respond to the proposition that \"Weak makes Right\" is wrong?",
+    "soundEffect": "test.mp3",
+    "background": "philosophy_classroom.jpg",
+    "reference":"",
     "transition": "fade_long"
   },
   {
@@ -64,7 +154,7 @@
       }
     ],
     "soundEffect": "test.mp3",
-    "reflectionText" : "Who do you think is right?",
+    "reflectionText" : "Do you see how utilitarianism works in action?",
     "background": "philosophy_classroom.jpg",
     "reference":"On the Common Saying: \"That May Be Correct in Theory, But Is of No Use in Practice\" (1793) by Immanuel Kant..",
     "transition": "fade_long"
