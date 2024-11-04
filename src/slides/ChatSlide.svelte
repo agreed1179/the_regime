@@ -1,209 +1,209 @@
 <!-- src/slides/ChatSlide.svelte -->
 <script>
-    import { onMount, onDestroy, tick } from 'svelte';
-    import { getAssetPath } from '../utils/assetHelper.js';
-    import { assetPaths, asyncPlaySound } from '../stores.js';
-    import { marked } from 'marked';
-    import DOMPurify from 'dompurify';
-    import { fade } from 'svelte/transition';
-  
-    export let chats = []; // Array of chat messages
-    export let chatName = ''; // Chat heading name
-    export let soundEffect = '';
-    export let isMuted = false;
-    export let updateSlide;
-    export let background = '';
-    export let reflectionText = '';
-    export let reference = '';
-  
-    // Paths to assets
-    $: backgroundPath = getAssetPath('background', background, $assetPaths);
-    $: soundEffectPath = getAssetPath('sound', soundEffect, $assetPaths);
-  
-    // Sanitize reflectionText
-    $: sanitizedReflectionText = reflectionText
-      ? DOMPurify.sanitize(marked.parse(reflectionText))
-      : '';
-  
-    let showScrollTip = false;
-    let chatContainer;
-    let chatHeader; // Reference to the chat header
-    let messageInputBar; // Reference to the message input bar
-    let bannerMessage; // Reference to the banner message
-    let hasScrolled = false;
-  
-    // Variables for animation
-    let displayedChats = []; // Chats that are currently displayed
-    let chatInterval;
-    let currentChatIndex = 0;
-  
-    // Variables for click-and-drag scrolling with momentum
-    let isDragging = false;
-    let startY;
-    let scrollTopAtStart;
-    let positions = []; // Store positions and timestamps
-    let velocity = 0; // Initial scroll velocity
-    let momentumID; // ID for requestAnimationFrame
-  
-    // Variable to control the display of the banner message
-    let showBannerMessage = false;
-  
-    function handleScroll() {
-      if (!hasScrolled && chatContainer.scrollTop > 0) {
-        hasScrolled = true;
-        showScrollTip = false;
+  import { onMount, onDestroy, tick } from 'svelte';
+  import { getAssetPath } from '../utils/assetHelper.js';
+  import { assetPaths, asyncPlaySound } from '../stores.js';
+  import { marked } from 'marked';
+  import DOMPurify from 'dompurify';
+  import { fade } from 'svelte/transition';
+
+  export let chats = []; // Array of chat messages
+  export let chatName = ''; // Chat heading name
+  export let soundEffect = '';
+  export let isMuted = false;
+  export let updateSlide;
+  export let background = '';
+  export let reflectionText = '';
+  export let reference = '';
+
+  // Paths to assets
+  $: backgroundPath = getAssetPath('background', background, $assetPaths);
+  $: soundEffectPath = getAssetPath('sound', soundEffect, $assetPaths);
+
+  // Sanitize reflectionText
+  $: sanitizedReflectionText = reflectionText
+    ? DOMPurify.sanitize(marked.parse(reflectionText))
+    : '';
+
+  let showScrollTip = false;
+  let chatContainer;
+  let chatHeader; // Reference to the chat header
+  let messageInputBar; // Reference to the message input bar
+  let bannerMessage; // Reference to the banner message
+  let hasScrolled = false;
+
+  // Variables for animation
+  let displayedChats = []; // Chats that are currently displayed
+  let chatInterval;
+  let currentChatIndex = 0;
+
+  // Variables for click-and-drag scrolling with momentum
+  let isDragging = false;
+  let startY;
+  let scrollTopAtStart;
+  let positions = []; // Store positions and timestamps
+  let velocity = 0; // Initial scroll velocity
+  let momentumID; // ID for requestAnimationFrame
+
+  // Variable to control the display of the banner message
+  let showBannerMessage = false;
+
+  function handleScroll() {
+    if (!hasScrolled && chatContainer.scrollTop > 0) {
+      hasScrolled = true;
+      showScrollTip = false;
+    }
+  }
+
+  function handleClickOutside(event) {
+    if (
+      !chatContainer.contains(event.target) &&
+      !chatHeader.contains(event.target) &&
+      !messageInputBar.contains(event.target) &&
+      !(bannerMessage && bannerMessage.contains(event.target))
+    ) {
+      updateSlide();
+    }
+  }
+
+  // Event handlers for click-and-drag scrolling with momentum
+  function handleMouseDown(event) {
+    isDragging = true;
+    startY = event.clientY;
+    scrollTopAtStart = chatContainer.scrollTop;
+    positions = [{ time: Date.now(), y: event.clientY }];
+    chatContainer.classList.add('grabbing'); // Change cursor
+    event.preventDefault(); // Prevent text selection
+
+    // Stop any ongoing momentum scrolling
+    if (momentumID) {
+      cancelAnimationFrame(momentumID);
+    }
+  }
+
+  function handleMouseMove(event) {
+    if (isDragging) {
+      const deltaY = startY - event.clientY;
+      chatContainer.scrollTop = scrollTopAtStart + deltaY;
+
+      // Record the position and time
+      positions.push({ time: Date.now(), y: event.clientY });
+
+      // Keep only the last 5 positions to calculate velocity
+      if (positions.length > 5) {
+        positions.shift();
       }
     }
-  
-    function handleClickOutside(event) {
+  }
+
+  function handleMouseUp() {
+    if (isDragging) {
+      isDragging = false;
+      chatContainer.classList.remove('grabbing'); // Reset cursor
+
+      // Calculate velocity
+      if (positions.length >= 2) {
+        const lastPosition = positions[positions.length - 1];
+        const secondLastPosition = positions[positions.length - 2];
+
+        const deltaY = lastPosition.y - secondLastPosition.y;
+        const deltaTime = lastPosition.time - secondLastPosition.time;
+
+        velocity = deltaY / deltaTime; // pixels per millisecond
+        // Invert velocity to match scroll direction
+        velocity = -velocity;
+
+        // Start momentum scrolling if velocity is significant
+        if (Math.abs(velocity) > 0.1) {
+          momentumScroll();
+        }
+      }
+
+      positions = []; // Reset positions
+    }
+  }
+
+  function handleMouseLeave() {
+    if (isDragging) {
+      handleMouseUp();
+    }
+  }
+
+  function momentumScroll() {
+    if (Math.abs(velocity) > 0.1) {
+      chatContainer.scrollTop += velocity * 16; // Assuming 60fps, 16ms per frame
+      velocity *= 0.95; // Apply friction to slow down
+
+      // Prevent scrolling beyond the content
       if (
-        !chatContainer.contains(event.target) &&
-        !chatHeader.contains(event.target) &&
-        !messageInputBar.contains(event.target) &&
-        !(bannerMessage && bannerMessage.contains(event.target))
+        chatContainer.scrollTop < 0 ||
+        chatContainer.scrollTop > chatContainer.scrollHeight - chatContainer.clientHeight
       ) {
-        updateSlide();
+        velocity = 0;
       }
+
+      momentumID = requestAnimationFrame(momentumScroll);
+    } else {
+      cancelAnimationFrame(momentumID);
     }
-  
-    // Event handlers for click-and-drag scrolling with momentum
-    function handleMouseDown(event) {
-      isDragging = true;
-      startY = event.clientY;
-      scrollTopAtStart = chatContainer.scrollTop;
-      positions = [{ time: Date.now(), y: event.clientY }];
-      chatContainer.classList.add('grabbing'); // Change cursor
-      event.preventDefault(); // Prevent text selection
-  
-      // Stop any ongoing momentum scrolling
-      if (momentumID) {
-        cancelAnimationFrame(momentumID);
-      }
-    }
-  
-    function handleMouseMove(event) {
-      if (isDragging) {
-        const deltaY = startY - event.clientY;
-        chatContainer.scrollTop = scrollTopAtStart + deltaY;
-  
-        // Record the position and time
-        positions.push({ time: Date.now(), y: event.clientY });
-  
-        // Keep only the last 5 positions to calculate velocity
-        if (positions.length > 5) {
-          positions.shift();
+  }
+
+  // Handle click on the message input bar
+  function handleMessageInputClick() {
+    showBannerMessage = true;
+  }
+
+  onMount(async () => {
+    await asyncPlaySound(soundEffectPath, isMuted); // async playSound function to accommodate async function in onMount
+
+    // Add event listener for click outside
+    document.addEventListener('click', handleClickOutside);
+
+    // Wait for the DOM to be ready
+    await tick();
+
+    // Start displaying chats one after another
+    chatInterval = setInterval(async () => {
+      if (currentChatIndex < chats.length) {
+        // Update displayedChats reactively
+        displayedChats = [...displayedChats, chats[currentChatIndex]];
+        currentChatIndex++;
+
+        // Wait for the DOM to update
+        await tick();
+
+        // Scroll to bottom to show new message
+        if (chatContainer) {
+          chatContainer.scrollTop = chatContainer.scrollHeight;
         }
-      }
-    }
-  
-    function handleMouseUp() {
-      if (isDragging) {
-        isDragging = false;
-        chatContainer.classList.remove('grabbing'); // Reset cursor
-  
-        // Calculate velocity
-        if (positions.length >= 2) {
-          const lastPosition = positions[positions.length - 1];
-          const secondLastPosition = positions[positions.length - 2];
-  
-          const deltaY = lastPosition.y - secondLastPosition.y;
-          const deltaTime = lastPosition.time - secondLastPosition.time;
-  
-          velocity = deltaY / deltaTime; // pixels per millisecond
-          // Invert velocity to match scroll direction
-          velocity = -velocity;
-  
-          // Start momentum scrolling if velocity is significant
-          if (Math.abs(velocity) > 0.1) {
-            momentumScroll();
-          }
-        }
-  
-        positions = []; // Reset positions
-      }
-    }
-  
-    function handleMouseLeave() {
-      if (isDragging) {
-        handleMouseUp();
-      }
-    }
-  
-    function momentumScroll() {
-      if (Math.abs(velocity) > 0.1) {
-        chatContainer.scrollTop += velocity * 16; // Assuming 60fps, 16ms per frame
-        velocity *= 0.95; // Apply friction to slow down
-  
-        // Prevent scrolling beyond the content
-        if (
-          chatContainer.scrollTop < 0 ||
-          chatContainer.scrollTop > chatContainer.scrollHeight - chatContainer.clientHeight
-        ) {
-          velocity = 0;
-        }
-  
-        momentumID = requestAnimationFrame(momentumScroll);
       } else {
-        cancelAnimationFrame(momentumID);
-      }
-    }
-  
-    // Handle click on the message input bar
-    function handleMessageInputClick() {
-      showBannerMessage = true;
-    }
-  
-    onMount(async () => {
-      await asyncPlaySound(soundEffectPath, isMuted); // async playSound function to accommodate async function in onMount
-  
-      // Add event listener for click outside
-      document.addEventListener('click', handleClickOutside);
-  
-      // Wait for the DOM to be ready
-      await tick();
-  
-      // Start displaying chats one after another
-      chatInterval = setInterval(async () => {
-        if (currentChatIndex < chats.length) {
-          // Update displayedChats reactively
-          displayedChats = [...displayedChats, chats[currentChatIndex]];
-          currentChatIndex++;
-  
-          // Wait for the DOM to update
-          await tick();
-  
-          // Scroll to bottom to show new message
+        clearInterval(chatInterval);
+        // Smoothly scroll to top after all messages are displayed
+        setTimeout(() => {
           if (chatContainer) {
-            chatContainer.scrollTop = chatContainer.scrollHeight;
+            chatContainer.scrollTo({ top: 0, behavior: 'smooth' });
+            // Check if scroll is needed after messages are rendered
+            setTimeout(() => {
+              if (chatContainer.scrollHeight > chatContainer.clientHeight) {
+                showScrollTip = true;
+              }
+            }, 500); // Delay to ensure smooth scroll completes
           }
-        } else {
-          clearInterval(chatInterval);
-          // Smoothly scroll to top after all messages are displayed
-          setTimeout(() => {
-            if (chatContainer) {
-              chatContainer.scrollTo({ top: 0, behavior: 'smooth' });
-              // Check if scroll is needed after messages are rendered
-              setTimeout(() => {
-                if (chatContainer.scrollHeight > chatContainer.clientHeight) {
-                  showScrollTip = true;
-                }
-              }, 500); // Delay to ensure smooth scroll completes
-            }
-          }, 100); // Small delay to ensure messages are rendered
-        }
-      }, 200); // Adjust the interval as needed (e.g., 200ms between messages)
-    });
-  
-    onDestroy(() => {
-      document.removeEventListener('click', handleClickOutside);
-      // Clean up the interval
-      clearInterval(chatInterval);
-      // Cancel any ongoing momentum scrolling
-      if (momentumID) {
-        cancelAnimationFrame(momentumID);
+        }, 100); // Small delay to ensure messages are rendered
       }
-    });
-  </script>
+    }, 200); // Adjust the interval as needed (e.g., 200ms between messages)
+  });
+
+  onDestroy(() => {
+    document.removeEventListener('click', handleClickOutside);
+    // Clean up the interval
+    clearInterval(chatInterval);
+    // Cancel any ongoing momentum scrolling
+    if (momentumID) {
+      cancelAnimationFrame(momentumID);
+    }
+  });
+</script>
   
   <style>
     .chat-slide {
@@ -318,6 +318,8 @@
       border-radius: 10px;
       word-wrap: break-word;
       position: relative;
+      display: flex;
+      flex-direction: column;
     }
   
     .message.left {
@@ -362,7 +364,15 @@
       border-top: 10px solid transparent;
       border-left: 10px solid #dcf8c6;
     }
-  
+
+    .message-image {
+      max-width: 100%;
+      max-height: 200px;
+      margin-bottom: 5px;
+      border-radius: 5px;
+      object-fit: contain; /* Preserve aspect ratio */
+    }
+
     .scroll-tip {
       position: absolute;
       top: 5px;
@@ -491,7 +501,16 @@
               <div class="message-content">
                 <div class="message {chat.position}">
                   <div class="sender-name">{chat.who}</div>
-                  <div class="text">{chat.text}</div>
+                  {#if chat['chat-image']}
+                    <img
+                      src="{getAssetPath('character', chat['chat-image'], $assetPaths)}"
+                      alt="Chat Image"
+                      class="message-image"
+                    />
+                  {/if}
+                  {#if chat.text}
+                    <div class="text">{chat.text}</div>
+                  {/if}
                 </div>
               </div>
             {:else}
@@ -499,7 +518,16 @@
               <div class="message-content">
                 <div class="message {chat.position}">
                   <div class="sender-name right">{chat.who}</div>
-                  <div class="text">{chat.text}</div>
+                  {#if chat['chat-image']}
+                    <img
+                      src="{getAssetPath('character', chat['chat-image'], $assetPaths)}"
+                      alt="Chat Image"
+                      class="message-image"
+                    />
+                  {/if}
+                  {#if chat.text}
+                    <div class="text">{chat.text}</div>
+                  {/if}
                 </div>
               </div>
               <img
@@ -542,4 +570,3 @@
       </div>
     {/if}
   </div>
-  

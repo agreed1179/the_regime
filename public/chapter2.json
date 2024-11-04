@@ -48,6 +48,19 @@
         "who-img": "plato.jpg",
         "position": "left",
         "text": "Lies. You don't."
+      },
+      {
+        "who": "bentham",
+        "who-img": "bentham.jpg",
+        "position": "right",
+        "chat-image": "meme_troll_problem.webp"
+      },
+      {
+        "who": "plato",
+        "who-img": "plato.jpg",
+        "position": "left",
+        "text": "Lies. You don't.",
+        "chat-image": "bentham.jpg"
       }
     ],
     "soundEffect": "test.mp3",
