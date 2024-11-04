@@ -300,10 +300,193 @@
   },
   {
     "type": "info",
-    "text": "asfd",
+    "text": "Of course, all that pain and pleasure stuff sound very hedonistic. It has made utilitarianism systemic and practical, but it does sound hedonistic, and many felt that they were shallow because of that. \n\n Yet again, if not pain and pleasure, what other measures of \"good\" can we use? \n\n This turned out to be a central issue which later Utilitarian philosophers attempted to address. \n\n Perhaps the most prominent one, was John Stuart Mill...",
     "soundEffect": "test.mp3",
     "background": "philosophy_classroom.jpg",
     "reference":"as cited.",
+    "transition": "fade_long"
+  },
+  {
+    "type": "quote",
+    "text": "It is better to be a human being dissatisfied than a pig satisfied; better to be Socrates dissatisfied than a fool satisfied. \n\n And if the fool, or the pig, are of a different opinion, it is because they only know their own side of the question.",
+    "characterImage": "bentham.jpg",
+    "quoteWho" : "John Stuart Mill",
+    "soundEffect": "test.mp3",
+    "reference":"Mill, J. S. (1863). *Utilitarianism* (p. 14). Parker, Son, and Bourn.",
+    "background": "philosophy_classroom.jpg",
+    "guess": false
+  },
+  {
+    "type": "chat",
+    "chatName": "Class of O'23",
+    "chats": [
+      {
+        "who": "Danny",
+        "who-img": "kid_1.png",
+        "position": "left",
+        "text": "Weak makes right is the same as Might makes right."
+      },      
+      {
+        "who": "Danny",
+        "who-img": "kid_1.png",
+        "position": "left",
+        "chat-image": "meme_troll_problem.webp"
+      },
+      {
+        "who": "Jeremy Bentham",
+        "who-img": "bentham.jpg",
+        "position": "right",
+        "text": "Maybe. But that is irrelevant."
+      },      
+      {
+        "who": "Danny",
+        "who-img": "kid_1.png",
+        "position": "left",
+        "text": "Huh?"
+      },
+      {
+        "who": "Jeremy Bentham",
+        "who-img": "bentham.jpg",
+        "position": "right",
+        "text": "Because the ethical thing to do is to maximise pleasure and minimise pain..."
+      },
+      {
+        "who": "Danny",
+        "who-img": "kid_1.png",
+        "position": "left",
+        "text": "Great! Let's maximise the pleasure of Elon Musk. Cuz why not?"
+      },
+      {
+        "who": "Jeremy Bentham",
+        "who-img": "bentham.jpg",
+        "position": "right",
+        "text": "...for the greatest number of people. Do it for EVERYONE."
+      },
+      {
+        "who": "Danny",
+        "who-img": "kid_1.png",
+        "position": "left",
+        "text": "Are you saying that Elon's pleasures and pains are less worthy than the pleasures and pains of a homeless drug addict?"
+      },      
+      {
+        "who": "Jeremy Bentham",
+        "who-img": "bentham.jpg",
+        "position": "right",
+        "text": "No but there are millions of poor and only one Elon Musk."
+      },
+      {
+        "who": "Danny",
+        "who-img": "kid_1.png",
+        "position": "left",
+        "text": "It's just not fair to take from those who worked hard and give to those who are incompetent."
+      },  
+      {
+        "who": "Jeremy Bentham",
+        "who-img": "bentham.jpg",
+        "position": "right",
+        "text": "With $100 you could feed someone who is starving and can save a life. But $100 for a billionaire means nothing. "
+      },    
+      {
+        "who": "Danny",
+        "who-img": "kid_1.png",
+        "position": "left",
+        "text": "So?"
+      },   
+      {
+        "who": "Jeremy Bentham",
+        "who-img": "bentham.jpg",
+        "position": "right",
+        "text": "So? Take $100 from a billionaire causes virtually no pain. But giving $100 to a starving homeless man creates immense benefit. Greatest good for the greatest number, measured in pleasure and pain. "
+      },       
+      {
+        "who": "Danny",
+        "who-img": "kid_1.png",
+        "position": "left",
+        "text": "But isn't this just punishing those who are successful? It's the tall poppy syndrome, old man."
+      },  
+      {
+        "who": "Jeremy Bentham",
+        "who-img": "bentham.jpg",
+        "position": "right",
+        "text": "Don't flip your wig kid. It has nothing to do with punishment or reward. Utilitarianism looks at results and results only. Nothing else matters."
+      },   
+      {
+        "who": "Danny",
+        "who-img": "kid_1.png",
+        "position": "left",
+        "text": "You're just giving freebies to those who don't deserve it. "
+      },  
+      {
+        "who": "Jeremy Bentham",
+        "who-img": "bentham.jpg",
+        "position": "right",
+        "text": "Greatest good for the greatest number. Results only, nothing else matters. Try again."
+      },  
+      {
+        "who": "Danny",
+        "who-img": "kid_1.png",
+        "position": "left",
+        "text": "Nope, not convinced. Not doing it. "
+      },
+      {
+        "who": "Jeremy Bentham",
+        "who-img": "bentham.jpg",
+        "position": "right",
+        "text": "Then you are acting unethically. "
+      },
+      {
+        "who": "Danny",
+        "who-img": "kid_1.png",
+        "position": "left",
+        "text": "Wtf why?"
+      },  
+      {
+        "who": "Jeremy Bentham",
+        "who-img": "bentham.jpg",
+        "position": "right",
+        "text": "Because utilitarianism is precisely about what is ethical. It allows you to judge whether an action is ethical."
+      },
+      {
+        "who": "Danny",
+        "who-img": "kid_1.png",
+        "position": "left",
+        "recall": true
+      },
+      {
+        "who": "Jeremy Bentham",
+        "who-img": "bentham.jpg",
+        "position": "right",
+        "text": "And you are moral and ethical only if you try to achieve the greatest good for the greatest number."
+      },
+      {
+        "who": "Danny",
+        "who-img": "kid_1.png",
+        "position": "left",
+        "text": "No way. You can't justify why we should aim for the greatest good for the greatest number, and why not doing so makes me unethical."
+      },
+      {
+        "who": "Jeremy Bentham",
+        "who-img": "bentham.jpg",
+        "position": "right",
+        "text": "Then go read my book. It's only about 300 pages. It's required reading for this course by the way. Also your essay is due tomorrow morning kid. Now get back to work."
+      },
+      {
+        "who": "Danny",
+        "who-img": "kid_1.png",
+        "position": "left",
+        "recall": true
+      },    
+      {
+        "who": "Danny",
+        "who-img": "kid_1.png",
+        "position": "left",
+        "chat-image": "meme_crying.png"
+      }
+    ],
+    "soundEffect": "test.mp3",
+    "reflectionText" : "Do you see how utilitarianism works in action?",
+    "background": "philosophy_classroom.jpg",
+    "reference":"Driver, J. (2009, March 27). *The History of Utilitarianism*. Stanford Encyclopedia of Philosophy; Stanford University.",
     "transition": "fade_long"
   }
 ]

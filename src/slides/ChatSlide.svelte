@@ -311,6 +311,7 @@
       flex-direction: column;
       max-width: 70%;
       font-family: 'Roboto', sans-serif;
+      font-size: 0.9em; /* Reduced font size */
     }
   
     .message {
@@ -377,7 +378,7 @@
       object-fit: contain; /* Preserve aspect ratio */
     }
 
-    .recalled-message {
+    .system-message {
       text-align: center;
       color: gray;
       font-size: 0.8em;
@@ -502,8 +503,13 @@
         {#each displayedChats as chat, index (index)}
           {#if chat.recall}
             <!-- Recalled Message -->
-            <div class="recalled-message" transition:fade="{{duration: 300}}">
+            <div class="system-message" transition:fade="{{duration: 300}}">
               {chat.who} has recalled a message.
+            </div>
+          {:else if chat.joined}
+            <!-- Joined Message -->
+            <div class="system-message" transition:fade="{{duration: 300}}">
+              {chat.who} has joined the chat.
             </div>
           {:else}
             <!-- Regular Message -->
