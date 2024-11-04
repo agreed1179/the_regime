@@ -16,7 +16,7 @@ export function getAssetPath(assetType, filename, assetPaths) {
   if (pathType && assetPaths[pathType]) {
     // Remove any leading and trailing slashes to ensure relative paths
     const sanitizedPath = assetPaths[pathType].replace(/^\/+|\/+$/g, '');
-    console.log(`${sanitizedPath}/${filename}`)
+    //console.log(`${sanitizedPath}/${filename}`)
     return `${sanitizedPath}/${filename}`;
   }
 

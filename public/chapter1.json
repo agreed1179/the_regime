@@ -535,15 +535,6 @@
       "nextId": 5
     },
     {
-      "id": 0,
-      "type": "info",
-      "text": "# 01. \"Might makes right\" \n\n But in reality, people shout past each other's ears. **?",
-      "reference": "Smith, J. (2020). The Nature of Reality. Academic Press.",
-      "background": "debate_room.jpg",
-      "transition": "fade_short",
-      "clickToAdvance": true
-    },
-    {
       "id": 2,
       "type": "dialogue",
       "characters": [

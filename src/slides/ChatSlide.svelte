@@ -191,7 +191,7 @@
           }
         }, 100); // Small delay to ensure messages are rendered
       }
-    }, 200); // Adjust the interval as needed (e.g., 200ms between messages)
+    }, 100); // Adjust the interval as needed (e.g., 200ms between messages) - this is the rate at which messages are populated initially.
   });
 
   onDestroy(() => {
@@ -310,11 +310,15 @@
       display: flex;
       flex-direction: column;
       max-width: 70%;
+      font-family: 'Roboto', sans-serif;
     }
   
     .message {
       background-color: #ffffff;
-      padding: 10px;
+      padding-top: 3px;
+      padding-left: 8px;
+      padding-right: 8px;
+      padding-bottom: 8px;
       border-radius: 10px;
       word-wrap: break-word;
       position: relative;
@@ -371,6 +375,13 @@
       margin-bottom: 5px;
       border-radius: 5px;
       object-fit: contain; /* Preserve aspect ratio */
+    }
+
+    .recalled-message {
+      text-align: center;
+      color: gray;
+      font-size: 0.8em;
+      margin: 10px 0;
     }
 
     .scroll-tip {
@@ -489,55 +500,65 @@
       >
         <!-- Display chat messages -->
         {#each displayedChats as chat, index (index)}
-          <div class="chat-message {chat.position}" transition:fade="{{duration: 300}}">
-            {#if chat.position === 'left'}
-              <!-- Left-aligned message -->
-              <img
-                src="{getAssetPath('character', chat['who-img'], $assetPaths)}"
-                alt="{chat.who}"
-                class="avatar"
-                transition:fade="{{duration: 300}}"
-              />
-              <div class="message-content">
-                <div class="message {chat.position}">
-                  <div class="sender-name">{chat.who}</div>
-                  {#if chat['chat-image']}
-                    <img
-                      src="{getAssetPath('character', chat['chat-image'], $assetPaths)}"
-                      alt="Chat Image"
-                      class="message-image"
-                    />
-                  {/if}
-                  {#if chat.text}
-                    <div class="text">{chat.text}</div>
-                  {/if}
+          {#if chat.recall}
+            <!-- Recalled Message -->
+            <div class="recalled-message" transition:fade="{{duration: 300}}">
+              {chat.who} has recalled a message.
+            </div>
+          {:else}
+            <!-- Regular Message -->
+            <div class="chat-message {chat.position}" transition:fade="{{duration: 300}}">
+              {#if chat.position === 'left'}
+                <!-- Left-aligned message -->
+                <img
+                  src="{getAssetPath('character', chat['who-img'], $assetPaths)}"
+                  alt="{chat.who}"
+                  class="avatar"
+                  transition:fade="{{duration: 300}}"
+                />
+                <div class="message-content">
+                  <div class="message {chat.position}">
+                    <div class="sender-name">{chat.who}</div>
+                    {#if chat['chat-image']}
+                    <!-- Remember that all chat images are stored under 'character' too. -->
+                      <img
+                        src="{getAssetPath('character', chat['chat-image'], $assetPaths)}" 
+                        alt="Chat Image"
+                        class="message-image"
+                      />
+                    {/if}
+                    {#if chat.text}
+                      <div class="text">{chat.text}</div>
+                    {/if}
+                  </div>
                 </div>
-              </div>
-            {:else}
-              <!-- Right-aligned message -->
-              <div class="message-content">
-                <div class="message {chat.position}">
-                  <div class="sender-name right">{chat.who}</div>
-                  {#if chat['chat-image']}
-                    <img
-                      src="{getAssetPath('character', chat['chat-image'], $assetPaths)}"
-                      alt="Chat Image"
-                      class="message-image"
-                    />
-                  {/if}
-                  {#if chat.text}
-                    <div class="text">{chat.text}</div>
-                  {/if}
+              {:else}
+                <!-- Right-aligned message -->
+                <div class="message-content">
+                  <div class="message {chat.position}">
+                    <div class="sender-name right">{chat.who}</div>
+                    {#if chat['chat-image']}
+                    <!-- Remember that all chat images are stored under 'character' too. -->
+                      <img
+                        src="{getAssetPath('character', chat['chat-image'], $assetPaths)}"
+                        alt="Chat Image"
+                        class="message-image"
+                      />
+                    {/if}
+                    {#if chat.text}
+                      <div class="text">{chat.text}</div>
+                    {/if}
+                  </div>
                 </div>
-              </div>
-              <img
-                src="{getAssetPath('character', chat['who-img'], $assetPaths)}"
-                alt="{chat.who}"
-                class="avatar"
-                transition:fade="{{duration: 300}}"
-              />
-            {/if}
-          </div>
+                <img
+                  src="{getAssetPath('character', chat['who-img'], $assetPaths)}"
+                  alt="{chat.who}"
+                  class="avatar"
+                  transition:fade="{{duration: 300}}"
+                />
+              {/if}
+            </div>
+          {/if}
         {/each}
         {#if showScrollTip}
           <div class="scroll-tip">Scroll to read more</div>
