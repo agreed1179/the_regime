@@ -587,6 +587,7 @@
                 background={$slides[$currentStage].background}
                 reflectionText={$slides[$currentStage].reflectionText}
                 reference={$slides[$currentStage].reference}
+                pic={$slides[$currentStage].pic}
               />
             {/if}
           </div>

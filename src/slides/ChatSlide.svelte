@@ -15,10 +15,12 @@
   export let background = '';
   export let reflectionText = '';
   export let reference = '';
+  export let pic = ''; 
 
   // Paths to assets
   $: backgroundPath = getAssetPath('background', background, $assetPaths);
   $: soundEffectPath = getAssetPath('sound', soundEffect, $assetPaths);
+  // Compute the image path for 'pic'
 
   // Sanitize reflectionText
   $: sanitizedReflectionText = reflectionText
@@ -191,7 +193,7 @@
           }
         }, 100); // Small delay to ensure messages are rendered
       }
-    }, 100); // Adjust the interval as needed (e.g., 200ms between messages) - this is the rate at which messages are populated initially.
+    }, 100); // Adjust the interval as needed (e.g., 100ms between messages) - this is the rate at which messages are populated initially. Currently at 100ms to make long conversations load faster.
   });
 
   onDestroy(() => {
@@ -316,8 +318,8 @@
   
     .message {
       background-color: #ffffff;
-      padding-top: 3px;
-      padding-left: 8px;
+      padding-top: 3px; /* reduced top to make it look more natural and space efficient */
+      padding-left: 8px; /* reduced other paddings to render a sleek, modern feel */
       padding-right: 8px;
       padding-bottom: 8px;
       border-radius: 10px;
@@ -340,7 +342,6 @@
     .message .sender-name {
       font-size: 0.8em;
       color: gray;
-      margin-bottom: 5px;
     }
   
     .message .sender-name.right {
@@ -459,13 +460,38 @@
       font-size: 1.2em;
     }
   
+
+
+    .content-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slide-image {
+      max-width: 50%;      /* Adjust as needed */
+      max-height: 80vh;    /* Keep image within viewport height */
+      object-fit: contain; /* Preserve aspect ratio without stretching */
+      margin: 0 20px;      /* Space between image and chat */
+    }
+
     /* Adjustments for mobile */
     @media (max-width: 600px) {
       .chat-container {
         width: 95%;
         height: 80vh;
       }
-  
+      .content-container {
+        flex-direction: column; /* Stack image and chat vertically on small screens */
+      }
+
+      .slide-image, .chat-container {
+        max-width: 90%;    /* Full width on mobile */
+        margin: 10px 0;    /* Space between elements */
+      }
+
       .message {
         max-width: 80%;
       }
@@ -484,111 +510,118 @@
   
   <div class="chat-slide" style="background-image: url('{backgroundPath}');">
     <!-- Removed ClickToAdvanceOverlay -->
-    <div class="chat-container">
-      <!-- Chat Header -->
-      <div class="chat-header" bind:this={chatHeader}>
-        {chatName}
-      </div>
-      <!-- Chat Messages -->
-      <div
-        class="chat-messages"
-        bind:this={chatContainer}
-        on:scroll={handleScroll}
-        on:mousedown={handleMouseDown}
-        on:mousemove={handleMouseMove}
-        on:mouseup={handleMouseUp}
-        on:mouseleave={handleMouseLeave}
-      >
-        <!-- Display chat messages -->
-        {#each displayedChats as chat, index (index)}
-          {#if chat.recall}
-            <!-- Recalled Message -->
-            <div class="system-message" transition:fade="{{duration: 300}}">
-              {chat.who} has recalled a message.
-            </div>
-          {:else if chat.joined}
-            <!-- Joined Message -->
-            <div class="system-message" transition:fade="{{duration: 300}}">
-              {chat.who} has joined the chat.
-            </div>
-          {:else}
-            <!-- Regular Message -->
-            <div class="chat-message {chat.position}" transition:fade="{{duration: 300}}">
-              {#if chat.position === 'left'}
-                <!-- Left-aligned message -->
-                <img
-                  src="{getAssetPath('character', chat['who-img'], $assetPaths)}"
-                  alt="{chat.who}"
-                  class="avatar"
-                  transition:fade="{{duration: 300}}"
-                />
-                <div class="message-content">
-                  <div class="message {chat.position}">
-                    <div class="sender-name">{chat.who}</div>
-                    {#if chat['chat-image']}
-                    <!-- Remember that all chat images are stored under 'character' too. -->
-                      <img
-                        src="{getAssetPath('character', chat['chat-image'], $assetPaths)}" 
-                        alt="Chat Image"
-                        class="message-image"
-                      />
-                    {/if}
-                    {#if chat.text}
-                      <div class="text">{chat.text}</div>
-                    {/if}
+    <div class="content-container">
+      {#if pic}
+        <!-- Display the image -->
+        <img src="{getAssetPath('character', pic, $assetPaths)}" alt="Slide Image" class="slide-image" />
+      {/if}
+      <!-- Chat Container -->
+      <div class="chat-container">
+        <!-- Chat Header -->
+        <div class="chat-header" bind:this={chatHeader}>
+          {chatName}
+        </div>
+        <!-- Chat Messages -->
+        <div
+          class="chat-messages"
+          bind:this={chatContainer}
+          on:scroll={handleScroll}
+          on:mousedown={handleMouseDown}
+          on:mousemove={handleMouseMove}
+          on:mouseup={handleMouseUp}
+          on:mouseleave={handleMouseLeave}
+        >
+          <!-- Display chat messages -->
+          {#each displayedChats as chat, index (index)}
+            {#if chat.recall}
+              <!-- Recalled Message -->
+              <div class="system-message" transition:fade="{{duration: 300}}">
+                {chat.who} has recalled a message.
+              </div>
+            {:else if chat.joined}
+              <!-- Joined Message -->
+              <div class="system-message" transition:fade="{{duration: 300}}">
+                {chat.who} has joined the chat.
+              </div>
+            {:else}
+              <!-- Regular Message -->
+              <div class="chat-message {chat.position}" transition:fade="{{duration: 300}}">
+                {#if chat.position === 'left'}
+                  <!-- Left-aligned message -->
+                  <img
+                    src="{getAssetPath('character', chat['who-img'], $assetPaths)}"
+                    alt="{chat.who}"
+                    class="avatar"
+                    transition:fade="{{duration: 300}}"
+                  />
+                  <div class="message-content">
+                    <div class="message {chat.position}">
+                      <div class="sender-name">{chat.who}</div>
+                      {#if chat['chat-image']}
+                      <!-- Remember that all chat images are stored under 'character' too. -->
+                        <img
+                          src="{getAssetPath('character', chat['chat-image'], $assetPaths)}" 
+                          alt="Chat Image"
+                          class="message-image"
+                        />
+                      {/if}
+                      {#if chat.text}
+                        <div class="text">{chat.text}</div>
+                      {/if}
+                    </div>
                   </div>
-                </div>
-              {:else}
-                <!-- Right-aligned message -->
-                <div class="message-content">
-                  <div class="message {chat.position}">
-                    <div class="sender-name right">{chat.who}</div>
-                    {#if chat['chat-image']}
-                    <!-- Remember that all chat images are stored under 'character' too. -->
-                      <img
-                        src="{getAssetPath('character', chat['chat-image'], $assetPaths)}"
-                        alt="Chat Image"
-                        class="message-image"
-                      />
-                    {/if}
-                    {#if chat.text}
-                      <div class="text">{chat.text}</div>
-                    {/if}
+                {:else}
+                  <!-- Right-aligned message -->
+                  <div class="message-content">
+                    <div class="message {chat.position}">
+                      <div class="sender-name right">{chat.who}</div>
+                      {#if chat['chat-image']}
+                      <!-- Remember that all chat images are stored under 'character' too. -->
+                        <img
+                          src="{getAssetPath('character', chat['chat-image'], $assetPaths)}"
+                          alt="Chat Image"
+                          class="message-image"
+                        />
+                      {/if}
+                      {#if chat.text}
+                        <div class="text">{chat.text}</div>
+                      {/if}
+                    </div>
                   </div>
-                </div>
-                <img
-                  src="{getAssetPath('character', chat['who-img'], $assetPaths)}"
-                  alt="{chat.who}"
-                  class="avatar"
-                  transition:fade="{{duration: 300}}"
-                />
-              {/if}
-            </div>
+                  <img
+                    src="{getAssetPath('character', chat['who-img'], $assetPaths)}"
+                    alt="{chat.who}"
+                    class="avatar"
+                    transition:fade="{{duration: 300}}"
+                  />
+                {/if}
+              </div>
+            {/if}
+          {/each}
+          {#if showScrollTip}
+            <div class="scroll-tip">Scroll to read more</div>
           {/if}
-        {/each}
-        {#if showScrollTip}
-          <div class="scroll-tip">Scroll to read more</div>
+        </div>
+        <!-- Message Input Bar -->
+        <div class="message-input-bar" on:click={handleMessageInputClick} bind:this={messageInputBar}>
+          <div class="input-placeholder">Type a message...</div>
+        </div>
+        <!-- Banner Message -->
+        {#if showBannerMessage}
+          <div
+            class="banner-message"
+            bind:this={bannerMessage}
+            on:click={(event) => {
+              showBannerMessage = false;
+              event.stopPropagation();
+            }}
+          >
+            <p>Glad to see that you're keen to join the conversation</p>
+            <p>In the future I might put an AI in there so you can have a good chat...</p>
+            <p>But for now, email me your thoughts instead :)</p>
+          </div>
         {/if}
       </div>
-      <!-- Message Input Bar -->
-      <div class="message-input-bar" on:click={handleMessageInputClick} bind:this={messageInputBar}>
-        <div class="input-placeholder">Type a message...</div>
-      </div>
-      <!-- Banner Message -->
-      {#if showBannerMessage}
-        <div
-          class="banner-message"
-          bind:this={bannerMessage}
-          on:click={(event) => {
-            showBannerMessage = false;
-            event.stopPropagation();
-          }}
-        >
-          <p>Glad to see that you're keen to join the conversation</p>
-          <p>In the future I might put an AI in there so you can have a good chat...</p>
-          <p>But for now, email me your thoughts instead :)</p>
-        </div>
-      {/if}
     </div>
     <!-- Reflection Text -->
     {#if reflectionText}
