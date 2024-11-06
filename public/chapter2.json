@@ -546,10 +546,18 @@
     "characterImage": "bentham.jpg",
     "quoteWho" : "Jeremy Bentham",
     "soundEffect": "test.mp3",
-    "reflectionText": "<p style=\"text-align: right\"> Click to start the next chapter... </p>",
+
     "reference":"Bentham’s advice to a young girl in 1830. Bentham, J., ed. by Goldworth, A. (1983). Deontology together with A Table of the Springs of Action and Article on Utilitarianism. Oxford: Clarendon, p.xix.",
     "background": "philosophy_classroom.jpg",
     "guess": false
+  },
+  {
+    "type": "dream",
+    "text": "End of chapter 02. \n\n *Click to start the next chapter...*",
+    "soundEffect" : "test.mp3",
+    "noHistory" : false,
+    "fadeInTime" : 1800,
+    "fadeOutTime" : 2000
   }
 ]
 }
