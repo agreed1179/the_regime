@@ -41,28 +41,28 @@
     },
     {
       "type": "info",
-      "text": "Indeed, whether we're conscious or not, the philosophers of the past have already a deep seated influence on us.",
+      "text": "Indeed, whether we're conscious or not, the philosophers or \"generals\" have already a deep seated influence on us. \n\n You might be familiar with many of these sayings coming from them, whether you've read it from elsewhere, heard it from other people, or internalised it via the participation of internet culture. \n\n For example...",
       "soundEffect": "test.mp3",
-      "background": "philosophy_classroom.jpg",
+      "background": "philosophy_classroom.jpg", 
       "transition": "fade_short"
     },
     {
       "type": "quotemulti",
       "characterImage": "plato.jpg",
       "quoteWho" : "Plato (427—347 B.C.E.)",
-      "reflectionText": "...Some of these philosophical \"generals\" are benign... \n\n Others, not so much.",
+      "reflectionText": "Plato envisions a society where its rulers are governed by reason - ideally a *philosopher king* who pursues justice, truth, and wisdom. \n\n He is critical of democracy, because he believe that it allowed unqualified individuals to make important decisions, who instead of ruling with reason plays to the whims of the masses, degenerating society into tyranny as they pursue self-interest and populism over justice and truth.",
       "quotes": [
         {
           "text": "With great power comes great responsibility"
         },
         {
-          "text": "Good actions give strength to ourselves and inspire good actions in others"
-        },
-        {
-          "text": "Necessity is the mother of invention"
+          "text": "He who steals a little steals with the same wish as he who steals much, but with less power"
         },
         {
           "text": "The measure of a man is what he does with power"
+        },
+        {
+          "text": "He who commits injustice is ever made more wretched than he who suffers it."
         },
         {
           "text": "Ignorance, the root and stem of every evil"
@@ -71,70 +71,93 @@
           "text": "A good decision is based on knowledge, not on numbers"
         },
         {
-          "text": "Justice means minding your own business and not meddling with other men's concerns"
-        },
-        {
           "text": "Dictatorship naturally arises out of democracy"
         },
         {
           "text": "Those who tell the stories rule society"
+        },
+        {
+          "text": "One of the penalties for refusing to participate in politics is that you end up being governed by your inferiors"
+        },
+        {
+          "text": "Human behaviour flows from three main sources: desire, emotion, and knowledge"
+        },
+        {
+          "text": "The empty vessel makes the loudest sound"
+        },
+        {
+          "text": "Knowledge without justice ought to be called cunning rather than wisdom"
+        },
+        {
+          "text": "This and no other is the root from which a tyrant springs; when he first appears he is a protector"
+        },
+        {
+          "text": "Man - a being in search of meaning"
         }
       ],
       "soundEffect": "test.mp3",
       "background": "philosophy_classroom.jpg",
-      "reference":"Image source: Lapham's Quarterly, https://www.laphamsquarterly.org/contributors/plato",
+      "reference":"Image sourced from Lapham's Quarterly, https://www.laphamsquarterly.org/contributors/plato",
       "transition": "fade_short",
       "guess": false
     },
     {
       "type": "quotemulti",
-      "characterImage": "plato.jpg",
-      "quoteWho" : "Immanuel Kant",
+      "characterImage": "marcus_aurelius.jpg",
+      "reflectionText": "Marcus Aurelius, a Roman Emperor, was a Stoic philosopher who emphasised self-discipline, acceptance, and meeting the vicissitudes of life through the control of one's own mind, thereby achieving inner peace. He believed that individuals should strive to control what they can, while accepting what lies beyond. \n\n Sounded like a yogi didn't he?",
+      "quoteWho" : "Marcus Aurelius (121—180 A.D.)",
       "quotes": [
         {
-          "text": "I can’t prove it, but I feel it’s true"
+          "text": "You have power over your mind - not outside events. Realize this, and you will find strength"
         },
         {
-          "text": "There is nothing higher than reason"
+          "text": "The happiness of your life depends upon the quality of your thoughts"
         },
         {
-          "text": "The mind imposes order on the chaos of reality"
+          "text": "Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth"
         },
         {
-          "text": "What we know is not the thing in itself, but only our perception of it"
+          "text": "When you arise in the morning think of what a privilege it is to be alive, to think, to enjoy, to love ..."
         },
         {
-          "text": "Experience, not reason alone, is the source of knowledge"
+          "text": "The best revenge is to be unlike him who performed the injury"
         },
         {
-          "text": "I had to deny knowledge in order to make room for faith."
+          "text": "The soul becomes dyed with the colour of its thoughts"
         },
         {
-          "text": "Reality is shaped by the mind, not revealed by it"
+          "text": "It is not death that a man should fear, but he should fear never beginning to live"
         },
         {
-          "text": "We can only know things as they appear, not as they are"
+          "text": "Never let the future disturb you. You will meet it, if you have to, with the same weapons of reason which today arm you against the present"
         },
         {
-          "text": "Certainty in science does not imply truth in philosophy"
+          "text": "Our life is what our thoughts make it"
         },
         {
-          "text": "Reason must be humbled by experience"
+          "text": "The object of life is not to be on the side of the majority, but to escape finding oneself in the ranks of the insane"
         },
         {
-          "text": "Truth lies beyond the reach of pure logic"
+          "text": "Reject your sense of injury and the injury itself disappears"
+        },
+        {
+          "text": "How much more grievous are the consequences of anger than the causes of it"
+        },
+        {
+          "text": "A man’s worth is no greater than the worth of his ambitions"
         }
       ],
       "soundEffect": "test.mp3",
       "background": "philosophy_classroom.jpg",
-      "reference":"Image source: Lapham's Quarterly, https://www.laphamsquarterly.org/contributors/plato",
+      "reference":"Image sourced from *Marcus Aurelius - Meditations, Death & Facts.* (2021, May 14). Biography. https://www.biography.com/political-figures/marcus-aurelius",
       "transition": "fade_short",
       "guess": false
     },
     {
       "type": "quotemulti",
-      "characterImage": "plato.jpg",
+      "characterImage": "hume.jpg",
       "quoteWho" : "David Hume",
+      "reflectionText": "David Hume is known for his *empiricism*, arguing that all knowledge derives from sensory perception. He famously challenged the concept of causality, arguing that we cannot observe causality directly, but only the sequence of events and *infer* a \"causal\" connection - which brought humility into causal reasoning. \n\n His philosophical insights contributed massively to the statistical procedures used in the scientific method, and underpins the field of *causal analysis* of this day which is routinely used in the quantitative fields.",
       "quotes": [
         {
           "text": "Beauty in things exists in the mind which contemplates them"
@@ -178,14 +201,15 @@
       ],
       "soundEffect": "test.mp3",
       "background": "philosophy_classroom.jpg",
-      "reference":"Image source: Lapham's Quarterly, https://www.laphamsquarterly.org/contributors/plato",
+      "reference":"Image sourced from Fieser, J. (n.d.). *Hume, David | Internet Encyclopedia of Philosophy*. Internet Encyclopedia of Philosophy. https://iep.utm.edu/hume/",
       "transition": "fade_short",
       "guess": false
     },
     {
       "type": "quotemulti",
-      "characterImage": "plato.jpg",
-      "quoteWho" : "David Hume",
+      "characterImage": "hegel.jpg",
+      "reflectionText": "Hegal's philosophy centres on the idea that we gain knowledge from a process of dialectical progression. His central idea is that when we face a novel situation, we first come up with a thesis and an antithesis, which then causes a bunch of contradictions. When we synthesise all these contradictions, we would have gain knowledge about something. \n\n Hegal may not be as well known to most people. But I'm sure you've heard about the direct descendent of his theory – Marxism and its associated Historical Materialistic reinterpretation of the world. ",
+      "quoteWho" : "Georg Wilhelm Friedrich Hegel",
       "quotes": [
         {
           "text": "Genuine tragedies in the world are not conflicts between right and wrong. They are conflicts between two rights"
@@ -194,7 +218,7 @@
           "text": "Nothing great in the world has ever been accomplished without passion"
         },
         {
-          "text": "The learner always begins by finding fault, but the scholar sees the positive merit in everything"
+          "text": "The many ... whom one chooses to call the people, are indeed a collection, but only as a multitude, a formless mass, whose movement and action would be elemental, irrational, savage, and terrible."
         },
         {
           "text": "Evil resides in the very gaze which perceives Evil all around itself"
@@ -203,33 +227,91 @@
           "text": "Truth is found neither in the thesis nor the antithesis, but in an emergent synthesis which reconciles the two"
         },
         {
-          "text": "Education is the art of making man ethical"
+          "text": "The anti-human, the merely animal, consists in staying within the sphere of feeling, and being able to communicate only at that level"
         },
         {
-          "text": "When liberty is mentioned, we must always be careful to observe whether it is not really the assertion of private interests which is thereby designated"
-        },
-        {
-          "text": "Mere goodness can achieve little against the power of nature"
+          "text": "What is rational is real; and what is real is rational"
         },
         {
           "text": "Once the state has been founded, there can no longer be any heroes. They come on the scene only in uncivilized conditions"
         },
         {
-          "text": "It is easier to discover a deficiency in individuals, in states, and in Providence, than to see their real import and value"
+          "text": "Propounding peace and love without practical or institutional engagement is delusion, not virtue"
         },
         {
           "text": "Animals are in possession of themselves; their soul is in possession of their body. But they have no right to their life, because they do not will it"
+        },
+        {
+          "text": "When we look at the world rationally, the world looks rationally back"
+        },
+        {
+          "text": "History teaches us that man learns nothing from history"
+        },
+        {
+          "text": "By means of the simple folk remedy of ascribing to feeling what is the millennia-long labor of reason and of its understanding, all are spared the bother of rational insight and knowledge."
         }
       ],
       "soundEffect": "test.mp3",
       "background": "philosophy_classroom.jpg",
-      "reference":"Image source: Lapham's Quarterly, https://www.laphamsquarterly.org/contributors/plato",
+      "reference":"Image sourced from Georg Wilhelm Friedrich Hegel. (2014). *The-German-American*. https://www.the-german-american.com/germany/german-literature/georg-wilhelm-friedrich-hegel/",
+      "transition": "fade_short",
+      "guess": false
+    },
+    {
+      "type": "quotemulti",
+      "characterImage": "ayn_rand_2.jpg",
+      "reflectionText": "Ayn Rand's philosophy is known as Objectivism, essentially asserting that what we can perceive is reality, and therefore is knowable through reason. She asserts that each person is an end in themselves. Therefore, *rational self-interest* is the highest moral purpose. \n\n In her view, emotions and faith are unreliable guides to truth; only objective reality and rational thought can provide an accurate understanding of the world.",
+      "quoteWho" : "Alice O'Connor (pen name Ayn Rand)",
+      "quotes": [
+        {
+          "text": "I could die for you. But I couldn't, and wouldn't, live for you"
+        },
+        {
+          "text": "The question isn't who is going to let me; it's who is going to stop me."
+        },
+        {
+          "text": "Contradictions do not exist. Whenever you think you are facing a contradiction, check your premises. You will find that one of them is wrong."
+        },
+        {
+          "text": "Ask yourself whether the dream of heaven and greatness should be waiting for us in our graves - or whether it should be ours here and now and on this earth."
+        },
+        {
+          "text": "A creative man is motivated by the desire to achieve, not by the desire to beat others."
+        },
+        {
+          "text": "Learn to value yourself, which means: fight for your happiness."
+        },
+        {
+          "text": "There is a level of cowardice lower than that of the conformist: the fashionable non-conformist."
+        },
+        {
+          "text": "There are two sides to every issue: one side is right and the other is wrong, but the middle is always evil."
+        },
+        {
+          "text": "The hardest thing to explain is the glaringly evident which everybody had decided not to see."
+        },
+        {
+          "text": "Civilization is the progress toward a society of privacy. The savage's whole existence is public, ruled by the laws of his tribe. Civilization is the process of setting man free from men."
+        },
+        {
+          "text": "Do not ever say that the desire to 'do good' by force is a good motive. Neither power-lust nor stupidity are good motives."
+        },
+        {
+          "text": "A white lie is the blackest of all."
+        },
+        {
+          "text": "Love is blind, they say; sex is impervious to reason and mocks the power of all philosophers. But, in fact, a person's sexual choice is the result and sum of their fundamental convictions. Tell me what a person finds sexually attractive and I will tell you their entire philosophy of life. Show me the person they sleep with and I will tell you their valuation of themselves."
+        }
+      ],
+      "soundEffect": "test.mp3",
+      "background": "philosophy_classroom.jpg",
+      "reference":"Image sourced from kmenshikova. (2023, February 14). 7 *Ayn Rand quotes for living a fulfilling life | Learn Liberty*. Learnliberty.org. https://www.learnliberty.org/blog/7-ayn-rand-quotes-for-living-a-fulfilling-life/",
       "transition": "fade_short",
       "guess": false
     },
     {
       "type": "info",
-      "text": "The real question is, which general are you fighting for? \n\n Some of these philosophical \"generals\" are benign. Others not so much. \n\n Say... Would you agree with this statement?",
+      "text": "As you can see, the philosophers of the past often have a very different view about things. You might or might not have resonated with some of them. \n\n The real question is, which general are you fighting for? \n\n Say... Would you agree with this statement?",
       "soundEffect": "test.mp3",
       "background": "philosophy_classroom.jpg",
       "transition": "fade_short"
@@ -237,7 +319,19 @@
     {
       "type": "agreedisagree",
       "agreeDisagreeId": 1,
-      "text": "The production of too many useful things results in too many useless people. .",
+      "text": "The production of too many useful things results in too many useless people.",
+      "characterImage": "marx.jpg",
+      "quoteWho" : "Karl Marx",
+      "reflectionTextCorrect": "Congratulations, you agreed with Karl Marx",
+      "reflectionTextIncorrect": "Congratulations, you disagreed with Karl Marx.",
+      "soundEffect": "test.mp3",
+      "reference":"Marx, K. (1978). *Economic and philosophic manuscripts of 1844*. In R. C. Tucker (Ed.), The Marx-Engels Reader (2nd ed., pp. 66-125). W. W. Norton & Company. (Original work published 1844)",
+      "background": "philosophy_classroom.jpg"
+    },
+    {
+      "type": "agreedisagree",
+      "agreeDisagreeId": 1,
+      "text": "The production of too many useful things results in too many useless people.",
       "characterImage": "marx.jpg",
       "quoteWho" : "Karl Marx",
       "reflectionTextCorrect": "Congratulations, you agreed with Karl Marx",
@@ -248,7 +342,7 @@
     },
     {
       "type": "dream",
-      "text": "Let's play a game. \n\n<br/> Guess who said these quotes... (INCOMPLETE - questions not working)",
+      "text": "Let's play a game. \n\n<br/> Guess who said these quotes...",
       "soundEffect" : "test.mp3",
       "noHistory" : false,
       "fadeInTime" : 1800,
@@ -420,198 +514,11 @@
       "reference" : "DeGroot, M. H., & Schervish, M. J. (2012). *Probability and statistics* (4th ed.). Pearson."
     },
     {
-      "type": "dialogue",
-      "dialogueText": "But I would say, that we’re all slaves to some philosophers, defunct or not…",
-      "background": "debate_room.jpg",
-      "soundEffect": "test.mp3"
-    },
-    {
-      "type": "dialogue",
-      "characters": [
-        {
-          "speaker": "Protestor",
-          "imageType": "large",
-          "imageSrc": "protestor_1.png",
-          "position": "upper-left",
-          "transition": {
-            "type": "fade",
-            "duration": 500
-          },
-          "imgborder": true
-        },
-        {
-          "speaker": "Protestor",
-          "imageType": "medium",
-          "imageSrc": "protestor_1.png",
-          "position": "upper-middle",
-          "transition": {
-            "type": "fade",
-            "duration": 500
-          },
-          "imgborder": false
-        },
-        {
-          "speaker": "Protestor",
-          "imageType": "small",
-          "imageSrc": "protestor_1.png",
-          "position": "upper-right",
-          "transition": {
-            "type": "fade",
-            "duration": 500
-          },
-          "imgborder": true
-        },
-        {
-          "speaker": "Protestor",
-          "imageType": "medium",
-          "imageSrc": "protestor_1.png",
-          "position": "middle-left",
-          "transition": {
-            "type": "fade",
-            "duration": 500
-          },
-          "imgborder": false
-        },
-        {
-          "speaker": "Protestor",
-          "imageType": "large",
-          "imageSrc": "protestor_1.png",
-          "position": "middle-middle",
-          "transition": {
-            "type": "fade",
-            "duration": 500
-          },
-          "imgborder": true
-        },
-        {
-          "speaker": "Protestor",
-          "imageType": "small",
-          "imageSrc": "protestor_1.png",
-          "position": "middle-right",
-          "transition": {
-            "type": "fade",
-            "duration": 500
-          },
-          "imgborder": false
-        },
-        {
-          "speaker": "Protestor",
-          "imageType": "medium",
-          "imageSrc": "protestor_1.png",
-          "position": "lower-left",
-          "transition": {
-            "type": "fade",
-            "duration": 500
-          },
-          "imgborder": true
-        },
-        {
-          "speaker": "Protestor",
-          "imageType": "small",
-          "imageSrc": "protestor_1.png",
-          "position": "lower-middle",
-          "transition": {
-            "type": "fade",
-            "duration": 500
-          },
-          "imgborder": false
-        },
-        {
-          "speaker": "Protestor",
-          "imageType": "large",
-          "imageSrc": "protestor_1.png",
-          "position": "lower-right",
-          "transition": {
-            "type": "fade",
-            "duration": 500
-          },
-          "imgborder": true
-        }
-      ],
-      "dialogueText": "How often have you seen this?",
-      "background": "debate_room.jpg",
-      "reference":"Bordwell, D., & Thompson, K. (2010). *Film Art: An Introduction (10th ed.).* McGraw-Hill.",
+      "type": "info",
+      "text": "As you can see, the philosophers of the past often have a very different view about things. You might or might not have resonated with some of them. \n\n The real question is, which general are you fighting for? \n\n Say... Would you agree with this statement?",
       "soundEffect": "test.mp3",
-      "nextId": 5
-    },
-    {
-      "id": 2,
-      "type": "dialogue",
-      "characters": [
-        {
-          "speaker": "",
-          "imageSize": "large",
-          "imageSrc": "protestor_1.png",
-          "position": "upper-left",
-          "transition": {
-            "type": "fade",
-            "duration": 500
-          }
-        }
-      ],
-      "dialogueText": "How often have you seen this?",
-      "background": "debate_room.jpg",
-      "soundEffect": "test.mp3",
-      "nextId": 2
-    },
-    {
-      "id": 2,
-      "type": "dialogue",
-      "characters": [
-        {
-          "speaker": "Plato",
-          "imageSize": "medium",
-          "imageSrc": "plato.jpg",
-          "position": "left",
-          "transition": {
-            "type": "fade",
-            "duration": 500
-          }
-        },
-        {
-          "speaker": "Aristotle",
-          "imageSize": "medium",
-          "imageSrc": "kant.jpg",
-          "position": "right",
-          "transition": {
-            "type": "fade",
-            "duration": 500
-          }
-        }
-      ],
-      "dialogueText": "Let us delve deeper into the forms and their existence.",
-      "background": "debate_room.jpg",
-      "soundEffect": "test.mp3",
-      "nextId": 3
-    },
-    {
-      "id": 3,
-      "type": "choices",
-      "choices": [
-        {
-          "side": "left",
-          "character": {
-            "speaker": "Kant",
-            "imageSize": "small",
-            "imageSrc": "kant.jpg",
-            "position": "choices"
-          },
-          "choiceText": "Ask about perception",
-          "popupMessage": "You chose to ask about perception. This will lead to new insights."
-        },
-        {
-          "side": "right",
-          "character": {
-            "speaker": "Politician",
-            "imageSize": "small",
-            "imageSrc": "trump.webp",
-            "position": "choices"
-          },
-          "choiceText": "Introduce Cartesian skepticism",
-          "popupMessage": "You chose to introduce Cartesian skepticism. Prepare for a philosophical debate."
-        }
-      ],
-      "background": "philosophy_classroom.jpg"
+      "background": "philosophy_classroom.jpg",
+      "transition": "fade_short"
     }
   ]
 }
