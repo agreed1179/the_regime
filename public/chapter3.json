@@ -385,7 +385,7 @@
         {
           "speaker": "",
           "imageSize": "large",
-          "imageSrc": "trolley_fpv.webp",
+          "imageSrc": "situation_shark.jpg",
           "position": "middle-middle",
           "transition": {
             "type": "fade",
@@ -393,10 +393,10 @@
           }
         }
       ],
-      "dialogueText": "In a whirlwind of shock, dread, panic, disbelief, paralysis, followed by a state of chaotic *Zen* with a Mulholland-Drive-esque dreamy lucidity, you find that somehow a lever has been *shoved* into your hands. \n\n On the lever, it says: \"pull lever to switch track\" \n\n",
+      "dialogueText": "A shark is chasing 5 people in a lifeboat which is leaking because it was designed to only carry 4 people. It will soon sink and everybody will die. \n\n What is the ethical thing to do? \n\n Utilitarians: Easy, feed one person to the shark. It keeps the shark busy and stops the boat from leaking, allowing the other 4 to escape.",
       "background": "debate_room.jpg",
       "soundEffect": "test.mp3",
-      "reference":"MedievalFurnace (2024), *Oh no! The trolley problem is in a first person perspective! [Online Forum Post]*. Reddit. https://www.reddit.com/r/trolleyproblem/comments/1fwxd8j/oh_no_the_trolley_problem_is_in_a_first_person/"
+      "reference":""
     }
   ]
 }

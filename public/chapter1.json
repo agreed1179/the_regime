@@ -256,6 +256,63 @@
       "reference":"Image sourced from Georg Wilhelm Friedrich Hegel. (2014). *The-German-American*. https://www.the-german-american.com/germany/german-literature/georg-wilhelm-friedrich-hegel/",
       "transition": "fade_short",
       "guess": false
+    },{
+      "type": "quotemulti",
+      "characterImage": "schopenhauer.jpg",
+      "reflectionText": "According to Schopenhauer, the world is driven by a \"will\" which is a restless, insatiable desire that propels not only humans but also all natural phenomena. In human beings, the will manifests as desires and can never be satisfied, therefore leading to inevitable dissatisfaction. One must learn to transcend the will in order to find relief from the endless bipolar cycle of ecstasy and depression. \n\n Schopenhauer also believes that artistic experiences such as music is a unique way to momentarily escape the will, and momentarily touch on a pure experience beyond the personal desire.",
+      "quoteWho" : "Arthur Schopenhauer",
+      "quotes": [
+        {
+          "text": "Talent hits a target no one else can hit. Genius hits a target no one else can see."
+        },
+        {
+          "text": "Compassion is the basis of morality."
+        },
+        {
+          "text": "Mostly it is loss which teaches us about the worth of things."
+        },
+        {
+          "text": "A man can do what he wants, but not want what he wants."
+        },
+        {
+          "text": "Wicked thoughts and worthless efforts gradually set their mark on the face, especially the eyes."
+        },
+        {
+          "text": "The more unintelligent a man is, the less mysterious existence seems to him."
+        },
+        {
+          "text": "The first forty years of life give us the text; the next thirty supply the commentary on it."
+        },
+        {
+          "text": "With people of limited ability modesty is merely honesty. But with those who possess great talent it is hypocrisy."
+        },
+        {
+          "text": "Every man takes the limits of his own field of vision for the limits of the world."
+        },
+        {
+          "text": "Almost all of our sorrows spring out of our relations with other people."
+        },
+        {
+          "text": "Friends and acquaintances are the surest passport to fortune."
+        },
+        {
+          "text": "Hatred is an affair of the heart; contempt that of the head."
+        },
+        {
+          "text": "Change alone is eternal, perpetual, immortal."
+        },
+        {
+          "text": "Treat a work of art like a prince. Let it speak to you first."
+        },
+        {
+          "text": "Martyrdom is the only way a man can become famous without ability."
+        }
+      ],
+      "soundEffect": "test.mp3",
+      "background": "philosophy_classroom.jpg",
+      "reference":"Image sourced from kmenshikova. (2023, February 14). 7 *Ayn Rand quotes for living a fulfilling life | Learn Liberty*. Learnliberty.org. https://www.learnliberty.org/blog/7-ayn-rand-quotes-for-living-a-fulfilling-life/",
+      "transition": "fade_short",
+      "guess": false
     },
     {
       "type": "quotemulti",
@@ -506,7 +563,7 @@
     },
     {
       "type": "dream",
-      "text": "Brace yourselves, things are about to get serious... \n\n<br/> (Trigger warning: serious political themes.)",
+      "text": "Brace yourself, it's about to get serious... \n\n<br/> (Trigger warning: intense political themes.)",
       "soundEffect" : "test.mp3",
       "noHistory" : true,
       "fadeInTime" : 1800,
@@ -548,6 +605,13 @@
       "background": "cave_background.jpg",
       "soundEffect": "test.mp3",
       "reference" : "DeGroot, M. H., & Schervish, M. J. (2012). *Probability and statistics* (4th ed.). Pearson."
+    },
+    {
+      "type": "info",
+      "text": "In a way, each filmmaker operates like a leader of a small regime within their immediate sphere of influence. But this influence doesn't stop there. Through the films we create, this miniature regime extends its reach, rippling out into the society at large. \n\n It is, therefore, of paramount import that filmmakers fully understand the regime they've constructed around them.  \n\n They must become consciously aware of the fundamental ideologies they are perpetuating.",
+      "soundEffect": "test.mp3",
+      "background": "philosophy_classroom.jpg",
+      "transition": "fade_short"
     },
     {
       "type": "info",
