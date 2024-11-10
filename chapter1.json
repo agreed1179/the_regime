@@ -468,122 +468,224 @@
     {
       "type": "quotequiz",
       "characterImage": "unknown_character.png",
-      "text": "The only limit to our realization of tomorrow is our doubts of today.",
+      "text": "For the bureaucrat, the world is a mere object to be manipulated by him.",
       "quoteWho": "",
-      "correctAnswer": "Franklin D. Roosevelt",
-      "reference":"Keynes, J. M. (1936). *The general theory of employment, interest, and money.* Palgrave Macmillan.",
+      "correctAnswer": "Karl Marx",
+      "reference":"",
       "choices": [
         {
-          "name": "Franklin D. Roosevelt",
-          "characterImage": "kant.jpg"
+          "name": "Karl Marx",
+          "characterImage": "marx.jpg"
         },
         {
-          "name": "Albert Einstein",
-          "characterImage": "plato.jpg"
+          "name": "Pierre Bourdieu",
+          "characterImage": "bourdieu.jpg"
         },
         {
-          "name": "Winston Churchill",
-          "characterImage": "trump.webp"
+          "name": "Milton Friedman",
+          "characterImage": "friedman.jpg"
         },
         {
-          "name": "Abraham Lincoln",
-          "characterImage": "protestor_1.png"
+          "name": "Marcus Aurelius",
+          "characterImage": "marcus_aurelius.jpg"
         }
       ],
       "background": "cave_background.jpg",
       "soundEffect": "test.mp3",
       "reflectionTextCorrect": "🎉 **Great job!** You selected the correct answer.",
-      "reflectionTextIncorrect": "❌ **Oops!** That's not correct. The right answer is *Franklin D. Roosevelt*."
+      "reflectionTextIncorrect": "❌ **Oops!** That's not correct. The right answer is *Karl Marx*."
     },
     {
       "type": "quotequiz",
       "characterImage": "unknown_character.png",
-      "text": "The only limit to our realization of tomorrow is our doubts of today.",
+      "text": "Without tradition, art is a flock of sheep without a shepherd. Without innovation, it is a corpse.",
       "quoteWho": "",
-      "correctAnswer": "Franklin D. Roosevelt",
-      "reference":"Keynes, J. M. (1936). *The general theory of employment, interest, and money.* Palgrave Macmillan.",
+      "correctAnswer": "Winston Churchill",
+      "reference":"",
       "choices": [
         {
-          "name": "Franklin D. Roosevelt",
-          "characterImage": "kant.jpg"
+          "name": "Richard Nixon",
+          "characterImage": "nixon.webp"
         },
         {
-          "name": "Albert Einstein",
-          "characterImage": "plato.jpg"
+          "name": "Adolf Hitler",
+          "characterImage": "hitler.jpg"
         },
         {
           "name": "Winston Churchill",
-          "characterImage": "trump.webp"
+          "characterImage": "churchill.webp"
         },
         {
-          "name": "Abraham Lincoln",
-          "characterImage": "protestor_1.png"
+          "name": "Elon Musk",
+          "characterImage": "musk.jpeg"
         }
       ],
       "background": "cave_background.jpg",
-      "soundEffect": "test.mp3",
-      "reflectionTextCorrect": "🎉 **Great job!** You selected the correct answer.",
-      "reflectionTextIncorrect": "❌ **Oops!** That's not correct. The right answer is *Franklin D. Roosevelt*."
+      "soundEffect": "test.mp3"
     },
     {
       "type": "quotequiz",
       "characterImage": "unknown_character.png",
-      "text": "The only limit to our realization of tomorrow is our doubts of today.",
+      "text": "It doesn't hurt to get more education.",
       "quoteWho": "",
-      "correctAnswer": "Franklin D. Roosevelt",
-      "reference":"Keynes, J. M. (1936). *The general theory of employment, interest, and money.* Palgrave Macmillan.",
+      "correctAnswer": "Donald Trump",
+      "reference":"",
       "choices": [
         {
-          "name": "Franklin D. Roosevelt",
-          "characterImage": "kant.jpg"
+          "name": "Mahatma Ghandi",
+          "characterImage": "ghandi.webp"
         },
         {
-          "name": "Albert Einstein",
-          "characterImage": "plato.jpg"
+          "name": "John Maynard Keynes",
+          "characterImage": "keynes.jpg"
         },
         {
-          "name": "Winston Churchill",
+          "name": "Margaret Thatcher",
+          "characterImage": "thatcher.jpg"
+        },
+        {
+          "name": "Donald Trump",
           "characterImage": "trump.webp"
-        },
-        {
-          "name": "Abraham Lincoln",
-          "characterImage": "protestor_1.png"
         }
       ],
       "background": "cave_background.jpg",
-      "soundEffect": "test.mp3",
-      "reflectionTextCorrect": "🎉 **Great job!** You selected the correct answer.",
-      "reflectionTextIncorrect": "❌ **Oops!** That's not correct. The right answer is *Franklin D. Roosevelt*."
+      "soundEffect": "test.mp3"
     },
     {
       "type": "quotequiz",
       "characterImage": "unknown_character.png",
-      "text": "The only limit to our realization of tomorrow is our doubts of today.",
+      "text": "When you're young, you look at television and think, there's a conspiracy. The networks have conspired to dumb us down. But when you get a little older, you realize that's not true. The networks are in business to give people exactly what they want.",
       "quoteWho": "",
-      "correctAnswer": "Franklin D. Roosevelt",
-      "reference":"Keynes, J. M. (1936). *The general theory of employment, interest, and money.* Palgrave Macmillan.",
+      "correctAnswer": "Steve Jobs",
+      "reference":"",
       "choices": [
         {
-          "name": "Franklin D. Roosevelt",
-          "characterImage": "kant.jpg"
+          "name": "Steve Jobs",
+          "characterImage": "jobs.png"
         },
         {
-          "name": "Albert Einstein",
-          "characterImage": "plato.jpg"
-        },
-        {
-          "name": "Winston Churchill",
+          "name": "Donald Trump",
           "characterImage": "trump.webp"
         },
         {
-          "name": "Abraham Lincoln",
-          "characterImage": "protestor_1.png"
+          "name": "Elon Musk",
+          "characterImage": "musk.jpeg"
+        },
+        {
+          "name": "Richard Nixon",
+          "characterImage": "nixon.webp"
         }
       ],
       "background": "cave_background.jpg",
-      "soundEffect": "test.mp3",
-      "reflectionTextCorrect": "🎉 **Great job!** You selected the correct answer.",
-      "reflectionTextIncorrect": "❌ **Oops!** That's not correct. The right answer is *Franklin D. Roosevelt*."
+      "soundEffect": "test.mp3"
+    },{
+      "type": "quotequiz",
+      "characterImage": "unknown_character.png",
+      "text": "Government hears only its own voice … It knows it hears only its own voice and yet it deceives itself that it hears the people’s voice.",
+      "quoteWho": "",
+      "correctAnswer": "Karl Marx",
+      "reference":"",
+      "choices": [
+        {
+          "name": "Javier Milei",
+          "characterImage": "milei.png"
+        },
+        {
+          "name": "Pierre Bourdieu",
+          "characterImage": "bourdieu.jpg"
+        },
+        {
+          "name": "Milton Friedman",
+          "characterImage": "friedman.jpg"
+        },
+        {
+          "name": "Karl Marx",
+          "characterImage": "marx.jpg"
+        }
+      ],
+      "background": "cave_background.jpg",
+      "soundEffect": "test.mp3"
+    },{
+      "type": "quotequiz",
+      "characterImage": "unknown_character.png",
+      "text": "Knowledge doesn't really form part of human nature. Conflict, combat, the outcome of the combat, and, consequently, risk and chance are what gives rise to knowledge.",
+      "quoteWho": "",
+      "correctAnswer": "Michel Foucault",
+      "reference":"",
+      "choices": [
+        {
+          "name": "Winston Churchill",
+          "characterImage": "churchill.webp"
+        },
+        {
+          "name": "Michel Foucault",
+          "characterImage": "foucault.png"
+        },
+        {
+          "name": "Marcus Aurelius",
+          "characterImage": "marcus_aurelius.jpg"
+        },
+        {
+          "name": "Karl Marx",
+          "characterImage": "marx.jpg"
+        }
+      ],
+      "background": "cave_background.jpg",
+      "soundEffect": "test.mp3"
+    },{
+      "type": "quotequiz",
+      "characterImage": "unknown_character.png",
+      "text": "The road to hell is paved with good intentions.",
+      "quoteWho": "",
+      "correctAnswer": "Karl Marx",
+      "reference":"",
+      "choices": [
+        {
+          "name": "Arthur Schopenhauer",
+          "characterImage": "schopenhauer.jpg"
+        },
+        {
+          "name": "Milton Friedman",
+          "characterImage": "friedman.jpg"
+        },
+        {
+          "name": "Winston Churchill",
+          "characterImage": "churchill.webp"
+        },
+        {
+          "name": "Karl Marx",
+          "characterImage": "marx.jpg"
+        }
+      ],
+      "background": "cave_background.jpg",
+      "soundEffect": "test.mp3"
+    },{
+      "type": "quotequiz",
+      "characterImage": "unknown_character.png",
+      "text": "We're running the most dangerous experiment in history right now, which is to see how much carbon dioxide the atmosphere can handle before there is an environmental catastrophe.",
+      "quoteWho": "",
+      "correctAnswer": "Elon Musk",
+      "reference":"",
+      "choices": [
+        {
+          "name": "Steve Jobs",
+          "characterImage": "jobs.png"
+        },
+        {
+          "name": "Elon Musk",
+          "characterImage": "musk.jpeg"
+        },
+        {
+          "name": "Pierre Bourdieu",
+          "characterImage": "bourdieu.jpg"
+        },
+        {
+          "name": "Michel Foucault",
+          "characterImage": "foucault.png"
+        }
+      ],
+      "background": "cave_background.jpg",
+      "soundEffect": "test.mp3"
     },
     {
       "type": "dream",
@@ -596,32 +698,165 @@
     {
       "type": "quotequiz",
       "characterImage": "unknown_character.png",
-      "text": "The only limit to our realization of tomorrow is our doubts of today.",
+      "text": "The art of reading and studying consists in remembering the essentials and forgetting what is not essential.",
       "quoteWho": "",
-      "correctAnswer": "Franklin D. Roosevelt",
-      "reference":"Keynes, J. M. (1936). *The general theory of employment, interest, and money.* Palgrave Macmillan.",
+      "correctAnswer": "Adolf Hitler",
+      "reference":"",
       "choices": [
         {
-          "name": "Franklin D. Roosevelt",
-          "characterImage": "kant.jpg"
+          "name": "Adolf Hitler",
+          "characterImage": "hitler.jpg"
         },
         {
-          "name": "Albert Einstein",
+          "name": "Plato",
           "characterImage": "plato.jpg"
         },
         {
-          "name": "Winston Churchill",
-          "characterImage": "trump.webp"
+          "name": "Pierre Bourdieu",
+          "characterImage": "bourdieu.jpg"
         },
         {
-          "name": "Abraham Lincoln",
-          "characterImage": "protestor_1.png"
+          "name": "Milton Friedman",
+          "characterImage": "friedman.jpg"
         }
       ],
       "background": "cave_background.jpg",
-      "soundEffect": "test.mp3",
-      "reflectionTextCorrect": "🎉 **Great job!** You selected the correct answer.",
-      "reflectionTextIncorrect": "❌ **Oops!** That's not correct. The right answer is *Franklin D. Roosevelt*."
+      "soundEffect": "test.mp3"
+    },    {
+      "type": "quotequiz",
+      "characterImage": "unknown_character.png",
+      "text": "The amount of money that is in your bank at the time of your death is the extra work you did which wasn't necessary.",
+      "quoteWho": "",
+      "correctAnswer": "Adolf Hitler",
+      "reference":"",
+      "choices": [
+        {
+          "name": "Karl Marx",
+          "characterImage": "marx.jpg"
+        },
+        {
+          "name": "Plato",
+          "characterImage": "plato.jpg"
+        },
+        {
+          "name": "Adolf Hitler",
+          "characterImage": "hitler.jpg"
+        },
+        {
+          "name": "Steve Jobs",
+          "characterImage": "jobs.png"
+        }
+      ],
+      "background": "cave_background.jpg",
+      "soundEffect": "test.mp3"
+    },{
+      "type": "quotequiz",
+      "characterImage": "unknown_character.png",
+      "text": "I use emotion for the many and reserve reason for the few. ",
+      "quoteWho": "",
+      "correctAnswer": "Adolf Hitler",
+      "reference":"",
+      "choices": [
+        {
+          "name": "Karl Marx",
+          "characterImage": "marx.jpg"
+        },
+        {
+          "name": "Donald Trump",
+          "characterImage": "trump.webp"
+        },
+        {
+          "name": "Winston Churchill",
+          "characterImage": "churchill.webp"
+        },
+        {
+          "name": "Adolf Hitler",
+          "characterImage": "hitler.jpg"
+        }
+      ],
+      "background": "cave_background.jpg",
+      "soundEffect": "test.mp3"
+    },{
+      "type": "quotequiz",
+      "characterImage": "unknown_character.png",
+      "text": "If freedom is short of weapons, we must compensate with willpower.",
+      "quoteWho": "",
+      "correctAnswer": "Adolf Hitler",
+      "reference":"",
+      "choices": [
+        {
+          "name": "Adolf Hitler",
+          "characterImage": "hitler.jpg"
+        },
+        {
+          "name": "Milton Friedman",
+          "characterImage": "friedman.jpg"
+        },
+        {
+          "name": "Karl Marx",
+          "characterImage": "marx.jpg"
+        },
+        {
+          "name": "Mahatma Ghandi",
+          "characterImage": "ghandi.webp"
+        }
+      ],
+      "background": "cave_background.jpg",
+      "soundEffect": "test.mp3"
+    },{
+      "type": "quotequiz",
+      "characterImage": "unknown_character.png",
+      "text": "Few teachers understand that the study of history can never be to learn historical dates and events by heart and recite them by rote... No, by the living God, this is very unimportant. \n\n To 'learn' history means to seek and find the forces which are the causes leading to those effects which we subsequently perceive as historical events.",
+      "quoteWho": "",
+      "correctAnswer": "Adolf Hitler",
+      "reference":"",
+      "choices": [
+        {
+          "name": "Winston Churchill",
+          "characterImage": "churchill.webp"
+        },
+        {
+          "name": "Adolf Hitler",
+          "characterImage": "hitler.jpg"
+        },
+        {
+          "name": "Michel Foucault",
+          "characterImage": "foucault.png"
+        },
+        {
+          "name": "Milton Friedman",
+          "characterImage": "friedman.jpg"
+        }
+      ],
+      "background": "cave_background.jpg",
+      "soundEffect": "test.mp3"
+    },{
+      "type": "quotequiz",
+      "characterImage": "unknown_character.png",
+      "text": "It makes me laugh when I think what consternation would be caused among us humans if the news suddenly announced that an interplanetary ship had landed in America! All our earthly little wars would stop immediately!",
+      "quoteWho": "",
+      "correctAnswer": "Adolf Hitler",
+      "reference":"",
+      "choices": [
+        {
+          "name": "Winston Churchill",
+          "characterImage": "churchill.webp"
+        },
+        {
+          "name": "Richard Nixon",
+          "characterImage": "nixon.webp"
+        },
+        {
+          "name": "Adolf Hitler",
+          "characterImage": "hitler.jpg"
+        },
+        {
+          "name": "Kim Jong Un",
+          "characterImage": "kju.jpg"
+        }
+      ],
+      "background": "cave_background.jpg",
+      "soundEffect": "test.mp3"
     },
     {
       "type": "scoresummary",
@@ -631,15 +866,8 @@
       "reference" : "DeGroot, M. H., & Schervish, M. J. (2012). *Probability and statistics* (4th ed.). Pearson."
     },
     {
-      "type": "info",
-      "text": "In a way, each filmmaker operates like a leader of a small regime within their immediate sphere of influence. But this influence doesn't stop there. Through the films we create, this miniature regime extends its reach, rippling out into the society at large. \n\n It is, therefore, of paramount import that filmmakers fully understand the regime they've constructed around them.  \n\n They must become consciously aware of the fundamental ideologies they are perpetuating.",
-      "soundEffect": "test.mp3",
-      "background": "philosophy_classroom.jpg",
-      "transition": "fade_short"
-    },
-    {
-      "type": "info",
-      "text": "We might think that these people exist outside of ourselves. \n\n They do not. They are within us. And we have hopefully seen, they are within us whether we're conscious of them or not. \n\n \"None are more hopelessly enslaved than those who falsely believe they are free.\" - Johann Wolfgang von Goethe \n\n When our minds are taken over by an idea, they stay with us. \n\n It'd be useful to find out what generals you're fighting for, don't you think? \n\n <p style=\"text-align: right\"> End of Chapter 1. Click to proceed to chapter 2. </p> \n\n",
+      "type": "dream",
+      "text": "We might think that these people exist outside of ourselves. \n\n They do not. They are all within us. And we have hopefully seen, they are within us whether we're conscious of them or not. \n\n \"None are more hopelessly enslaved than those who falsely believe they are free.\" - Johann Wolfgang von Goethe \n\n When our minds are taken over by an idea, they stay with us. \n\n It'd be useful to find out what generals you're fighting for, don't you think? \n\n <p style=\"text-align: right\"> End of Chapter 1. Click to proceed to chapter 2. </p> \n\n",
       "soundEffect": "test.mp3",
       "background": "philosophy_classroom.jpg",
       "transition": "fade_short"
