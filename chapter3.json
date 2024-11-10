@@ -5,7 +5,7 @@
   "slides": [
     {
       "type": "info",
-      "text": "Let's begin this chapter with a story. There are many versions of it floating around, but it generally goes like this... \n\n One day you were out for a morning walk. What a beautiful sunny day! \n\n  You meditate on what to eat for breakfast, what to do in the afternoon, and what is the meaning of your life... \n\n But as you turn a corner, and out of nowhere, whoa! A scene of bizarre **atrocity** unfolded right in front of you... \n\n",
+      "text": "# 03. Taking it out for a spin \n\n Let's begin this chapter with a story. There are many versions of it floating around, but it generally goes like this... \n\n One day you were out for a morning walk. What a beautiful sunny day! \n\n  You meditate on what to eat for breakfast, what to do in the afternoon, and what is the meaning of your life... \n\n But as you turn a corner, and out of nowhere, whoa! A scene of bizarre **atrocity** unfolded right in front of you... \n\n",
       "soundEffect": "test.mp3",
       "background": "philosophy_classroom.jpg",
       "reference":"",
@@ -397,6 +397,199 @@
       "background": "debate_room.jpg",
       "soundEffect": "test.mp3",
       "reference":""
+    },{
+      "type": "dialogue",
+      "characters": [
+        {
+          "speaker": "",
+          "imageSize": "large",
+          "imageSrc": "situation_transplant.jpg",
+          "position": "middle-middle",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          }
+        }
+      ],
+      "dialogueText": "A horrendous car accident injured 5 people. Alice is missing a liver, Bob is missing his lungs, Cathy is missing her heart, Dee is missing her kidneys, and En is missing his brain. \n\n Next door, a healthy patient comes in for a regular checkup. \n\n Utilitarians: Sack the healthy patient and distribute her healthy organs to the injured. We'll save 5 people at the cost of one.",
+      "background": "debate_room.jpg",
+      "soundEffect": "test.mp3",
+      "reference":""
+    },{
+      "type": "dialogue",
+      "characters": [
+        {
+          "speaker": "",
+          "imageSize": "large",
+          "imageSrc": "situation_bomb.jpg",
+          "position": "middle-middle",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          }
+        }
+      ],
+      "dialogueText": "A terrorist hid a powerful bomb in the city somewhere, and he refuses to tell the officers where he hid it. Time is ticking. \n\n Utilitarians: Use the most brutal form of torture that causes the most horrendous wounds and ultimately lead to a horrendous death. The bomb could kill many people, and his pain is a small price to be paid. ",
+      "background": "debate_room.jpg",
+      "soundEffect": "test.mp3",
+      "reference":""
+    },{
+      "type": "dialogue",
+      "characters": [
+        {
+          "speaker": "",
+          "imageSize": "large",
+          "imageSrc": "situation_twins.jpg",
+          "position": "middle-middle",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          }
+        }
+      ],
+      "dialogueText": "A pair of conjoined twins are growing to a point where a single set of organs could no longer support them both. \n\n Utilitarians: Just kill one, anyone, so the other could survive. Flip a coin if you have to.",
+      "background": "debate_room.jpg",
+      "soundEffect": "test.mp3",
+      "reference":""
+    },{
+      "type": "dialogue",
+      "characters": [
+        {
+          "speaker": "",
+          "imageSize": "large",
+          "imageSrc": "situation-speluncean.jpg",
+          "position": "middle-middle",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          }
+        }
+      ],
+      "dialogueText": "In the Case of the Speluncean Explorers, a group of 5 cave explorers were stuck inside the cave after a landslide. Rescue will take over 30 days. There is no food source in the cave. \n\n Utilitarians: They were right to kill eat Whetmore, so the other 4 could survive. ",
+      "background": "debate_room.jpg",
+      "soundEffect": "test.mp3",
+      "reference":""
+    },{
+      "type": "dialogue",
+      "characters": [
+        {
+          "speaker": "",
+          "imageSize": "large",
+          "imageSrc": "situation_lion.jpg",
+          "position": "middle-middle",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          }
+        }
+      ],
+      "dialogueText": "In ancient Rome, Christians were tossed to the lions so thousands of Roman spectators could experience ecstatic joy.",
+      "background": "debate_room.jpg",
+      "soundEffect": "test.mp3",
+      "reference":""
+    },{
+      "type": "dialogue",
+      "characters": [
+        {
+          "speaker": "",
+          "imageSize": "large",
+          "imageSrc": "situation_crime_and_punishment.webp",
+          "position": "middle-middle",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          }
+        }
+      ],
+      "dialogueText": "In Dostoevsky's *Crime and Punishment*, Rodion Raskolnikov murdered a miserly old pawnbroker whom he sees as a parasite leeching from society and causing harm, believing that her death would rid the world of a worthless person while providing him with the means to accomplish greater things.",
+      "background": "debate_room.jpg",
+      "soundEffect": "test.mp3",
+      "reference":""
+    },{
+      "type": "dialogue",
+      "characters": [
+        {
+          "speaker": "",
+          "imageSize": "large",
+          "imageSrc": "situation_robot.jpg",
+          "position": "middle-middle",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          }
+        }
+      ],
+      "dialogueText": "In Isaac Asimov's *The Evitable Conflict*, an AGI (artificial *general* intelligence) was tasked with the goal of keeping humans safe ends up rounds up all humans up because it's good for them.",
+      "background": "debate_room.jpg",
+      "soundEffect": "test.mp3",
+      "reference":""
+    }, {
+      "type": "dream",
+      "text": "You might think, well these are all very far away from us. \n\n These stories are imagined and far-fetched from reality. \n\n ... Think again.",
+      "soundEffect" : "test.mp3",
+      "noHistory" : false,
+      "fadeInTime" : 1800,
+      "fadeOutTime" : 2000
+    },{
+      "type": "dialogue",
+      "characters": [
+        {
+          "speaker": "",
+          "imageSize": "large",
+          "imageSrc": "situation_car.jpg",
+          "position": "middle-middle",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          }
+        }
+      ],
+      "dialogueText": "Engineers are trying to figure out what a self-driving vehicle should do milliseconds before an accident. Should it manoeuvre the car in favour the safety of the driver? Or should it prioritise avoiding collision with the pedestrians but risk ramming the car into an immovable object? \n\n Utilitarians: Easy. If it's just one person, simply smash through. If it's more than one person, self-detonate the car, but try not to blow up the pedestrians.",
+      "background": "debate_room.jpg",
+      "soundEffect": "test.mp3",
+      "reference":""
+    },  {
+      "type": "dialogue",
+      "characters": [
+        {
+          "speaker": "",
+          "imageSize": "large",
+          "imageSrc": "situation_bread.jpg",
+          "position": "middle-middle",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          }
+        }
+      ],
+      "dialogueText": "Is it morally wrong for a starving man to steal bread so he won't die?",
+      "background": "debate_room.jpg",
+      "soundEffect": "test.mp3",
+      "reference":""
+    }, {
+      "type": "dialogue",
+      "characters": [
+        {
+          "speaker": "",
+          "imageSize": "large",
+          "imageSrc": "situation_writer.jpg",
+          "position": "middle-middle",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          }
+        }
+      ],
+      "dialogueText": "And here at home, a screenwriter's personal story was trampled beyond recognition, because the producer wanted story to have wide appeal in order to be commercially viable. \n\n Utilitarians: Do it, sack the writer and make more people happy. Because greatest good for the greatest number.",
+      "background": "debate_room.jpg",
+      "soundEffect": "test.mp3",
+      "reference":""
+    }, {
+      "type": "info",
+      "text": "Danny now understands that these are all logically equivalent scenarios. And Utilitarians would say to them... \n\n The end justifies the means, always. \n\n<p style=\"text-align: right\"> End of chapter 3. Click to proceed to chapter 4...</p>",
+      "soundEffect": "test.mp3",
+      "background": "bar.jpg",
+      "transition": "fade_long"
     }
   ]
 }
