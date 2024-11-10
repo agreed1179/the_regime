@@ -1,0 +1,402 @@
+{  
+  "title": "03. Taking it out for a spin",
+  "music": "chapter1.mp3",
+  "volume": 0.4,
+  "slides": [
+    {
+      "type": "info",
+      "text": "Let's begin this chapter with a story. There are many versions of it floating around, but it generally goes like this... \n\n One day you were out for a morning walk. What a beautiful sunny day! \n\n  You meditate on what to eat for breakfast, what to do in the afternoon, and what is the meaning of your life... \n\n But as you turn a corner, and out of nowhere, whoa! A scene of bizarre **atrocity** unfolded right in front of you... \n\n",
+      "soundEffect": "test.mp3",
+      "background": "philosophy_classroom.jpg",
+      "reference":"",
+      "transition": "fade_long"
+    },  {
+      "type": "dialogue",
+      "characters": [
+        {
+          "speaker": "",
+          "imageSize": "large",
+          "imageSrc": "trolley_1.jpg",
+          "position": "middle-middle",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          }
+        }
+      ],
+      "dialogueText": "In front of you is a railway track with 2 forking pathways.  \n\n Some insane fanatic has tied 5 people on one track, and 1 person on the other. \n\n A trolley is approaching in high speed. It is going too fast to stop. ",
+      "background": "debate_room.jpg",
+      "soundEffect": "test.mp3",
+      "reference":"Image sourced from Bizarro, S. (2020, June 6). *The Trolley Problem — Origins*. Medium. https://sarabizarro.medium.com/the-trolley-problem-73e22048d88e"
+    }, {
+      "type": "dialogue",
+      "characters": [
+        {
+          "speaker": "",
+          "imageSize": "large",
+          "imageSrc": "trolley_fpv.webp",
+          "position": "middle-middle",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          }
+        }
+      ],
+      "dialogueText": "In a whirlwind of shock, dread, panic, disbelief, paralysis, followed by a state of chaotic *Zen* with a Mulholland-Drive-esque dreamy lucidity, you find that somehow a lever has been *shoved* into your hands. \n\n On the lever, it says: \"pull lever to switch track\" \n\n",
+      "background": "debate_room.jpg",
+      "soundEffect": "test.mp3",
+      "reference":"MedievalFurnace (2024), *Oh no! The trolley problem is in a first person perspective! [Online Forum Post]*. Reddit. https://www.reddit.com/r/trolleyproblem/comments/1fwxd8j/oh_no_the_trolley_problem_is_in_a_first_person/"
+    },  {
+      "type": "dialogue",
+      "characters": [
+        {
+          "speaker": "",
+          "imageSize": "large",
+          "imageSrc": "trolley_1.jpg",
+          "position": "middle-middle",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          }
+        }
+      ],
+      "dialogueText": "The trolley is headed towards the track with 5 people. If you pull the lever, you divert the trolley to the track with 1 person. \n\n If you do nothing, 5 will die. If you change the tracks, 1 person who otherwise would've survived this atrocity will die. \n\n Time is ticking. What should you do? ",
+      "background": "debate_room.jpg",
+      "soundEffect": "test.mp3",
+      "reference":"Image sourced from Bizarro, S. (2020, June 6). *The Trolley Problem — Origins*. Medium. https://sarabizarro.medium.com/the-trolley-problem-73e22048d88e"
+    },     {
+      "type": "chat",
+      "pic" : "trolley_1.jpg",
+      "chatName": "Chat with @dan_da_meme_man",
+      "chats": [
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "OH MY GOD WHAT DO I DO???"
+        }, {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "chat-image": "trolley_fpv.webp"
+        }, {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "WHAT DO I DO WHAT DO I DO ITS COMING OMFG!!!"
+        },  {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "chat-image": "meme_crying.png"
+        }, 
+        {
+          "who": "Jeremy Bentham",
+          "who-img": "bentham.jpg",
+          "position": "right",
+          "text": "Do it."
+        },      
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "WHAT?"
+        },
+        {
+          "who": "Jeremy Bentham",
+          "who-img": "bentham.jpg",
+          "position": "right",
+          "text": "Pull the lever. Five deaths is worse than one."
+        },
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "You're telling me to kill someone?"
+        },
+        {
+          "who": "Jeremy Bentham",
+          "who-img": "bentham.jpg",
+          "position": "right",
+          "text": "For the greatest good to the greatest numbers, yes."
+        },
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "Nope. Not doing it."
+        },      
+        {
+          "who": "Jeremy Bentham",
+          "who-img": "bentham.jpg",
+          "position": "right",
+          "text": "Then you are acting unethically."
+        },
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "How is refusing to commit murder unethical?"
+        },  
+        {
+          "who": "Jeremy Bentham",
+          "who-img": "bentham.jpg",
+          "position": "right",
+          "text": "Because 1 death is better than 5. Remember, only the outcomes matter. Nothing else is relevant in moral judgement."
+        },    
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "But I'd be killing someone. You're not saying it's ethical to kill an innocent guy who is also a victim of this insane fanatic?"
+        },   
+        {
+          "who": "Jeremy Bentham",
+          "who-img": "bentham.jpg",
+          "position": "right",
+          "text": "Is the question of guilt or innocence relevant to the outcomes at hand?"
+        },       
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "..."
+        },  
+        {
+          "who": "Jeremy Bentham",
+          "who-img": "bentham.jpg",
+          "position": "right",
+          "text": "You can do it son. For the greatest good to the greatest number."
+        },   
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "chat-image": "meme_thinking.png"
+        },
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "Nope. I'm not buying it. You're wrong."
+        },          
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "You're telling me to kill someone with intention, and that's murder. No matter how you spin it it's premeditated murder!"
+        },   
+        {
+          "who": "Jeremy Bentham",
+          "who-img": "bentham.jpg",
+          "position": "right",
+          "text": "Is it relevant? Does it in any way change the outcomes?"
+        },  
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "And I'm gonna be traumatised for life! I'll never get over the fact that I had to execute someone innocent!"
+        },
+        {
+          "who": "Jeremy Bentham",
+          "who-img": "bentham.jpg",
+          "position": "right",
+          "text": "A trivial sacrifice in exchange for 4 lives."
+        }, 
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "recall": true
+        },
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "You know what,"
+        }, 
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "I'm just gonna walk away,"
+        }, 
+        {
+          "who": "Jeremy Bentham",
+          "who-img": "bentham.jpg",
+          "position": "right",
+          "text": "Then you are acting unethically."
+        },
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "I didn't cause this situation. For god sake I was just thinking about brunch! And this ...thing was just shoved in my face! It's absolutely not my fault. It's the fanatic's fault. I'm gonna walk away and pretend nothing happened."
+        }, 
+        {
+          "who": "Jeremy Bentham",
+          "who-img": "bentham.jpg",
+          "position": "right",
+          "text": "The result will still be 5 deaths instead of 1 due to your indecision. You will live out the rest of your life knowing that you could've prevented 4 deaths, but you didn't."
+        },
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "The blood isn't on my hands man, it's on the fanatic. It's on the railway authority. It's on the police for letting a crazy fanatic run free and commandeer the trolley. It's absolutely not on me!"
+        },
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "chat-image": "meme_please.png"
+        },
+        {
+          "who": "Jeremy Bentham",
+          "who-img": "bentham.jpg",
+          "position": "right",
+          "text": "Walking away may absolve you of personal guilt, but it is a trivial gain incomparable to the 4 lives lost."
+        },        
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "Don't try to drag me into this! The people on the tracks, they're hostages, they're already compromised! It's not about achieving an ideal outcome, I know my security studies!"
+        },        
+        {
+          "who": "Jeremy Bentham",
+          "who-img": "bentham.jpg",
+          "position": "right",
+          "text": "These applied frameworks like security studies merely help you analyse and understand a situation. But they do not guide you toward ethical action. Only moral philosophy can do that."
+        }, 
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "recall": true
+        },    
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "chat-image": "meme_how_could_u.png"
+        },        
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "I'm going to the bav, I need a drink"
+        },        
+        {
+          "who": "Jeremy Bentham",
+          "who-img": "bentham.jpg",
+          "position": "right",
+          "text": "Ethical choices are painful, they're not easy."
+        },      
+        {
+          "who": "John Stuart Mill",
+          "who-img": "mill.jpg",
+          "position": "right",
+          "text": "Remember kid, drinking is unethical."
+        },
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "Either I murder someone, or I let people die. I'm doomed anyway JUST LEAVE ME ALONG LET ME HAVE MY DRINK!!!"
+        },        
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "chat-image": "meme_crying.png"
+        }  
+      ],
+      "soundEffect": "test.mp3",
+      "reflectionText" : "",
+      "background": "philosophy_classroom.jpg",
+      "reference":"Driver, J. (2009, March 27). *The History of Utilitarianism*. Stanford Encyclopedia of Philosophy; Stanford University.",
+      "transition": "fade_long"
+    },  
+    {
+      "type": "info",
+      "text": "Oh poor Danny. You'd think that this might be the end of the story. \n\n Far from it... \n\n Having been through all that, he went to the Bav and had a drink. A couple of them actually. \n\n He tried to get rid of the ideas that Bentham and Mill implanted into his mind, but they keeps coming back... ",
+      "soundEffect": "test.mp3",
+      "background": "bar.jpg",
+      "transition": "fade_long"
+    },      
+    {
+      "type": "quote",
+      "text": "The mind, once stretched by a new idea, never returns to its original dimensions.",
+      "characterImage": "bentham.jpg",
+      "quoteWho" : "Ralph Waldo Emerson",
+      "soundEffect": "test.mp3",
+      "background": "philosophy_classroom.jpg",
+      "guess": false
+    },    
+    {
+      "type": "info",
+      "text": "He tried to get rid of the ideas that Bentham and Mill implanted into his mind, but they keep coming back... ",
+      "soundEffect": "test.mp3",
+      "background": "bar_blur.jpg",
+      "transition": "fade_long"
+    },    
+    {
+      "type": "quote",
+      "text": "Create all the happiness you are able to create; remove all the misery you are able to remove. Every day will allow you, --will invite you to add something to the pleasure of others, --or to diminish something of their pains.",
+      "characterImage": "bentham.jpg",
+      "quoteWho" : "Jeremy Bentham",
+      "soundEffect": "test.mp3",
+      "reference":"Bentham’s advice to a young girl in 1830. Bentham, J., ed. by Goldworth, A. (1983). Deontology together with A Table of the Springs of Action and Article on Utilitarianism. Oxford: Clarendon, p.xix.",
+      "background": "philosophy_classroom.jpg",
+      "guess": false
+    },
+    {
+      "type": "quote",
+      "text": "It is the *greatest happiness* of the *greatest number* that is the measure of right and wrong.",
+      "characterImage": "bentham.jpg",
+      "quoteWho" : "Jeremy Bentham",
+      "soundEffect": "test.mp3",
+      "reference":"Crimmins, J. E. (2021). *Jeremy Bentham* (E. N. Zalta, Ed.). Stanford Encyclopedia of Philosophy; Metaphysics Research Lab, Stanford University.",
+      "background": "philosophy_classroom.jpg",
+      "guess": false
+    },    
+    {
+      "type": "quote",
+      "text": "All action is for the sake of **some end**; and rules of action, it seems natural to suppose, must take their whole character and color from the end to which they are subservient.",
+      "characterImage": "mill.jpg",
+      "quoteWho" : "John Stuart Mill",
+      "soundEffect": "test.mp3",
+      "reference":"Mill, J. S. (1863). *Utilitarianism* (Chapter 1). Parker, Son, and Bourn. Image from *John Stuart Mill - Econlib*. (2018). Econlib.",
+      "background": "philosophy_classroom.jpg",
+      "guess": false
+    },
+    {
+      "type": "dream",
+      "text": "And then he fell asleep... \n\n ...In Danny's dreams - as the neurons in his brain connect and rearrange themselves to accommodate new philosophical reality - he saw images... horrendous images...",
+      "soundEffect" : "test.mp3",
+      "noHistory" : false,
+      "fadeInTime" : 1800,
+      "fadeOutTime" : 2000
+    }, {
+      "type": "dialogue",
+      "characters": [
+        {
+          "speaker": "",
+          "imageSize": "large",
+          "imageSrc": "situation_shark.jpg",
+          "position": "middle-middle",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          }
+        }
+      ],
+      "dialogueText": "A shark is chasing 5 people in a lifeboat which is leaking because it was designed to only carry 4 people. It will soon sink and everybody will die. \n\n What is the ethical thing to do? \n\n Utilitarians: Easy, feed one person to the shark. It keeps the shark busy and stops the boat from leaking, allowing the other 4 to escape.",
+      "background": "debate_room.jpg",
+      "soundEffect": "test.mp3",
+      "reference":""
+    }
+  ]
+}
