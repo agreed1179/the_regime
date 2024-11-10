@@ -81,22 +81,35 @@
       "text": "#### Conservatism \n\n \"But Mike, I'm neither a socialist nor a capitalist. I'm a conservative.\" One might object. \n\n Indeed, thinkers like von Mises held that conservatism is neither socialist nor libertarian. But, in my experience, conservatives are simply those who have not yet completely made up their mind about the utilitarianism vs deontology question. Once they do, they will almost inevitably shift toward one of the two ends of the conflict. \n\n ",
       "soundEffect": "test.mp3",
       "background": "philosophy_classroom.jpg",
-      "reference":"von Mises, L. (1958). *Why I am not a conservative*. New York University Press.",
       "transition": "fade_long"
     },{
       "type": "info",
       "text": "#### Aliens on Mars \n\n And just to stretch these theories one last time... \n\n Suppose that we find aliens on Mars (extraterrestrials, not illegal migrants, mind you...) and we discover that instead of being more advanced than us, they are more backwards than us, akin to the state of human civilisation during the early Mesopotamian ages, some 10000 years ago. \n\n Are we morally obligated sacrifice the resources on Earth to help these aliens on Mars? How would one even approach this question? \n\n Utilitarians would say it depends on how hard it is to transport resources to Mars. But certainly, we should try, if we have the capacity. \n\n Deontologists would say, that it will depend on whether these aliens are capable of *pure reason* like we do, the answer of which will determine whether categorical imperative will apply to these aliens the same way it applies to us; and subsequently make a moral determination on that basis. \n\n But this issue of Aliens is hardly political... \n\n (...when I have time I will return to the ideas of consent, and social contract theory...)",
       "soundEffect": "test.mp3",
       "background": "philosophy_classroom.jpg",
-      "reference":"von Mises, L. (1958). *Why I am not a conservative*. New York University Press.",
       "transition": "fade_long"
     }, {
       "type": "dream",
-      "text": "By this point, I hope we can see just how profoundly the scope of this conflict in moral philosophies shapes the undercurrents of our day to day conflicts. \n\n Is there, then, any recourse for the utilitarians and the deontologists? \n\n Probably not. \n\n So are we doomed then to repeat this eternal conflict ad infinitum? \n\n Oh, about that. Fear not, I have an idea that you might like... \n\n End of chapter 5. Click to continue to chapter 6...",
+      "text": "By this point, I hope we can see just how profoundly the scope of this conflict in moral philosophies shapes the undercurrents of our day to day conflicts. \n\n Is there, then, any recourse for the utilitarians and the deontologists? \n\n Probably not. ",
       "soundEffect" : "test.mp3",
       "noHistory" : false,
       "fadeInTime" : 1800,
       "fadeOutTime" : 2000
+    }, {
+      "type": "quote",
+      "text": "Can't one compromise and borrow different ideas from different philosophies according to the expediency of the moment?",
+      "characterImage": "nixon.webp",
+      "quoteWho" : "Richard Nixon",
+      "soundEffect": "test.mp3",
+      "reference":"Woods, R. B. (2005). The Limits of Expediency. *Cambridge University Press EBooks*, 320–350. https://doi.org/10.1017/cbo9780511814020.011",
+      "background": "philosophy_classroom.jpg",
+      "guess": false
+    }, {
+      "type": "info",
+      "text": "Uhh, No.  \n\n As soon as you take one side, the other will deem you unethical. \n\n And if you try to act consistently with the ethics of both sides you will end up with none, because they are inherently contradictive to one another. \n\n So are we doomed then to repeat this eternal conflict ad infinitum? \n\n Oh, about that. Fear not, I have an idea that you might like... \n\n <p style=\"text-align: right\"> End of chapter 5. Click to continue to chapter 6...</p>",
+      "soundEffect": "test.mp3",
+      "background": "philosophy_classroom.jpg",
+      "transition": "fade_long"
     }
   ]   
 }
