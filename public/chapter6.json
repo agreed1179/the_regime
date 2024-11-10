@@ -5,14 +5,14 @@
   "slides": [
     {
       "type": "dream",
-      "text": "# 06. Meta-Preemptive Ethics - data loading error",
+      "text": "# 06. Meta-Preemptive Ethics (Under construction)",
       "soundEffect" : "test.mp3",
       "noHistory" : false,
       "fadeInTime" : 1800,
       "fadeOutTime" : 2000
     }, {
       "type": "info",
-      "text": "",
+      "text": "(Under construction thank you for your patience... I promise it will be worth the wait...)",
       "soundEffect": "test.mp3",
       "background": "philosophy_classroom.jpg",
       "reference":"",
