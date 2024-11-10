@@ -1,0 +1,22 @@
+{  
+  "title": "06. Meta-Preemptive Ethics",
+  "music": "chapter1.mp3",
+  "volume": 0.4,
+  "slides": [
+    {
+      "type": "dream",
+      "text": "# 05. The clash of everything, everywhere \n\n  If Karl Marx viewed the progression of society as the progression through historical materialism... \n\n Then I would say that history progresses through the fundamental and irreconcilable conflict between the morality of consequences vs the morality of rights. \n\n **all conflicts of political or ethical nature are conflicts between utilitarianism and deontology**. \n\n *This is the central finding of this exegesis.*",
+      "soundEffect" : "test.mp3",
+      "noHistory" : false,
+      "fadeInTime" : 1800,
+      "fadeOutTime" : 2000
+    }, {
+      "type": "info",
+      "text": "This conflict goes by many names, I'm sure you've heard some of them: \n\n - The political Left vs the political Right \n\n - Socialism vs Capitalism \n\n - Objective value (Labour Theory of Value) vs Subjective value (Market price) \n\n - Collectivism vs Individualism \n\n - Living by the permission of others vs the inherent right to live \n\n - Identity politics vs Egalitarianism \n\n - Rehabilitative justice vs Retributive justice \n\n - Affirmative action (demonstrating oppression) vs Strict meritocracy (demonstrating merit) \n\n - Redistribution vs Wealth creation \n\n - Femininity vs Masculinity (gender wars) \n\n ... \n\n The list goes on.",
+      "soundEffect": "test.mp3",
+      "background": "philosophy_classroom.jpg",
+      "reference":"",
+      "transition": "fade_long"
+    }, 
+  ]   
+}
