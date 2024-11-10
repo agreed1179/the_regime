@@ -413,12 +413,36 @@
       "type": "agreedisagree",
       "agreeDisagreeId": 1,
       "text": "Europe was created by history. America was created by philosophy.",
-      "characterImage": "trump.webp",
+      "characterImage": "thatcher.jpg",
       "quoteWho" : "Margaret Thatcher",
       "reflectionTextCorrect": "Congratulations, you agreed with Margaret Thatcher.",
       "reflectionTextIncorrect": "Congratulations, you disagreed with Margaret Thatcher.",
       "soundEffect": "test.mp3",
       "reference":"Gandhi, M. (n.d.). *The Essential Gandhi: An Anthology of His Writings on His Life, Work, and Ideas* (L. Fischer, Ed.). Vintage Books.",
+      "background": "philosophy_classroom.jpg"
+    },
+    {
+      "type": "agreedisagree",
+      "agreeDisagreeId": 1,
+      "text": "Socialism is a sacred cause for realizing the demand and desire of the masses of the people for independence; it is a revolutionary cause that advances amid a fierce struggle against imperialism and all other counterrevolutionary forces.",
+      "characterImage": "kju.jpg",
+      "quoteWho" : "Kim Jong Un",
+      "reflectionTextCorrect": "Congratulations, you agreed with Kim Jong Un.",
+      "reflectionTextIncorrect": "Awwww, you disagreed with Kim Jong Un...",
+      "soundEffect": "test.mp3",
+      "reference":"Kim, J. (2016). *Report to the Seventh Congress of the Workers' Party of Korea on the work of the Central Committee*. Pyongyang, North Korea: Foreign Languages Publishing House.",
+      "background": "philosophy_classroom.jpg"
+    },
+    {
+      "type": "agreedisagree",
+      "agreeDisagreeId": 1,
+      "text": "Only a crisis - actual or perceived - produces real change. When that crisis occurs, the actions that are taken depend on the ideas that are lying around. That, I believe, is our basic function: to develop alternatives to existing policies, to keep them alive and available until the politically impossible becomes the politically inevitable.",
+      "characterImage": "friedman.jpg",
+      "quoteWho" : "Milton Friedman",
+      "reflectionTextCorrect": "You agreed with Milton Friedman.",
+      "reflectionTextIncorrect": "You disagreed with Milton Friedman.",
+      "soundEffect": "test.mp3",
+      "reference":"Friedman, M. (1982). *Capitalism and freedom*. University of Chicago Press.",
       "background": "philosophy_classroom.jpg"
     },
     {
