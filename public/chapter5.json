@@ -74,13 +74,6 @@
       "text": "#### Conservatism \n\n \"But Mike, I'm neither a socialist nor a capitalist. I'm a conservative.\" One might object. \n\n Indeed, thinkers like von Mises held that conservatism is neither socialist nor libertarian. But, in my experience, conservatives are simply those who have not yet completely made up their mind about the utilitarianism vs deontology question. Once they do, they will almost inevitably shift toward one of the two ends of the conflict. \n\n ",
       "soundEffect": "test.mp3",
       "background": "philosophy_classroom.jpg",
-      "reference":"von Mises, L. (1958). *Why I am not a conservative*. New York University Press.",
-      "transition": "fade_long"
-    },{
-      "type": "info",
-      "text": "#### Conservatism \n\n \"But Mike, I'm neither a socialist nor a capitalist. I'm a conservative.\" One might object. \n\n Indeed, thinkers like von Mises held that conservatism is neither socialist nor libertarian. But, in my experience, conservatives are simply those who have not yet completely made up their mind about the utilitarianism vs deontology question. Once they do, they will almost inevitably shift toward one of the two ends of the conflict. \n\n ",
-      "soundEffect": "test.mp3",
-      "background": "philosophy_classroom.jpg",
       "transition": "fade_long"
     },{
       "type": "info",
@@ -97,7 +90,7 @@
       "fadeOutTime" : 2000
     }, {
       "type": "quote",
-      "text": "Can't one compromise and borrow different ideas from different philosophies according to the expediency of the moment?",
+      "text": "Wait, can't one compromise and borrow different ideas from different philosophies according to the expediency of the moment?",
       "characterImage": "nixon.webp",
       "quoteWho" : "Richard Nixon",
       "soundEffect": "test.mp3",
