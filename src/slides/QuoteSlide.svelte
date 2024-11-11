@@ -188,6 +188,7 @@
     /* Removed font-weight to allow Markdown styling */
     /* font-weight: bold; */
     color: #fff;
+    font-size: 1.2em;
   }
 
   /* Adjustments for .quote-who-overlay */
@@ -222,8 +223,9 @@
     z-index: 100;
     animation: fadeInUp 0.5s ease-out;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column; /* Add this line */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
     text-align: center;
     font-size: 1.2em;
     transition: opacity 0.5s ease, transform 0.5s ease;

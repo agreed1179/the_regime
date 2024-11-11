@@ -285,12 +285,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; /* Align text to the left */
+    align-items: flex-start; /* Align text */
     height: 100%;
     width: 100%;
     padding: 10px; /* Optional padding */
     box-sizing: border-box;
     overflow: hidden;
+    text-align: center;
   }
 
   /* Dialogue Block Styling */
@@ -300,6 +301,8 @@
     animation: fadeInUp 0.5s forwards ease-out; /* Animation properties */
     margin-bottom: 10px; /* Space between blocks */
     width: 100%;
+    font-size: 1.2em;
+    text-align: center;
   }
 
   /* Fade-In Up Animation */
