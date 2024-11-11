@@ -7,7 +7,8 @@ export const assetPaths = writable({
   backgrounds: '/images/backgrounds/',
   music: '/music/',
   sounds: '/sounds/',
-  styles: '/styles/' // If you have stylesheets or related assets
+  styles: '/styles/', // If you have stylesheets or related assets
+  icons: '/images/icons/'
 });
 
 export const currentStage = writable(0);
@@ -36,6 +37,12 @@ export const playerChoices = writable([]);
 // Export the current choice (for the current question)
 export const currentChoice = writable(null);
 
+
+// Store for player choices in AgreeDisagreeSlide
+export const agreeDisagreeChoices = writable([]);
+
+
+
 // **Audio Management Stores and Functions**
 
 // Track the currently playing audio instance
@@ -46,6 +53,7 @@ export const soundEffectVolume = writable(0.4);
 
 // Add the hideReference store - for quizzes and stuff
 export const hideReference = writable(false);
+
 
 
 /**

@@ -387,10 +387,10 @@
     },
     {
       "type": "agreedisagree",
-      "agreeDisagreeId": 1,
+      "agreeDisagreeId": 2,
       "text": "Politicians can't manage. All they can do is talk.",
       "characterImage": "trump.webp",
-      "quoteWho" : "Karl Marx",
+      "quoteWho" : "Donald Trump",
       "reflectionTextCorrect": "Congratulations, you agreed with Donald Trump.",
       "reflectionTextIncorrect": "Congratulations, you disagreed with Donald Trump.",
       "soundEffect": "test.mp3",
@@ -399,7 +399,7 @@
     },    
     {
       "type": "agreedisagree",
-      "agreeDisagreeId": 1,
+      "agreeDisagreeId": 3,
       "text": "What do I think of Western civilization? I think it would be a very good idea.",
       "characterImage": "ghandi.webp",
       "quoteWho" : "Mahatma Ghandi",
@@ -411,7 +411,7 @@
     },    
     {
       "type": "agreedisagree",
-      "agreeDisagreeId": 1,
+      "agreeDisagreeId": 4,
       "text": "Europe was created by history. America was created by philosophy.",
       "characterImage": "thatcher.jpg",
       "quoteWho" : "Margaret Thatcher",
@@ -423,7 +423,7 @@
     },
     {
       "type": "agreedisagree",
-      "agreeDisagreeId": 1,
+      "agreeDisagreeId": 5,
       "text": "Socialism is a sacred cause for realizing the demand and desire of the masses of the people for independence; it is a revolutionary cause that advances amid a fierce struggle against imperialism and all other counterrevolutionary forces.",
       "characterImage": "kju.jpg",
       "quoteWho" : "Kim Jong Un",
@@ -435,7 +435,7 @@
     },
     {
       "type": "agreedisagree",
-      "agreeDisagreeId": 1,
+      "agreeDisagreeId": 6,
       "text": "Only a crisis - actual or perceived - produces real change. When that crisis occurs, the actions that are taken depend on the ideas that are lying around. That, I believe, is our basic function: to develop alternatives to existing policies, to keep them alive and available until the politically impossible becomes the politically inevitable.",
       "characterImage": "friedman.jpg",
       "quoteWho" : "Milton Friedman",
@@ -447,7 +447,7 @@
     },
     {
       "type": "agreedisagree",
-      "agreeDisagreeId": 1,
+      "agreeDisagreeId": 7,
       "text": "Industry, technology, and commerce can thrive only as long as an idealistic national community offers the necessary preconditions. And these do not lie in material egoism, but in a spirit of sacrifice and joyful renunciation.",
       "characterImage": "hitler.jpg",
       "quoteWho" : "Adolf Hitler",

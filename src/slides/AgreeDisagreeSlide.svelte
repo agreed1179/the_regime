@@ -2,7 +2,7 @@
     import { fade } from 'svelte/transition';
     import { onMount } from 'svelte';
     import { getAssetPath } from '../utils/assetHelper.js';
-    import { assetPaths, playSound, playerChoices, hideReference } from '../stores.js';
+    import { assetPaths, playSound, playerChoices, hideReference, agreeDisagreeChoices } from '../stores.js';
     import { marked } from 'marked';
     import DOMPurify from 'dompurify';
     import ClickToAdvanceOverlay from '../components/ClickToAdvanceOverlay.svelte';
@@ -54,7 +54,7 @@
   
         // Start Phase 1: Fade-in the overlays
         overlayClass = 'fade-in';
-  
+
         // After 0.5s (overlays are fully opaque), swap the image and show the name
         setTimeout(() => {
           hasRevealed = true; // Swap to the real character image and reveal the name
@@ -74,6 +74,31 @@
           choices.push({ id: agreeDisagreeId, choice: choice });
           return choices;
         });
+                // Record the player's choice in the store
+                
+        // Record the player's choice in the store
+        agreeDisagreeChoices.update(choices => {
+            // Check if the choice already exists
+            const index = choices.findIndex(c => c.id === agreeDisagreeId);
+            if (index !== -1) {
+              // Update existing choice
+              choices[index] = {
+                id: agreeDisagreeId,
+                choice: choice,
+                characterImage: characterImage,
+                quoteWho: quoteWho
+              };
+            } else {
+              // Add new choice
+              choices.push({
+                id: agreeDisagreeId,
+                choice: choice,
+                characterImage: characterImage,
+                quoteWho: quoteWho
+              });
+            }
+            return choices;
+          });
       }
     }
   

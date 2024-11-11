@@ -7,7 +7,8 @@ export function getAssetPath(assetType, filename, assetPaths) {
     'background': 'backgrounds',
     'sound': 'sounds',
     'music': 'music',
-    'style': 'styles'
+    'style': 'styles',
+    'icon': 'icons'
     // Remove 'full' and 'close' if they're no longer used
   };
 

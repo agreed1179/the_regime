@@ -17,6 +17,7 @@
   import FlashScreen from './components/FlashScreen.svelte';
   import ScoreSummary from './slides/ScoreSummary.svelte';
   import AgreeDisagreeSlide from './slides/AgreeDisagreeSlide.svelte';
+  import ScoreFinal from './slides/ScoreFinal.svelte';
   import ClickToAdvanceOverlay from './components/ClickToAdvanceOverlay.svelte';
   import ChapterSelector from './components/ChapterSelector.svelte';
   
@@ -136,15 +137,23 @@
           });
 
           totalChapters++;
+        } else if (response.status === 404) {
+          // Expected case when there are no more chapters
+          // Do not log an error; simply break out of the loop
+          break;
         } else {
+          // Handle other HTTP errors (e.g., 500 Internal Server Error)
+          console.error(`HTTP error fetching chapter${totalChapters}.json:`, response.status);
           break;
         }
       } catch (error) {
-        console.error(`Error fetching chapter${totalChapters}.json:`, error);
+        // Handle network errors (e.g., loss of internet connection)
+        console.error(`Network error fetching chapter${totalChapters}.json:`, error);
         break;
       }
     }
-  }
+  }                 
+
   
   onMount(() => {
     fetchAllChapters();
@@ -588,6 +597,13 @@
                 reflectionText={$slides[$currentStage].reflectionText}
                 reference={$slides[$currentStage].reference}
                 pic={$slides[$currentStage].pic}
+              />
+              {:else if $slides[$currentStage]?.type === 'finalscore'}
+              <ScoreFinal
+                updateSlide={handleDialogueEnd}
+                background={$slides[$currentStage].background}
+                soundEffect={$slides[$currentStage].soundEffect}
+                isMuted={isMuted}
               />
             {/if}
           </div>

@@ -18,12 +18,9 @@
       "reference":"",
       "transition": "fade_long"
     }, {
-        "type": "dream",
-        "text": "Summary of your choices in this journey so far (under construction)",
-        "soundEffect" : "test.mp3",
-        "noHistory" : false,
-        "fadeInTime" : 1800,
-        "fadeOutTime" : 2000
+        "type": "finalscore",
+        "background": "philosophy_classroom.jpg",
+        "soundEffect" : "test.mp3"
     }, 
     {
         "type": "quote",
