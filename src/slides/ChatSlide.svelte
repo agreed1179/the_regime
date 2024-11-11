@@ -64,7 +64,8 @@
       !messageInputBar.contains(event.target) &&
       !(bannerMessage && bannerMessage.contains(event.target))
     ) {
-      updateSlide();
+      console.log("triggered")
+      //updateSlide();
     }
   }
 
@@ -630,3 +631,6 @@
       </div>
     {/if}
   </div>
+
+
+  
