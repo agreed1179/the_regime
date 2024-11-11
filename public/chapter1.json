@@ -864,10 +864,24 @@
       "background": "cave_background.jpg",
       "soundEffect": "test.mp3",
       "reference" : "DeGroot, M. H., & Schervish, M. J. (2012). *Probability and statistics* (4th ed.). Pearson."
+    },    
+    {
+      "type": "info",
+      "text": "At this point, you might say... \"Fascist Mike! What kind of Hitler joke is this!\" \n\n ... Now, now. Before you start sharpening that pitchfork, consider this... \n\n **Imagine for a moment** that you were a citizen in Germany in the years between the two World Wars... \n\n ... Having just endured the deep humiliation of defeat and forced into the crushing terms of the Treaty of Versailles \n\n ... having watched your country be looted for over a decade while the allied powers feast on the blood of your family and neighbours...\n\n ... while you break your back and grind your hands to the bone and the children of your people still starve and freeze to death on the streets, \n\n ... those who didn't were devoured by the machine which produces steel used to make lipsticks that the allied masters now apply make up before going to a fancy dinner. \n\n ... All for a war you did not start and your family did not fight. But nobody cared and there was nothing you could do...\n\n ",
+      "soundEffect": "test.mp3",
+      "background": "philosophy_classroom.jpg",
+      "transition": "fade_short"
+    },    
+    {
+      "type": "info",
+      "text": "Then, one day, amidst the grief and agony came a whisper. Of a rumour, of one who they say carries the promise of restoring pride, dignity, and a path out of the darkness of despair. \n\n You look around you. An election is coming, and your peers are excited. That man there with just 1 arm, he talk with hope and excitement and he is more alive than he has ever been since he lost his son in the war. \n\n Some years later, your country is now winning wars. It dealt devastating blows to the powers that once enslaved you. \n\n Ask yourself this. could you really resist the allure of Hitler at that time? Could you truly say that you won't be swayed by him? \n\n Some years down the line, your situation drastically improved. You now eat better, sleep better, and your children went to not factories but school. Your leader demonstrated his genius military leadership and one after another you conquered the people who oppressed you for decades. You see some people disappearing on the streets, but you didn't know or like them anyway. \n\n Are you really going to oppose him? Are you really going to stick your neck out for the people who continued to have stake throughout the interwar period while you lost an arm in a steel mill accident? Are you really going to question the visionary leader who worked tirelessly for over 25 years to make this all happen, when the alternative was utter anguish and ruination?",
+      "soundEffect": "test.mp3",
+      "background": "philosophy_classroom.jpg",
+      "transition": "fade_short"
     },
     {
-      "type": "dream",
-      "text": "We might think that these people exist outside of ourselves. \n\n They do not. They are all within us. And we have hopefully seen, they are within us whether we're conscious of them or not. \n\n \"None are more hopelessly enslaved than those who falsely believe they are free.\" - Johann Wolfgang von Goethe \n\n When our minds are taken over by an idea, they stay with us. \n\n It'd be useful to find out what generals you're fighting for, don't you think? \n\n <p style=\"text-align: right\"> End of Chapter 1. Click to proceed to chapter 2. </p> \n\n",
+      "type": "info",
+      "text": "I for one, find these questions impossible to answer... \n\n ... Not without a shiny, thick set of philosophical armour. An independent mind of reason, perception, and most importantly, moral judgement.\n\n We tend to think that these people exist outside of ourselves. \n\n They do not. \n\n The archetypal influences they represent are all within us. And we have hopefully seen, they are within us whether we're conscious of them or not.\n\n \"None are more hopelessly enslaved than those who falsely believe they are free.\" - Johann Wolfgang von Goethe \n\n When our minds are taken over by an idea, they stay with us.  \n\n It'd be useful to find out what generals we're fighting for, don’t you think? \n\n <p style=\"text-align: right\"> End of Chapter 1. Click to proceed to chapter 2. </p>\n\n ",
       "soundEffect": "test.mp3",
       "background": "philosophy_classroom.jpg",
       "transition": "fade_short"
