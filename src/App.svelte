@@ -96,6 +96,11 @@
   // Chapter Counter Text
   $: chapterCounterText = `Chapter ${$currentChapter + 1}/${totalChapters}`;
 
+  // Reactive variable to hold the background image of the current slide - for the vertical video effect.
+  $: currentBackgroundImage = $slides[$currentStage]?.background
+    ? getAssetPath('background', $slides[$currentStage].background, $assetPaths)
+    : '';
+
   // Compute Cumulative Slide Counts whenever slideCounts changes
   $: cumulativeSlideCounts = slideCounts.reduce((acc, count, index) => {
     acc.push((acc[index - 1] || 0) + count);
@@ -461,240 +466,256 @@
   <FlashScreen screenType="end" on:proceed={restartGame} />
 {:else}
 
-  <!-- Existing game content -->
-  <div class="meeting-room">
-    <!-- Background Audio Element -->
-    <audio
-      bind:this={backgroundAudio}
-      loop
-      preload="auto" 
-      on:loadeddata={() => {
-        if (!isMuted && $backgroundMusic) {
-          backgroundAudio.play().catch(error => {
-            console.error('Background music playback failed:', error);
-          });
-        }
-      }}
-    ></audio>
-    
-    <div class="screen" style="background-image: url('{$backgroundImage}');">
-      {#if showChapterSelector}
-  <ChapterSelector 
-    chapters={chaptersData} 
-    on:close={() => showChapterSelector = false}
-    on:selectChapter={handleChapterSelection}
-  />
-{/if}
-
-      {#if $slides.length > 0}
-        <!-- Slide content transition -->
-        {#key $currentStage}
-          <div class="slide-content" in:fade={{ duration: 500 }}>
-            {#if $slides[$currentStage]?.type === 'dialogue'}
-              <DialogueSlide
-                characters={$slides[$currentStage].characters}
-                dialogueText={$slides[$currentStage].dialogueText}
-                background={$slides[$currentStage].background}
-                soundEffect={$slides[$currentStage].soundEffect}
-                isMuted={isMuted}
-                updateSlide={handleDialogueEnd}
-                assetPaths={$assetPaths}
-              />
-            {:else if $slides[$currentStage]?.type === 'choices'}
-              <ChoicesSlide 
-                choices={$slides[$currentStage].choices}
-                background={$slides[$currentStage].background}
-                soundEffect={$slides[$currentStage].soundEffect}
-                isMuted={isMuted}
-                updateSlide={handleDialogueEnd}
-                assetPaths={$assetPaths}
-              />
-            {:else if $slides[$currentStage]?.type === 'info'}
-              <InfoSlide
-                text={$slides[$currentStage]?.text}
-                reference={$slides[$currentStage]?.reference}
-                updateSlide={handleDialogueEnd}
-                soundEffect={$slides[$currentStage]?.soundEffect}
-                isMuted={isMuted}
-                background={$slides[$currentStage].background}
-              />
-            {:else if $slides[$currentStage]?.type === 'quote'}
-              <QuoteSlide
-                updateSlide={handleDialogueEnd}
-                characterImage={$slides[$currentStage].characterImage}
-                text={$slides[$currentStage].text}
-                quoteWho={$slides[$currentStage].quoteWho}
-                background={$slides[$currentStage].background}
-                soundEffect={$slides[$currentStage].soundEffect}
-                reflectionText={$slides[$currentStage].reflectionText}
-                isMuted={isMuted}
-                guess={$slides[$currentStage].guess}
-              />
-            {:else if $slides[$currentStage]?.type === 'quotemulti'}
-              <QuoteMultiSlide
-                characterImage={$slides[$currentStage].characterImage}
-                quoteWho={$slides[$currentStage].quoteWho}
-                quotes={$slides[$currentStage].quotes}
-                background={$slides[$currentStage].background}
-                soundEffect={$slides[$currentStage].soundEffect}
-                isMuted={isMuted}
-                updateSlide={handleDialogueEnd}
-                guess={$slides[$currentStage].guess}
-                reflectionText={$slides[$currentStage].reflectionText}
-              />
-            {:else if $slides[$currentStage]?.type === 'quotequiz'}
-              <QuoteQuizSlide
-                updateSlide={handleDialogueEnd}
-                characterImage={$slides[$currentStage].characterImage}
-                text={$slides[$currentStage].text}
-                quoteWho={$slides[$currentStage].quoteWho}
-                background={$slides[$currentStage].background}
-                soundEffect={$slides[$currentStage].soundEffect}
-                isMuted={isMuted}
-                choices={$slides[$currentStage].choices}
-                correctAnswer={$slides[$currentStage].correctAnswer}
-                reflectionTextCorrect={$slides[$currentStage].reflectionTextCorrect}
-                reflectionTextIncorrect={$slides[$currentStage].reflectionTextIncorrect}
-              />
-            {:else if $slides[$currentStage]?.type === 'scoresummary'}
-                <ScoreSummary 
-                updateSlide={handleDialogueEnd} 
-                quizId={$slides[$currentStage].quizId}
-                background={$slides[$currentStage].background}
-                soundEffect={$slides[$currentStage].soundEffect}
-                reference={$slides[$currentStage].reference}
-              />
-            {:else if $slides[$currentStage]?.type === 'dream'}
-              <DreamSlide
-                text={$slides[$currentStage].text}
-                soundEffect={$slides[$currentStage].soundEffect}
-                isMuted={isMuted}
-                updateSlide={handleDialogueEnd}
-                fadeInTime={$slides[$currentStage].fadeInTime}
-                fadeOutTime={$slides[$currentStage].fadeOutTime}
-              />
-            {:else if $slides[$currentStage]?.type === 'agreedisagree'}
-              <AgreeDisagreeSlide
-                updateSlide={handleDialogueEnd}
-                characterImage={$slides[$currentStage].characterImage}
-                text={$slides[$currentStage].text}
-                quoteWho={$slides[$currentStage].quoteWho}
-                background={$slides[$currentStage].background}
-                soundEffect={$slides[$currentStage].soundEffect}
-                isMuted={isMuted}
-                reflectionTextCorrect={$slides[$currentStage].reflectionTextCorrect}
-                reflectionTextIncorrect={$slides[$currentStage].reflectionTextIncorrect}
-                agreeDisagreeId={$slides[$currentStage].agreeDisagreeId}
-              />
-            {:else if $slides[$currentStage]?.type === 'chat'}
-              <ChatSlide
-                chats={$slides[$currentStage].chats}
-                chatName={$slides[$currentStage].chatName}
-                soundEffect={$slides[$currentStage].soundEffect}
-                isMuted={isMuted}
-                updateSlide={handleDialogueEnd}
-                background={$slides[$currentStage].background}
-                reflectionText={$slides[$currentStage].reflectionText}
-                reference={$slides[$currentStage].reference}
-                pic={$slides[$currentStage].pic}
-              />
-              {:else if $slides[$currentStage]?.type === 'finalscore'}
-              <ScoreFinal
-                updateSlide={handleDialogueEnd}
-                background={$slides[$currentStage].background}
-                soundEffect={$slides[$currentStage].soundEffect}
-                isMuted={isMuted}
-              />
-            {/if}
-          </div>
-        {/key}
-      {/if}
-
-      <!-- Back Button -->
-      {#if $history.length > 0 && $showBackButton}
-        <button on:click={goBack} class="back-button" aria-label="Go Back">
-          Back
-        </button>
-      {/if}
-
-      <!-- Progress Bar and Counters -->
-      <div class="progress-container">
-        <!-- Slide Counter -->
-        <div class="slide-counter">
-          {slideCounterText}
-        </div>
-        
-        <!-- Separator -->
-        <span class="separator" aria-hidden="true">-</span>
-        
-        <!-- Progress Bar -->
-        <div class="progress-bar">
-          <div class="progress" style="width: {progress}%"></div>
-          <!-- Chapter Markers -->
-          {#each cumulativeSlideCounts as cumulativeCount, index}
-            {#if index < totalChapters - 1} <!-- Exclude the last chapter's end -->
-              <div
-                class="marker"
-                style="left: { (cumulativeCount / totalSlides) * 100 }%;"
-                title={`Chapter ${index + 1}`}
-              ></div>
-            {/if}
-          {/each}
-        </div>
-        
-        <!-- Separator -->
-        <span class="separator" aria-hidden="true">-</span>
-        
-        <!-- Chapter Counter -->
-        <div class="chapter-counter">
-          {chapterCounterText}
-        </div>
-      </div>
-
-        <!-- Controls Container -->
-        <div class="controls">
-          <!-- Chapter Selection Button -->
-          <button on:click={openChapterSelector} class="chapter-button" aria-label="Select Chapter">
-            Chapters 📖
-          </button>
-
-          <!-- Mute/Unmute Button -->
-          <button on:click={toggleMute} class="mute-button" aria-label={isMuted ? 'Unmute Music' : 'Mute Music'}>
-            {#if isMuted}
-              Unmute 🔊
-            {:else}
-              Mute 🔇
-            {/if}
-          </button>
-        </div>
-
-      <!-- Reference Section -->
-      {#if $slides[$currentStage]?.reference && !$hideReference}
-        <div 
-          class="reference" 
-          on:click={handleReferenceClick} 
-          on:keydown={handleReferenceKeydown}
-          tabindex="0" 
-          role="button" 
-          aria-label="Copy reference to clipboard"
-        >
-          <span class="source-label">Source:</span>
-          {@html sanitizedReference}
-        </div>
-      {/if}
-
-      <!-- Reference Copy Confirmation Banner -->
-      {#if showBanner}
-        <div class="copy-banner" transition:fade={{ duration: 500 }} role="alert" aria-live="assertive">
-          Reference successfully copied:<br/><br/>
-          {copiedReference}
-        </div>
-      {/if}
-
-      <!-- Click to Advance Overlay -->
-      {#if $currentStage === (slideCounts[$currentChapter] || 0) - 1}
-        <ClickToAdvanceOverlay onAdvance={loadNextChapter} />
-      {/if}
+  <!-- Main Content Container -->
+  <div
+    class="app-container"
+  >
+    <!-- Blurred background image -->
+    <div
+    class="blurred-background"
+    style="background-image: url('{currentBackgroundImage}');"
+    >
     </div>
+
+    <!-- Semi-Transparent Overlay -->
+    <div class="background-overlay"></div>
+
+    <!-- Actual Existing game content -->
+    <div class="meeting-room">
+      <!-- Background Audio Element -->
+      <audio
+        bind:this={backgroundAudio}
+        loop
+        preload="auto" 
+        on:loadeddata={() => {
+          if (!isMuted && $backgroundMusic) {
+            backgroundAudio.play().catch(error => {
+              console.error('Background music playback failed:', error);
+            });
+          }
+        }}
+      ></audio>
+      
+      <div class="screen" style="background-image: url('{$backgroundImage}');">
+        {#if showChapterSelector}
+    <ChapterSelector 
+      chapters={chaptersData} 
+      on:close={() => showChapterSelector = false}
+      on:selectChapter={handleChapterSelection}
+    />
+  {/if}
+
+        {#if $slides.length > 0}
+          <!-- Slide content transition -->
+          {#key $currentStage}
+            <div class="slide-content" in:fade={{ duration: 500 }}>
+              {#if $slides[$currentStage]?.type === 'dialogue'}
+                <DialogueSlide
+                  characters={$slides[$currentStage].characters}
+                  dialogueText={$slides[$currentStage].dialogueText}
+                  background={$slides[$currentStage].background}
+                  soundEffect={$slides[$currentStage].soundEffect}
+                  isMuted={isMuted}
+                  updateSlide={handleDialogueEnd}
+                  assetPaths={$assetPaths}
+                />
+              {:else if $slides[$currentStage]?.type === 'choices'}
+                <ChoicesSlide 
+                  choices={$slides[$currentStage].choices}
+                  background={$slides[$currentStage].background}
+                  soundEffect={$slides[$currentStage].soundEffect}
+                  isMuted={isMuted}
+                  updateSlide={handleDialogueEnd}
+                  assetPaths={$assetPaths}
+                />
+              {:else if $slides[$currentStage]?.type === 'info'}
+                <InfoSlide
+                  text={$slides[$currentStage]?.text}
+                  reference={$slides[$currentStage]?.reference}
+                  updateSlide={handleDialogueEnd}
+                  soundEffect={$slides[$currentStage]?.soundEffect}
+                  isMuted={isMuted}
+                  background={$slides[$currentStage].background}
+                />
+              {:else if $slides[$currentStage]?.type === 'quote'}
+                <QuoteSlide
+                  updateSlide={handleDialogueEnd}
+                  characterImage={$slides[$currentStage].characterImage}
+                  text={$slides[$currentStage].text}
+                  quoteWho={$slides[$currentStage].quoteWho}
+                  background={$slides[$currentStage].background}
+                  soundEffect={$slides[$currentStage].soundEffect}
+                  reflectionText={$slides[$currentStage].reflectionText}
+                  isMuted={isMuted}
+                  guess={$slides[$currentStage].guess}
+                />
+              {:else if $slides[$currentStage]?.type === 'quotemulti'}
+                <QuoteMultiSlide
+                  characterImage={$slides[$currentStage].characterImage}
+                  quoteWho={$slides[$currentStage].quoteWho}
+                  quotes={$slides[$currentStage].quotes}
+                  background={$slides[$currentStage].background}
+                  soundEffect={$slides[$currentStage].soundEffect}
+                  isMuted={isMuted}
+                  updateSlide={handleDialogueEnd}
+                  guess={$slides[$currentStage].guess}
+                  reflectionText={$slides[$currentStage].reflectionText}
+                />
+              {:else if $slides[$currentStage]?.type === 'quotequiz'}
+                <QuoteQuizSlide
+                  updateSlide={handleDialogueEnd}
+                  characterImage={$slides[$currentStage].characterImage}
+                  text={$slides[$currentStage].text}
+                  quoteWho={$slides[$currentStage].quoteWho}
+                  background={$slides[$currentStage].background}
+                  soundEffect={$slides[$currentStage].soundEffect}
+                  isMuted={isMuted}
+                  choices={$slides[$currentStage].choices}
+                  correctAnswer={$slides[$currentStage].correctAnswer}
+                  reflectionTextCorrect={$slides[$currentStage].reflectionTextCorrect}
+                  reflectionTextIncorrect={$slides[$currentStage].reflectionTextIncorrect}
+                />
+              {:else if $slides[$currentStage]?.type === 'scoresummary'}
+                  <ScoreSummary 
+                  updateSlide={handleDialogueEnd} 
+                  quizId={$slides[$currentStage].quizId}
+                  background={$slides[$currentStage].background}
+                  soundEffect={$slides[$currentStage].soundEffect}
+                  reference={$slides[$currentStage].reference}
+                />
+              {:else if $slides[$currentStage]?.type === 'dream'}
+                <DreamSlide
+                  text={$slides[$currentStage].text}
+                  soundEffect={$slides[$currentStage].soundEffect}
+                  isMuted={isMuted}
+                  updateSlide={handleDialogueEnd}
+                  fadeInTime={$slides[$currentStage].fadeInTime}
+                  fadeOutTime={$slides[$currentStage].fadeOutTime}
+                />
+              {:else if $slides[$currentStage]?.type === 'agreedisagree'}
+                <AgreeDisagreeSlide
+                  updateSlide={handleDialogueEnd}
+                  characterImage={$slides[$currentStage].characterImage}
+                  text={$slides[$currentStage].text}
+                  quoteWho={$slides[$currentStage].quoteWho}
+                  background={$slides[$currentStage].background}
+                  soundEffect={$slides[$currentStage].soundEffect}
+                  isMuted={isMuted}
+                  reflectionTextCorrect={$slides[$currentStage].reflectionTextCorrect}
+                  reflectionTextIncorrect={$slides[$currentStage].reflectionTextIncorrect}
+                  agreeDisagreeId={$slides[$currentStage].agreeDisagreeId}
+                />
+              {:else if $slides[$currentStage]?.type === 'chat'}
+                <ChatSlide
+                  chats={$slides[$currentStage].chats}
+                  chatName={$slides[$currentStage].chatName}
+                  soundEffect={$slides[$currentStage].soundEffect}
+                  isMuted={isMuted}
+                  updateSlide={handleDialogueEnd}
+                  background={$slides[$currentStage].background}
+                  reflectionText={$slides[$currentStage].reflectionText}
+                  reference={$slides[$currentStage].reference}
+                  pic={$slides[$currentStage].pic}
+                />
+                {:else if $slides[$currentStage]?.type === 'finalscore'}
+                <ScoreFinal
+                  updateSlide={handleDialogueEnd}
+                  background={$slides[$currentStage].background}
+                  soundEffect={$slides[$currentStage].soundEffect}
+                  isMuted={isMuted}
+                />
+              {/if}
+            </div>
+          {/key}
+        {/if}
+
+        <!-- Back Button -->
+        {#if $history.length > 0 && $showBackButton}
+          <button on:click={goBack} class="back-button" aria-label="Go Back">
+            Back
+          </button>
+        {/if}
+
+        <!-- Progress Bar and Counters -->
+        <div class="progress-container">
+          <!-- Slide Counter -->
+          <div class="slide-counter">
+            {slideCounterText}
+          </div>
+          
+          <!-- Separator -->
+          <span class="separator" aria-hidden="true">-</span>
+          
+          <!-- Progress Bar -->
+          <div class="progress-bar">
+            <div class="progress" style="width: {progress}%"></div>
+            <!-- Chapter Markers -->
+            {#each cumulativeSlideCounts as cumulativeCount, index}
+              {#if index < totalChapters - 1} <!-- Exclude the last chapter's end -->
+                <div
+                  class="marker"
+                  style="left: { (cumulativeCount / totalSlides) * 100 }%;"
+                  title={`Chapter ${index + 1}`}
+                ></div>
+              {/if}
+            {/each}
+          </div>
+          
+          <!-- Separator -->
+          <span class="separator" aria-hidden="true">-</span>
+          
+          <!-- Chapter Counter -->
+          <div class="chapter-counter">
+            {chapterCounterText}
+          </div>
+        </div>
+
+          <!-- Controls Container -->
+          <div class="controls">
+            <!-- Chapter Selection Button -->
+            <button on:click={openChapterSelector} class="chapter-button" aria-label="Select Chapter">
+              Chapters 📖
+            </button>
+
+            <!-- Mute/Unmute Button -->
+            <button on:click={toggleMute} class="mute-button" aria-label={isMuted ? 'Unmute Music' : 'Mute Music'}>
+              {#if isMuted}
+                Unmute 🔊
+              {:else}
+                Mute 🔇
+              {/if}
+            </button>
+          </div>
+
+        <!-- Reference Section -->
+        {#if $slides[$currentStage]?.reference && !$hideReference}
+          <div 
+            class="reference" 
+            on:click={handleReferenceClick} 
+            on:keydown={handleReferenceKeydown}
+            tabindex="0" 
+            role="button" 
+            aria-label="Copy reference to clipboard"
+          >
+            <span class="source-label">Source:</span>
+            {@html sanitizedReference}
+          </div>
+        {/if}
+
+        <!-- Reference Copy Confirmation Banner -->
+        {#if showBanner}
+          <div class="copy-banner" transition:fade={{ duration: 500 }} role="alert" aria-live="assertive">
+            Reference successfully copied:<br/><br/>
+            {copiedReference}
+          </div>
+        {/if}
+
+        <!-- Click to Advance Overlay -->
+        {#if $currentStage === (slideCounts[$currentChapter] || 0) - 1}
+          <ClickToAdvanceOverlay onAdvance={loadNextChapter} />
+        {/if}
+      </div>
+    </div>
+
   </div>
 {/if}

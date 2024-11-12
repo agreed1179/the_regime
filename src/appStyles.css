@@ -1,5 +1,10 @@
 /* src/public/styles/appStyles.css */
 
+/* 0. Reset styles for box-sizing - this is for vertical video blur effect */
+* {
+  box-sizing: border-box;
+}
+
 /* 1. Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400&display=swap');
 
@@ -13,6 +18,38 @@ html, body {
   background-color: #f9f9f9; /* Optional: Light background color for the entire app */
   color: #333; /* Default text color */
   z-index: 999; /* Ensure the button is on top */
+}
+
+/* Add styles for the app-container - this is for vertical video blur effect */
+.app-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* New Blurred Background */
+.blurred-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(40px); /* Adjust the blur intensity as needed */
+  z-index: 1; /* Ensure it's behind the content */
+}
+
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Adjust opacity as needed */
+  z-index: 2; /* Above the blurred background */
 }
 
 /* 3. Animation Keyframes */
@@ -43,13 +80,20 @@ html, body {
 
 /* 5. Meeting Room */
 .meeting-room {
-  display: flex;
+  position: relative; /* Changed from flex layout */
+  width: 100%;
+  height: 100%;
+  display: flex; /* Use flex to center the content */
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full viewport height */
-  width: 100vw;  /* Full viewport width */
-  background-color: #f1f1f1;
-  overflow: hidden; /* Prevent overflow in the container */
+  overflow: hidden; /* Prevent overflow */
+  /* Remove background-color if any */
+  background-color: transparent;
+  /* Ensure it is above the background */
+  z-index: 5;
+}
+.screen * {
+  filter: none; /* make content unaffected by blur*/
 }
 
 .screen {
@@ -70,6 +114,11 @@ html, body {
   align-items: center;
   transition: background-image 0.5s ease-in-out;
   overflow: hidden;
+  z-index: 6;
+
+}
+.screen * {
+  filter: none; /* make content unaffected by blur*/
 }
 
 /* 6. Slide Content */
