@@ -65,7 +65,7 @@
       !(bannerMessage && bannerMessage.contains(event.target))
     ) {
       console.log("triggered")
-      //updateSlide();
+      updateSlide();
     }
   }
 
