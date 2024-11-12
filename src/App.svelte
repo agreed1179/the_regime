@@ -471,12 +471,15 @@
     class="app-container"
   >
     <!-- Blurred background image -->
-    <div
-    class="blurred-background"
-    style="background-image: url('{currentBackgroundImage}');"
-    >
-    </div>
-
+    {#key currentBackgroundImage}
+      <div
+        class="blurred-background"
+        style="background-image: url('{currentBackgroundImage}');"
+        in:fade={{ duration: 500 }}
+        out:fade={{ duration: 500 }}
+        >
+      </div>
+    {/key}
     <!-- Semi-Transparent Overlay -->
     <div class="background-overlay"></div>
 
