@@ -153,8 +153,8 @@ img {
 button {
   margin: 10px;
   padding: 10px 20px;
-  background-color: #007bff; /* Default color */
-  color: white;
+  background-color: #ffa200; /* Default color */
+  color: rgb(0, 0, 0);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -182,11 +182,12 @@ button:disabled {
   position: absolute;
   bottom: 25px;
   left: 20px;
-  background-color: #007bff;
+  background-color: #ffa200;
 }
 
 .back-button:hover {
-  background-color: #0056b3;
+  background-color: #e39000;
+  transform: scale(1.15);
 }
 
 /* Next Chapter Button */
@@ -234,13 +235,13 @@ button:disabled {
 
 .mute-button:hover {
   background-color: #5a6268; /* Darker Gray */
-  transform: scale(1.05);
+  transform: scale(1.15);
 }
 
 /* Chapter Selection Button */
 .chapter-button {
-  background-color: #007bff; /* Blue */
-  color: #fff;
+  background-color: #ffa200; /* Blue */
+  color: #000000;
   border: none;
   padding: 10px;
   border-radius: 5px;
@@ -251,8 +252,8 @@ button:disabled {
 }
 
 .chapter-button:hover {
-  background-color: #0056b3; /* Darker Blue */
-  transform: scale(1.05);
+  background-color: #e39000; /* Darker Blue */
+  transform: scale(1.15);
 }
 
 
@@ -334,18 +335,20 @@ button:disabled {
 /* Slide and Chapter Counters */
 /* 9. Slide Counter */
 .slide-counter {
-  font-size: 0.9em;
+  font-size: 0.85em;
   color: #ffffff; /* Default text color */
   transition: color 0.3s ease; /* Smooth transition */
   cursor: default; /* Indicates non-interactive by default */
+  white-space: nowrap;
 }
 
 /* 10. Chapter Counter */
 .chapter-counter {
-  font-size: 0.9em;
+  font-size: 0.85em;
   color: #ffffff; /* Default text color */
   transition: color 0.3s ease; /* Smooth transition */
   cursor: default; /* Indicates non-interactive by default */
+  white-space: nowrap;
 }
 
 /* Hover and Focus Effects */
