@@ -494,7 +494,7 @@
           "speaker": "",
           "imageSize": "large",
           "imageSrc": "situation_crime_and_punishment.webp",
-          "position": "upper-middle",
+          "position": "middle-middle",
           "transition": {
             "type": "fade",
             "duration": 500
@@ -512,7 +512,7 @@
           "speaker": "",
           "imageSize": "large",
           "imageSrc": "situation_robot.jpg",
-          "position": "middle-middle",
+          "position": "upper-middle",
           "transition": {
             "type": "fade",
             "duration": 500
