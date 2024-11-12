@@ -6,9 +6,20 @@ import { getAssetPath } from './assetHelper.js'; // Ensure this import exists
 // Function to pre-load images and sound effects
 export function preloadImages(slideData) {
   slideData.forEach((slide) => {
+    // pre-load backgrounds
     if (slide.background) {
       const img = new Image();
       img.src = getAssetPath('background', slide.background, get(assetPaths));
+    }
+    // pre-load display artefacts    
+    if (slide.characters.imageSrc) {
+      const img = new Image();
+      img.src = getAssetPath('character', slide.characters.imageSrc, get(assetPaths));
+    }
+    // pre-load character images
+    if (slide.characterImage) {
+      const img = new Image();
+      img.src = getAssetPath('character', slide.characterImage, get(assetPaths));
     }
     // Pre-load sound effects if any
     if (slide.soundEffect) {

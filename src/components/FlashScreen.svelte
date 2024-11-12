@@ -260,7 +260,7 @@
             <div class="progress-bar">
               <div class="progress" style="width: {loadingProgress}%"></div>
             </div>
-            <p>Loading... {loadedAssets} of {totalAssets} files ({loadingProgress}%)</p>
+            <p>Loading {loadingProgress}%... <br> ({loadedAssets} of {totalAssets} files)</p>
           </div>
         </div>
       {/if}
