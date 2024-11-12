@@ -97,16 +97,19 @@ img {
 .reference {
   position: absolute;
   bottom: 10px;
-  left: 20px;
+  left: 10px;
+  color: #ffffff; /* Change text color to white */
   font-size: 0.9em;
-  color: #666;
-  z-index: 999; /* Higher than overlay */
+  z-index: 999;
   margin-top: 20px;
-  font-size: 0.9em;
-  color: #666;
   font-style: normal;
-  cursor: pointer; /* Indicates it's clickable */
+  cursor: pointer;
   transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  overflow: hidden;  /* long references are simply cropped - they can copy it to clipboard anyway */
+  text-overflow: clip;
+  white-space: nowrap;
 }
 
 .reference p {
@@ -177,7 +180,7 @@ button:disabled {
 /* Back Button */
 .back-button {
   position: absolute;
-  bottom: 20px;
+  bottom: 25px;
   left: 20px;
   background-color: #007bff;
 }
@@ -209,7 +212,7 @@ button:disabled {
 /* Controls Container */
 .controls {
   position: absolute;
-  bottom: 20px;
+  bottom: 25px;
   right: 20px;
   display: flex;
   gap: 10px;
@@ -278,15 +281,16 @@ button:disabled {
 .slide-counter,
 .chapter-counter {
   font-size: 0.9em;
-  color: #333;
+  color: #ffffff;
   font-weight: 500;
 }
 
 /* Adjusted Progress Bar Width */
 .progress-bar {
-  width: 400px; /* Adjust as needed for your layout */
+  width: 600px; /* Adjust as needed for your layout */
   height: 12px;
-  background-color: #e0e0e0;
+  background-color: #786774;
+  border: 1px solid #333333; /* Outline border */
   border-radius: 6px;
   overflow: hidden;
   position: relative;
@@ -295,7 +299,7 @@ button:disabled {
 /* Progress Bar Fill */
 .progress {
   height: 100%;
-  background-color: #28a745;
+  background-color: #ffa200;
   width: 0%; /* Dynamically set via inline style */
   transition: width 0.3s ease;
 }
@@ -306,7 +310,7 @@ button:disabled {
   top: -5px; /* Position above the progress bar */
   width: 2px;
   height: 20px;
-  background-color: #ffa200; /* Distinct color for markers */
+  background-color: #ffffff; /* Distinct color for markers */
   transform: translateX(-50%); /* Center the marker on the position */
   cursor: pointer;
 }
@@ -331,7 +335,7 @@ button:disabled {
 /* 9. Slide Counter */
 .slide-counter {
   font-size: 0.9em;
-  color: #000000; /* Default text color */
+  color: #ffffff; /* Default text color */
   transition: color 0.3s ease; /* Smooth transition */
   cursor: default; /* Indicates non-interactive by default */
 }
@@ -339,7 +343,7 @@ button:disabled {
 /* 10. Chapter Counter */
 .chapter-counter {
   font-size: 0.9em;
-  color: #000000; /* Default text color */
+  color: #ffffff; /* Default text color */
   transition: color 0.3s ease; /* Smooth transition */
   cursor: default; /* Indicates non-interactive by default */
 }
@@ -381,7 +385,7 @@ button:disabled {
   /* background-color: none; */ /* Ensure no background */
 
   /* Default text color */
-  color: #000000; /* Black text by default */
+  color: #ffffff; /* Black text by default */
 
   /* Existing styles */
   font-size: 0.9em;
