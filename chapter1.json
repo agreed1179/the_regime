@@ -318,7 +318,7 @@
           "text": "A white lie is the blackest of all."
         },
         {
-          "text": "Love is blind, they say; sex is impervious to reason and mocks the power of all philosophers. But, in fact, a person's sexual choice is the result and sum of their fundamental convictions. Tell me what a person finds sexually attractive and I will tell you their entire philosophy of life. Show me the person they sleep with and I will tell you their valuation of themselves."
+          "text": "...a person's sexual choice is the result and sum of their fundamental convictions. Tell me what a person finds sexually attractive and I will tell you their entire philosophy of life. Show me the person they sleep with and I will tell you their valuation of themselves."
         }
       ],
       "soundEffect": "test.mp3",
@@ -329,7 +329,7 @@
     },
     {
       "type": "info",
-      "text": "As you can see, the philosophers of the past often have a very different view about things. You might or might not have resonated with some of them. \n\n The real question is, which general are you fighting for? \n\n <p style=\"text-align: right\"> End of chapter 01, click to start chapter 02... </p>",
+      "text": "As you can see, the philosophers of the past often have a very different view about things. You might or might not have resonated with some of them. \n\n The real question is, which general are you fighting for? \n\n <p style=\"text-align: right\"> **End of chapter 01.** Click to start chapter 02... </p>",
       "soundEffect": "test.mp3",
       "background": "philosophy_classroom.jpg",
       "transition": "fade_short"
