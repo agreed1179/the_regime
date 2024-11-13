@@ -30,14 +30,13 @@
         "characterImage": "plato.jpg",
         "quoteWho" : "Plato (427—347 B.C.E.)",
         "soundEffect": "test.mp3",
-        "reflectionText": "... which speaks enough about the utilitarian position in policies relating to criminal justice.",
-        "reference":"Bentham, J. (1789). *An Introduction to the Principles of Morals and Legislation*. Clarendon Press.",
+        "reference":"Plato. (380 BCE/2004). *The Republic* (C. D. C. Reeve, Trans.). Hackett Publishing Company. (Original work published ca. 380 BCE)",
         "background": "camp_fire.jpg",
         "guess": false
     },
     {
       "type": "dream",
-      "text": "We each run **a regime** of our own. ",
+      "text": "We each run **a regime** of our own. <br><br><br> The End. ",
       "soundEffect" : "test.mp3",
       "noHistory" : false,
       "fadeInTime" : 1800,

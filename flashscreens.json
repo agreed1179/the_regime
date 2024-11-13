@@ -9,8 +9,7 @@
   "end": {
     "heading": "<h1>Thank you for playing.</h1>",
     "subheading": "<p><i>\"The essence of democracy is not voting but speaking; not majority rule, but reasoned argument.\"</i> - Fareed Zakaria</p>",
-    "quote": "<p><em>Special thanks to: the staff and students of AFTRS.</em></p>",
-    "credits": "Special thanks to: the staff and students of AFTRS.",
+    "quote": "<p><em>Special thanks to:</em></p> <br> Julie Greene <br><br> The Collect Call Team <br><br> The staff and students of AFTRS. <br><br><br> Music credits: <br> Sergio Prosvirini <br> Guilherme Bernardes William <br> Rockot <br> Patrick A.",
     "button": {
       "label": "Play again",
       "action": "reload"
