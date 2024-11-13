@@ -84,7 +84,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 800px; /* Limit maximum width for readability */
+    max-width: 1400px; /* Limit maximum width for readability */
     width: 100%;
   }
 
@@ -96,26 +96,26 @@
   .subheading-container {
     margin-bottom: 20px; /* Space below subheading */
     font-size: 1.2em;
-    color: #ccc; /* Lighter color for subheading */
+    color: #fff; /* Lighter color for subheading */
   }
 
   .author-container {
     margin-bottom: 20px; /* Space below author */
     font-size: 1em;
-    color: #bbb; /* Slightly lighter color for author */
+    color: #fff; /* Slightly lighter color for author */
   }
 
   .quote-container {
     margin-top: 20px; /* Space above quote */
     font-style: italic;
     color: #fff; /* Lighter color for quote */
-    max-width: 600px; /* Limit quote width */
+    max-width: 900px; /* Limit quote width */
   }
 
   .text-container {
     margin-top: 20px; /* Space above text */
     font-size: 0.95em;
-    color: #ddd; /* Light color for text */
+    color: #fff; /* Light color for text */
     line-height: 1.5em;
     max-width: 600px; /* Limit text width for readability */
     text-align: left; /* Align text to left */
@@ -126,7 +126,7 @@
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 1em;
-    background-color: #4caf50; /* Green background */
+    background-color: #ffa200;; /* Orange background */
     color: #fff; /* White text */
     border: none;
     border-radius: 5px;
@@ -135,7 +135,7 @@
   }
 
   .action-button:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #e39000;  /* Darker Orange on hover */
   }
 
   /* Responsive Adjustments */

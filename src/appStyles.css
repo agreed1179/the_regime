@@ -299,7 +299,7 @@ button:disabled {
 
 /* Chapter Selection Button */
 .chapter-button {
-  background-color: #ffa200; /* Blue */
+  background-color: #ffa200; /* Orange */
   color: #000000;
   border: none;
   padding: 10px;
@@ -311,7 +311,7 @@ button:disabled {
 }
 
 .chapter-button:hover {
-  background-color: #e39000; /* Darker Blue */
+  background-color: #e39000; /* Darker Orange */
   transform: scale(1.15);
 }
 
