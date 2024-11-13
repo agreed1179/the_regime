@@ -1,44 +1,23 @@
 {  
-  "title": "07. Epilogue",
+  "title": "07. Meta-Preemptive Ethics",
   "music": "chapter1.mp3",
   "volume": 0.4,
   "slides": [
     {
       "type": "dream",
-      "text": "# 07. Epilogue \n\n Democracy is not what it seems. \n\n Grab a random person on the street and ask, what is democracy? \n\n You might get answers along the lines of voting, polling, or majority rules. \n\n More sophisticated answers might include the separation of powers, judicial independence \n\n Some would say media as the fourth power is essential for a democratic society; others would scream \"fake news\".",
+      "text": "# 07. Meta-Preemptive Ethics",
       "soundEffect" : "test.mp3",
       "noHistory" : false,
       "fadeInTime" : 1800,
-      "fadeOutTime" : 2000
+      "fadeOutTime" : 2000,
+      "blackText": true
     }, {
       "type": "info",
-      "text": "But I say, democracy is fundamentally rooted in reason and logic. It thrives on the free and open exchange of ideas and NOTHING is off the table. \n\n Democracy means that no topic is too controversial, no perspective too wild, and no question too \"difficult\" to at least be rationally discussed. Every idea, no matter how novel or uncomfortable, must have the chance to be heard, examined, and debated. \n\n In this sense, the inclusivity of ideas is perhaps even more important than the diversity of ancestral roots or skin colours. Because at the end of the day, it is only through creativity that we are able to overcome the clash between differing frameworks of morality – and thereby achieving the highest form of morality, a meta-preemptively ethical resolution for ultimately all political and philosophical conflicts.",
+      "text": "(Under construction thank you for your patience... I promise it will be worth the wait...) \n\n AFTRS does not require original contribution as part of the exegesis so I have omitted this part for now. But the idea is, I have invented a novel method to resolve the conflict. \n\n Stay tuned.",
       "soundEffect": "test.mp3",
       "background": "philosophy_classroom.jpg",
       "reference":"",
       "transition": "fade_long"
-    }, {
-        "type": "finalscore",
-        "background": "philosophy_classroom.jpg",
-        "soundEffect" : "test.mp3"
-    }, 
-    {
-        "type": "quote",
-        "text": "Until philosophers are kings, or the kings and princes of this world have the spirit and power of philosophy, and political greatness and wisdom meet in one, and those commoner natures who pursue either to the exclusion of the other are compelled to stand aside, cities will never have rest from their evils.",
-        "characterImage": "plato.jpg",
-        "quoteWho" : "Plato (427—347 B.C.E.)",
-        "soundEffect": "test.mp3",
-        "reflectionText": "... which speaks enough about the utilitarian position in policies relating to criminal justice.",
-        "reference":"Bentham, J. (1789). *An Introduction to the Principles of Morals and Legislation*. Clarendon Press.",
-        "background": "philosophy_classroom.jpg",
-        "guess": false
-    },{
-        "type": "dream",
-        "text": "# The End.",
-        "soundEffect" : "test.mp3",
-        "noHistory" : false,
-        "fadeInTime" : 1800,
-        "fadeOutTime" : 2000
     }
   ]   
 }
