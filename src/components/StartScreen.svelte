@@ -326,7 +326,7 @@
             <!-- Click to Start Message -->
           {#if !isLoading}
             <div class="click-to-start">
-              Loaded {totalAssets} files. Click anywhere to start The Regime...
+              Click anywhere to start The Regime...
             </div>
           {:else}
             <p>Loading {loadingProgress}%... <br> ({loadedAssets} of {totalAssets} files)</p>
