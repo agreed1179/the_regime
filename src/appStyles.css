@@ -110,8 +110,8 @@ html, body {
   position: relative;
   width: 100%;
   height: 100%;
-  max-width: 1440px; /* Optional maximum width */
-  max-height: 90vh;   /* Optional maximum height */
+  max-width: 1960px; /* Optional maximum width */
+  max-height: 98vh;   /* Optional maximum height */
   aspect-ratio: 16 / 9; /* Desired aspect ratio */
   background-size: cover;
   background-position: center;
@@ -347,7 +347,7 @@ button:disabled {
 
 /* Adjusted Progress Bar Width */
 .progress-bar {
-  width: 600px; /* Adjust as needed for your layout */
+  width: 800px; /* Adjust as needed for your layout */
   height: 12px;
   background-color: #786774;
   border: 1px solid #333333; /* Outline border */

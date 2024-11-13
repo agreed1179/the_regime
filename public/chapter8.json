@@ -34,6 +34,15 @@
         "reference":"Bentham, J. (1789). *An Introduction to the Principles of Morals and Legislation*. Clarendon Press.",
         "background": "camp_fire.jpg",
         "guess": false
+    },
+    {
+      "type": "dream",
+      "text": "We each run **a regime** of our own. ",
+      "soundEffect" : "test.mp3",
+      "noHistory" : false,
+      "fadeInTime" : 1800,
+      "fadeOutTime" : 2000,
+      "blackText": true
     }
   ]   
 }
