@@ -15,12 +15,12 @@
       "type": "info",
       "text": "But I say, democracy is fundamentally rooted in reason and logic. It thrives on the free and open exchange of ideas and NOTHING is off the table. \n\n Democracy means that no topic is too controversial, no perspective too wild, and no question too \"difficult\" to at least be rationally discussed. Every idea, no matter how novel or uncomfortable, must have the chance to be heard, examined, and debated. \n\n In this sense, the inclusivity of ideas is perhaps even more important than the diversity of ancestral roots or skin colours. Because at the end of the day, it is only through creativity that we are able to overcome the clash between differing frameworks of morality – and thereby achieving the highest form of morality, a meta-preemptively ethical resolution for ultimately all political and philosophical conflicts.",
       "soundEffect": "test.mp3",
-      "background": "philosophy_classroom.jpg",
+      "background": "camp_fire.jpg",
       "reference":"",
       "transition": "fade_long"
     }, {
         "type": "finalscore",
-        "background": "philosophy_classroom.jpg",
+        "background": "camp_fire.jpg",
         "soundEffect" : "test.mp3",
         "reference" : "DeGroot, M. H., & Schervish, M. J. (2012). *Probability and statistics* (4th ed.). Pearson."
     }, 
@@ -32,7 +32,7 @@
         "soundEffect": "test.mp3",
         "reflectionText": "... which speaks enough about the utilitarian position in policies relating to criminal justice.",
         "reference":"Bentham, J. (1789). *An Introduction to the Principles of Morals and Legislation*. Clarendon Press.",
-        "background": "philosophy_classroom.jpg",
+        "background": "camp_fire.jpg",
         "guess": false
     }
   ]   

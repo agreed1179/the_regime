@@ -554,7 +554,7 @@
   },
   {
     "type": "dream",
-    "text": "End of chapter 03. \n\n *Click to start the next chapter...*",
+    "text": "**End of chapter 03.** \n\n *Click to start the next chapter...*",
     "soundEffect" : "test.mp3",
     "noHistory" : false,
     "fadeInTime" : 1800,

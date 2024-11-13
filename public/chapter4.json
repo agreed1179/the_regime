@@ -594,7 +594,7 @@
       "reference":""
     }, {
       "type": "info",
-      "text": "Danny now understands that these are all logically equivalent scenarios. And Utilitarians would say to them... \n\n The end justifies the means, always. \n\n<p style=\"text-align: right\"> End of chapter 03. Click to proceed to chapter 04...</p>",
+      "text": "Danny now understands that these are all logically equivalent scenarios. And Utilitarians would say to them... \n\n The end justifies the means, always. \n\n<p style=\"text-align: right\"> **End of chapter 04**. Click to proceed to chapter 05...</p>",
       "soundEffect": "test.mp3",
       "background": "bar.jpg",
       "transition": "fade_long"

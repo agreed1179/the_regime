@@ -395,7 +395,7 @@
       "guess": false
     },{
       "type": "dream",
-      "text": "And thus the war of the philosophies has begun. There is no going back now. \n\n End of chapter 04. Click to start chapter 05.",
+      "text": "And thus the war of the philosophies has begun. There is no going back now. \n\n **End of chapter 05.** Click to start chapter 06...",
       "soundEffect" : "test.mp3",
       "noHistory" : false,
       "fadeInTime" : 1800,
