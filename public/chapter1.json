@@ -463,7 +463,8 @@
       "soundEffect" : "test.mp3",
       "noHistory" : false,
       "fadeInTime" : 1800,
-      "fadeOutTime" : 2000
+      "fadeOutTime" : 2000,
+      "blackText": true
     },
     {
       "type": "quotequiz",
@@ -693,7 +694,8 @@
       "soundEffect" : "test.mp3",
       "noHistory" : true,
       "fadeInTime" : 1800,
-      "fadeOutTime" : 2000
+      "fadeOutTime" : 2000,
+      "blackText": true
     },
     {
       "type": "quotequiz",

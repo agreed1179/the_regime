@@ -71,7 +71,8 @@
     "soundEffect" : "test.mp3",
     "noHistory" : false,
     "fadeInTime" : 1800,
-    "fadeOutTime" : 2000
+    "fadeOutTime" : 2000,
+    "blackText": true
   },
   {
     "type": "quote",
@@ -557,7 +558,8 @@
     "soundEffect" : "test.mp3",
     "noHistory" : false,
     "fadeInTime" : 1800,
-    "fadeOutTime" : 2000
+    "fadeOutTime" : 2000,
+    "blackText": true
   }
 ]
 }

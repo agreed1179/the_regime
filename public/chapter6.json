@@ -9,7 +9,8 @@
       "soundEffect" : "test.mp3",
       "noHistory" : false,
       "fadeInTime" : 1800,
-      "fadeOutTime" : 2000
+      "fadeOutTime" : 2000,
+      "blackText": true
     }, {
       "type": "info",
       "text": "(Under construction thank you for your patience... I promise it will be worth the wait...) \n\n AFTRS does not require original contribution as part of the exegesis so I have omitted this part for now. But the idea is, I have invented a novel method to resolve the conflict. \n\n Stay tuned.",

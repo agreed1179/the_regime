@@ -253,7 +253,8 @@
       "soundEffect" : "test.mp3",
       "noHistory" : false,
       "fadeInTime" : 1800,
-      "fadeOutTime" : 2000
+      "fadeOutTime" : 2000,
+      "blackText": true
     }, {
       "type": "info",
       "text": "We've seen the four formulations of the Categorical Imperative: \n\n - The Formula of the Universal Law \n\n - The Humanity Formula \n\n - The Autonomy Formula \n\n - The Formula of the Kingdom of Ends. \n\n Now here is the interesting part. Kant would say that all of these laws are perfect equivalents of each other. He gave detailed reasonings in his work, *Groundwork for the Metaphysics of Morals*, the derivation of which is beyond the scope of this exegesis. \n\n But let's look at how we might apply these formulations to derive a categorical imperative...",
@@ -372,7 +373,8 @@
       "soundEffect" : "test.mp3",
       "noHistory" : false,
       "fadeInTime" : 1800,
-      "fadeOutTime" : 2000
+      "fadeOutTime" : 2000,
+      "blackText": true
     }, {
       "type": "quote",
       "text": "Left-wing zealots have often been prepared to ride roughshod over due process and basic considerations of fairness when they think they can get away with it. For them the ends always seems to justify the means. That is precisely how their predecessors came to create the gulag.",
@@ -397,7 +399,8 @@
       "soundEffect" : "test.mp3",
       "noHistory" : false,
       "fadeInTime" : 1800,
-      "fadeOutTime" : 2000
+      "fadeOutTime" : 2000,
+      "blackText": true
     }
   ]
 }

@@ -9,7 +9,8 @@
       "soundEffect" : "test.mp3",
       "noHistory" : false,
       "fadeInTime" : 1800,
-      "fadeOutTime" : 2000
+      "fadeOutTime" : 2000,
+      "blackText": true
     }, {
       "type": "info",
       "text": "This conflict goes by many names, I'm sure you've heard some of them: \n\n - The political Left vs the political Right \n\n - Socialism vs Capitalism \n\n - Objective value (Labour Theory of Value) vs Subjective value (Market price) \n\n - Collectivism vs Individualism \n\n - Living by the permission of others vs the inherent right to live \n\n - Identity politics vs Egalitarianism \n\n - Rehabilitative justice vs Retributive justice \n\n - Affirmative action (demonstrating oppression) vs Strict meritocracy (demonstrating merit) \n\n - Redistribution vs Wealth creation \n\n - Femininity vs Masculinity (gender wars) \n\n ... \n\n The list goes on.",
@@ -87,7 +88,8 @@
       "soundEffect" : "test.mp3",
       "noHistory" : false,
       "fadeInTime" : 1800,
-      "fadeOutTime" : 2000
+      "fadeOutTime" : 2000,
+      "blackText": true
     }, {
       "type": "quote",
       "text": "Wait, can't one compromise and borrow different ideas from different philosophies according to the expediency of the moment?",

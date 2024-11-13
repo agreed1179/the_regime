@@ -72,6 +72,11 @@
   let sanitizedCopiedReference = '';
   let showChapterSelector = false;
 
+  // Default text color for reference and progress counters
+  let textColor = 'white'; 
+  // Reactive statement to update textColor based on the current slide's blackText property
+  $: textColor = $slides[$currentStage]?.blackText ? 'black' : 'white'; 
+
   // Reactive statement to control back button visibility
   $: {
     const currentSlideType = $slides[$currentStage]?.type;
@@ -103,23 +108,6 @@
   $: currentBackgroundImage = $slides[$currentStage]?.background
     ? getAssetPath('background', $slides[$currentStage].background, $assetPaths)
     : '';
-
-
-  let textColor = 'white'; // Default text color for reference and progress counters
-
-  // Reactive statement to calculate brightness when background image changes
-  $: if (currentBackgroundImage) {
-    calculateImageBrightness(currentBackgroundImage)
-      .then((brightness) => {
-        // Adjust text color based on brightness threshold
-        textColor = brightness > 127.5 ? 'black' : 'white';
-      })
-      .catch((err) => {
-        console.error('Error calculating brightness:', err);
-        // Default to white text color in case of error
-        textColor = 'white';
-      });
-  }
 
   // Compute Cumulative Slide Counts whenever slideCounts changes
   $: cumulativeSlideCounts = slideCounts.reduce((acc, count, index) => {
@@ -452,67 +440,6 @@
       event.preventDefault();
       handleReferenceClick();
     }
-  }
-
-  function calculateImageBrightness(imageSrc) {
-    return new Promise((resolve, reject) => {
-      const img = new Image();
-      img.crossOrigin = 'Anonymous'; // Necessary if images are served with CORS headers
-      img.src = imageSrc;
-
-      img.onload = () => {
-        const width = img.width;
-        const height = img.height;
-
-        // Define the area to sample: bottom 5% of the image
-        const sampleHeight = height * 0.05;
-        const sampleY = height - sampleHeight; // Starting y-coordinate
-
-        // Scale down the width to speed up processing
-        const MAX_WIDTH = 100; // Adjust as needed
-        const scale = MAX_WIDTH / width;
-        const scaledSampleHeight = sampleHeight * scale;
-
-        // Create a canvas with scaled dimensions
-        const canvas = document.createElement('canvas');
-        canvas.width = MAX_WIDTH;
-        canvas.height = scaledSampleHeight;
-
-        const ctx = canvas.getContext('2d');
-
-        // Draw the bottom 5% of the image onto the canvas
-        ctx.drawImage(
-          img,
-          0, sampleY, width, sampleHeight, // Source rectangle
-          0, 0, canvas.width, canvas.height // Destination rectangle
-        );
-
-        // Get the pixel data from the canvas
-        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-        const data = imageData.data;
-
-        let colorSum = 0;
-        for (let i = 0; i < data.length; i += 4) {
-          const r = data[i];
-          const g = data[i + 1];
-          const b = data[i + 2];
-
-          // Use the luminance formula to calculate brightness
-          const brightness = (0.299 * r + 0.587 * g + 0.114 * b);
-          colorSum += brightness;
-        }
-
-        // Calculate the average brightness
-        const pixels = data.length / 4;
-        const averageBrightness = colorSum / pixels;
-        resolve(averageBrightness);
-      };
-
-      img.onerror = (err) => {
-        console.error('Failed to load image for brightness calculation:', err);
-        reject(err);
-      };
-    });
   }
 </script>
 
