@@ -623,6 +623,7 @@
                   updateSlide={handleDialogueEnd}
                   background={$slides[$currentStage].background}
                   soundEffect={$slides[$currentStage].soundEffect}
+                  reference={$slides[$currentStage].reference}
                   isMuted={isMuted}
                 />
               {/if}

@@ -23,10 +23,12 @@
     "svelte": "^4.2.19"
   },
   "dependencies": {
+    "chart.js": "^4.4.6",
     "dompurify": "^3.1.7",
     "html2canvas": "^1.4.1",
     "marked": "^14.1.3",
     "remove-markdown": "^0.5.5",
-    "sirv-cli": "^2.0.0"
+    "sirv-cli": "^2.0.0",
+    "svelte-chartjs": "^3.1.5"
   }
 }

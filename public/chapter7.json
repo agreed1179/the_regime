@@ -21,7 +21,8 @@
     }, {
         "type": "finalscore",
         "background": "philosophy_classroom.jpg",
-        "soundEffect" : "test.mp3"
+        "soundEffect" : "test.mp3",
+        "reference" : "DeGroot, M. H., & Schervish, M. J. (2012). *Probability and statistics* (4th ed.). Pearson."
     }, 
     {
         "type": "quote",

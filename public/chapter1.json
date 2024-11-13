@@ -491,7 +491,7 @@
           "characterImage": "marcus_aurelius.jpg"
         }
       ],
-      "background": "cave_background.jpg",
+      "background": "camp_fire.jpg",
       "soundEffect": "test.mp3",
       "reflectionTextCorrect": "🎉 **Great job!** You selected the correct answer.",
       "reflectionTextIncorrect": "❌ **Oops!** That's not correct. The right answer is *Karl Marx*."

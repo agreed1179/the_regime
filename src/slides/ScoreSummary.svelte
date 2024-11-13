@@ -74,9 +74,7 @@
       score = currentScoreValue;
       total = totalQuestionsValue;
 
-      // Reset currentScore and totalQuestions for the next quiz
-      currentScore.set(0);
-      totalQuestions.set(0);
+
     } else if (storedQuizData) {
       // No current questions answered, but have stored data
       score = storedQuizData.score;
