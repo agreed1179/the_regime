@@ -1,68 +1,22 @@
 {  
-  "title": "04. The code, unwritten",
+  "title": "04. Taking it out for a spin",
   "music": "chapter1.mp3",
   "volume": 0.4,
   "slides": [
     {
       "type": "info",
-      "text": "# 04. The code, unwritten \n\n The idea of \"the greatest good for the greatest number\" is at least *prima facie* intuitively appealing. \n\n And as soon as it is agreed that ethical action should be guided by outcomes, it reduces complex ethical dilemmas down to a technocratic calculation of the potential outcomes each action might result in. \n\n We could delve into the literature in psychology, economics, statistics, among others – to arrive at fairly decent numerical estimates of the proposed actions – and the ethical course of action is simply picking the one with the biggest number attached to its outcomes. \n\n Understandably, it is often incredibly difficult to argue against utilitarian ethic. \n\n But undoubtedly, there is clearly something deeply lacking in utilitarianism (and consequentialism in general). ",
+      "text": "# 04. Taking it out for a spin \n\n Let's begin this chapter with a story. There are many versions of it floating around, but it generally goes like this... \n\n One day you were out for a morning walk, what a beautiful sunny day! \n\n  You meditate on what to eat for breakfast, what to do in the afternoon, and what is the meaning of your life... \n\n But as you turn a corner, and out of nowhere, whoa! A scene of bizarre **atrocity** unfolded right in front of you... \n\n",
       "soundEffect": "test.mp3",
-      "background": "bar_blur.jpg",
+      "background": "morning_walk.jpg",
       "reference":"",
       "transition": "fade_long"
-    },    {
-      "type": "info",
-      "text": "Danny wakes up from the utilitarian nightmare and finds a person sitting next to him. \n\n \"Did someone tell you getting drunk was unethical?\" \n\n Danny sits up. In front of him is an old man. \n\n His name, is John Locke. \n\n \" Utilitarianism however is not the only framework of moral philosophy. Far from it.\" He assures Danny. \n\n There is yet hope still...",
-      "soundEffect": "test.mp3",
-      "background": "bar.jpg",
-      "reference":"",
-      "transition": "fade_long"
-    },     {
-      "type": "quote",
-      "text": "All mankind... being all equal and independent, no one ought to harm another in his *life, health, liberty or possessions*.",
-      "characterImage": "locke.jpg",
-      "quoteWho" : "John Locke",
-      "soundEffect": "test.mp3",
-      "background": "classroom_2.jpg",
-      "reference":"Source: Locke, J. (1689). *Second treatise of government*.",
-      "guess": false
     },  {
-      "type": "info",
-      "text": "Central to John Locke's theory is the concept of **Natural Rights**. \n\n His reasoning is as follows: \n\n - Locke begins by imagining a state where there are no governments or laws, and people existed purely in a state of nature. \n\n - In this state, he argues, individuals are free and equal, and any law or rights that might arise in a situation like this are inherent to nature, and is independent of any social or political institutions. \n\n - Hence, nature is instructing human beings how to behave, and these laws are known as **Natural rights**. \n\n - These rights are therefore bestowed to us by nature (and nature is obviously bigger than us), and so they cannot be taken away. That is to say, these natural rights are **inalienable**. \n\n In this sense (and as a tangent), nature as a source of law is distinguishable from *divine law* which, in the Christian tradition, is a set of laws passed down from God. I mean, one *could* always resort to religion to defeat utilitarianism. But that'd be boring. And it clearly won't convince the utilitarians who are also atheists. ",
-      "soundEffect": "test.mp3",
-      "background": "classroom_2.jpg",
-      "reference":"",
-      "transition": "fade_long"
-    },   {
-      "type": "info",
-      "text": "Following this chain of reasoning, Locke eventually concluded that there are 3 rights inherent to nature: \n\n - **Life**, because in a state of nature self-preservation is the paramount goal; \n\n - **Liberty**, because we own ourselves; \n\n - **Property**, because we need things to survive.\n\n The natural rights to life and liberty are fairly straightforward. But property is a bit more complex: \n\n - In a state of nature, we own ourselves. \n\n - Therefore, we own our labour.\n\n - If we work on something, we mix our labour with it and extends our self ownership to it. \n\n - Therefore anything we work on, we own.",
-      "soundEffect": "test.mp3",
-      "background": "classroom_2.jpg",
-      "reference":"",
-      "transition": "fade_long"
-    }, {
-      "type": "quote",
-      "text": "The natural liberty of man is to be free from any superior power on Earth, and not to be under the will or legislative authority of man, but to have only **the law of nature** for his rule.",
-      "characterImage": "locke.jpg",
-      "quoteWho" : "John Locke",
-      "soundEffect": "test.mp3",
-      "background": "classroom_2.jpg",
-      "reference":"Source: Locke, J. (1689). *Second treatise of government*.",
-      "guess": false
-    }, {
-      "type": "info",
-      "text": "This idea that we have certain inviolable rights is called **Deontology**. \n\n In contrast to utilitarianism, which is a **results based morality**, deontology can be aptly described as a framework for **rights-based morality**. \n\n - Utilitarianism considers results and results only; Deontology considers the action in itself.\n\n - Utilitarians consider an action to be moral if it delivers the greatest good for the greatest number; deontologists consider an action to be moral if it does not violate any rights. \n\n- Utilitarianism aims to maximise wellbeing; deontology is about following rules of morality that are universally binding.  \n\n The two frameworks of morality couldn't be more different from one another. In fact, during many classic philosophical inquiries they are commonly understood in the context of one another.\n\n Source: Alexander, L., & Moore, M. (2020, October 30). *Deontological Ethics*. Stanford Encyclopedia of Philosophy. ",
-      "soundEffect": "test.mp3",
-      "background": "classroom_2.jpg",
-      "reference":"",
-      "transition": "fade_long"
-    },{
       "type": "dialogue",
       "characters": [
         {
           "speaker": "",
           "imageSize": "large",
-          "imageSrc": "bill_of_rights.jpg",
+          "imageSrc": "trolley_1.jpg",
           "position": "middle-middle",
           "transition": {
             "type": "fade",
@@ -70,82 +24,17 @@
           }
         }
       ],
-      "dialogueText": "Perhaps the most well known example, the US Bill of Rights, is a direct application of deontological morality. ",
-      "background": "debate_room.jpg",
+      "dialogueText": "In front of you is a railway track with 2 forking pathways.  \n\n Some insane fanatic has tied 5 people on one track, and 1 person on the other. \n\n A trolley is approaching in high speed. It is going too fast to stop. ",
+      "background": "trolley_1.jpg",
       "soundEffect": "test.mp3",
-      "reference":"United States Courts. (2019, December 12). *Now Cherished, Bill of Rights Spent a Century in Obscurity.* United States Courts. https://www.uscourts.gov/news/2019/12/12/now-cherished-bill-rights-spent-century-obscurity"
-    }, {
-      "type": "info",
-      "text": "Understandably so, the utilitarians didn't like the idea very much. \n\n Or maybe, that's precisely how deontological ethics is intended to work... \n\n When the utilitarians set out to achieve the greatest good for the greatest numbers, their efforts are thwarted by inalienable rights. \n\n Fortuitously. John Locke was over a hundred years before Jeremy Bentham. And when Jeremy Bentham was still alive, he *clearly* wasn't very impressed by Locke's ideas of natural rights...",
-      "soundEffect": "test.mp3",
-      "background": "classroom_2.jpg",
-      "reference":"",
-      "transition": "fade_long"
-    }, {
-      "type": "quote",
-      "text": "Natural rights is simple nonsense: natural and imprescriptible rights, rhetorical nonsense — *nonsense upon stilts*.",
-      "characterImage": "bentham.jpg",
-      "quoteWho" : "Jeremy Bentham",
-      "soundEffect": "test.mp3",
-      "reference":"Anarchical Fallacies in J. Bowring (ed.) Works vol. 2 (1843)",
-      "background": "classroom_2.jpg",
-      "guess": false
-    }, {
-      "type": "info",
-      "text": "Ouch, spicy words coming from the godfather figure of utilitarianism. In his relentless attack on deontology, Bentham's main arguments were: \n\n - \"Natural rights\" are an illusion because they exist only in the mind and cannot be enforced or observed without legal frameworks. \n\n - That rights are created and enforced by law and legal institutions. \n\n- Therefore what Locke framed as \"Natural Rights\" are actually *Natural Laws*, not moral rules. ",
-      "soundEffect": "test.mp3",
-      "background": "classroom_2.jpg",
-      "reference":"",
-      "transition": "fade_long"
-    }, {
-      "type": "quote",
-      "text": "Right, the substantive right, is the child of law; from real laws come real rights; but from imaginary laws, from \"laws of nature,\" come imaginary rights.",
-      "characterImage": "bentham.jpg",
-      "quoteWho" : "Jeremy Bentham",
-      "soundEffect": "test.mp3",
-      "reference":"Anarchical Fallacies in J. Bowring (ed.) Works vol. 2 (1843)",
-      "background": "classroom_2.jpg",
-      "guess": false
-    }, {
-      "type": "info",
-      "text": "And finally, as a hard utilitarian himself, using his own consequentialist theory: \n\n - If everybody had natural rights, anarchy will be the result, which is bad. Unless if you're an anarchist of course. But there aren't that many of you anyway... ",
-      "soundEffect": "test.mp3",
-      "background": "classroom_2.jpg",
-      "reference":"",
-      "transition": "fade_long"
-    }, {
-      "type": "quote",
-      "text": "Natural rights and natural justice are from the very foundation of their structure, anarchical, and promotive of confusion in the highest degree.",
-      "characterImage": "bentham.jpg",
-      "quoteWho" : "Jeremy Bentham",
-      "soundEffect": "test.mp3",
-      "reference":"Anarchical Fallacies in J. Bowring (ed.) Works vol. 2 (1843)",
-      "background": "classroom_2.jpg",
-      "guess": false
-    }, {
-      "type": "info",
-      "text": "Good ol' Jeremy, showing no quarters to his ideological opponents. Not even to the French when they were neck deep in their revolution...",
-      "soundEffect": "test.mp3",
-      "background": "classroom_2.jpg",
-      "reference":"",
-      "transition": "fade_long"
-    },{
-      "type": "quote",
-      "text": "The expressions employed…are so vague and indeterminate as to be susceptible of any one meaning, and in effect of no meaning at all.",
-      "characterImage": "bentham.jpg",
-      "quoteWho" : "Jeremy Bentham",
-      "soundEffect": "test.mp3",
-      "reflectionText": "Bentham's comment on Declaration of the Rights of Man and of the Citizen (1789). (French: *Déclaration des droits de l'Homme et du citoyen de 1789*)",
-      "reference":"Bentham, J. (1843). *Anarchical fallacies: Being an examination of the declarations of rights issued during the French Revolution*. Bowring (Ed.), The works of Jeremy Bentham (Vol. 2, pp. 489–534). Simpkin, Marshall, & Co.",
-      "background": "classroom_2.jpg",
-      "guess": false
+      "reference":"Image sourced from Bizarro, S. (2020, June 6). *The Trolley Problem — Origins*. Medium. https://sarabizarro.medium.com/the-trolley-problem-73e22048d88e"
     }, {
       "type": "dialogue",
       "characters": [
         {
           "speaker": "",
           "imageSize": "large",
-          "imageSrc": "declaration_independence.jpg",
+          "imageSrc": "trolley_fpv.webp",
           "position": "middle-middle",
           "transition": {
             "type": "fade",
@@ -153,143 +42,29 @@
           }
         }
       ],
-      "dialogueText": "And of course, the Americans...",
-      "background": "debate_room.jpg",
+      "dialogueText": "In a whirlwind of shock, dread, panic, disbelief, paralysis, followed by a state of chaotic *Zen* with a Mulholland-Drive-esque dreamy lucidity, you find that somehow a lever has been *shoved* into your hands. \n\n On the lever, it says: \"pull lever to switch track\" \n\n",
+      "background": "trolley_1.jpg",
       "soundEffect": "test.mp3",
-      "reference":"Shaw, R. (2019, August). *Foreign policy and “unalienable” rights*. Angelus News - Multimedia Catholic News. https://angelusnews.com/voices/foreign-policy-and-unalienable-rights/"
-    }, {
-      "type": "quote",
-      "text": "Self-evident truths are those which are found to be self-evident by men, who are capable of perceiving them. And who are they? and by what tokens are they known from other men?",
-      "characterImage": "bentham.jpg",
-      "quoteWho" : "Jeremy Bentham",
+      "reference":"MedievalFurnace (2024), *Oh no! The trolley problem is in a first person perspective! [Online Forum Post]*. Reddit. https://www.reddit.com/r/trolleyproblem/comments/1fwxd8j/oh_no_the_trolley_problem_is_in_a_first_person/"
+    },  {
+      "type": "dialogue",
+      "characters": [
+        {
+          "speaker": "",
+          "imageSize": "large",
+          "imageSrc": "trolley_1.jpg",
+          "position": "middle-middle",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          }
+        }
+      ],
+      "dialogueText": "The trolley is headed towards the track with 5 people. If you pull the lever, you divert the trolley to the track with 1 person. \n\n If you do nothing, 5 will die. If you change the tracks, 1 person who otherwise would've survived this atrocity will die. \n\n Time is ticking. What should you do? ",
+      "background": "trolley_1.jpg",
       "soundEffect": "test.mp3",
-      "reflectionText": "Bentham's comment on Declaration of the Rights of Man and of the Citizen (1789). (French: *Déclaration des droits de l'Homme et du citoyen de 1789*)",
-      "reference":"Bentham, J. (1843). *Anarchical fallacies: Being an examination of the declarations of rights issued during the French Revolution*. Bowring (Ed.), The works of Jeremy Bentham (Vol. 2, pp. 489–534). Simpkin, Marshall, & Co.",
-      "background": "classroom_2.jpg",
-      "guess": false
-    },{
-      "type": "info",
-      "text": "Jeremy Bentham's attack on the Lockean concept of Natural Rights was fierce, pragmatic, uncompromising. And he made good points. \n\n Is the idea of rights doomed before it could begin? \n\n Unbeknownst to him, a separate breed of Deontology was being developed in Europe. One does not need to depend on the idea of natural or legal rights. \n\n And it was a heavy weight philosopher, perhaps the GOAT of philosophers. (\"greatest of all time\"). \n\n His name, was Immanuel Kant. His method,  *pure reason*.",
-      "soundEffect": "test.mp3",
-      "background": "classroom_2.jpg",
-      "reference":"",
-      "transition": "fade_long"
-    },{
-      "type": "info",
-      "text": "Now, a point needs to be made here before we could progress further in Kantian Deontology. \n\n Thus far, we've been talking about **rights**. Of course, people love to talk about the idea of rights. But deontologists talk instead in terms of **duties**. \n\n If we look at the word \"deontology \" it came from the Greek words \"δέον\" or \"deon\" meaning \"duty\", plus \"λόγος\" meaning \"study\" – i.e. the \"study of duty\". \n\n The reason is simple: one person's rights is *always* someone else's duties. \n\n For instance, my right to property is someone else's duty to not steal from me. My right to be free from starvation is someone else's duty to feed me. \n\n This is known as the **Correlativity of Rights and Duties.** \n\n Deontologists talk about duties instead of rights, because rights arise as a result of other people's duties. Because your right is always someone else's duties. ",
-      "soundEffect": "test.mp3",
-      "background": "classroom_2.jpg",
-      "reference":"Beauchamp, T. L., & Feinberg, J. (1980). *The relationship between rights and duties: The fundamental principle of justice*. Education and the Legal System (pp. 231–022).",
-      "transition": "fade_long"
-    },{
-      "type": "info",
-      "text": "In addition, deontologists make a distinction between two types of moral duties: Negative duties, and Positive duties. \n\n- Negative duties are obligations to refrain from certain actions. For instance:\n\n    - Duty to not cause harm to others\n\n    - Duty to not steal from others\n\n    - Duty not to lie\n\n- Positive duties are obligations to actively do something to the benefit of others.\n\n    - Duty to feed those who are hungry\n\n    - Duty to defend people form crimes \n\n    - Duty to vote every 3 years\n\n This distinction is extremely important, as Kantians deontologists believe that they apply differently:\n\n - Negative duties are \"Categorical Imperatives\", meaning they are unconditional moral laws that always and universally apply. \n\n - Positive duties are \"Hypothetical Imperatives\", meaning that they apply only in certain hypothetical conditions under *such and such circumstances*.",
-      "soundEffect": "test.mp3",
-      "background": "classroom_2.jpg",
-      "reference":"Johnson, R., & Cureton, A. (2022, January 21). *Kant’s Moral Philosophy*. Stanford Encyclopedia of Philosophy. https://plato.stanford.edu/entries/kant-moral/",
-      "transition": "fade_long"
-    },{
-      "type": "info",
-      "text": "To understand the idea of a Categorical Imperative, we need to look at how Kant derived the set of Categorical Imperatives. \n\n Kant's argument essentially goes something like this: \n\n - Human beings are capable of **pure reason** – i.e. logical thinking, rationality, etc. Which is something other beings do not possess. This is the distinguishing characteristic of a human being apart from, say, animals or plants or rocks. \n\n - This capacity for this pure reason is what gives human beings their intrinsic worth, or *dignity*.\n\n - Therefore, moral rules derived from pure reason holds a unique and central position in human existence and is binding at all times.\n\n In short, instead of relying on Natural law as the source of morality, Kant relied on pure reason as the source of morality. \n\n OK then, how would one go about deriving these moral rules out of pure reason? \n\n The starting point, is surprisingly simple...",
-      "soundEffect": "test.mp3",
-      "background": "classroom_2.jpg",
-      "reference":"Johnson, R., & Cureton, A. (2021). *Kant’s Moral Philosophy* (E. N. Zalta, Ed.). Stanford Encyclopedia of Philosophy; Metaphysics Research Lab, Stanford University. https://plato.stanford.edu/entries/kant-moral",
-      "transition": "fade_long"
-    },{
-      "type": "quote",
-      "text": "Act only according to that maxim whereby you can, at the same time, will that it should become a universal law.",
-      "characterImage": "kant.jpeg",
-      "quoteWho" : "Immanuel Kant",
-      "soundEffect": "test.mp3",
-      "reflectionText": "This is known as the Formula of the Universal Law. \n\n Essentially, what Kant was trying to do is to find the equivalent of \"I think, therefore I am\" in ethics, which applies to all persons across all cultures. \n\n Next, he goes on...",
-      "reference":"Kant, I. (1785). *Groundwork for the Metaphysics of Morals.*",
-      "background": "classroom_2.jpg",
-      "guess": false
-    },{
-      "type": "quote",
-      "text": "Act in such a way that you treat humanity, whether in your own person or in the person of any other, always at the same time as an end, never merely as a means.",
-      "characterImage": "kant.jpeg",
-      "quoteWho" : "Immanuel Kant",
-      "soundEffect": "test.mp3",
-      "reflectionText": "This is known as the **Humanity Formulation** holding that human beings **are ends to themselves**, and **should never be used as a means to an end.** ",
-      "reference":"Kant, I. (1785). *Groundwork for the Metaphysics of Morals.*",
-      "background": "classroom_2.jpg",
-      "guess": false
-    },{
-      "type": "info",
-      "text": "In other words, human beings have **intrinsic moral worth**. \n\n Why? Because human beings are capable of *pure reason*. This is a universal quality of human beings, and therefore in recognition of this shared rational capacity the autonomy of pure reason should be respected. \n\n Continuing on...",
-      "soundEffect": "test.mp3",
-      "background": "classroom_2.jpg",
-      "transition": "fade_long"
-    },{
-      "type": "quote",
-      "text": "Act so that your will can regard itself at the same time as making universal law through its maxims.",
-      "characterImage": "kant.jpeg",
-      "quoteWho" : "Immanuel Kant",
-      "soundEffect": "test.mp3",
-      "reflectionText": "This is known as the Autonomy Formulation of Kant's categorical imperative. Because we are capable of pure reason, we are capable of self-directed rational behaviour and we can adopt and pursue our own ends. When we act morally, we're not just acting according to some external rules, laws, or impulses, but rather in accordance with our own rationality. \n\n And finally...",
-      "reference":"Kant, I. (1785). *Groundwork for the Metaphysics of Morals.*",
-      "background": "classroom_2.jpg",
-      "guess": false
-    },{
-      "type": "quote",
-      "text": "Act according to maxims of a universally legislating member of a merely possible kingdom of ends.",
-      "characterImage": "kant.jpeg",
-      "quoteWho" : "Immanuel Kant",
-      "soundEffect": "test.mp3",
-      "reference":"Kant, I. (1785). *Groundwork for the Metaphysics of Morals.*",
-      "background": "classroom_2.jpg",
-      "guess": false
-    },{
-      "type": "info",
-      "text": "This is known as the Formula of the Kingdom of Ends. \n\n Not to be confused with any kind of consequentialism, that's not what Kant means. \n\n Kant imagines a world where all individuals are effectively legislators of moral laws – whatever people \"legislate\" as a moral law, everybody will follow. As these moral laws bind on all other rational wills they form a \"systematic union of different rational beings under common laws\" \n\n Fundamentally, this means that we should act only in ways that are acceptable in such a community of different rational beings, where everybody is capable of being a legislator of the moral laws of the community – in a weird game theoretic way, perhaps it may sound. ",
-      "soundEffect": "test.mp3",
-      "background": "classroom_2.jpg",
-      "reference":"Johnson, R., & Cureton, A. (2021). *Kant’s Moral Philosophy* (E. N. Zalta, Ed.). Stanford Encyclopedia of Philosophy; Metaphysics Research Lab, Stanford University. https://plato.stanford.edu/entries/kant-moral",
-      "transition": "fade_long"
-    }, {
-      "type": "dream",
-      "text": "So what does this all boil down to?",
-      "soundEffect" : "test.mp3",
-      "noHistory" : false,
-      "fadeInTime" : 1800,
-      "fadeOutTime" : 2000,
-      "blackText": true
-    }, {
-      "type": "info",
-      "text": "We've seen the four formulations of the Categorical Imperative: \n\n - The Formula of the Universal Law \n\n - The Humanity Formula \n\n - The Autonomy Formula \n\n - The Formula of the Kingdom of Ends. \n\n Now here is the interesting part. Kant would say that all of these laws are perfect equivalents of each other. He gave detailed reasonings in his work, *Groundwork for the Metaphysics of Morals*, the derivation of which is beyond the scope of this exegesis. \n\n But let's look at how we might apply these formulations to derive a categorical imperative...",
-      "soundEffect": "test.mp3",
-      "background": "classroom_2.jpg",
-      "reference":"as cited.",
-      "transition": "fade_long"
-    },{
-      "type": "info",
-      "text": "Suppose I'm considering lying in order to scam $100 worth of groceries. I might say that the product is faulty to get my money back, but in fact it isn't. \n\n 1) First, formulate a rule-based maxim from the proposed course of action. \n\n    - My proposed maxim is therefore, \"Lying is moral if it benefits me.\" \n\n 2) Second, extend this maxim to all human beings, universally without exception. \n\n    - OK, now everybody lies whenever it benefits them.\n\n 3) Test for logical consistency, self consistency, and against the 4 formulations. \n\n    - We are treating people not as ends in itself, but as means to an end (Breach of the Humanity Formula). \n\n    - We now have a world where truth or falsehood could no longer be determined. This creates a world where logical deduction is impossible. \n\n Therefore a community of rational beings would not accept this rule. (Breach of the formula of the Kingdom of Ends) \n\n Therefore, the maxim that \"lying is moral if it benefits me\" cannot be a categorical imperative, or a negative duty.",
-      "soundEffect": "test.mp3",
-      "background": "classroom_2.jpg",
-      "transition": "fade_long"
-    },{
-      "type": "info",
-      "text": "At this point, you might say that all of this sounds very abstract. How are we meant to apply this in everyday life? \n\n Now here is the best part about all this Categorical Imperative stuff. Over the centuries since Kant formulated the them, philosophers have went on an exhaustive search. The result, is a list of duties best summarised by W. D. Ross: \n\n - Duty to not cause harm \n\n - Duty to not tell lies\n\n - Duty to repair damage done\n\n - Duty to not cause injustice\n\n These are the negative duties, i.e. categorical imperatives, that one should follow at all time, universally, and without exception. If one can do that, one is acting ethically.",
-      "soundEffect": "test.mp3",
-      "background": "classroom_2.jpg",
-      "reference":"Ross, W. D. (1930). *The Right and the Good*. Oxford University Press.",
-      "transition": "fade_long"
-    },{
-      "type": "info",
-      "text": "Now we've seen what negative duties, are we have previously also mentioned the idea of positive duties. Put simply, positive duties are \"nice to haves\", and can only be morally carried out if they **do not contradict a negative duty**. \n\n For this reason, they are also called Imperfective Duties. Some of these positive duties include: \n\n - Duty of Beneficence: help others, when and if it does not breach a negative duty.\n\n - Duty of Gratitude: Thank others for their help, when and if it does not breach a negative duty. \n\n - Duty of Self-Improvement: practice virtue ethics, when and if it does not breach a negative duty.\n\n So how does it all fit together?",
-      "soundEffect": "test.mp3",
-      "background": "classroom_2.jpg",
-      "reference":"Johnson, R., & Cureton, A. (2021). *Kant’s Moral Philosophy* (E. N. Zalta, Ed.). Stanford Encyclopedia of Philosophy; Metaphysics Research Lab, Stanford University. https://plato.stanford.edu/entries/kant-moral",
-      "transition": "fade_long"
-    },{
-      "type": "info",
-      "text": "In short, Deontological morality requires us to: \n\n - Follow negative duties at all times without exception (Categorical Imperatives)\n\n - Carry out positive duties when and if it does not contradict a negative duty (Hypothetical Imperatives)\n\n If we can do that, then, according to deontological ethics, we would be acting ethically.",
-      "soundEffect": "test.mp3",
-      "background": "classroom_2.jpg",
-      "reference":"Johnson, R., & Cureton, A. (2021). *Kant’s Moral Philosophy* (E. N. Zalta, Ed.). Stanford Encyclopedia of Philosophy; Metaphysics Research Lab, Stanford University. https://plato.stanford.edu/entries/kant-moral",
-      "transition": "fade_long"
-    },{
+      "reference":"Image sourced from Bizarro, S. (2020, June 6). *The Trolley Problem — Origins*. Medium. https://sarabizarro.medium.com/the-trolley-problem-73e22048d88e"
+    },     {
       "type": "chat",
       "pic" : "trolley_1.jpg",
       "chatName": "Chat with @dan_da_meme_man",
@@ -298,22 +73,7 @@
           "who": "Danny",
           "who-img": "kid_1.png",
           "position": "left",
-          "text": "Wait, so you're saying that as long as I follow those 4 negative duties, I'm acting ethically?"
-        }, {
-          "who": "Danny",
-          "who-img": "kid_1.png",
-          "position": "left",
-          "chat-image": "meme_thinking_hard.png"
-        }, {
-          "who": "Immanuel Kant",
-          "who-img": "kant.jpeg",
-          "position": "right",
-          "text": "That's it. But try to do the positive duties, if you can, provided you don't breach the negative ones."
-        },{
-          "who": "Danny",
-          "who-img": "kid_1.png",
-          "position": "left",
-          "text": "Alright, I'm back here"
+          "text": "OH MY GOD WHAT DO I DO???"
         }, {
           "who": "Danny",
           "who-img": "kid_1.png",
@@ -323,31 +83,235 @@
           "who": "Danny",
           "who-img": "kid_1.png",
           "position": "left",
-          "text": "What should I do?"
-        },{
+          "text": "WHAT DO I DO WHAT DO I DO ITS COMING OMFG!!!"
+        },  {
           "who": "Danny",
           "who-img": "kid_1.png",
           "position": "left",
-          "chat-image": "meme_thinking_hard.png"
-        },{
-          "who": "Immanuel Kant",
-          "who-img": "kant.jpeg",
-          "position": "right",
-          "text": "Don't do it. You have a duty to not cause harm to others."
-        },{
-          "who": "Danny",
-          "who-img": "kid_1.png",
-          "position": "left",
-          "text": "But 5 people will die. Should I just let it happen?"
-        },
-        
-
+          "chat-image": "meme_crying.png"
+        }, 
         {
           "who": "Jeremy Bentham",
           "who-img": "bentham.jpg",
           "position": "right",
-          "text": "Heresy! What stick in the mud nonsense are you feeding to the kids!"
-        },         
+          "text": "Do it."
+        },      
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "WHAT?"
+        },
+        {
+          "who": "Jeremy Bentham",
+          "who-img": "bentham.jpg",
+          "position": "right",
+          "text": "Pull the lever. Five deaths is worse than one."
+        },
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "You're telling me to kill someone?"
+        },
+        {
+          "who": "Jeremy Bentham",
+          "who-img": "bentham.jpg",
+          "position": "right",
+          "text": "For the greatest good to the greatest numbers, yes."
+        },
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "Nope. Not doing it."
+        },      
+        {
+          "who": "Jeremy Bentham",
+          "who-img": "bentham.jpg",
+          "position": "right",
+          "text": "Then you are acting unethically."
+        },
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "How is refusing to commit murder unethical?"
+        },  
+        {
+          "who": "Jeremy Bentham",
+          "who-img": "bentham.jpg",
+          "position": "right",
+          "text": "Because 1 death is better than 5. Remember, only the outcomes matter. Nothing else is relevant in moral judgement."
+        },    
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "But I'd be killing someone. You're not saying it's ethical to kill an innocent guy who is also a victim of this insane fanatic?"
+        },   
+        {
+          "who": "Jeremy Bentham",
+          "who-img": "bentham.jpg",
+          "position": "right",
+          "text": "Is the question of guilt or innocence relevant to the outcomes at hand?"
+        },       
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "..."
+        },  
+        {
+          "who": "Jeremy Bentham",
+          "who-img": "bentham.jpg",
+          "position": "right",
+          "text": "You can do it son. For the greatest good to the greatest number."
+        },   
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "chat-image": "meme_thinking.png"
+        },
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "Nope. I'm not buying it. You're wrong."
+        },          
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "You're telling me to kill someone with intention, and that's murder. No matter how you spin it it's premeditated murder!"
+        },   
+        {
+          "who": "Jeremy Bentham",
+          "who-img": "bentham.jpg",
+          "position": "right",
+          "text": "Is it relevant? Does it in any way change the outcomes?"
+        },  
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "And I'm gonna be traumatised for life! I'll never get over the fact that I had to execute someone innocent!"
+        },
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "chat-image": "meme_please.png"
+        },
+        {
+          "who": "Jeremy Bentham",
+          "who-img": "bentham.jpg",
+          "position": "right",
+          "text": "A trivial sacrifice in exchange for 4 lives."
+        }, 
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "recall": true
+        },
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "You know what,"
+        }, 
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "I'm just gonna walk away,"
+        }, 
+        {
+          "who": "Jeremy Bentham",
+          "who-img": "bentham.jpg",
+          "position": "right",
+          "text": "Then you are acting unethically."
+        },
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "I didn't cause this situation. For god sake I was just thinking about brunch! And this ...thing was just shoved in my face! It's absolutely not my fault. It's the fanatic's fault. I'm gonna walk away and pretend nothing happened."
+        }, 
+        {
+          "who": "Jeremy Bentham",
+          "who-img": "bentham.jpg",
+          "position": "right",
+          "text": "The result will still be 5 deaths instead of 1 due to your indecision. You will live out the rest of your life knowing that you could've prevented 4 deaths, but you didn't."
+        },
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "The blood isn't on my hands man, it's on the fanatic. It's on the railway authority. It's on the police for letting a crazy fanatic run free and commandeer the trolley. It's absolutely not on me!"
+        },
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "chat-image": "meme_please.png"
+        },
+        {
+          "who": "Jeremy Bentham",
+          "who-img": "bentham.jpg",
+          "position": "right",
+          "text": "Walking away may absolve you of personal guilt, but it is a trivial gain incomparable to the 4 lives lost."
+        },        
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "Don't try to drag me into this! The people on the tracks, they're hostages, they're already compromised! It's not about achieving an ideal outcome, I know my security studies!"
+        },        
+        {
+          "who": "Jeremy Bentham",
+          "who-img": "bentham.jpg",
+          "position": "right",
+          "text": "These applied frameworks like security studies merely help you analyse and understand a situation. But they do not guide you toward ethical action. Only moral philosophy can do that."
+        }, 
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "recall": true
+        },    
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "chat-image": "meme_how_could_u.png"
+        },        
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "I'm going to the bav, I need a drink"
+        },        
+        {
+          "who": "Jeremy Bentham",
+          "who-img": "bentham.jpg",
+          "position": "right",
+          "text": "Ethical choices are painful, they're not easy."
+        },      
+        {
+          "who": "John Stuart Mill",
+          "who-img": "mill.jpg",
+          "position": "right",
+          "text": "Remember kid, drinking is unethical."
+        },
+        {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "text": "Either I murder someone, or I let people die. I'm doomed anyway JUST LEAVE ME ALONG LET ME HAVE MY DRINK!!!"
+        },        
         {
           "who": "Danny",
           "who-img": "kid_1.png",
@@ -356,51 +320,284 @@
         }  
       ],
       "soundEffect": "test.mp3",
-      "reflectionText": "Some spicy chat with Kant - to be completed later...",
-      "background": "classroom_2.jpg",
+      "reflectionText" : "",
+      "background": "trolley_1.jpg",
       "reference":"Driver, J. (2009, March 27). *The History of Utilitarianism*. Stanford Encyclopedia of Philosophy; Stanford University.",
       "transition": "fade_long"
-    },  {
+    },  
+    {
       "type": "info",
-      "text": "Both Utilitarianism and Deontology are incredibly powerful frameworks of morality, because they allow objective determination of morality. \n\n Objective morality provides a framework that is consistent, stable, and universal. They allow for accountability and facilitates the resolution of conflicts and disagreements through an impersonal and objective standard. \n\n One could of course try to argue that morality is subjective. This leads to Moral Relativism – where morality is subjective, contextual, and is *relative* to the traditions, convictions, or practices of a group of individuals. \n\n But subjective morality leads to tyranny, and arbitrariness of morality. \n\n After all, if \"morality is what I say\" then the word morality loses meaning. Without the moral constraints, and without a common objective standard of morality, it is even *more difficult* to resolve moral difficulties, and we will all die very quickly. ",
+      "text": "Oh poor Danny. You'd think that this might be the end of the story. \n\n Far from it... \n\n Having been through all that, he went to the Bav and had a drink. A couple of them actually. \n\n He tried to get rid of the ideas that Bentham and Mill implanted into his mind, but they keeps coming back... ",
       "soundEffect": "test.mp3",
-      "background": "classroom_2.jpg",
-      "reference":"Gowans, C. (2021, March 10). *Moral Relativism (Stanford Encyclopedia of Philosophy)*. Stanford.edu. https://plato.stanford.edu/entries/moral-relativism/",
+      "background": "bar.jpg",
       "transition": "fade_long"
-    },{
+    },      
+    {
+      "type": "quote",
+      "text": "The mind, once stretched by a new idea, never returns to its original dimensions.",
+      "characterImage": "emerson.webp",
+      "quoteWho" : "Ralph Waldo Emerson",
+      "soundEffect": "test.mp3",
+      "background": "philosophy_classroom.jpg",
+      "guess": false
+    },    
+    {
+      "type": "info",
+      "text": "He tried to get rid of the ideas that Bentham and Mill implanted into his mind, but they keep coming back... ",
+      "soundEffect": "test.mp3",
+      "background": "bar_blur.jpg",
+      "transition": "fade_long"
+    },    
+    {
+      "type": "quote",
+      "text": "Create all the happiness you are able to create; remove all the misery you are able to remove. Every day will allow you, --will invite you to add something to the pleasure of others, --or to diminish something of their pains.",
+      "characterImage": "bentham.jpg",
+      "quoteWho" : "Jeremy Bentham",
+      "soundEffect": "test.mp3",
+      "reference":"Bentham’s advice to a young girl in 1830. Bentham, J., ed. by Goldworth, A. (1983). Deontology together with A Table of the Springs of Action and Article on Utilitarianism. Oxford: Clarendon, p.xix.",
+      "background": "philosophy_classroom.jpg",
+      "guess": false
+    },
+    {
+      "type": "quote",
+      "text": "It is the *greatest happiness* of the *greatest number* that is the measure of right and wrong.",
+      "characterImage": "bentham.jpg",
+      "quoteWho" : "Jeremy Bentham",
+      "soundEffect": "test.mp3",
+      "reference":"Crimmins, J. E. (2021). *Jeremy Bentham* (E. N. Zalta, Ed.). Stanford Encyclopedia of Philosophy; Metaphysics Research Lab, Stanford University.",
+      "background": "philosophy_classroom.jpg",
+      "guess": false
+    },    
+    {
+      "type": "quote",
+      "text": "All action is for the sake of **some end**; and rules of action, it seems natural to suppose, must take their whole character and color from the end to which they are subservient.",
+      "characterImage": "mill.jpg",
+      "quoteWho" : "John Stuart Mill",
+      "soundEffect": "test.mp3",
+      "reference":"Mill, J. S. (1863). *Utilitarianism* (Chapter 1). Parker, Son, and Bourn. Image from *John Stuart Mill - Econlib*. (2018). Econlib.",
+      "background": "trolley_1.jpg",
+      "guess": false
+    },
+    {
       "type": "dream",
-      "text": "But then here is the **central finding** of this exegesis. \n\n All ethical dilemmas and political conflicts are a clash between the principles of utilitarianism vs deontology. They represent fundamentally different principles of morality that cannot find any compromise between them. \n\n History has demonstrated that neither could defeat the other, only momentarily subdue their antithesis, after which the backlash is even harder. ",
+      "text": "And then he fell asleep... \n\n ...In Danny's dreams - as the neurons in his brain connect and rearrange themselves to accommodate new philosophical reality - he saw images... horrendous images...",
       "soundEffect" : "test.mp3",
       "noHistory" : false,
       "fadeInTime" : 1800,
       "fadeOutTime" : 2000,
       "blackText": true
     }, {
-      "type": "quote",
-      "text": "Left-wing zealots have often been prepared to ride roughshod over due process and basic considerations of fairness when they think they can get away with it. For them the ends always seems to justify the means. That is precisely how their predecessors came to create the gulag.",
-      "characterImage": "thatcher.jpg",
-      "quoteWho" : "Margaret Thatcher",
-      "soundEffect": "test.mp3",
-      "reference":"Thatcher, M. (2002). *Statecraft: Strategies for a changing world*. HarperCollins. Image from *Margaret Thatcher Foundation.* (2019). Margaretthatcher.org.",
+      "type": "dialogue",
+      "characters": [
+        {
+          "speaker": "",
+          "imageSize": "large",
+          "imageSrc": "situation_shark.jpg",
+          "position": "upper-middle",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          }
+        }
+      ],
+      "dialogueText": "A shark is chasing 5 people in a lifeboat which is leaking because it was designed to only carry 4 people. It will soon sink and everybody will die. \n\n What is the ethical thing to do? \n\n Utilitarians: Easy, feed one person to the shark. It keeps the shark busy and stops the boat from leaking, allowing the other 4 to escape.",
       "background": "dream.jpg",
-      "guess": false
-    },{
-      "type": "quote",
-      "text": "The first man who, having enclosed a piece of ground, bethought himself of saying \"This is mine,\" and found people simple enough to believe him, was the real founder of civil society. ",
-      "characterImage": "rousseau.webp",
-      "quoteWho" : "Jean-Jacques Rousseau",
       "soundEffect": "test.mp3",
-      "reference":"Discourse on the Origin and Basis of Inequality Among Men (1755) Image sourced from Britannica.",
-      "background": "dream.jpg",
-      "guess": false
+      "reference":""
     },{
+      "type": "dialogue",
+      "characters": [
+        {
+          "speaker": "",
+          "imageSize": "large",
+          "imageSrc": "situation_transplant.jpg",
+          "position": "upper-middle",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          }
+        }
+      ],
+      "dialogueText": "A horrendous car accident injured 5 people. Alice is missing a liver, Bob is missing his lungs, Cathy is missing her heart, Dee is missing her kidneys, and En is missing his brain. \n\n Next door, a healthy patient comes in for a regular checkup. \n\n Utilitarians: Sack the healthy patient and distribute her healthy organs to the injured. We'll save 5 people at the cost of one.",
+      "background": "dream.jpg",
+      "soundEffect": "test.mp3",
+      "reference":""
+    },{
+      "type": "dialogue",
+      "characters": [
+        {
+          "speaker": "",
+          "imageSize": "large",
+          "imageSrc": "situation_bomb.jpg",
+          "position": "upper-middle",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          }
+        }
+      ],
+      "dialogueText": "A terrorist hid a powerful bomb in the city somewhere, and he refuses to tell the officers where he hid it. Time is ticking. \n\n Utilitarians: Use the most brutal form of torture that causes the most horrendous wounds and ultimately lead to a horrendous death. The bomb could kill many people, and his pain is a small price to be paid. ",
+      "background": "dream.jpg",
+      "soundEffect": "test.mp3",
+      "reference":""
+    },{
+      "type": "dialogue",
+      "characters": [
+        {
+          "speaker": "",
+          "imageSize": "large",
+          "imageSrc": "situation_twins.jpg",
+          "position": "upper-middle",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          }
+        }
+      ],
+      "dialogueText": "A pair of conjoined twins are growing to a point where a single set of organs could no longer support them both. \n\n Utilitarians: Just kill one, anyone, so the other could survive. Flip a coin if you have to.",
+      "background": "dream.jpg",
+      "soundEffect": "test.mp3",
+      "reference":""
+    },{
+      "type": "dialogue",
+      "characters": [
+        {
+          "speaker": "",
+          "imageSize": "large",
+          "imageSrc": "situation-speluncean.jpg",
+          "position": "upper-middle",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          }
+        }
+      ],
+      "dialogueText": "In the Case of the Speluncean Explorers, a group of 5 cave explorers were stuck inside the cave after a landslide. Rescue will take over 30 days. There is no food source in the cave. \n\n Utilitarians: They were right to kill eat Whetmore, so the other 4 could survive. ",
+      "background": "dream.jpg",
+      "soundEffect": "test.mp3",
+      "reference":""
+    },{
+      "type": "dialogue",
+      "characters": [
+        {
+          "speaker": "",
+          "imageSize": "large",
+          "imageSrc": "situation_lion.jpg",
+          "position": "upper-middle",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          }
+        }
+      ],
+      "dialogueText": "In ancient Rome, Christians were tossed to the lions so thousands of Roman spectators could experience ecstatic joy.",
+      "background": "dream.jpg",
+      "soundEffect": "test.mp3",
+      "reference":""
+    },{
+      "type": "dialogue",
+      "characters": [
+        {
+          "speaker": "",
+          "imageSize": "large",
+          "imageSrc": "situation_crime_and_punishment.webp",
+          "position": "middle-middle",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          }
+        }
+      ],
+      "dialogueText": "In Dostoevsky's *Crime and Punishment*, Rodion Raskolnikov murdered a miserly old pawnbroker whom he sees as a parasite leeching from society and causing harm, believing that her death would rid the world of a worthless person while providing him with the means to accomplish greater things.",
+      "background": "dream.jpg",
+      "soundEffect": "test.mp3",
+      "reference":""
+    },{
+      "type": "dialogue",
+      "characters": [
+        {
+          "speaker": "",
+          "imageSize": "large",
+          "imageSrc": "situation_robot.jpg",
+          "position": "upper-middle",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          }
+        }
+      ],
+      "dialogueText": "In Isaac Asimov's *The Evitable Conflict*, an AGI (artificial *general* intelligence) was tasked with the goal of keeping humans safe ends up rounds up all humans up because it's good for them.",
+      "background": "dream.jpg",
+      "soundEffect": "test.mp3",
+      "reference":""
+    }, {
       "type": "dream",
-      "text": "And thus the war of the philosophies has begun. There is no going back now. \n\n End of chapter 4. Click to start chapter 5.",
+      "text": "You might think, well these are all very far away from us. \n\n These stories are imagined and far-fetched from reality. \n\n ... Think again.",
       "soundEffect" : "test.mp3",
       "noHistory" : false,
       "fadeInTime" : 1800,
       "fadeOutTime" : 2000,
       "blackText": true
+    },{
+      "type": "dialogue",
+      "characters": [
+        {
+          "speaker": "",
+          "imageSize": "large",
+          "imageSrc": "situation_car.jpg",
+          "position": "upper-middle",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          }
+        }
+      ],
+      "dialogueText": "Engineers are trying to figure out what a self-driving vehicle should do milliseconds before an accident. Should it manoeuvre the car in favour the safety of the driver? Or should it prioritise avoiding collision with the pedestrians but risk ramming the car into an immovable object? \n\n Utilitarians: Easy. If it's just one person, simply smash through. If it's more than one person, self-detonate the car, but try not to blow up the pedestrians.",
+      "background": "dream.jpg",
+      "soundEffect": "test.mp3",
+      "reference":""
+    },  {
+      "type": "dialogue",
+      "characters": [
+        {
+          "speaker": "",
+          "imageSize": "large",
+          "imageSrc": "situation_bread.jpg",
+          "position": "upper-middle",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          }
+        }
+      ],
+      "dialogueText": "Is it morally wrong for a starving man to steal bread so he won't die?",
+      "background": "dream.jpg",
+      "soundEffect": "test.mp3",
+      "reference":""
+    }, {
+      "type": "dialogue",
+      "characters": [
+        {
+          "speaker": "",
+          "imageSize": "large",
+          "imageSrc": "situation_writer.jpg",
+          "position": "upper-middle",
+          "transition": {
+            "type": "fade",
+            "duration": 500
+          }
+        }
+      ],
+      "dialogueText": "And here at home in the film industry, a screenwriter's personal story was trampled beyond recognition, because the producer wanted story to have wide appeal in order to be commercially viable. \n\n Utilitarians: Do it, sack the writer and make more people happy. Because greatest good for the greatest number.",
+      "background": "dream.jpg",
+      "soundEffect": "test.mp3",
+      "reference":""
+    }, {
+      "type": "info",
+      "text": "Danny now understands that these are all logically equivalent scenarios. And Utilitarians would say to them... \n\n The end justifies the means, always. \n\n<p style=\"text-align: right\"> End of chapter 03. Click to proceed to chapter 04...</p>",
+      "soundEffect": "test.mp3",
+      "background": "bar.jpg",
+      "transition": "fade_long"
     }
   ]
 }

@@ -1,565 +1,524 @@
-{  
-  "title": "02. \"Might makes Right\"",
-  "music": "chapter1.mp3",
-  "volume": 0.4,
-  "slides": [
-  {
-    "type": "info",
-    "text": "# 02 \"Might makes right\" \n\n \"Might makes right\" refers to the idea that power alone is the ultimate determinant of what is morally or ethically \"right\". \n\n Simply because the powerful couldn't be stopped. \n\n This power can come in many shapes or forms. In the ancient times it was physical strength, or perhaps tribal lineage. Nowadays we see it in forms of political power, popularity, wealth, qualifications, and hierarchical authority in an organisation. \n\n It's a simplistic yet dangerously appealing idea, and most people would agree that the notion of \"might makes right\" is fundamentally wrong, as it goes against the very principles of civilisation which seeks to rise above the Darwinian laws of the jungle. \n\n But, it quickly gets more complicated if you take the logic just *one step further*...",
-    "soundEffect": "test.mp3",
-    "background": "camp_fire.jpg",
-    "reference":"*Merriam-Webster Dictionary*. (2021). Merriam-Webster.com. https://www.merriam-webster.com/dictionary/might%20makes%2Fis%20right",
-    "transition": "fade_long"
-  },
-  {
-    "type": "info",
-    "text": "If \"Might makes right\" is wrong, then logic would dictate that *\"Weak makes right\"* is also wrong. \n\n If we accept the proposition that power alone should not dictate what is morally right, then the logical conclusion is that the weaker party is not morally superior merely because of their lack of power. \n\n But in practice, people naturally incline towards supporting the weaker party, or the \"underdog\". \n\n In film, the underdog tale goes as far back as the 1920s, portrayed in classic Chaplin films *The kid* (1921) and *The Gold Rush* (1925), to *Wings* (1927), the first film to win the Academy Award for Best Picture. \n\n In recent times, the most popular films stretching from the original Star Wars to Harry Potter, Dodgeball, the Matrix, and in TV – Breaking Bad (chemistry teacher with terminal cancer),  Queen’s Gambit (orphan girl), and various protagonistic characters in Game of Thrones. ",
-    "soundEffect": "test.mp3",
-    "background": "camp_fire.jpg",
-    "reference":"as cited.",
-    "transition": "fade_long"
-  },
-  {
-    "type": "dialogue",
-    "characters": [
+{
+    "title": "02. Let's play a game...",
+    "music": "chapter1.mp3",
+    "volume": 0.4,
+    "slides": [
       {
-        "speaker": "",
-        "imageSize": "small",
-        "imageSrc": "save_the_cat.jpg",
-        "position": "upper-middle",
-        "transition": {
-          "type": "fade",
-          "duration": 500
-        }
-      }
-    ],
-    "dialogueText": "Hollywood writing coaches often advice budding writers that the protagonist must be an underdog in order to gain the empathy of the audience, or be \"likable\" as they would say. \n\n In perhaps the most influential screenwriting guide published in 2005, *Save the Cat!*, Synder advises that protagonists should be made underdogs, stressing the significance of tapping into the audience’s empathy so they could “root for” the character and follow their journey as if they were their own. ",
-    "background": "camp_fire.jpg",
-    "soundEffect": "test.mp3",
-    "reference":"Snyder, B. (2005). *Save the cat! : the last book on screenwriting you'll ever need*. Michael Wiese Productions."
-  },
-  {
-    "type": "info",
-    "text": "It would seem contradictory that people's natural instincts are to simultaneously reject the notion that “Might makes right” but accept the proposition that \"Weak makes right.\" \n\n The result however, is the same. \"Weak makes right\" is merely another form of \"Might makes right\" differing only in the definition of or metric applied to the word \"Might\". \n\n In ancient times, barbarians with bulging muscles are perceived as mighty because they're able to effectively use violence to achieve a desired outcome through brute force. \n\n In contemporary society, systems might exist to reward those who are perceived to lack power, which in turn makes them mighty. Societies do this for a variety of reasons, including restorative justice and reducing inequality, to name a few. \n\n But many would shun at the retort that \"might makes right\" and \"weak makes right\" are logically equivalent, and understandably so.  \n\n What, then, is the moral justification for the intrinsic support that people feel for the weaker party? \n\n Is there a rule or law of morality that would allow us to approach a problem like this with *objectivity* and *consistency*?",
-    "soundEffect": "test.mp3",
-    "background": "camp_fire.jpg",
-    "reference":"",
-    "transition": "fade_long"
-  },
-  {
-    "type": "dialogue",
-    "characters": [
-      {
-        "speaker": "",
-        "imageSize": "large",
-        "imageSrc": "musk_twitter.png",
-        "position": "middle-middle",
-        "transition": {
-          "type": "fade",
-          "duration": 500
-        }
-      }
-    ],
-    "dialogueText": "Or, are we really gonna let these people win...",
-    "background": "camp_fire.jpg",
-    "soundEffect": "test.mp3",
-    "reference":"x.com. (2024). X (Formerly Twitter). https://x.com/elonmusk/status/1783727565989134488?lang=en"
-  },
-  {
-    "type": "dream",
-    "text": "Fortunately, not all is lost. \n\n Someone came up with a solution a long time ago. Right here in this galaxy, I might add. \n\n His name, was Jeremy Bentham. \n\n The solution, was this...",
-    "soundEffect" : "test.mp3",
-    "noHistory" : false,
-    "fadeInTime" : 1800,
-    "fadeOutTime" : 2000,
-    "blackText": true
-  },
-  {
-    "type": "quote",
-    "text": "It is the *greatest happiness* of the *greatest number* that is the measure of right and wrong.",
-    "characterImage": "bentham.jpg",
-    "quoteWho" : "Jeremy Bentham",
-    "soundEffect": "test.mp3",
-    "reference":"Crimmins, J. E. (2021). *Jeremy Bentham* (E. N. Zalta, Ed.). Stanford Encyclopedia of Philosophy; Metaphysics Research Lab, Stanford University.",
-    "background": "debate_room.jpg",
-    "guess": false
-  },  
-  {
-    "type": "info",
-    "text": "Bentham's solution to the problem was to axiomatically define the measure of right or wrong, or the judge of morality or ethics, in terms of the *greatest good* for the *greatest number* of people. \n\n This approach, is known as **Utilitarianism**. \n\n Utilitarianism is a form of *Consequentialism*, a moral framework that assesses the rightness or wrongness of an action based solely on its outcomes. \n\n For a utilitarian (or a consequentialist), actions are not judged by intentions, principles, or inherent characteristics or anything else, except by the results they produce... \n\n ...and by these **results only**. \n\n",
-    "soundEffect": "test.mp3",
-    "background": "debate_room.jpg",
-    "reference":"",
-    "transition": "fade_long"
-  },
-  {
-    "type": "info",
-    "text": "There are other forms of *consequentialism*, for instance: \n\n - **Egoism**: sounds bad enough already, right? Unlike utilitarianism, which seeks the greatest good for the greatest number, it asserts that individuals *should act * (i.e. morally right to act) in ways that maximise their own self-interest. Hence the name, Egoism. \n\n - **Altruism**: this one is the opposite of Egoism, asserting that that individuals should only maximise the benefits of others to *the exclusion of the self*. Codified martyrdom, essentially. \n\n Essentially, Egoism and Altruism breaks Utilitarianism into two disjoint sets of the beneficiaries for the maximisation of the good: the others, or the self. \n\n But you know what, let's just go with Utilitarianism, at least it would seem reasonably fair to maximise the goods of everyone, including ourselves. \n\n After all, who can argue with the idea of *the greatest good for the greatest number*?",
-    "soundEffect": "test.mp3",
-    "background": "debate_room.jpg",
-    "reference":"see entries on *Egoism* and *Altruism* at Stanford Encyclopedia of Philosophy; Metaphysics Research Lab, Stanford University. https://plato.stanford.edu/",
-    "transition": "fade_long"
-  },
-  {
-    "type": "info",
-    "text": "But another question remains. \n\n If we were to accept Utilitarianism as the judge of morality, and we try to achieve *the greatest good for the greatest number*, then what is it meant by \"good\"? \n\n How do you define **good**? \n\n Bentham’s answer was again straightforward...",
-    "soundEffect": "test.mp3",
-    "background": "debate_room.jpg",
-    "reference":"Driver, J. (2009, March 27). *The History of Utilitarianism*. Stanford Encyclopedia of Philosophy; Stanford University. ",
-    "transition": "fade_long"
-  },
-  {
-    "type": "quote",
-    "text": "Nature has placed mankind under the governance of two sovereign masters, <span style=\"color:red\">*pain* </span> and <span style=\"color:orange\">*pleasure*</span>. It is for them alone to point out what we ought to do, as well as to determine what we shall do.",
-    "characterImage": "bentham.jpg",
-    "quoteWho" : "Jeremy Bentham",
-    "soundEffect": "test.mp3",
-    "reference":"Bentham, J. (2012). *An Introduction to the Principles of Morals and Legislation*. Courier Corporation. (Original work published 1789)",
-    "background": "debate_room.jpg",
-    "guess": false
-  },
-  {
-    "type": "info",
-    "text": "Bentham's position can thus be summed in one simple line: \n\n <p style=\"text-align: center\"><b> Pleasure good, Pain bad.</b></p> \n\n Utilitarianism would thus dictate that the *moral thing to do* is to try to achieve: \n\n - maximum amount of pleasure; \n\n - minimum amount of pain; \n\n - for as many people as possible. \n\n Well then, having said all that, how might Bentham respond to the proposition that \"Weak makes Right\" is wrong?",
-    "soundEffect": "test.mp3",
-    "background": "debate_room.jpg",
-    "reference":"",
-    "transition": "fade_long"
-  },
-  {
-    "type": "chat",
-    "chatName": "Chat with @dan_da_meme_man",
-    "chats": [
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "text": "Weak makes right is the same as Might makes right."
-      },      
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "chat-image": "meme_troll_problem.webp"
+        "type": "info",
+        "text": "# 02. Let's play a game... \n\n Say... Would you agree with these following statements?",
+        "soundEffect": "test.mp3",
+        "background": "philosophy_classroom.jpg",
+        "transition": "fade_short"
       },
       {
-        "who": "Jeremy Bentham",
-        "who-img": "bentham.jpg",
-        "position": "right",
-        "text": "Maybe. But that is irrelevant."
-      },      
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "text": "Huh?"
+        "type": "agreedisagree",
+        "agreeDisagreeId": 1,
+        "text": "The production of too many useful things results in too many useless people.",
+        "characterImage": "marx.jpg",
+        "quoteWho" : "Karl Marx",
+        "reflectionTextCorrect": "Congratulations, you agreed with Karl Marx.",
+        "reflectionTextIncorrect": "Congratulations, you disagreed with Karl Marx.",
+        "soundEffect": "test.mp3",
+        "reference":"Marx, K. (1978). *Economic and philosophic manuscripts of 1844*. In R. C. Tucker (Ed.), The Marx-Engels Reader (2nd ed., pp. 66-125). W. W. Norton & Company. (Original work published 1844)",
+        "background": "philosophy_classroom.jpg"
       },
       {
-        "who": "Jeremy Bentham",
-        "who-img": "bentham.jpg",
-        "position": "right",
-        "text": "Because the ethical thing to do is to maximise pleasure and minimise pain..."
-      },
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "text": "Great! Let's maximise the pleasure of Elon Musk. Cuz why not?"
-      },
-      {
-        "who": "Jeremy Bentham",
-        "who-img": "bentham.jpg",
-        "position": "right",
-        "text": "...for the greatest number of people. Do it for EVERYONE."
-      },
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "text": "Are you saying that Elon's pleasures and pains are less worthy than the pleasures and pains of a homeless drug addict?"
-      },      
-      {
-        "who": "Jeremy Bentham",
-        "who-img": "bentham.jpg",
-        "position": "right",
-        "text": "No but there are millions of poor and only one Elon Musk."
-      },
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "text": "It's just not fair to take from those who worked hard and give to those who are incompetent."
-      },  
-      {
-        "who": "Jeremy Bentham",
-        "who-img": "bentham.jpg",
-        "position": "right",
-        "text": "With $100 you could feed someone who is starving and can save a life. But $100 for a billionaire means nothing. "
+        "type": "agreedisagree",
+        "agreeDisagreeId": 2,
+        "text": "Politicians can't manage. All they can do is talk.",
+        "characterImage": "trump.webp",
+        "quoteWho" : "Donald Trump",
+        "reflectionTextCorrect": "Congratulations, you agreed with Donald Trump.",
+        "reflectionTextIncorrect": "Congratulations, you disagreed with Donald Trump.",
+        "soundEffect": "test.mp3",
+        "reference":"*Donald Trump Explains All. (n.d.).* Time. https://time.com/4003734/donald-trump-interview-transcript/",
+        "background": "philosophy_classroom.jpg"
       },    
       {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "text": "So?"
-      },   
-      {
-        "who": "Jeremy Bentham",
-        "who-img": "bentham.jpg",
-        "position": "right",
-        "text": "So? Take $100 from a billionaire causes virtually no pain. But giving $100 to a starving homeless man creates immense benefit. Greatest good for the greatest number, measured in pleasure and pain. "
-      },       
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "text": "But isn't this just punishing those who are successful? It's the tall poppy syndrome, old man."
-      },  
-      {
-        "who": "Jeremy Bentham",
-        "who-img": "bentham.jpg",
-        "position": "right",
-        "text": "Don't flip your wig kid. It has nothing to do with punishment or reward. Utilitarianism looks at results and results only. Nothing else matters."
-      },   
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "text": "You're just giving freebies to those who don't deserve it. "
-      },  
-      {
-        "who": "Jeremy Bentham",
-        "who-img": "bentham.jpg",
-        "position": "right",
-        "text": "Greatest good for the greatest number. Results only, nothing else matters. Try again."
-      },  
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "text": "Nope, not convinced. Not doing it. "
-      },
-      {
-        "who": "Jeremy Bentham",
-        "who-img": "bentham.jpg",
-        "position": "right",
-        "text": "Then you are acting unethically. "
-      },
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "text": "Wtf why?"
-      },  
-      {
-        "who": "Jeremy Bentham",
-        "who-img": "bentham.jpg",
-        "position": "right",
-        "text": "Because utilitarianism is precisely about what is ethical. It allows you to judge whether an action is ethical."
-      },
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "recall": true
-      },
-      {
-        "who": "Jeremy Bentham",
-        "who-img": "bentham.jpg",
-        "position": "right",
-        "text": "And you are moral and ethical only if you try to achieve the greatest good for the greatest number."
-      },
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "text": "No way. You can't justify why we should aim for the greatest good for the greatest number, and why not doing so makes me unethical."
-      },
-      {
-        "who": "Jeremy Bentham",
-        "who-img": "bentham.jpg",
-        "position": "right",
-        "text": "Then go read my book. It's only about 300 pages. It's required reading for this course by the way. Also your essay is due tomorrow morning kid. Now get back to work."
-      },
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "recall": true
+        "type": "agreedisagree",
+        "agreeDisagreeId": 3,
+        "text": "What do I think of Western civilization? I think it would be a very good idea.",
+        "characterImage": "ghandi.webp",
+        "quoteWho" : "Mahatma Ghandi",
+        "reflectionTextCorrect": "Congratulations, you agreed with Mahatma Ghandi.",
+        "reflectionTextIncorrect": "You disagreed with Mahatma Ghandi.",
+        "soundEffect": "test.mp3",
+        "reference":"Gandhi, M. (n.d.). *The Essential Gandhi: An Anthology of His Writings on His Life, Work, and Ideas* (L. Fischer, Ed.). Vintage Books.",
+        "background": "philosophy_classroom.jpg"
       },    
       {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "chat-image": "meme_crying.png"
+        "type": "agreedisagree",
+        "agreeDisagreeId": 4,
+        "text": "Europe was created by history. America was created by philosophy.",
+        "characterImage": "thatcher.jpg",
+        "quoteWho" : "Margaret Thatcher",
+        "reflectionTextCorrect": "Congratulations, you agreed with Margaret Thatcher.",
+        "reflectionTextIncorrect": "Congratulations, you disagreed with Margaret Thatcher.",
+        "soundEffect": "test.mp3",
+        "reference":"Gandhi, M. (n.d.). *The Essential Gandhi: An Anthology of His Writings on His Life, Work, and Ideas* (L. Fischer, Ed.). Vintage Books.",
+        "background": "philosophy_classroom.jpg"
+      },
+      {
+        "type": "agreedisagree",
+        "agreeDisagreeId": 5,
+        "text": "Socialism is a sacred cause for realizing the demand and desire of the masses of the people for independence; it is a revolutionary cause that advances amid a fierce struggle against imperialism and all other counterrevolutionary forces.",
+        "characterImage": "kju.jpg",
+        "quoteWho" : "Kim Jong Un",
+        "reflectionTextCorrect": "Congratulations, you agreed with Kim Jong Un.",
+        "reflectionTextIncorrect": "Awwww, you disagreed with Kim Jong Un...",
+        "soundEffect": "test.mp3",
+        "reference":"Kim, J. (2016). *Report to the Seventh Congress of the Workers' Party of Korea on the work of the Central Committee*. Pyongyang, North Korea: Foreign Languages Publishing House.",
+        "background": "philosophy_classroom.jpg"
+      },
+      {
+        "type": "agreedisagree",
+        "agreeDisagreeId": 6,
+        "text": "Only a crisis - actual or perceived - produces real change. When that crisis occurs, the actions that are taken depend on the ideas that are lying around. That, I believe, is our basic function: to develop alternatives to existing policies, to keep them alive and available until the politically impossible becomes the politically inevitable.",
+        "characterImage": "friedman.jpg",
+        "quoteWho" : "Milton Friedman",
+        "reflectionTextCorrect": "You agreed with Milton Friedman.",
+        "reflectionTextIncorrect": "You disagreed with Milton Friedman.",
+        "soundEffect": "test.mp3",
+        "reference":"Friedman, M. (1982). *Capitalism and freedom*. University of Chicago Press.",
+        "background": "philosophy_classroom.jpg"
+      },
+      {
+        "type": "agreedisagree",
+        "agreeDisagreeId": 7,
+        "text": "Industry, technology, and commerce can thrive only as long as an idealistic national community offers the necessary preconditions. And these do not lie in material egoism, but in a spirit of sacrifice and joyful renunciation.",
+        "characterImage": "hitler.jpg",
+        "quoteWho" : "Adolf Hitler",
+        "reflectionTextCorrect": "You agreed with Adolf Hitler.",
+        "reflectionTextIncorrect": "You disagreed with Adolf Hitler.",
+        "soundEffect": "test.mp3",
+        "reference":"Hitler, A. (1999). *Mein Kampf* (R. Manheim, Trans.). Houghton Mifflin. (Original work published 1925)",
+        "background": "philosophy_classroom.jpg"
+      },
+      {
+        "type": "dream",
+        "text": "Let's play a game. \n\n<br/> Guess where these lines came from...",
+        "soundEffect" : "test.mp3",
+        "noHistory" : false,
+        "fadeInTime" : 1800,
+        "fadeOutTime" : 2000,
+        "blackText": true
+      },
+      {
+        "type": "quotequiz",
+        "characterImage": "unknown_character.png",
+        "text": "For the bureaucrat, the world is a mere object to be manipulated by him.",
+        "quoteWho": "",
+        "correctAnswer": "Karl Marx",
+        "newQuiz": true,
+        "reference":"",
+        "choices": [
+          {
+            "name": "Karl Marx",
+            "characterImage": "marx.jpg"
+          },
+          {
+            "name": "Pierre Bourdieu",
+            "characterImage": "bourdieu.jpg"
+          },
+          {
+            "name": "Milton Friedman",
+            "characterImage": "friedman.jpg"
+          },
+          {
+            "name": "Marcus Aurelius",
+            "characterImage": "marcus_aurelius.jpg"
+          }
+        ],
+        "background": "camp_fire.jpg",
+        "soundEffect": "test.mp3",
+        "reflectionTextCorrect": "🎉 **Great job!** You selected the correct answer.",
+        "reflectionTextIncorrect": "❌ **Oops!** That's not correct. The right answer is *Karl Marx*."
+      },
+      {
+        "type": "quotequiz",
+        "characterImage": "unknown_character.png",
+        "text": "Without tradition, art is a flock of sheep without a shepherd. Without innovation, it is a corpse.",
+        "quoteWho": "",
+        "correctAnswer": "Winston Churchill",
+        "reference":"",
+        "choices": [
+          {
+            "name": "Richard Nixon",
+            "characterImage": "nixon.webp"
+          },
+          {
+            "name": "Adolf Hitler",
+            "characterImage": "hitler.jpg"
+          },
+          {
+            "name": "Winston Churchill",
+            "characterImage": "churchill.webp"
+          },
+          {
+            "name": "Elon Musk",
+            "characterImage": "musk.jpeg"
+          }
+        ],
+        "background": "camp_fire.jpg",
+        "soundEffect": "test.mp3"
+      },
+      {
+        "type": "quotequiz",
+        "characterImage": "unknown_character.png",
+        "text": "It doesn't hurt to get more education.",
+        "quoteWho": "",
+        "correctAnswer": "Donald Trump",
+        "reference":"",
+        "choices": [
+          {
+            "name": "Mahatma Ghandi",
+            "characterImage": "ghandi.webp"
+          },
+          {
+            "name": "John Maynard Keynes",
+            "characterImage": "keynes.jpg"
+          },
+          {
+            "name": "Margaret Thatcher",
+            "characterImage": "thatcher.jpg"
+          },
+          {
+            "name": "Donald Trump",
+            "characterImage": "trump.webp"
+          }
+        ],
+        "background": "camp_fire.jpg",
+        "soundEffect": "test.mp3"
+      },
+      {
+        "type": "quotequiz",
+        "characterImage": "unknown_character.png",
+        "text": "When you're young, you look at television and think, there's a conspiracy. The networks have conspired to dumb us down. But when you get a little older, you realize that's not true. The networks are in business to give people exactly what they want.",
+        "quoteWho": "",
+        "correctAnswer": "Steve Jobs",
+        "reference":"",
+        "choices": [
+          {
+            "name": "Steve Jobs",
+            "characterImage": "jobs.png"
+          },
+          {
+            "name": "Donald Trump",
+            "characterImage": "trump.webp"
+          },
+          {
+            "name": "Elon Musk",
+            "characterImage": "musk.jpeg"
+          },
+          {
+            "name": "Richard Nixon",
+            "characterImage": "nixon.webp"
+          }
+        ],
+        "background": "camp_fire.jpg",
+        "soundEffect": "test.mp3"
+      },{
+        "type": "quotequiz",
+        "characterImage": "unknown_character.png",
+        "text": "Government hears only its own voice … It knows it hears only its own voice and yet it deceives itself that it hears the people’s voice.",
+        "quoteWho": "",
+        "correctAnswer": "Karl Marx",
+        "reference":"",
+        "choices": [
+          {
+            "name": "Javier Milei",
+            "characterImage": "milei.png"
+          },
+          {
+            "name": "Pierre Bourdieu",
+            "characterImage": "bourdieu.jpg"
+          },
+          {
+            "name": "Milton Friedman",
+            "characterImage": "friedman.jpg"
+          },
+          {
+            "name": "Karl Marx",
+            "characterImage": "marx.jpg"
+          }
+        ],
+        "background": "camp_fire.jpg",
+        "soundEffect": "test.mp3"
+      },{
+        "type": "quotequiz",
+        "characterImage": "unknown_character.png",
+        "text": "Knowledge doesn't really form part of human nature. Conflict, combat, the outcome of the combat, and, consequently, risk and chance are what gives rise to knowledge.",
+        "quoteWho": "",
+        "correctAnswer": "Michel Foucault",
+        "reference":"",
+        "choices": [
+          {
+            "name": "Winston Churchill",
+            "characterImage": "churchill.webp"
+          },
+          {
+            "name": "Michel Foucault",
+            "characterImage": "foucault.png"
+          },
+          {
+            "name": "Marcus Aurelius",
+            "characterImage": "marcus_aurelius.jpg"
+          },
+          {
+            "name": "Karl Marx",
+            "characterImage": "marx.jpg"
+          }
+        ],
+        "background": "camp_fire.jpg",
+        "soundEffect": "test.mp3"
+      },{
+        "type": "quotequiz",
+        "characterImage": "unknown_character.png",
+        "text": "The road to hell is paved with good intentions.",
+        "quoteWho": "",
+        "correctAnswer": "Karl Marx",
+        "reference":"",
+        "choices": [
+          {
+            "name": "Arthur Schopenhauer",
+            "characterImage": "schopenhauer.jpg"
+          },
+          {
+            "name": "Milton Friedman",
+            "characterImage": "friedman.jpg"
+          },
+          {
+            "name": "Winston Churchill",
+            "characterImage": "churchill.webp"
+          },
+          {
+            "name": "Karl Marx",
+            "characterImage": "marx.jpg"
+          }
+        ],
+        "background": "camp_fire.jpg",
+        "soundEffect": "test.mp3"
+      },{
+        "type": "quotequiz",
+        "characterImage": "unknown_character.png",
+        "text": "We're running the most dangerous experiment in history right now, which is to see how much carbon dioxide the atmosphere can handle before there is an environmental catastrophe.",
+        "quoteWho": "",
+        "correctAnswer": "Elon Musk",
+        "reference":"",
+        "choices": [
+          {
+            "name": "Steve Jobs",
+            "characterImage": "jobs.png"
+          },
+          {
+            "name": "Elon Musk",
+            "characterImage": "musk.jpeg"
+          },
+          {
+            "name": "Pierre Bourdieu",
+            "characterImage": "bourdieu.jpg"
+          },
+          {
+            "name": "Michel Foucault",
+            "characterImage": "foucault.png"
+          }
+        ],
+        "background": "camp_fire.jpg",
+        "soundEffect": "test.mp3"
+      },
+      {
+        "type": "dream",
+        "text": "Brace yourself, it's about to get serious... \n\n<br/> (Trigger warning: intense political themes.)",
+        "soundEffect" : "test.mp3",
+        "noHistory" : true,
+        "fadeInTime" : 1800,
+        "fadeOutTime" : 2000,
+        "blackText": true
+      },
+      {
+        "type": "quotequiz",
+        "characterImage": "unknown_character.png",
+        "text": "The art of reading and studying consists in remembering the essentials and forgetting what is not essential.",
+        "quoteWho": "",
+        "correctAnswer": "Adolf Hitler",
+        "reference":"",
+        "choices": [
+          {
+            "name": "Adolf Hitler",
+            "characterImage": "hitler.jpg"
+          },
+          {
+            "name": "Plato",
+            "characterImage": "plato.jpg"
+          },
+          {
+            "name": "Pierre Bourdieu",
+            "characterImage": "bourdieu.jpg"
+          },
+          {
+            "name": "Milton Friedman",
+            "characterImage": "friedman.jpg"
+          }
+        ],
+        "background": "camp_fire.jpg",
+        "soundEffect": "test.mp3"
+      },    {
+        "type": "quotequiz",
+        "characterImage": "unknown_character.png",
+        "text": "The amount of money that is in your bank at the time of your death is the extra work you did which wasn't necessary.",
+        "quoteWho": "",
+        "correctAnswer": "Adolf Hitler",
+        "reference":"",
+        "choices": [
+          {
+            "name": "Karl Marx",
+            "characterImage": "marx.jpg"
+          },
+          {
+            "name": "Plato",
+            "characterImage": "plato.jpg"
+          },
+          {
+            "name": "Adolf Hitler",
+            "characterImage": "hitler.jpg"
+          },
+          {
+            "name": "Steve Jobs",
+            "characterImage": "jobs.png"
+          }
+        ],
+        "background": "camp_fire.jpg",
+        "soundEffect": "test.mp3"
+      },{
+        "type": "quotequiz",
+        "characterImage": "unknown_character.png",
+        "text": "I use emotion for the many and reserve reason for the few. ",
+        "quoteWho": "",
+        "correctAnswer": "Adolf Hitler",
+        "reference":"",
+        "choices": [
+          {
+            "name": "Karl Marx",
+            "characterImage": "marx.jpg"
+          },
+          {
+            "name": "Donald Trump",
+            "characterImage": "trump.webp"
+          },
+          {
+            "name": "Winston Churchill",
+            "characterImage": "churchill.webp"
+          },
+          {
+            "name": "Adolf Hitler",
+            "characterImage": "hitler.jpg"
+          }
+        ],
+        "background": "camp_fire.jpg",
+        "soundEffect": "test.mp3"
+      },{
+        "type": "quotequiz",
+        "characterImage": "unknown_character.png",
+        "text": "If freedom is short of weapons, we must compensate with willpower.",
+        "quoteWho": "",
+        "correctAnswer": "Adolf Hitler",
+        "reference":"",
+        "choices": [
+          {
+            "name": "Adolf Hitler",
+            "characterImage": "hitler.jpg"
+          },
+          {
+            "name": "Milton Friedman",
+            "characterImage": "friedman.jpg"
+          },
+          {
+            "name": "Karl Marx",
+            "characterImage": "marx.jpg"
+          },
+          {
+            "name": "Mahatma Ghandi",
+            "characterImage": "ghandi.webp"
+          }
+        ],
+        "background": "camp_fire.jpg",
+        "soundEffect": "test.mp3"
+      },{
+        "type": "quotequiz",
+        "characterImage": "unknown_character.png",
+        "text": "Few teachers understand that the study of history can never be to learn historical dates and events by heart and recite them by rote... No, by the living God, this is very unimportant. \n\n To 'learn' history means to seek and find the forces which are the causes leading to those effects which we subsequently perceive as historical events.",
+        "quoteWho": "",
+        "correctAnswer": "Adolf Hitler",
+        "reference":"",
+        "choices": [
+          {
+            "name": "Winston Churchill",
+            "characterImage": "churchill.webp"
+          },
+          {
+            "name": "Adolf Hitler",
+            "characterImage": "hitler.jpg"
+          },
+          {
+            "name": "Michel Foucault",
+            "characterImage": "foucault.png"
+          },
+          {
+            "name": "Milton Friedman",
+            "characterImage": "friedman.jpg"
+          }
+        ],
+        "background": "camp_fire.jpg",
+        "soundEffect": "test.mp3"
+      },{
+        "type": "quotequiz",
+        "characterImage": "unknown_character.png",
+        "text": "It makes me laugh when I think what consternation would be caused among us humans if the news suddenly announced that an interplanetary ship had landed in America! All our earthly little wars would stop immediately!",
+        "quoteWho": "",
+        "correctAnswer": "Adolf Hitler",
+        "reference":"",
+        "choices": [
+          {
+            "name": "Winston Churchill",
+            "characterImage": "churchill.webp"
+          },
+          {
+            "name": "Richard Nixon",
+            "characterImage": "nixon.webp"
+          },
+          {
+            "name": "Adolf Hitler",
+            "characterImage": "hitler.jpg"
+          },
+          {
+            "name": "Kim Jong Un",
+            "characterImage": "kju.jpg"
+          }
+        ],
+        "background": "camp_fire.jpg",
+        "soundEffect": "test.mp3"
+      },  
+      {
+        "type": "info",
+        "text": "At this point, you might say... \"Fascist Mike! What kind of Hitler joke is this!\" \n\n ... Now, now. Before you start sharpening that pitchfork, consider this... \n\n **Imagine for a moment** that you were a citizen in Germany in the years between the two World Wars... \n\n ... Having just endured the deep humiliation of defeat and forced into the crushing terms of the Treaty of Versailles \n\n ... having watched your country be looted for over a decade while the allied powers feast on the blood of your family and neighbours...\n\n ... while you break your back and grind your hands to the bone and the children of your people still starve and freeze to death on the streets, \n\n ... those who didn't were devoured by the machine which produces steel used to make lipsticks that the allied masters now apply make up before going to a fancy dinner. \n\n ... All for a war you did not start and your family did not fight. But nobody cared and there was nothing you could do...\n\n ",
+        "soundEffect": "test.mp3",
+        "background": "camp_fire.jpg",
+        "transition": "fade_short"
+      },    
+      {
+        "type": "info",
+        "text": "Then, one day, amidst the grief and agony came a whisper. Of a rumour, of one who they say carries the promise of restoring pride, dignity, and a path out of the darkness of despair. \n\n You look around you. An election is coming, and your peers are excited. That man there with just 1 arm, he talk with hope and excitement and he is more alive than he has ever been since he lost his son in the war. \n\n Some years later, your country is now winning wars. It dealt devastating blows to the powers that once enslaved you. \n\n Ask yourself this. could you really resist the allure of Hitler at that time? Could you truly say that you won't be swayed by him? \n\n Some years down the line, your situation drastically improved. You now eat better, sleep better, and your children went to not factories but school. Your leader demonstrated his genius military leadership and one after another you conquered the people who oppressed you for decades. You see some people disappearing on the streets, but you didn't know or like them anyway. \n\n Are you really going to oppose him? Are you really going to stick your neck out for the people who continued to have stake throughout the interwar period while you lost an arm in a steel mill accident? Are you really going to question the visionary leader who worked tirelessly for over 25 years to make this all happen, when the alternative was utter anguish and ruination?",
+        "soundEffect": "test.mp3",
+        "background": "postwar_germany_1.jpg",
+        "transition": "fade_short"
+      },
+      {
+        "type": "info",
+        "text": "I for one, find these questions impossible to answer... \n\n ... Not without a shiny, thick set of philosophical armour. An independent mind of reason, perception, and most importantly, moral judgement.\n\n We tend to think that these people exist outside of ourselves. \n\n They do not. \n\n The archetypal influences they represent are all within us. And we have hopefully seen, they are within us whether we're conscious of them or not.\n\n \"None are more hopelessly enslaved than those who falsely believe they are free.\" - Johann Wolfgang von Goethe \n\n When our minds are taken over by an idea, they stay with us.  \n\n It'd be useful to find out what generals we're fighting for, don’t you think? \n\n <p style=\"text-align: right\"> End of Chapter 02. Click to proceed to chapter 03. </p>\n\n ",
+        "soundEffect": "test.mp3",
+        "background": "postwar_germany_2.jpg",
+        "transition": "fade_short"
       }
-    ],
-    "soundEffect": "test.mp3",
-    "reflectionText" : "How might utilitarianism works in action...",
-    "background": "bar_large.jpg",
-    "reference":"Driver, J. (2009, March 27). *The History of Utilitarianism*. Stanford Encyclopedia of Philosophy; Stanford University.",
-    "transition": "fade_long"
-  },
-  {
-    "type": "info",
-    "text": "Of course, all that pain and pleasure stuff sound very hedonistic. It has made utilitarianism systemic and practical, but it does sound hedonistic, and many felt that they were shallow because of that. \n\n Yet again, if not pain and pleasure, what other measures of \"good\" can we use? \n\n This turned out to be a central issue which later Utilitarian philosophers attempted to address. \n\n Perhaps the most prominent one, was John Stuart Mill...",
-    "soundEffect": "test.mp3",
-    "background": "bar_large.jpg",
-    "reference":"as cited.",
-    "transition": "fade_long"
-  },
-  {
-    "type": "quote",
-    "text": "It is better to be a human being dissatisfied than a pig satisfied; better to be Socrates dissatisfied than a fool satisfied. \n\n And if the fool, or the pig, are of a different opinion, it is because they only know their own side of the question.",
-    "characterImage": "mill.jpg",
-    "quoteWho" : "John Stuart Mill",
-    "soundEffect": "test.mp3",
-    "reference":"Mill, J. S. (1863). *Utilitarianism* (p. 14). Parker, Son, and Bourn. Image from *John Stuart Mill - Econlib*. (2018). Econlib.",
-    "background": "dorm.jpg",
-    "guess": false
-  },
-  {
-    "type": "info",
-    "text": "In his work *Utilitarianism* (1863), John Stuart Mill introduced the idea of **higher** and **lower pleasures**. According to Mill: \n\n - **Higher pleasures** are those associated with intellectual, moral, and emotional growth, such as learning, art, and companionship. \n\n - **Lower pleasures** are those relating to bodily function only, such as food, sleep, or physical comfort. \n\n Crucially, when there is a conflict between the higher and the lower pleasures, *the higher pleasures should prevail*. \n\n It is clearly Mill's position that those who experienced the higher pleasures will know the difference between the two, and the “fool” or “pig” might believe lower pleasures to be sufficient only because they lack the capacity or experience to appreciate higher pleasures.",
-    "soundEffect": "test.mp3",
-    "background": "camp_fire.jpg",
-    "reference":"as cited.",
-    "transition": "dorm.jpg"
-  },
-  {
-    "type": "chat",
-    "chatName": "Chat with @dan_da_meme_man",
-    "chats": [
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "text": "I'm not writing this stupid essay anymore."
-      },
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "chat-image": "meme_crying.png"
-      },      
-      {
-        "who": "Jeremy Bentham",
-        "who-img": "bentham.jpg",
-        "position": "right",
-        "text": "Why what happened?"
-      },      
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "text": "It's so boring, it's causing me pain. I don't wanna do this no more"
-      },
-      {
-        "who": "Jeremy Bentham",
-        "who-img": "bentham.jpg",
-        "position": "right",
-        "text": "Hit the pause button, clear your head, and give it your best shot. You'll thank yourself later."
-      },
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "text": "No. I'm just gonna maximise my pleasure and minimise my pain, and I'm gonna go to this party at the Bav"
-      },
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "text": "Actually, yes. By your theory I should just go out and get drunk. If I don't, I'm unethical, that's what your theory says, isn't it?"
-      },
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "text": "If I go out to the party a whole bunch of people including myself can have fun for hours. But if I write an essay only you get to have fun laughing at how dumb my arguments are, for maybe 5 minutes. So I should be partying, greatest good for the greatest numbers, right?"
-      },      
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "chat-image": "meme_confront.png"
-      },  
-      {
-        "who": "Jeremy Bentham",
-        "who-img": "bentham.jpg",
-        "position": "right",
-        "text": "The question is not can you reason or can you talk, but can you suffer?"
-      },
-      {
-        "who": "John Stuart Mill",
-        "who-img": "mill.jpg",
-        "position": "right",
-        "joined": true
-      },
-      {
-        "who": "John Stuart Mill",
-        "who-img": "mill.jpg",
-        "position": "right",
-        "text": "Wrong, kid. No. Getting drunk isn't ethical."
-      },      
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "text": "Lol don't tell me you never got drunk in your life"
-      },      
-      {
-        "who": "John Stuart Mill",
-        "who-img": "mill.jpg",
-        "position": "right",
-        "text": "Drinking and partying results in a lower pleasure. Writing your essay results in a higher pleasure. When they clash, the ethical thing to do is to pick the higher one."
-      },          
-      {
-        "who": "John Stuart Mill",
-        "who-img": "mill.jpg",
-        "position": "right",
-        "text": "And I've actually advocated against tax on alcohol. You should thank me either way kid, for your brains and your booze."
-      },    
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "text": "But writing this essay is NOT giving me any pleasure, it's causing me pain!!! Terrible terrible pain!!!"
-      },  
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "chat-image": "meme_please.png"
-      },  
-      {
-        "who": "John Stuart Mill",
-        "who-img": "mill.jpg",
-        "position": "right",
-        "text": "That is because you don't yet know how to enjoy the higher pleasures."
-      },
-      {
-        "who": "John Stuart Mill",
-        "who-img": "mill.jpg",
-        "position": "right",
-        "text": "You only know about the fun of getting drunk. But you don't know how ecstatic it is to finally grasp a concept you have long failed to comprehend."
-      },         
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "text": "So? I don't believe for a second that anyone could possibly enjoy reading stuff like Shakespear for example"
-      },   
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "text": "It's an academic gatekeeping device that English teachers use to torture us and make themselves look smart. It's so painful they're not reading it themselves either, they're just regurgitating stuff from a teacher's guide or something"
-      },
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "text": "But EVERYBODY loves drinking you can't deny that"
-      },    
-      {
-        "who": "John Stuart Mill",
-        "who-img": "mill.jpg",
-        "position": "right",
-        "text": "That's because you only know your own side of the question"
-      },
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "recall": true
-      },
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "text": "Wait a second are you saying I'm a pig?"
-      },      
-      {
-        "who": "John Stuart Mill",
-        "who-img": "mill.jpg",
-        "position": "right",
-        "text": "Do you only know the lower pleasures of drinking and partying and not know the higher pleasures of knowing moral philosophy?"
-      },          
-      {
-        "who": "Jeremy Bentham",
-        "who-img": "bentham.jpg",
-        "position": "right",
-        "text": "The question is not whether you could reason or talk, but can you suffer?"
-      },       
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "recall": true
-      },  
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "text": "Fine, be that way then"
-      },
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "recall": true
-      },  
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "text": "Sigh..."
-      },            
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "text": "I'm about to catch a massive L and get cancelled by the whole squad"
-      },
-      {
-        "who": "Danny",
-        "who-img": "kid_1.png",
-        "position": "left",
-        "chat-image": "kid_party_study.jpg"
-      }
-    ],
-    "soundEffect": "test.mp3",
-    "reflectionText" : "",
-    "background": "dorm.jpg",
-    "reference":"Source: Bentham, J. (2012). *An Introduction to the Principles of Morals and Legislation*. Courier Corporation. (Original work published 1789)",
-    "transition": "fade_long"
-  },
-  {
-    "type": "info",
-    "text": "The strength of the utilitarian argument, combined with its enticing simplicity, has attracted countless philosophers, politicians, and their generals –  the *intellectuals* – over the years. \n\n The straightforward principle – *the greatest good for the greatest number* – offers a clear, practical, and *objective* guideline of morality. \n\n Throughout history, people have adopted similar thinking almost out of instinct, although perhaps unconsciously and without rigourous rational grounding. \n\n Later utilitarians came up with various additions to the theory of utilitarianism, but core tenet remain unchanged. \n\n These days, Utilitarianism is in every continent and every industry, simply put, everywhere. ",
-    "soundEffect": "test.mp3",
-    "background": "dorm.jpg",
-    "transition": "fade_long"
-  },  
-  {
-    "type": "quote",
-    "text": "Create all the happiness you are able to create; remove all the misery you are able to remove. Every day will allow you, --will invite you to add something to the pleasure of others, --or to diminish something of their pains.",
-    "characterImage": "bentham.jpg",
-    "quoteWho" : "Jeremy Bentham",
-    "soundEffect": "test.mp3",
-
-    "reference":"Bentham’s advice to a young girl in 1830. Bentham, J., ed. by Goldworth, A. (1983). Deontology together with A Table of the Springs of Action and Article on Utilitarianism. Oxford: Clarendon, p.xix.",
-    "background": "dorm.jpg",
-    "guess": false
-  },
-  {
-    "type": "dream",
-    "text": "End of chapter 02. \n\n *Click to start the next chapter...*",
-    "soundEffect" : "test.mp3",
-    "noHistory" : false,
-    "fadeInTime" : 1800,
-    "fadeOutTime" : 2000,
-    "blackText": true
+    ]
   }
-]
-}
+  

@@ -462,9 +462,12 @@
   <EndScreen on:proceed={restartGame} />
 {:else}
 
-  <!-- Main Content Container -->
+  <!-- Main Content Container - override default clicking behaviour to prevent text selection-->
   <div
     class="app-container"
+    on:dblclick|preventDefault
+    on:mouseup|preventDefault
+    on:selectstart|preventDefault
   >
     <!-- Blurred background image -->
     {#key currentBackgroundImage}
