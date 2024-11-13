@@ -11,15 +11,17 @@
   import { getAssetPath } from '../utils/assetHelper.js';
   import ClickToAdvanceOverlay from '../components/ClickToAdvanceOverlay.svelte';
   import { Line } from 'svelte-chartjs';
+  
   // Import Chart.js components
   import {
     Chart,
     LineController,
     LineElement,
     PointElement,
+    BarController,     // Newly imported
+    BarElement,        // Newly imported
     LinearScale,
     CategoryScale,
-    ScatterController,
     Tooltip,
     Legend,
   } from 'chart.js';
@@ -29,9 +31,10 @@
     LineController,
     LineElement,
     PointElement,
+    BarController,     // Newly registered
+    BarElement,        // Newly registered
     LinearScale,
     CategoryScale,
-    ScatterController,
     Tooltip,
     Legend
   );
@@ -91,9 +94,22 @@
     }
   }
 
-  // Recompute CDF data whenever 'total' changes
+  // Reactive variables for probability message
+  let xProbability = 0;
+  let formattedXProbability = "0.00";
+
+  // Compute CDF data and chart configurations whenever 'total' changes
   $: if (total > 0) {
     computeCDFData();
+
+    // Calculate the probability of beating the user's score
+    if (score >= 0 && score <= total) {
+      xProbability = (1 - binomialCDF(total, score, p)) * 100;
+      formattedXProbability = xProbability.toFixed(2);
+    } else {
+      xProbability = 0;
+      formattedXProbability = "0.00";
+    }
 
     // Chart configuration
     chartData = {
@@ -108,11 +124,14 @@
           tension: 0.1,
         },
         {
-          type: 'scatter',
+          type: 'bar', // Changed from 'scatter' to 'bar'
           label: 'Your Score',
           data: [{ x: score, y: binomialCDF(total, score, p) }],
-          backgroundColor: 'rgba(255, 99, 132, 1)',
-          pointRadius: 8,
+          backgroundColor: 'rgba(255, 99, 132, 0.6)', // Slightly transparent
+          borderColor: 'rgba(255, 99, 132, 1)',
+          borderWidth: 1,
+          barThickness: 5, // Reduced from 10 to 5 for thinner appearance
+          width: 1, // Thin bar
         },
       ],
     };
@@ -132,6 +151,9 @@
           ticks: {
             stepSize: 1,
           },
+          // Adjust for bar spacing
+          barPercentage: 0.5,       // Decrease to make bars thinner
+          categoryPercentage: 0.5,  // Decrease to make bars thinner
         },
         y: {
           title: {
@@ -139,20 +161,23 @@
             text: 'Cumulative Probability',
           },
           beginAtZero: true,
-          max: 1,
+          max: 1.1, // Updated from 1 to 1.1
         },
       },
       plugins: {
         tooltip: {
           callbacks: {
             label: function (context) {
-              if (context.dataset.type === 'scatter') {
+              if (context.dataset.type === 'bar') { // Updated from 'scatter' to 'bar'
                 return `Your Score: ${context.parsed.x}`;
               } else {
                 return `CDF: ${(context.parsed.y * 100).toFixed(2)}%`;
               }
             },
           },
+        },
+        legend: {
+          position: 'top',
         },
       },
     };
@@ -259,6 +284,13 @@
     margin: 20px auto;
   }
 
+  .probability-message {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #333;
+  }
+
   /* Adjust for mobile */
   @media (max-width: 600px) {
     .agree-disagree-summary {
@@ -328,6 +360,10 @@
       {#if chartData}
         <div class="chart-container">
           <Line data={chartData} options={chartOptions} />
+        </div>
+        <!-- Probability Message -->
+        <div class="probability-message">
+          Probability of beating your score by random guessing: {formattedXProbability}%
         </div>
       {/if}
     </div>
