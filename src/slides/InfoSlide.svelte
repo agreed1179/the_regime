@@ -50,7 +50,6 @@
 
   // Function to handle click events
   function handleClick(event) {
-      console.log('InfoSlide handleClick triggered');
       updateSlide();
   }
 

@@ -1,3 +1,4 @@
+<!-- src/App.svelte -->
 <script>
   import './appStyles.css';
   import { onMount } from 'svelte';
@@ -14,13 +15,14 @@
   import QuoteQuizSlide from './slides/QuoteQuizSlide.svelte';
   import DreamSlide from './slides/DreamSlide.svelte';
   import ChatSlide from './slides/ChatSlide.svelte';
-  import FlashScreen from './components/FlashScreen.svelte';
   import ScoreSummary from './slides/ScoreSummary.svelte';
   import AgreeDisagreeSlide from './slides/AgreeDisagreeSlide.svelte';
   import ScoreFinal from './slides/ScoreFinal.svelte';
   import ClickToAdvanceOverlay from './components/ClickToAdvanceOverlay.svelte';
   import ChapterSelector from './components/ChapterSelector.svelte';
-  
+
+  import StartScreen from './components/StartScreen.svelte';
+  import EndScreen from './components/EndScreen.svelte';
 
   // Import stores
   import { 
@@ -49,6 +51,7 @@
   let gameStarted = false;
   let isMuted = false;
   let backgroundAudio;
+  $: backgroundAudio; //Make it reactive
 
   // Progress-related variables
   let slideCounts = [];
@@ -240,6 +243,9 @@
     await loadChapter(0); // Load Chapter 0
     currentStage.set(0); // Initialize currentStage
     slides.set(allChapters[$currentChapter].slides); //set initial slide of a chapter
+
+
+
   }
 
   // Function to load the next chapter
@@ -276,20 +282,6 @@
             console.error('Background music playback failed:', error);
           });
         }
-      }
-    }
-  }
-
-  // Reactive statement to update audio src and play music when backgroundMusic changes
-  $: if (backgroundAudio && $backgroundMusic) {
-    const fullMusicPath = getAssetPath('music', $backgroundMusic, $assetPaths);
-    if (backgroundAudio.src !== fullMusicPath) { // Prevent resetting src if already correct
-      backgroundAudio.src = fullMusicPath;
-      if (!isMuted) {
-        backgroundAudio.volume = $backgroundVolume; // Set the volume
-        backgroundAudio.play().catch(error => {
-          console.error('Background music playback failed:', error);
-        });
       }
     }
   }
@@ -456,14 +448,13 @@
 <!-- Application Markup -->
 {#if !gameStarted}
   <!-- Starting screen using FlashScreen component -->
-  <FlashScreen 
-    screenType="start" 
-    on:proceed={startGame} 
+  <StartScreen
+    on:proceed={startGame}
     on:startLoading={preloadAssets}
   />
   {:else if gameEnded}
-  <!-- Ending screen using FlashScreen component -->
-  <FlashScreen screenType="end" on:proceed={restartGame} />
+  <!-- Ending screen using EndScreen component -->
+  <EndScreen on:proceed={restartGame} />
 {:else}
 
   <!-- Main Content Container -->
@@ -487,17 +478,19 @@
     <div class="meeting-room">
       <!-- Background Audio Element -->
       <audio
-        bind:this={backgroundAudio}
-        loop
-        preload="auto" 
-        on:loadeddata={() => {
-          if (!isMuted && $backgroundMusic) {
-            backgroundAudio.play().catch(error => {
-              console.error('Background music playback failed:', error);
-            });
-          }
-        }}
-      ></audio>
+      bind:this={backgroundAudio}
+      loop
+      preload="auto"
+      src={$backgroundMusic ? getAssetPath('music', $backgroundMusic, $assetPaths) : ''}
+      on:loadeddata={() => {
+        if (!isMuted && $backgroundMusic) {
+          backgroundAudio.volume = $backgroundVolume; // Ensure volume is set
+          backgroundAudio.play().catch(error => {
+            console.error('Background music playback failed:', error);
+          });
+        }
+      }}
+    ></audio>
       
       <div class="screen" style="background-image: url('{$backgroundImage}');">
         {#if showChapterSelector}

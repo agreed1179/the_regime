@@ -1,3 +1,4 @@
+<!-- src/components/FlashScreen.svelte -->
 <script>
     import { onMount, tick } from 'svelte';
     import { fade } from 'svelte/transition';

@@ -11,11 +11,6 @@ export function preloadImages(slideData) {
       const img = new Image();
       img.src = getAssetPath('background', slide.background, get(assetPaths));
     }
-    // pre-load display artefacts    
-    if (slide.characters.imageSrc) {
-      const img = new Image();
-      img.src = getAssetPath('character', slide.characters.imageSrc, get(assetPaths));
-    }
     // pre-load character images
     if (slide.characterImage) {
       const img = new Image();

@@ -199,6 +199,12 @@
           "text": "And I'm gonna be traumatised for life! I'll never get over the fact that I had to execute someone innocent!"
         },
         {
+          "who": "Danny",
+          "who-img": "kid_1.png",
+          "position": "left",
+          "chat-image": "meme_please.png"
+        },
+        {
           "who": "Jeremy Bentham",
           "who-img": "bentham.jpg",
           "position": "right",
