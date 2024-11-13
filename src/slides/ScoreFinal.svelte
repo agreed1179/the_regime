@@ -353,7 +353,7 @@
       {/if}
 
       <div class="quiz-summary">
-        You answered {score} out of {total} questions correctly.
+        You correctly identified {score} out of {total} quotes.
       </div>
 
       <!-- Chart Container -->
