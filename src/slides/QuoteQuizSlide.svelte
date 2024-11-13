@@ -27,6 +27,7 @@
   export let correctAnswer = '';  // Name of the correct answer
   export let reflectionTextCorrect = '';    // Reflection text for correct answer
   export let reflectionTextIncorrect = '';  // Reflection text for incorrect answer
+  export let newQuiz = false;     // Defaults to false if not provided; if true will wipe current scores i.e. start a new quiz.
 
   // Reactive variables to compute asset paths
   $: backgroundPath = getAssetPath('background', background, $assetPaths);
@@ -110,6 +111,12 @@
   }
 
   onMount(() => {
+    if (newQuiz) {
+      // Reset currentScore and totalQuestions for the new quiz
+      currentScore.set(0);
+      totalQuestions.set(0);
+    }
+
     hideReference.set(true);
     playSound(soundEffectPath, isMuted);
     showBackButton.set(false);

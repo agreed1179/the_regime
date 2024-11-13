@@ -575,6 +575,7 @@
                   correctAnswer={$slides[$currentStage].correctAnswer}
                   reflectionTextCorrect={$slides[$currentStage].reflectionTextCorrect}
                   reflectionTextIncorrect={$slides[$currentStage].reflectionTextIncorrect}
+                  newQuiz={$slides[$currentStage].newQuiz} 
                 />
               {:else if $slides[$currentStage]?.type === 'scoresummary'}
                   <ScoreSummary 

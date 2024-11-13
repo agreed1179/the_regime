@@ -472,6 +472,7 @@
       "text": "For the bureaucrat, the world is a mere object to be manipulated by him.",
       "quoteWho": "",
       "correctAnswer": "Karl Marx",
+      "newQuiz": true,
       "reference":"",
       "choices": [
         {
@@ -859,14 +860,7 @@
       ],
       "background": "camp_fire.jpg",
       "soundEffect": "test.mp3"
-    },
-    {
-      "type": "scoresummary",
-      "quizId" : 1,
-      "background": "camp_fire.jpg",
-      "soundEffect": "test.mp3",
-      "reference" : "DeGroot, M. H., & Schervish, M. J. (2012). *Probability and statistics* (4th ed.). Pearson."
-    },    
+    },  
     {
       "type": "info",
       "text": "At this point, you might say... \"Fascist Mike! What kind of Hitler joke is this!\" \n\n ... Now, now. Before you start sharpening that pitchfork, consider this... \n\n **Imagine for a moment** that you were a citizen in Germany in the years between the two World Wars... \n\n ... Having just endured the deep humiliation of defeat and forced into the crushing terms of the Treaty of Versailles \n\n ... having watched your country be looted for over a decade while the allied powers feast on the blood of your family and neighbours...\n\n ... while you break your back and grind your hands to the bone and the children of your people still starve and freeze to death on the streets, \n\n ... those who didn't were devoured by the machine which produces steel used to make lipsticks that the allied masters now apply make up before going to a fancy dinner. \n\n ... All for a war you did not start and your family did not fight. But nobody cared and there was nothing you could do...\n\n ",
